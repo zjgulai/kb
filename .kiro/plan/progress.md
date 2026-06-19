@@ -91,3 +91,7 @@ provider_call_boundary: "no KB provider call"
 - Added remote `origin=https://github.com/zjgulai/kb.git`.
 - Pushed `main` to `origin`; Git reported `[new branch] main -> main` and set local branch to track `origin/main`.
 - Current boundary after push: repository contains draft/local governance docs, scripts, eval artifacts, and metadata; raw third-party source files remain local-only.
+- User asked for a complete plan and TODO list for unfinished work, with the goal of full extraction and end-to-end KB extraction plus agent build to online use.
+- Created `drafts/analysis/consultant-role-kb-full-extraction-agent-launch-plan-20260619.md`.
+- Added P6 to the task plan as the next pending phase: full extraction, agent runtime, staging, and launch planning.
+- Current recommended next sprint: full 81-source register, parser unit-manifest CLI, card QA validator, rerank tuning for four rank-1 misses, legal/source-owner review packet, and runtime decision.

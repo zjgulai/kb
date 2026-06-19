@@ -292,3 +292,37 @@ Boundary:
 
 - The source PRD file was not modified.
 - This is a draft addendum candidate, not a production-ready PRD update.
+
+## Full Extraction And Agent Launch Plan
+
+The roadmap document was created at `drafts/analysis/consultant-role-kb-full-extraction-agent-launch-plan-20260619.md`.
+
+It defines the path from the current local PoC to online use:
+
+- W0 governance and legal/source-owner review;
+- W1 full 81-source register;
+- W2 parser productionization and unit manifests;
+- W3 full typed-card extraction;
+- W4 durable knowledge store and vector index;
+- W5 `consultant-agent` runtime;
+- W6 eval, red-team, citation, and safety gates;
+- W7 staging deployment;
+- W8 internal pilot;
+- W9 production launch and operations.
+
+Key blockers:
+
+- legal/license decision for third-party `consult/` sources;
+- persistent storage policy for derived cards;
+- model/provider policy for online agent;
+- production architecture and deployment target;
+- human source-owner review.
+
+Immediate next sprint:
+
+- full 81-source register;
+- parser unit-manifest CLI;
+- card QA validator;
+- rerank tuning for `CONSULT-EVAL-014`, `CONSULT-EVAL-017`, `CONSULT-EVAL-038`, and `CONSULT-EVAL-047`;
+- legal/source-owner review packet;
+- runtime decision for local, private staging, provider, or hybrid deployment.

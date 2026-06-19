@@ -18,5 +18,13 @@ provider_call_boundary: "no KB provider call"
 
 ## Active Next Work
 
-Initialize Git and push draft/local project artifacts to `zjgulai/kb`, excluding raw `consult/` source files until legal/license review.
+Git initialization and first push completed.
 
+Evidence:
+
+- branch: `main`
+- root commit: `9cb0309`
+- remote: `https://github.com/zjgulai/kb.git`
+- push result: `[new branch] main -> main`
+
+Raw `consult/` source files remain excluded by `.gitignore`; only `consult/README.md` is tracked.

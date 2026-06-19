@@ -82,3 +82,12 @@ provider_call_boundary: "no KB provider call"
 - Ran expanded answer-trace fixture; trace_pass_count = 12/12 and trace_pass_rate = 1.0.
 - Created `drafts/analysis/consultant-role-kb-prd-addendum-directory-blueprint-20260619.md`.
 - Current next gate: initialize `.codex/` project context and Git repository while preserving draft/local boundaries and source licensing cautions.
+- Created Codex self-evolution project structure: `.codex/context-pack.md`, `.codex/session-thread.md`, project `AGENTS.md`, root `README.md`, `domains/`, `agents/`, `shared/`, and `archive/`.
+- Added `.gitignore` that excludes raw `consult/` source files and `.DS_Store`, while keeping `consult/README.md`.
+- Wrote one self-evolution candidate lesson to `~/.codex/evolution/inbox/candidates.jsonl` after the Python runtime mismatch failure; no long-term memory promotion was performed.
+- Initialized Git repository on branch `main`.
+- Verified `git ls-remote https://github.com/zjgulai/kb.git` returned empty output before push.
+- Created root commit `9cb0309` with 99 files; raw `consult/` source files were not staged.
+- Added remote `origin=https://github.com/zjgulai/kb.git`.
+- Pushed `main` to `origin`; Git reported `[new branch] main -> main` and set local branch to track `origin/main`.
+- Current boundary after push: repository contains draft/local governance docs, scripts, eval artifacts, and metadata; raw third-party source files remain local-only.

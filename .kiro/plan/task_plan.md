@@ -30,10 +30,10 @@ Use `KB_Platform_PRD.md` and the local `consult/` source folder to design a role
 | P2 | complete | Create source register/eval set candidates after user answers decision questions | Draft CSV/JSONL or Markdown |
 | P3 | complete | Run parser/chunk/eval local PoC if authorized, including local hash baseline, real local embedding candidate, and rerank/source-prior check | Local PoC reports and embedding ADR |
 | P4 | complete | Add citation anchors, run controlled expansion, and prepare PRD deltas/directory blueprint after review | Anchored card samples, expanded regression, and PRD addendum draft |
-| P5 | in_progress | Initialize project structure, Git repository, and remote push | `.codex/` context, repository metadata, GitHub push |
+| P5 | complete | Initialize project structure, Git repository, and remote push | `.codex/` context, repository metadata, GitHub push |
 
 ## Current Decisions Needed
 
-1. Whether raw `consult/` third-party source files should be committed to GitHub or excluded under pending legal/license review.
-2. Whether the GitHub remote accepts push with the current authentication context.
-3. Whether to later promote the PRD addendum into `KB_Platform_PRD.md` after human/legal review.
+1. Whether to later promote the PRD addendum into `KB_Platform_PRD.md` after human/legal review.
+2. Whether to run a second controlled expansion after tuning the four remaining answerable rank-1 misses.
+3. Whether raw `consult/` third-party source files can ever be committed after legal/license review.

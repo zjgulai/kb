@@ -733,3 +733,51 @@ Interpretation:
   seed file.
 - Boundary: actual reviewer decisions, legal/license clearance, staging
   implementation, provider calls, and live KB ingestion remain unperformed.
+
+## Shared Staging Readiness Preflight
+
+A local shared-staging readiness preflight and draft runbook were created after
+the localhost auth/audit harness. This advances the staging lane without
+claiming staging deployment or approval.
+
+Artifacts:
+
+- Preflight script: `tmp/consultant_role_kb_shared_staging_readiness_preflight_20260619.py`
+- Preflight output: `tmp/consultant-role-kb-shared-staging-readiness-preflight-20260619.json`
+- Preflight report: `drafts/analysis/consultant-role-kb-shared-staging-readiness-preflight-20260619.md`
+- Runbook: `drafts/analysis/consultant-role-kb-shared-staging-runbook-20260619.md`
+
+Preflight result:
+
+- ready_for_shared_staging = false.
+- status = blocked.
+- check_count = 19.
+- pass_count = 13.
+- blocker_count = 6.
+- provider_call_count = 0.
+- live_kb_write_count = 0.
+
+Passing checks include local API smoke, 800-record alignment, policy-refusal
+path, local auth/audit harness smoke, missing-token 401 behavior, RBAC 403
+behavior, audit contract validation, audit leak check, no-provider boundary,
+no-live-write boundary, human label workflow generation, raw `consult/` Git
+exclusion, and rollback runbook existence.
+
+Current blockers:
+
+- `human_labels_approved`: approved decision count remains 0.
+- `legal_source_owner_clearance`: legal/source-owner clearance remains pending.
+- `external_auth_token_hash_configured`: `KB_STAGING_AUTH_TOKEN_SHA256` is not configured.
+- `external_audit_path_configured`: `KB_STAGING_AUDIT_PATH` is not configured.
+- `rate_limit_configured`: ingress or middleware rate limiting is not recorded.
+- `rollback_owner_recorded`: rollback owner is not recorded.
+
+Boundary:
+
+- Local readiness check only.
+- Draft runbook only.
+- No shared staging deployment.
+- No provider call.
+- No live KB ingestion.
+- No human label approval.
+- No legal/source-owner clearance.

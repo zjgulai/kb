@@ -209,3 +209,10 @@ provider_call_boundary: "no KB provider call"
 - Second local harness smoke failed because an allowed `/eval/label-seed` audit event lacked `retrieval_mode`; fixed by defaulting allowed non-retrieval events to `local_bge_vector_plus_deterministic_rerank`.
 - Final local harness smoke result: record_count = 800, allowed_http_status = 200, policy_refusal_http_status = 200, missing_token_status = 401, rbac_denied_status = 403, label_seed_match_at_5 = 1.0, policy_refusal_pass_rate = 1.0, audit_event_count = 5, audit_schema_failure_count = 0, audit_forbidden_leak_count = 0, failure_count = 0, provider_call_count = 0, live_kb_write_count = 0.
 - Boundary remains: localhost-only validation; no staging deployment, no provider call, no live KB ingestion, no human label approval, and no legal/source-owner clearance.
+- User asked to continue the next unfinished task; proceeded with a shared-staging readiness preflight and runbook rather than deploying shared staging without approvals.
+- Created `tmp/consultant_role_kb_shared_staging_readiness_preflight_20260619.py`.
+- Generated `tmp/consultant-role-kb-shared-staging-readiness-preflight-20260619.json` and `drafts/analysis/consultant-role-kb-shared-staging-readiness-preflight-20260619.md`.
+- Created `drafts/analysis/consultant-role-kb-shared-staging-runbook-20260619.md` with approval gates, environment contract, preflight command, start command, smoke checks, rollback, and stop conditions.
+- Ran the preflight; it exited fail-closed with `ready_for_shared_staging=false`, `status=blocked`, `check_count=19`, `pass_count=13`, `blocker_count=6`, `provider_call_boundary=no KB provider call`, and `live_kb_ingestion=no live KB ingestion`.
+- Preflight blockers: approved human labels are still 0; legal/source-owner clearance is still pending; `KB_STAGING_AUTH_TOKEN_SHA256` is missing; `KB_STAGING_AUDIT_PATH` is missing; rate limiting is not recorded; rollback owner is not recorded.
+- Boundary remains: local readiness check and draft runbook only; no shared staging deployment, no provider call, no live KB ingestion, no human label approval, and no legal/source-owner clearance.

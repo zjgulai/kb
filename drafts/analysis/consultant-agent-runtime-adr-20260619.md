@@ -15,6 +15,8 @@ source_documents:
   - "drafts/analysis/consultant-role-kb-private-retrieval-api-report-20260619.md"
   - "drafts/analysis/consultant-role-kb-staging-auth-audit-design-20260619.md"
   - "drafts/analysis/consultant-role-kb-local-staging-auth-audit-smoke-report-20260619.md"
+  - "drafts/analysis/consultant-role-kb-shared-staging-readiness-preflight-20260619.md"
+  - "drafts/analysis/consultant-role-kb-shared-staging-runbook-20260619.md"
 scope: "runtime decision for consultant-agent from full extraction to staging"
 production_impact: "production unchanged"
 provider_call_boundary: "no KB provider call"
@@ -46,6 +48,7 @@ The local consultant-role KB PoC now has:
 - local staging auth/audit smoke has audit_event_count = 5,
   audit_schema_failure_count = 0, audit_forbidden_leak_count = 0,
   provider_call_count = 0, and live_kb_write_count = 0;
+- shared staging readiness preflight is blocked with blocker_count = 6;
 - answer-trace fixture pass rate = 1.0.
 
 The unresolved blockers are legal/license review, human approval of locator
@@ -127,6 +130,7 @@ not a shared staging deployment.
 - staging auth/audit contract validation has `failure_count = 0`.
 - local staging auth/audit harness smoke has `failure_count = 0` and
   `audit_forbidden_leak_count = 0`.
+- shared staging readiness preflight must return `ready_for_shared_staging=true`.
 - durable vector store and local retrieval API remain aligned with the current all-extractable card set before staging.
 
 ## 7. Consequences
@@ -147,8 +151,9 @@ Tradeoff:
 ## 8. Current Recommendation
 
 Proceed with local-only full extraction infrastructure, durable local indexing,
-human-gold locator labels, and the private no-provider retrieval API plus local
-auth/audit harness. Do not run shared staging or enable provider-backed/public
-online use until legal, security, product, and source-owner review explicitly
-approves retrieved-content handling, external secret storage, append-only audit
-storage, rate limiting, and rollback.
+human-gold locator labels, the private no-provider retrieval API, local
+auth/audit harness, and shared-staging readiness preflight. Do not run shared
+staging or enable provider-backed/public online use until legal, security,
+product, and source-owner review explicitly approves retrieved-content handling,
+external secret storage, append-only audit storage, rate limiting, rollback, and
+the readiness preflight returns green.

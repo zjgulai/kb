@@ -6,6 +6,7 @@ source_documents:
   - "agents/consultant-agent/runtime/local_retrieval_api.py"
   - "drafts/analysis/consultant-agent-runtime-adr-20260619.md"
   - "drafts/analysis/consultant-role-kb-legal-source-owner-review-packet-20260619.md"
+  - "drafts/analysis/consultant-role-kb-shared-staging-runbook-20260619.md"
   - "shared/indexes/consultant-agent/all-extractable-bge-small-zh-v1-5-20260619/manifest.json"
 scope: "draft staging auth and audit contract for consultant-agent no-provider retrieval API"
 production_impact: "production unchanged"
@@ -170,6 +171,7 @@ Local staging harness smoke:
 - smoke output: `tmp/consultant-role-kb-local-staging-auth-audit-smoke-20260619.json`;
 - audit events: `tmp/consultant-role-kb-local-staging-audit-events-20260619.jsonl`;
 - report: `drafts/analysis/consultant-role-kb-local-staging-auth-audit-smoke-report-20260619.md`.
+- shared staging runbook: `drafts/analysis/consultant-role-kb-shared-staging-runbook-20260619.md`.
 
 Smoke result:
 

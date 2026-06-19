@@ -1,0 +1,194 @@
+{
+  "ok": true,
+  "ready_for_shared_staging": false,
+  "status": "blocked",
+  "created_at": "2026-06-19T09:48:34Z",
+  "production_impact": "production unchanged",
+  "provider_call_boundary": "no KB provider call",
+  "live_kb_ingestion": "no live KB ingestion",
+  "shared_staging_deployment": "not deployed",
+  "check_count": 19,
+  "pass_count": 13,
+  "warning_count": 0,
+  "blocker_count": 6,
+  "blockers": [
+    {
+      "check_id": "human_labels_approved",
+      "status": "blocker",
+      "evidence": "tmp/consultant-role-kb-human-label-review-workflow-validation-20260619.json",
+      "detail": "approved_decision_count=0; manual reviewer decisions are required before claiming human-gold labels",
+      "required_for_shared_staging": true
+    },
+    {
+      "check_id": "legal_source_owner_clearance",
+      "status": "blocker",
+      "evidence": "drafts/analysis/consultant-role-kb-legal-source-owner-review-packet-20260619.md",
+      "detail": "legal/source-owner clearance remains pending; shared staging cannot treat corpus as approved",
+      "required_for_shared_staging": true
+    },
+    {
+      "check_id": "external_auth_token_hash_configured",
+      "status": "blocker",
+      "evidence": "environment:KB_STAGING_AUTH_TOKEN_SHA256",
+      "detail": "token hash status=missing; secret value is not logged",
+      "required_for_shared_staging": true
+    },
+    {
+      "check_id": "external_audit_path_configured",
+      "status": "blocker",
+      "evidence": "environment:KB_STAGING_AUDIT_PATH",
+      "detail": "audit path status=missing; environment variable is not set",
+      "required_for_shared_staging": true
+    },
+    {
+      "check_id": "rate_limit_configured",
+      "status": "blocker",
+      "evidence": "environment:KB_STAGING_RATE_LIMIT_CONFIGURED",
+      "detail": "rate limiting must be configured at private ingress or middleware before shared staging",
+      "required_for_shared_staging": true
+    },
+    {
+      "check_id": "rollback_owner_recorded",
+      "status": "blocker",
+      "evidence": "environment:KB_STAGING_ROLLBACK_OWNER",
+      "detail": "rollback owner is not recorded in local environment; value is not logged",
+      "required_for_shared_staging": true
+    }
+  ],
+  "checks": [
+    {
+      "check_id": "local_api_smoke_green",
+      "status": "pass",
+      "evidence": "tmp/consultant-role-kb-private-retrieval-api-smoke-20260619.json",
+      "detail": "private no-provider retrieval API local smoke must be green; observed=0, expected=0",
+      "required_for_shared_staging": true
+    },
+    {
+      "check_id": "local_api_800_record_alignment",
+      "status": "pass",
+      "evidence": "tmp/consultant-role-kb-private-retrieval-api-smoke-20260619.json",
+      "detail": "API smoke must load the current 800-record local index; observed=800, expected=800",
+      "required_for_shared_staging": true
+    },
+    {
+      "check_id": "local_api_policy_refusal_green",
+      "status": "pass",
+      "evidence": "tmp/consultant-role-kb-private-retrieval-api-smoke-20260619.json",
+      "detail": "policy-refusal eval path must remain green; observed=1.0, expected=1.0",
+      "required_for_shared_staging": true
+    },
+    {
+      "check_id": "local_harness_smoke_green",
+      "status": "pass",
+      "evidence": "tmp/consultant-role-kb-local-staging-auth-audit-smoke-20260619.json",
+      "detail": "localhost staging auth/audit harness smoke must be green; observed=0, expected=0",
+      "required_for_shared_staging": true
+    },
+    {
+      "check_id": "local_harness_denies_missing_token",
+      "status": "pass",
+      "evidence": "tmp/consultant-role-kb-local-staging-auth-audit-smoke-20260619.json",
+      "detail": "missing bearer token must fail closed; observed=401, expected=401",
+      "required_for_shared_staging": true
+    },
+    {
+      "check_id": "local_harness_denies_rbac",
+      "status": "pass",
+      "evidence": "tmp/consultant-role-kb-local-staging-auth-audit-smoke-20260619.json",
+      "detail": "forbidden endpoint-role combination must fail closed; observed=403, expected=403",
+      "required_for_shared_staging": true
+    },
+    {
+      "check_id": "audit_contract_green",
+      "status": "pass",
+      "evidence": "tmp/consultant-role-kb-staging-auth-audit-contract-validation-20260619.json",
+      "detail": "staging audit sample events must validate; observed=0, expected=0",
+      "required_for_shared_staging": true
+    },
+    {
+      "check_id": "audit_no_forbidden_leak",
+      "status": "pass",
+      "evidence": "tmp/consultant-role-kb-local-staging-auth-audit-smoke-20260619.json",
+      "detail": "audit smoke must not leak token, bearer header, raw questions, or raw source text; observed=0, expected=0",
+      "required_for_shared_staging": true
+    },
+    {
+      "check_id": "no_provider_calls",
+      "status": "pass",
+      "evidence": "multiple smoke outputs",
+      "detail": "all readiness evidence must preserve no-provider boundary; observed=0, expected=0",
+      "required_for_shared_staging": true
+    },
+    {
+      "check_id": "no_live_kb_writes",
+      "status": "pass",
+      "evidence": "multiple smoke outputs",
+      "detail": "all readiness evidence must preserve no-live-KB-write boundary; observed=0, expected=0",
+      "required_for_shared_staging": true
+    },
+    {
+      "check_id": "human_label_workflow_generated",
+      "status": "pass",
+      "evidence": "tmp/consultant-role-kb-human-label-review-workflow-validation-20260619.json",
+      "detail": "human label workflow generation must be valid; observed=0, expected=0",
+      "required_for_shared_staging": true
+    },
+    {
+      "check_id": "human_labels_approved",
+      "status": "blocker",
+      "evidence": "tmp/consultant-role-kb-human-label-review-workflow-validation-20260619.json",
+      "detail": "approved_decision_count=0; manual reviewer decisions are required before claiming human-gold labels",
+      "required_for_shared_staging": true
+    },
+    {
+      "check_id": "legal_source_owner_clearance",
+      "status": "blocker",
+      "evidence": "drafts/analysis/consultant-role-kb-legal-source-owner-review-packet-20260619.md",
+      "detail": "legal/source-owner clearance remains pending; shared staging cannot treat corpus as approved",
+      "required_for_shared_staging": true
+    },
+    {
+      "check_id": "raw_consult_not_tracked",
+      "status": "pass",
+      "evidence": "git ls-files consult",
+      "detail": "tracked_consult_files=['consult/README.md']",
+      "required_for_shared_staging": true
+    },
+    {
+      "check_id": "rollback_runbook_exists",
+      "status": "pass",
+      "evidence": "drafts/analysis/consultant-role-kb-shared-staging-runbook-20260619.md",
+      "detail": "runbook documents start, smoke, rollback, and stop conditions; operator owner is checked separately",
+      "required_for_shared_staging": true
+    },
+    {
+      "check_id": "external_auth_token_hash_configured",
+      "status": "blocker",
+      "evidence": "environment:KB_STAGING_AUTH_TOKEN_SHA256",
+      "detail": "token hash status=missing; secret value is not logged",
+      "required_for_shared_staging": true
+    },
+    {
+      "check_id": "external_audit_path_configured",
+      "status": "blocker",
+      "evidence": "environment:KB_STAGING_AUDIT_PATH",
+      "detail": "audit path status=missing; environment variable is not set",
+      "required_for_shared_staging": true
+    },
+    {
+      "check_id": "rate_limit_configured",
+      "status": "blocker",
+      "evidence": "environment:KB_STAGING_RATE_LIMIT_CONFIGURED",
+      "detail": "rate limiting must be configured at private ingress or middleware before shared staging",
+      "required_for_shared_staging": true
+    },
+    {
+      "check_id": "rollback_owner_recorded",
+      "status": "blocker",
+      "evidence": "environment:KB_STAGING_ROLLBACK_OWNER",
+      "detail": "rollback owner is not recorded in local environment; value is not logged",
+      "required_for_shared_staging": true
+    }
+  ],
+  "source_text_returned": false
+}

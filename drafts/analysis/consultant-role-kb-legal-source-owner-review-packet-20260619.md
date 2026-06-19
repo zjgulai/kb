@@ -17,6 +17,8 @@ source_documents:
   - "drafts/analysis/consultant-role-kb-private-retrieval-api-report-20260619.md"
   - "drafts/analysis/consultant-role-kb-staging-auth-audit-design-20260619.md"
   - "drafts/analysis/consultant-role-kb-local-staging-auth-audit-smoke-report-20260619.md"
+  - "drafts/analysis/consultant-role-kb-shared-staging-readiness-preflight-20260619.md"
+  - "drafts/analysis/consultant-role-kb-shared-staging-runbook-20260619.md"
 scope: "human review packet for full consultant-agent source and derived-card governance"
 production_impact: "production unchanged"
 provider_call_boundary: "no KB provider call"
@@ -106,6 +108,8 @@ provider-backed `consultant-agent` use.
 | local staging auth/audit harness smoke failure_count | 0 |
 | local staging auth/audit harness audit events | 5 |
 | local staging auth/audit harness audit forbidden leaks | 0 |
+| shared staging readiness preflight status | blocked |
+| shared staging readiness preflight blockers | 6 |
 
 ## 2. High-Risk Review Buckets
 
@@ -141,6 +145,7 @@ Human interpretation:
 | Is the review workflow ready for reviewer input? | Yes as a local/draft queue and decision template; no labels are approved until a reviewer fills decisions and validation passes. | source owner/domain reviewer |
 | Can a private no-provider retrieval API be prototyped locally? | Completed locally; staging still requires auth, audit, security, and source-owner/legal gates. | technical owner/security |
 | Can staging auth/audit be designed before deployment? | Design, local contract validation, and localhost-only harness smoke are acceptable as draft/local artifacts; shared staging still requires security/legal approval. | technical owner/security |
+| Is shared staging ready now? | No. Preflight is blocked by human label, legal/source-owner, external secret, external audit path, rate limit, and rollback-owner gates. | product/legal/security |
 | Can `consultant-agent` answer users online from this corpus? | Not yet; staging requires legal/source-owner/security approval. | product/legal/security |
 | Can a provider model see retrieved card content? | Not before provider policy and data-use approval. | legal/security/product |
 
@@ -159,6 +164,7 @@ Human interpretation:
 - [ ] Review and approve, override, reject, or mark pending locator label seeds as needing discussion.
 - [x] Draft staging auth, audit log, and deployment topology contract before running the local API as a shared service.
 - [x] Implement and smoke-test localhost-only staging auth/audit harness without shared staging deployment.
+- [x] Generate shared-staging readiness preflight and draft runbook.
 - [ ] Confirm and implement staging auth, audit log, and deployment topology before running the local API as a shared service.
 - [ ] Confirm whether `consultant-agent` may call a provider model in staging.
 - [ ] Confirm retention policy for prompts, retrieved card IDs, and answer traces.
@@ -183,13 +189,15 @@ The project-local gates `approve_local_metadata`, existing draft-card
 retention, `approve_batch_expansion_30`, `approve_batch_expansion_60`,
 `approve_all_extractable_expansion`, durable local vector-store packaging, and
 pending locator label seeding, locator label review workflow generation,
-runtime ADR acceptance, draft staging auth/audit contract design, and
-localhost-only auth/audit harness smoke are now
+runtime ADR acceptance, draft staging auth/audit contract design,
+localhost-only auth/audit harness smoke, and shared-staging readiness preflight
+are now
 recorded. CSV loader support now covers the two previously insufficient-unit
 registered CSV sources in the 800-card all-extractable set, and the durable
 vector store plus local retrieval API smoke have been rebuilt against that
-800-card set. The next local step should move to actual human review of locator
-labels or security-approved shared staging implementation.
+800-card set. Shared staging readiness is currently blocked with 6 blockers.
+The next local step should move to actual human review of locator labels or
+recording legal/security decisions needed to clear the preflight.
 
 Do not approve online provider-backed `consultant-agent` until legal/source-owner
 and security review explicitly permits retrieved KB content to leave the local

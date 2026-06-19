@@ -69,6 +69,7 @@ approve production launch.
 | `tmp/consultant-role-kb-clearance-execution-pack-validation-20260619.json` | combined clearance execution pack is `blocked` with 80 selected legal/source-owner rows pending, 8 security controls pending, and 4 runtime config blockers |
 | `tmp/consultant-role-kb-reviewer-decision-questionnaire-validation-20260619.json` | reviewer questionnaire is structurally ready with 88 rows, 80 legal/source-owner questions, 8 security/operations questions, official decision templates unchanged, approval effect `0`, provider calls `0`, live KB writes `0` |
 | `tmp/consultant-role-kb-reviewer-questionnaire-intake-validation-20260619.json` | questionnaire intake converter generated valid temporary candidate JSONL files from the unfilled questionnaire; answered responses `0`, legal selected approvals `0/80`, security approvals `0/8`, official template writes `0`, approval effect `0` |
+| `tmp/consultant-role-kb-runtime-config-redacted-fixture-smoke-20260619.json` | runtime-config redacted fixture smoke passed 3 scenarios: default missing config blocked, redacted-ready fixture ready, secret-like/private-contact fixture blocked with redaction leak `0`; no external config applied |
 
 ## 3.1 Batch-60 Selection Note
 
@@ -94,3 +95,4 @@ current 800-card all-extractable set, including the CSV cards.
 - Whether security/operations reviewers fill the official JSONL decision file to approve, reject, discuss, or keep pending the 8 shared-staging controls.
 - Whether a filled questionnaire candidate JSONL should be accepted into official decision files after human review.
 - Whether to configure approved external secret storage, append-only audit storage, rate limiting, rollback owner, and private ingress for the no-provider API after security approval.
+- Whether externally approved runtime config evidence should be supplied to the preflight after legal/source-owner and security gates clear.

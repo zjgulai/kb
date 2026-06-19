@@ -194,10 +194,7 @@ def private_ingress_status() -> str:
     return "not_configured"
 
 
-def main() -> None:
-    write_schema()
-    write_template()
-
+def build_payload() -> dict[str, Any]:
     auth_status = auth_token_hash_status()
     audit_status, audit_detail = audit_path_status()
     rate_limit_status = boolean_env_status("KB_STAGING_RATE_LIMIT_CONFIGURED")
@@ -215,7 +212,7 @@ def main() -> None:
         blockers.append("rollback_owner_not_recorded")
 
     ready = not blockers
-    payload = {
+    return {
         "ok": True,
         "artifact_type": "staging_runtime_config_validation",
         "created_at": now_z(),
@@ -245,8 +242,18 @@ def main() -> None:
             "do not store secret values, raw tokens, passwords, private keys, or private contact details in this repository"
         ),
     }
+
+
+def write_outputs(payload: dict[str, Any]) -> None:
     OUT_JSON.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
+    auth_status = payload["auth_token_hash_status"]
+    audit_status = payload["audit_path_status"]
+    rate_limit_status = payload["rate_limit_status"]
+    rollback_status = payload["rollback_owner_status"]
+    ingress_status = payload["private_ingress_status"]
+    ready = bool(payload["runtime_config_ready"])
+    blockers = payload["blockers"]
     blocker_rows = "\n".join(f"| `{item}` |" for item in blockers)
     REPORT.write_text(
         f"""---
@@ -309,7 +316,15 @@ requires separate legal, security, and deployment approval.
 """,
         encoding="utf-8",
     )
-    print(json.dumps({"runtime_config_ready": ready, "blocker_count": len(blockers)}, ensure_ascii=False))
+
+
+def main() -> None:
+    write_schema()
+    write_template()
+    payload = build_payload()
+    write_outputs(payload)
+    ready = bool(payload["runtime_config_ready"])
+    print(json.dumps({"runtime_config_ready": ready, "blocker_count": payload["blocker_count"]}, ensure_ascii=False))
     if not ready:
         raise SystemExit(2)
 

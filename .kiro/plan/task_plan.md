@@ -57,6 +57,7 @@ Resolved on 2026-06-19:
 18. Combined clearance execution pack has been generated for the next manual review step; it contains 88 checklist rows: 80 selected legal/source-owner source rows and 8 security/operations controls.
 19. Reviewer decision questionnaire has been generated from the clearance execution pack; it contains 88 question rows and maps choices to the official legal/source-owner and security/operations decision templates, but records 0 approvals and has no staging effect.
 20. Reviewer questionnaire intake converter has been generated and locally validated; it converts answered questionnaire rows into temporary candidate legal/security JSONL files under `tmp/`, leaves official templates unchanged, and currently yields 0 approvals from the unfilled questionnaire.
+21. Runtime-config redacted fixture smoke has been generated and locally validated; default config remains blocked, a redacted-ready fixture passes, and a secret-like/private-contact fixture blocks without leaking raw values.
 
 Still open:
 
@@ -66,3 +67,4 @@ Still open:
 4. Whether legal/source-owner reviewers fill the official JSONL decision file to clear, restrict, quarantine, reject, or discuss the 80 selected sources.
 5. Whether security/operations reviewers fill the official JSONL decision file and whether approved external secret storage, append-only audit storage, rate limiting, rollback ownership, and private ingress are configured outside Git.
 6. Whether a filled questionnaire candidate JSONL should be accepted into official reviewer decision files after human review.
+7. Whether externally approved runtime config evidence should be supplied to preflight after security approval; current redacted fixtures are validation evidence only, not applied configuration.

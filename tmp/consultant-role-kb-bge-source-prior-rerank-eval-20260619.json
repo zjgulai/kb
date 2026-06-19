@@ -1,0 +1,2951 @@
+{
+  "metrics": {
+    "embedding_method": "real_local_model_with_source_prior_rerank",
+    "base_embedding_method": "BAAI/bge-small-zh-v1.5",
+    "model_snapshot": "7999e1d3359715c523056ef9478215996d62a620",
+    "embedding_dimension": 512,
+    "rerank_label_leakage": "none; allowed_source_ids are used only for evaluation",
+    "provider_call_boundary": "no KB provider call",
+    "production_impact": "production unchanged",
+    "indexed_card_count": 33,
+    "eval_count": 50,
+    "answerable_eval_count": 48,
+    "no_allowed_source_eval_count": 2,
+    "elapsed_seconds": 7.927,
+    "all_eval": {
+      "count": 50,
+      "source_recall_at_1": 0.92,
+      "source_recall_at_5": 0.96
+    },
+    "answerable_eval": {
+      "count": 48,
+      "source_recall_at_1": 0.9583,
+      "source_recall_at_5": 1.0
+    },
+    "category_metrics": {
+      "deliverable_workflow": {
+        "count": 10,
+        "source_recall_at_1": 1.0,
+        "source_recall_at_5": 1.0
+      },
+      "diagnostic_planning": {
+        "count": 10,
+        "source_recall_at_1": 1.0,
+        "source_recall_at_5": 1.0
+      },
+      "methodology_selection": {
+        "count": 10,
+        "source_recall_at_1": 1.0,
+        "source_recall_at_5": 1.0
+      },
+      "refusal_unknown": {
+        "count": 10,
+        "source_recall_at_1": 0.6,
+        "source_recall_at_5": 0.8
+      },
+      "source_lookup": {
+        "count": 10,
+        "source_recall_at_1": 1.0,
+        "source_recall_at_5": 1.0
+      }
+    },
+    "baseline": {
+      "hash_all_eval": {
+        "source_recall_at_1": 0.76,
+        "source_recall_at_5": 0.86
+      },
+      "bge_all_eval": {
+        "source_recall_at_1": 0.66,
+        "source_recall_at_5": 0.9
+      }
+    },
+    "failure_counts": {
+      "answerable_top1_failures": 2,
+      "answerable_top5_failures": 0
+    },
+    "rerank_weights": {
+      "max_keyword_prior": 0.18,
+      "source_term_overlap": 0.018,
+      "exact_phrase_match": 0.045,
+      "methodology_method_card": 0.04,
+      "methodology_diagnostic_card": 0.025,
+      "diagnostic_dimension_card": 0.055,
+      "diagnostic_kpi_card": 0.025,
+      "deliverable_template_card": 0.055,
+      "deliverable_method_card": 0.02,
+      "generic_kpi_penalty": -0.04,
+      "generic_terminology_penalty": -0.04,
+      "ambiguous_problem_definition_source": 0.11,
+      "premature_framework_penalty": -0.03,
+      "client_ready_ppt_executive_summary_source": 0.12,
+      "client_ready_non_slide_deliverable_penalty": -0.02,
+      "high_stakes_due_diligence_source": 0.09
+    }
+  },
+  "results": [
+    {
+      "eval_id": "CONSULT-EVAL-001",
+      "category": "source_lookup",
+      "allowed_source_ids": [
+        "SRC-CONSULT-001"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-001",
+          "card_id": "CARD-SRC-CONSULT-001-METHOD",
+          "base_score": 0.566587,
+          "keyword_prior": 0.18,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.11,
+          "rerank_score": 0.856587
+        },
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "base_score": 0.478202,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.0,
+          "source_intent_prior": -0.03,
+          "rerank_score": 0.484202
+        },
+        {
+          "source_id": "SRC-CONSULT-011",
+          "card_id": "CARD-SRC-CONSULT-011-METHOD",
+          "base_score": 0.473135,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.473135
+        },
+        {
+          "source_id": "SRC-CONSULT-014",
+          "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-05",
+          "base_score": 0.499967,
+          "keyword_prior": 0.0,
+          "card_type_prior": -0.04,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.459967
+        },
+        {
+          "source_id": "SRC-CONSULT-010",
+          "card_id": "CARD-SRC-CONSULT-010-METHOD",
+          "base_score": 0.455047,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.455047
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-002",
+      "category": "source_lookup",
+      "allowed_source_ids": [
+        "SRC-CONSULT-002"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "base_score": 0.63288,
+          "keyword_prior": 0.135,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.76788
+        },
+        {
+          "source_id": "SRC-CONSULT-006",
+          "card_id": "CARD-SRC-CONSULT-006-DELIV",
+          "base_score": 0.55466,
+          "keyword_prior": 0.063,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.61766
+        },
+        {
+          "source_id": "SRC-CONSULT-012",
+          "card_id": "CARD-SRC-CONSULT-012-METHOD",
+          "base_score": 0.565217,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.583217
+        },
+        {
+          "source_id": "SRC-CONSULT-011",
+          "card_id": "CARD-SRC-CONSULT-011-METHOD",
+          "base_score": 0.564788,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.582788
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "base_score": 0.563378,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.581378
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-003",
+      "category": "source_lookup",
+      "allowed_source_ids": [
+        "SRC-CONSULT-003"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-003",
+          "card_id": "CARD-SRC-CONSULT-003-DELIV",
+          "base_score": 0.59409,
+          "keyword_prior": 0.18,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.77409
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "base_score": 0.53308,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.56908
+        },
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "base_score": 0.52229,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.55829
+        },
+        {
+          "source_id": "SRC-CONSULT-006",
+          "card_id": "CARD-SRC-CONSULT-006-DELIV",
+          "base_score": 0.543121,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.543121
+        },
+        {
+          "source_id": "SRC-CONSULT-001",
+          "card_id": "CARD-SRC-CONSULT-001-METHOD",
+          "base_score": 0.498673,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.516673
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-004",
+      "category": "source_lookup",
+      "allowed_source_ids": [
+        "SRC-CONSULT-004"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-004",
+          "card_id": "CARD-SRC-CONSULT-004-DELIV",
+          "base_score": 0.54602,
+          "keyword_prior": 0.117,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.66302
+        },
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "base_score": 0.557629,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.593629
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "base_score": 0.520437,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.556437
+        },
+        {
+          "source_id": "SRC-CONSULT-001",
+          "card_id": "CARD-SRC-CONSULT-001-METHOD",
+          "base_score": 0.524257,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.542257
+        },
+        {
+          "source_id": "SRC-CONSULT-003",
+          "card_id": "CARD-SRC-CONSULT-003-DELIV",
+          "base_score": 0.541312,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.541312
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-005",
+      "category": "source_lookup",
+      "allowed_source_ids": [
+        "SRC-CONSULT-005"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "base_score": 0.566735,
+          "keyword_prior": 0.081,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.647735
+        },
+        {
+          "source_id": "SRC-CONSULT-006",
+          "card_id": "CARD-SRC-CONSULT-006-DELIV",
+          "base_score": 0.540515,
+          "keyword_prior": 0.063,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.603515
+        },
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "base_score": 0.537682,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.573682
+        },
+        {
+          "source_id": "SRC-CONSULT-001",
+          "card_id": "CARD-SRC-CONSULT-001-METHOD",
+          "base_score": 0.533128,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.551128
+        },
+        {
+          "source_id": "SRC-CONSULT-003",
+          "card_id": "CARD-SRC-CONSULT-003-DELIV",
+          "base_score": 0.530209,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.530209
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-006",
+      "category": "source_lookup",
+      "allowed_source_ids": [
+        "SRC-CONSULT-006"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-006",
+          "card_id": "CARD-SRC-CONSULT-006-DELIV",
+          "base_score": 0.578998,
+          "keyword_prior": 0.126,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.704998
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "base_score": 0.521024,
+          "keyword_prior": 0.099,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.620024
+        },
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "base_score": 0.504384,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.540384
+        },
+        {
+          "source_id": "SRC-CONSULT-003",
+          "card_id": "CARD-SRC-CONSULT-003-DELIV",
+          "base_score": 0.518969,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.518969
+        },
+        {
+          "source_id": "SRC-CONSULT-001",
+          "card_id": "CARD-SRC-CONSULT-001-METHOD",
+          "base_score": 0.500078,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.518078
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-007",
+      "category": "source_lookup",
+      "allowed_source_ids": [
+        "SRC-CONSULT-007"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-007",
+          "card_id": "CARD-SRC-CONSULT-007-DIAG",
+          "base_score": 0.584766,
+          "keyword_prior": 0.108,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.692766
+        },
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "base_score": 0.594572,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.630572
+        },
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "base_score": 0.53758,
+          "keyword_prior": 0.081,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.61858
+        },
+        {
+          "source_id": "SRC-CONSULT-011",
+          "card_id": "CARD-SRC-CONSULT-011-METHOD",
+          "base_score": 0.546301,
+          "keyword_prior": 0.045,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.591301
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "base_score": 0.554244,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.590244
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-008",
+      "category": "source_lookup",
+      "allowed_source_ids": [
+        "SRC-CONSULT-008"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "base_score": 0.666477,
+          "keyword_prior": 0.117,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.783477
+        },
+        {
+          "source_id": "SRC-CONSULT-007",
+          "card_id": "CARD-SRC-CONSULT-007-DIAG",
+          "base_score": 0.55508,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.57308
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "base_score": 0.536489,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.572489
+        },
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "base_score": 0.532537,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.568537
+        },
+        {
+          "source_id": "SRC-CONSULT-010",
+          "card_id": "CARD-SRC-CONSULT-010-METHOD",
+          "base_score": 0.568436,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.568436
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-009",
+      "category": "source_lookup",
+      "allowed_source_ids": [
+        "SRC-CONSULT-013"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-013",
+          "card_id": "CARD-SRC-CONSULT-013-FUNCTION-KPI-03",
+          "base_score": 0.677903,
+          "keyword_prior": 0.099,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.776903
+        },
+        {
+          "source_id": "SRC-CONSULT-014",
+          "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-03",
+          "base_score": 0.646628,
+          "keyword_prior": 0.099,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.745628
+        },
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "base_score": 0.531831,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.567831
+        },
+        {
+          "source_id": "SRC-CONSULT-001",
+          "card_id": "CARD-SRC-CONSULT-001-METHOD",
+          "base_score": 0.548493,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.566493
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "base_score": 0.533413,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.551413
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-010",
+      "category": "source_lookup",
+      "allowed_source_ids": [
+        "SRC-CONSULT-015"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-015",
+          "card_id": "CARD-SRC-CONSULT-015-ACRONYM-03",
+          "base_score": 0.706393,
+          "keyword_prior": 0.108,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.814393
+        },
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "base_score": 0.607036,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.643036
+        },
+        {
+          "source_id": "SRC-CONSULT-013",
+          "card_id": "CARD-SRC-CONSULT-013-FUNCTION-KPI-01",
+          "base_score": 0.559446,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.577446
+        },
+        {
+          "source_id": "SRC-CONSULT-003",
+          "card_id": "CARD-SRC-CONSULT-003-DELIV",
+          "base_score": 0.575486,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.575486
+        },
+        {
+          "source_id": "SRC-CONSULT-001",
+          "card_id": "CARD-SRC-CONSULT-001-METHOD",
+          "base_score": 0.551417,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.569417
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-011",
+      "category": "methodology_selection",
+      "allowed_source_ids": [
+        "SRC-CONSULT-001",
+        "SRC-CONSULT-002"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "base_score": 0.564728,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.04,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.640728
+        },
+        {
+          "source_id": "SRC-CONSULT-001",
+          "card_id": "CARD-SRC-CONSULT-001-METHOD",
+          "base_score": 0.548701,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.04,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.588701
+        },
+        {
+          "source_id": "SRC-CONSULT-010",
+          "card_id": "CARD-SRC-CONSULT-010-METHOD",
+          "base_score": 0.513162,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.04,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.553162
+        },
+        {
+          "source_id": "SRC-CONSULT-006",
+          "card_id": "CARD-SRC-CONSULT-006-DELIV",
+          "base_score": 0.529929,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.547929
+        },
+        {
+          "source_id": "SRC-CONSULT-012",
+          "card_id": "CARD-SRC-CONSULT-012-METHOD",
+          "base_score": 0.50772,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.04,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.54772
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-012",
+      "category": "methodology_selection",
+      "allowed_source_ids": [
+        "SRC-CONSULT-002",
+        "SRC-CONSULT-007"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-007",
+          "card_id": "CARD-SRC-CONSULT-007-DIAG",
+          "base_score": 0.67416,
+          "keyword_prior": 0.144,
+          "card_type_prior": 0.025,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.84316
+        },
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "base_score": 0.622864,
+          "keyword_prior": 0.099,
+          "card_type_prior": 0.04,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.761864
+        },
+        {
+          "source_id": "SRC-CONSULT-011",
+          "card_id": "CARD-SRC-CONSULT-011-METHOD",
+          "base_score": 0.61396,
+          "keyword_prior": 0.09,
+          "card_type_prior": 0.04,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.74396
+        },
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "base_score": 0.622242,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.025,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.683242
+        },
+        {
+          "source_id": "SRC-CONSULT-006",
+          "card_id": "CARD-SRC-CONSULT-006-DELIV",
+          "base_score": 0.605173,
+          "keyword_prior": 0.063,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.668173
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-013",
+      "category": "methodology_selection",
+      "allowed_source_ids": [
+        "SRC-CONSULT-008"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "base_score": 0.60077,
+          "keyword_prior": 0.09,
+          "card_type_prior": 0.025,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.71577
+        },
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "base_score": 0.583916,
+          "keyword_prior": 0.054,
+          "card_type_prior": 0.04,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.677916
+        },
+        {
+          "source_id": "SRC-CONSULT-001",
+          "card_id": "CARD-SRC-CONSULT-001-METHOD",
+          "base_score": 0.570744,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.04,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.628744
+        },
+        {
+          "source_id": "SRC-CONSULT-011",
+          "card_id": "CARD-SRC-CONSULT-011-METHOD",
+          "base_score": 0.576011,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.04,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.616011
+        },
+        {
+          "source_id": "SRC-CONSULT-010",
+          "card_id": "CARD-SRC-CONSULT-010-METHOD",
+          "base_score": 0.574284,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.04,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.614284
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-014",
+      "category": "methodology_selection",
+      "allowed_source_ids": [
+        "SRC-CONSULT-009"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-009",
+          "card_id": "CARD-SRC-CONSULT-009-DIAG",
+          "base_score": 0.615539,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.025,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.658539
+        },
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "base_score": 0.590318,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.025,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.651318
+        },
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "base_score": 0.564225,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.04,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.640225
+        },
+        {
+          "source_id": "SRC-CONSULT-001",
+          "card_id": "CARD-SRC-CONSULT-001-METHOD",
+          "base_score": 0.592124,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.04,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.632124
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "base_score": 0.581965,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.617965
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-015",
+      "category": "methodology_selection",
+      "allowed_source_ids": [
+        "SRC-CONSULT-010"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-010",
+          "card_id": "CARD-SRC-CONSULT-010-METHOD",
+          "base_score": 0.514201,
+          "keyword_prior": 0.054,
+          "card_type_prior": 0.04,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.608201
+        },
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "base_score": 0.48363,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.04,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.55963
+        },
+        {
+          "source_id": "SRC-CONSULT-011",
+          "card_id": "CARD-SRC-CONSULT-011-METHOD",
+          "base_score": 0.470986,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.04,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.528986
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "base_score": 0.48548,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.52148
+        },
+        {
+          "source_id": "SRC-CONSULT-006",
+          "card_id": "CARD-SRC-CONSULT-006-DELIV",
+          "base_score": 0.502685,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.520685
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-016",
+      "category": "methodology_selection",
+      "allowed_source_ids": [
+        "SRC-CONSULT-011"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-011",
+          "card_id": "CARD-SRC-CONSULT-011-METHOD",
+          "base_score": 0.479158,
+          "keyword_prior": 0.099,
+          "card_type_prior": 0.04,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.618158
+        },
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "base_score": 0.475515,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.04,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.551515
+        },
+        {
+          "source_id": "SRC-CONSULT-010",
+          "card_id": "CARD-SRC-CONSULT-010-METHOD",
+          "base_score": 0.471025,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.04,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.547025
+        },
+        {
+          "source_id": "SRC-CONSULT-007",
+          "card_id": "CARD-SRC-CONSULT-007-DIAG",
+          "base_score": 0.433182,
+          "keyword_prior": 0.045,
+          "card_type_prior": 0.025,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.503182
+        },
+        {
+          "source_id": "SRC-CONSULT-001",
+          "card_id": "CARD-SRC-CONSULT-001-METHOD",
+          "base_score": 0.462475,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.04,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.502475
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-017",
+      "category": "methodology_selection",
+      "allowed_source_ids": [
+        "SRC-CONSULT-012"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-012",
+          "card_id": "CARD-SRC-CONSULT-012-METHOD",
+          "base_score": 0.612039,
+          "keyword_prior": 0.063,
+          "card_type_prior": 0.04,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.715039
+        },
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "base_score": 0.607997,
+          "keyword_prior": 0.054,
+          "card_type_prior": 0.04,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.701997
+        },
+        {
+          "source_id": "SRC-CONSULT-006",
+          "card_id": "CARD-SRC-CONSULT-006-DELIV",
+          "base_score": 0.586482,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.604482
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "base_score": 0.567785,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.603785
+        },
+        {
+          "source_id": "SRC-CONSULT-011",
+          "card_id": "CARD-SRC-CONSULT-011-METHOD",
+          "base_score": 0.562177,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.04,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.602177
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-018",
+      "category": "methodology_selection",
+      "allowed_source_ids": [
+        "SRC-CONSULT-001"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-001",
+          "card_id": "CARD-SRC-CONSULT-001-METHOD",
+          "base_score": 0.55163,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.04,
+          "source_intent_prior": 0.11,
+          "rerank_score": 0.70163
+        },
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "base_score": 0.572702,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.04,
+          "source_intent_prior": -0.03,
+          "rerank_score": 0.618702
+        },
+        {
+          "source_id": "SRC-CONSULT-011",
+          "card_id": "CARD-SRC-CONSULT-011-METHOD",
+          "base_score": 0.56314,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.04,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.60314
+        },
+        {
+          "source_id": "SRC-CONSULT-014",
+          "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-05",
+          "base_score": 0.571511,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.589511
+        },
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "base_score": 0.563818,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.025,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.588818
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-019",
+      "category": "methodology_selection",
+      "allowed_source_ids": [
+        "SRC-CONSULT-013",
+        "SRC-CONSULT-014"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-014",
+          "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-03",
+          "base_score": 0.713926,
+          "keyword_prior": 0.117,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.830926
+        },
+        {
+          "source_id": "SRC-CONSULT-013",
+          "card_id": "CARD-SRC-CONSULT-013-FUNCTION-KPI-01",
+          "base_score": 0.683246,
+          "keyword_prior": 0.099,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.782246
+        },
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "base_score": 0.573882,
+          "keyword_prior": 0.054,
+          "card_type_prior": 0.04,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.667882
+        },
+        {
+          "source_id": "SRC-CONSULT-001",
+          "card_id": "CARD-SRC-CONSULT-001-METHOD",
+          "base_score": 0.575002,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.04,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.633002
+        },
+        {
+          "source_id": "SRC-CONSULT-010",
+          "card_id": "CARD-SRC-CONSULT-010-METHOD",
+          "base_score": 0.581363,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.04,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.621363
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-020",
+      "category": "methodology_selection",
+      "allowed_source_ids": [
+        "SRC-CONSULT-005",
+        "SRC-CONSULT-006"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-006",
+          "card_id": "CARD-SRC-CONSULT-006-DELIV",
+          "base_score": 0.692775,
+          "keyword_prior": 0.18,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.872775
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "base_score": 0.654506,
+          "keyword_prior": 0.18,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.834506
+        },
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "base_score": 0.606428,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.04,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.682428
+        },
+        {
+          "source_id": "SRC-CONSULT-011",
+          "card_id": "CARD-SRC-CONSULT-011-METHOD",
+          "base_score": 0.601497,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.04,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.659497
+        },
+        {
+          "source_id": "SRC-CONSULT-001",
+          "card_id": "CARD-SRC-CONSULT-001-METHOD",
+          "base_score": 0.595078,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.04,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.635078
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-021",
+      "category": "diagnostic_planning",
+      "allowed_source_ids": [
+        "SRC-CONSULT-007"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-007",
+          "card_id": "CARD-SRC-CONSULT-007-DIAG",
+          "base_score": 0.636582,
+          "keyword_prior": 0.18,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.871582
+        },
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "base_score": 0.617249,
+          "keyword_prior": 0.117,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.789249
+        },
+        {
+          "source_id": "SRC-CONSULT-011",
+          "card_id": "CARD-SRC-CONSULT-011-METHOD",
+          "base_score": 0.615254,
+          "keyword_prior": 0.045,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.660254
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "base_score": 0.62187,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.65787
+        },
+        {
+          "source_id": "SRC-CONSULT-009",
+          "card_id": "CARD-SRC-CONSULT-009-DIAG",
+          "base_score": 0.583888,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.656888
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-022",
+      "category": "diagnostic_planning",
+      "allowed_source_ids": [
+        "SRC-CONSULT-008"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "base_score": 0.73712,
+          "keyword_prior": 0.18,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.97212
+        },
+        {
+          "source_id": "SRC-CONSULT-007",
+          "card_id": "CARD-SRC-CONSULT-007-DIAG",
+          "base_score": 0.660126,
+          "keyword_prior": 0.18,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.895126
+        },
+        {
+          "source_id": "SRC-CONSULT-009",
+          "card_id": "CARD-SRC-CONSULT-009-DIAG",
+          "base_score": 0.634384,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.725384
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "base_score": 0.643978,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.679978
+        },
+        {
+          "source_id": "SRC-CONSULT-010",
+          "card_id": "CARD-SRC-CONSULT-010-METHOD",
+          "base_score": 0.611852,
+          "keyword_prior": 0.045,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.656852
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-023",
+      "category": "diagnostic_planning",
+      "allowed_source_ids": [
+        "SRC-CONSULT-009"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-009",
+          "card_id": "CARD-SRC-CONSULT-009-DIAG",
+          "base_score": 0.644555,
+          "keyword_prior": 0.117,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.816555
+        },
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "base_score": 0.628615,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.719615
+        },
+        {
+          "source_id": "SRC-CONSULT-007",
+          "card_id": "CARD-SRC-CONSULT-007-DIAG",
+          "base_score": 0.605067,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.678067
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "base_score": 0.580045,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.616045
+        },
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "base_score": 0.569528,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.587528
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-024",
+      "category": "diagnostic_planning",
+      "allowed_source_ids": [
+        "SRC-CONSULT-010"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-010",
+          "card_id": "CARD-SRC-CONSULT-010-METHOD",
+          "base_score": 0.665347,
+          "keyword_prior": 0.18,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.845347
+        },
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "base_score": 0.620537,
+          "keyword_prior": 0.054,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.729537
+        },
+        {
+          "source_id": "SRC-CONSULT-007",
+          "card_id": "CARD-SRC-CONSULT-007-DIAG",
+          "base_score": 0.557238,
+          "keyword_prior": 0.099,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.711238
+        },
+        {
+          "source_id": "SRC-CONSULT-011",
+          "card_id": "CARD-SRC-CONSULT-011-METHOD",
+          "base_score": 0.630599,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.666599
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "base_score": 0.601351,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.637351
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-025",
+      "category": "diagnostic_planning",
+      "allowed_source_ids": [
+        "SRC-CONSULT-011"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-011",
+          "card_id": "CARD-SRC-CONSULT-011-METHOD",
+          "base_score": 0.585473,
+          "keyword_prior": 0.18,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.09,
+          "rerank_score": 0.855473
+        },
+        {
+          "source_id": "SRC-CONSULT-010",
+          "card_id": "CARD-SRC-CONSULT-010-METHOD",
+          "base_score": 0.56577,
+          "keyword_prior": 0.054,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.09,
+          "rerank_score": 0.70977
+        },
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "base_score": 0.559074,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.650074
+        },
+        {
+          "source_id": "SRC-CONSULT-007",
+          "card_id": "CARD-SRC-CONSULT-007-DIAG",
+          "base_score": 0.531894,
+          "keyword_prior": 0.063,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.649894
+        },
+        {
+          "source_id": "SRC-CONSULT-012",
+          "card_id": "CARD-SRC-CONSULT-012-METHOD",
+          "base_score": 0.515757,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.09,
+          "rerank_score": 0.623757
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-026",
+      "category": "diagnostic_planning",
+      "allowed_source_ids": [
+        "SRC-CONSULT-012"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-012",
+          "card_id": "CARD-SRC-CONSULT-012-METHOD",
+          "base_score": 0.663782,
+          "keyword_prior": 0.135,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.798782
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "base_score": 0.630824,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.666824
+        },
+        {
+          "source_id": "SRC-CONSULT-003",
+          "card_id": "CARD-SRC-CONSULT-003-DELIV",
+          "base_score": 0.621846,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.621846
+        },
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "base_score": 0.526076,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.617076
+        },
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "base_score": 0.587442,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.605442
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-027",
+      "category": "diagnostic_planning",
+      "allowed_source_ids": [
+        "SRC-CONSULT-013",
+        "SRC-CONSULT-014"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-013",
+          "card_id": "CARD-SRC-CONSULT-013-FUNCTION-KPI-03",
+          "base_score": 0.694631,
+          "keyword_prior": 0.117,
+          "card_type_prior": 0.025,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.836631
+        },
+        {
+          "source_id": "SRC-CONSULT-014",
+          "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-03",
+          "base_score": 0.686827,
+          "keyword_prior": 0.117,
+          "card_type_prior": 0.025,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.828827
+        },
+        {
+          "source_id": "SRC-CONSULT-009",
+          "card_id": "CARD-SRC-CONSULT-009-DIAG",
+          "base_score": 0.552866,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.625866
+        },
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "base_score": 0.551047,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.624047
+        },
+        {
+          "source_id": "SRC-CONSULT-007",
+          "card_id": "CARD-SRC-CONSULT-007-DIAG",
+          "base_score": 0.54986,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.62286
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-028",
+      "category": "diagnostic_planning",
+      "allowed_source_ids": [
+        "SRC-CONSULT-015"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-015",
+          "card_id": "CARD-SRC-CONSULT-015-ACRONYM-03",
+          "base_score": 0.718811,
+          "keyword_prior": 0.099,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.817811
+        },
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "base_score": 0.529927,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.602927
+        },
+        {
+          "source_id": "SRC-CONSULT-007",
+          "card_id": "CARD-SRC-CONSULT-007-DIAG",
+          "base_score": 0.52727,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.60027
+        },
+        {
+          "source_id": "SRC-CONSULT-009",
+          "card_id": "CARD-SRC-CONSULT-009-DIAG",
+          "base_score": 0.525805,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.598805
+        },
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "base_score": 0.577209,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.595209
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-029",
+      "category": "diagnostic_planning",
+      "allowed_source_ids": [
+        "SRC-CONSULT-001",
+        "SRC-CONSULT-003"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-003",
+          "card_id": "CARD-SRC-CONSULT-003-DELIV",
+          "base_score": 0.564198,
+          "keyword_prior": 0.135,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.699198
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "base_score": 0.527375,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.563375
+        },
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "base_score": 0.448803,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.521803
+        },
+        {
+          "source_id": "SRC-CONSULT-009",
+          "card_id": "CARD-SRC-CONSULT-009-DIAG",
+          "base_score": 0.445471,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.518471
+        },
+        {
+          "source_id": "SRC-CONSULT-012",
+          "card_id": "CARD-SRC-CONSULT-012-METHOD",
+          "base_score": 0.497045,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.515045
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-030",
+      "category": "diagnostic_planning",
+      "allowed_source_ids": [
+        "SRC-CONSULT-001",
+        "SRC-CONSULT-002"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-001",
+          "card_id": "CARD-SRC-CONSULT-001-METHOD",
+          "base_score": 0.588911,
+          "keyword_prior": 0.081,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.669911
+        },
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "base_score": 0.531201,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.604201
+        },
+        {
+          "source_id": "SRC-CONSULT-009",
+          "card_id": "CARD-SRC-CONSULT-009-DIAG",
+          "base_score": 0.503773,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.576773
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "base_score": 0.556964,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.574964
+        },
+        {
+          "source_id": "SRC-CONSULT-007",
+          "card_id": "CARD-SRC-CONSULT-007-DIAG",
+          "base_score": 0.49984,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.57284
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-031",
+      "category": "deliverable_workflow",
+      "allowed_source_ids": [
+        "SRC-CONSULT-003"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-003",
+          "card_id": "CARD-SRC-CONSULT-003-DELIV",
+          "base_score": 0.585236,
+          "keyword_prior": 0.099,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.739236
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "base_score": 0.51966,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.59266
+        },
+        {
+          "source_id": "SRC-CONSULT-006",
+          "card_id": "CARD-SRC-CONSULT-006-DELIV",
+          "base_score": 0.527775,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.582775
+        },
+        {
+          "source_id": "SRC-CONSULT-004",
+          "card_id": "CARD-SRC-CONSULT-004-DELIV",
+          "base_score": 0.51501,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.57001
+        },
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "base_score": 0.498539,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.516539
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-032",
+      "category": "deliverable_workflow",
+      "allowed_source_ids": [
+        "SRC-CONSULT-004"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-004",
+          "card_id": "CARD-SRC-CONSULT-004-DELIV",
+          "base_score": 0.595883,
+          "keyword_prior": 0.081,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.731883
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "base_score": 0.575674,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.648674
+        },
+        {
+          "source_id": "SRC-CONSULT-003",
+          "card_id": "CARD-SRC-CONSULT-003-DELIV",
+          "base_score": 0.542443,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.615443
+        },
+        {
+          "source_id": "SRC-CONSULT-006",
+          "card_id": "CARD-SRC-CONSULT-006-DELIV",
+          "base_score": 0.558791,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.613791
+        },
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "base_score": 0.57872,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.59672
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-033",
+      "category": "deliverable_workflow",
+      "allowed_source_ids": [
+        "SRC-CONSULT-005"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "base_score": 0.591431,
+          "keyword_prior": 0.081,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.727431
+        },
+        {
+          "source_id": "SRC-CONSULT-006",
+          "card_id": "CARD-SRC-CONSULT-006-DELIV",
+          "base_score": 0.534383,
+          "keyword_prior": 0.063,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.652383
+        },
+        {
+          "source_id": "SRC-CONSULT-003",
+          "card_id": "CARD-SRC-CONSULT-003-DELIV",
+          "base_score": 0.548706,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.621706
+        },
+        {
+          "source_id": "SRC-CONSULT-004",
+          "card_id": "CARD-SRC-CONSULT-004-DELIV",
+          "base_score": 0.540022,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.595022
+        },
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "base_score": 0.544199,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.562199
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-034",
+      "category": "deliverable_workflow",
+      "allowed_source_ids": [
+        "SRC-CONSULT-005",
+        "SRC-CONSULT-006"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-006",
+          "card_id": "CARD-SRC-CONSULT-006-DELIV",
+          "base_score": 0.640886,
+          "keyword_prior": 0.099,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.794886
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "base_score": 0.598099,
+          "keyword_prior": 0.099,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.752099
+        },
+        {
+          "source_id": "SRC-CONSULT-003",
+          "card_id": "CARD-SRC-CONSULT-003-DELIV",
+          "base_score": 0.587436,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.660436
+        },
+        {
+          "source_id": "SRC-CONSULT-004",
+          "card_id": "CARD-SRC-CONSULT-004-DELIV",
+          "base_score": 0.58282,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.63782
+        },
+        {
+          "source_id": "SRC-CONSULT-011",
+          "card_id": "CARD-SRC-CONSULT-011-METHOD",
+          "base_score": 0.568826,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.568826
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-035",
+      "category": "deliverable_workflow",
+      "allowed_source_ids": [
+        "SRC-CONSULT-010"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-010",
+          "card_id": "CARD-SRC-CONSULT-010-METHOD",
+          "base_score": 0.643361,
+          "keyword_prior": 0.117,
+          "card_type_prior": 0.02,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.780361
+        },
+        {
+          "source_id": "SRC-CONSULT-011",
+          "card_id": "CARD-SRC-CONSULT-011-METHOD",
+          "base_score": 0.641312,
+          "keyword_prior": 0.054,
+          "card_type_prior": 0.02,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.715312
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "base_score": 0.614945,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.705945
+        },
+        {
+          "source_id": "SRC-CONSULT-003",
+          "card_id": "CARD-SRC-CONSULT-003-DELIV",
+          "base_score": 0.58505,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.65805
+        },
+        {
+          "source_id": "SRC-CONSULT-004",
+          "card_id": "CARD-SRC-CONSULT-004-DELIV",
+          "base_score": 0.586394,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.641394
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-036",
+      "category": "deliverable_workflow",
+      "allowed_source_ids": [
+        "SRC-CONSULT-011"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-011",
+          "card_id": "CARD-SRC-CONSULT-011-METHOD",
+          "base_score": 0.627508,
+          "keyword_prior": 0.099,
+          "card_type_prior": 0.02,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.746508
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "base_score": 0.583142,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.674142
+        },
+        {
+          "source_id": "SRC-CONSULT-010",
+          "card_id": "CARD-SRC-CONSULT-010-METHOD",
+          "base_score": 0.604689,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.02,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.660689
+        },
+        {
+          "source_id": "SRC-CONSULT-003",
+          "card_id": "CARD-SRC-CONSULT-003-DELIV",
+          "base_score": 0.568634,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.641634
+        },
+        {
+          "source_id": "SRC-CONSULT-004",
+          "card_id": "CARD-SRC-CONSULT-004-DELIV",
+          "base_score": 0.575217,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.630217
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-037",
+      "category": "deliverable_workflow",
+      "allowed_source_ids": [
+        "SRC-CONSULT-012"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-012",
+          "card_id": "CARD-SRC-CONSULT-012-METHOD",
+          "base_score": 0.607689,
+          "keyword_prior": 0.081,
+          "card_type_prior": 0.02,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.708689
+        },
+        {
+          "source_id": "SRC-CONSULT-004",
+          "card_id": "CARD-SRC-CONSULT-004-DELIV",
+          "base_score": 0.574122,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.629122
+        },
+        {
+          "source_id": "SRC-CONSULT-003",
+          "card_id": "CARD-SRC-CONSULT-003-DELIV",
+          "base_score": 0.55297,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.62597
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "base_score": 0.544207,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.617207
+        },
+        {
+          "source_id": "SRC-CONSULT-006",
+          "card_id": "CARD-SRC-CONSULT-006-DELIV",
+          "base_score": 0.553215,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.608215
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-038",
+      "category": "deliverable_workflow",
+      "allowed_source_ids": [
+        "SRC-CONSULT-004",
+        "SRC-CONSULT-007"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-004",
+          "card_id": "CARD-SRC-CONSULT-004-DELIV",
+          "base_score": 0.570609,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.661609
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "base_score": 0.569669,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.642669
+        },
+        {
+          "source_id": "SRC-CONSULT-006",
+          "card_id": "CARD-SRC-CONSULT-006-DELIV",
+          "base_score": 0.585564,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.640564
+        },
+        {
+          "source_id": "SRC-CONSULT-011",
+          "card_id": "CARD-SRC-CONSULT-011-METHOD",
+          "base_score": 0.59054,
+          "keyword_prior": 0.045,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.63554
+        },
+        {
+          "source_id": "SRC-CONSULT-003",
+          "card_id": "CARD-SRC-CONSULT-003-DELIV",
+          "base_score": 0.545284,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.618284
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-039",
+      "category": "deliverable_workflow",
+      "allowed_source_ids": [
+        "SRC-CONSULT-004",
+        "SRC-CONSULT-008"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "base_score": 0.683292,
+          "keyword_prior": 0.099,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.782292
+        },
+        {
+          "source_id": "SRC-CONSULT-004",
+          "card_id": "CARD-SRC-CONSULT-004-DELIV",
+          "base_score": 0.610175,
+          "keyword_prior": 0.081,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.746175
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "base_score": 0.618924,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.709924
+        },
+        {
+          "source_id": "SRC-CONSULT-003",
+          "card_id": "CARD-SRC-CONSULT-003-DELIV",
+          "base_score": 0.570871,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.643871
+        },
+        {
+          "source_id": "SRC-CONSULT-006",
+          "card_id": "CARD-SRC-CONSULT-006-DELIV",
+          "base_score": 0.576322,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.631322
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-040",
+      "category": "deliverable_workflow",
+      "allowed_source_ids": [
+        "SRC-CONSULT-004"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-004",
+          "card_id": "CARD-SRC-CONSULT-004-DELIV",
+          "base_score": 0.513414,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.12,
+          "rerank_score": 0.688414
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "base_score": 0.536743,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.055,
+          "source_intent_prior": -0.02,
+          "rerank_score": 0.589743
+        },
+        {
+          "source_id": "SRC-CONSULT-003",
+          "card_id": "CARD-SRC-CONSULT-003-DELIV",
+          "base_score": 0.522524,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.055,
+          "source_intent_prior": -0.02,
+          "rerank_score": 0.575524
+        },
+        {
+          "source_id": "SRC-CONSULT-006",
+          "card_id": "CARD-SRC-CONSULT-006-DELIV",
+          "base_score": 0.529005,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.055,
+          "source_intent_prior": -0.02,
+          "rerank_score": 0.564005
+        },
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "base_score": 0.497541,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.515541
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-041",
+      "category": "refusal_unknown",
+      "allowed_source_ids": [
+        "SRC-CONSULT-006"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-006",
+          "card_id": "CARD-SRC-CONSULT-006-DELIV",
+          "base_score": 0.586818,
+          "keyword_prior": 0.081,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.667818
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "base_score": 0.579518,
+          "keyword_prior": 0.081,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.660518
+        },
+        {
+          "source_id": "SRC-CONSULT-011",
+          "card_id": "CARD-SRC-CONSULT-011-METHOD",
+          "base_score": 0.552358,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.570358
+        },
+        {
+          "source_id": "SRC-CONSULT-001",
+          "card_id": "CARD-SRC-CONSULT-001-METHOD",
+          "base_score": 0.550028,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.550028
+        },
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "base_score": 0.528941,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.546941
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-042",
+      "category": "refusal_unknown",
+      "allowed_source_ids": [
+        "SRC-CONSULT-005",
+        "SRC-CONSULT-006"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "base_score": 0.549305,
+          "keyword_prior": 0.081,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.630305
+        },
+        {
+          "source_id": "SRC-CONSULT-006",
+          "card_id": "CARD-SRC-CONSULT-006-DELIV",
+          "base_score": 0.535324,
+          "keyword_prior": 0.081,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.616324
+        },
+        {
+          "source_id": "SRC-CONSULT-001",
+          "card_id": "CARD-SRC-CONSULT-001-METHOD",
+          "base_score": 0.49783,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.49783
+        },
+        {
+          "source_id": "SRC-CONSULT-004",
+          "card_id": "CARD-SRC-CONSULT-004-DELIV",
+          "base_score": 0.496459,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.496459
+        },
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "base_score": 0.46084,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.47884
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-043",
+      "category": "refusal_unknown",
+      "allowed_source_ids": [
+        "SRC-CONSULT-010",
+        "SRC-CONSULT-011"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-004",
+          "card_id": "CARD-SRC-CONSULT-004-DELIV",
+          "base_score": 0.545723,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.545723
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "base_score": 0.497518,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.533518
+        },
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "base_score": 0.506895,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.524895
+        },
+        {
+          "source_id": "SRC-CONSULT-010",
+          "card_id": "CARD-SRC-CONSULT-010-METHOD",
+          "base_score": 0.503936,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.521936
+        },
+        {
+          "source_id": "SRC-CONSULT-012",
+          "card_id": "CARD-SRC-CONSULT-012-METHOD",
+          "base_score": 0.480415,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.480415
+        }
+      ],
+      "source_recall_at_1": false,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-044",
+      "category": "refusal_unknown",
+      "allowed_source_ids": [
+        "SRC-CONSULT-004"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-004",
+          "card_id": "CARD-SRC-CONSULT-004-DELIV",
+          "base_score": 0.610009,
+          "keyword_prior": 0.081,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.691009
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "base_score": 0.568433,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.586433
+        },
+        {
+          "source_id": "SRC-CONSULT-009",
+          "card_id": "CARD-SRC-CONSULT-009-DIAG",
+          "base_score": 0.574855,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.574855
+        },
+        {
+          "source_id": "SRC-CONSULT-014",
+          "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-03",
+          "base_score": 0.613779,
+          "keyword_prior": 0.0,
+          "card_type_prior": -0.04,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.573779
+        },
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "base_score": 0.548945,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.566945
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-045",
+      "category": "refusal_unknown",
+      "allowed_source_ids": [
+        "SRC-CONSULT-001",
+        "SRC-CONSULT-002",
+        "SRC-CONSULT-013"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "base_score": 0.428868,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.464868
+        },
+        {
+          "source_id": "SRC-CONSULT-001",
+          "card_id": "CARD-SRC-CONSULT-001-METHOD",
+          "base_score": 0.424711,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.442711
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "base_score": 0.418898,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.436898
+        },
+        {
+          "source_id": "SRC-CONSULT-003",
+          "card_id": "CARD-SRC-CONSULT-003-DELIV",
+          "base_score": 0.423626,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.423626
+        },
+        {
+          "source_id": "SRC-CONSULT-004",
+          "card_id": "CARD-SRC-CONSULT-004-DELIV",
+          "base_score": 0.41159,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.41159
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-046",
+      "category": "refusal_unknown",
+      "allowed_source_ids": [],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-001",
+          "card_id": "CARD-SRC-CONSULT-001-METHOD",
+          "base_score": 0.503833,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.503833
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "base_score": 0.461159,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.479159
+        },
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "base_score": 0.460889,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.478889
+        },
+        {
+          "source_id": "SRC-CONSULT-009",
+          "card_id": "CARD-SRC-CONSULT-009-DIAG",
+          "base_score": 0.451515,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.451515
+        },
+        {
+          "source_id": "SRC-CONSULT-012",
+          "card_id": "CARD-SRC-CONSULT-012-METHOD",
+          "base_score": 0.445132,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.445132
+        }
+      ],
+      "source_recall_at_1": false,
+      "source_recall_at_5": false,
+      "answerable_by_registered_source": false
+    },
+    {
+      "eval_id": "CONSULT-EVAL-047",
+      "category": "refusal_unknown",
+      "allowed_source_ids": [
+        "SRC-CONSULT-001",
+        "SRC-CONSULT-006",
+        "SRC-CONSULT-014"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "base_score": 0.562235,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.580235
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "base_score": 0.543223,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.561223
+        },
+        {
+          "source_id": "SRC-CONSULT-001",
+          "card_id": "CARD-SRC-CONSULT-001-METHOD",
+          "base_score": 0.55911,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.55911
+        },
+        {
+          "source_id": "SRC-CONSULT-004",
+          "card_id": "CARD-SRC-CONSULT-004-DELIV",
+          "base_score": 0.555382,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.555382
+        },
+        {
+          "source_id": "SRC-CONSULT-003",
+          "card_id": "CARD-SRC-CONSULT-003-DELIV",
+          "base_score": 0.544791,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.544791
+        }
+      ],
+      "source_recall_at_1": false,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-048",
+      "category": "refusal_unknown",
+      "allowed_source_ids": [],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-001",
+          "card_id": "CARD-SRC-CONSULT-001-METHOD",
+          "base_score": 0.612067,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.648067
+        },
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "base_score": 0.574831,
+          "keyword_prior": 0.054,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.628831
+        },
+        {
+          "source_id": "SRC-CONSULT-012",
+          "card_id": "CARD-SRC-CONSULT-012-METHOD",
+          "base_score": 0.601109,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.619109
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "base_score": 0.580552,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.616552
+        },
+        {
+          "source_id": "SRC-CONSULT-013",
+          "card_id": "CARD-SRC-CONSULT-013-FUNCTION-KPI-01",
+          "base_score": 0.603146,
+          "keyword_prior": 0.036,
+          "card_type_prior": -0.04,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.599146
+        }
+      ],
+      "source_recall_at_1": false,
+      "source_recall_at_5": false,
+      "answerable_by_registered_source": false
+    },
+    {
+      "eval_id": "CONSULT-EVAL-049",
+      "category": "refusal_unknown",
+      "allowed_source_ids": [
+        "SRC-CONSULT-005"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "base_score": 0.617013,
+          "keyword_prior": 0.099,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.716013
+        },
+        {
+          "source_id": "SRC-CONSULT-006",
+          "card_id": "CARD-SRC-CONSULT-006-DELIV",
+          "base_score": 0.532938,
+          "keyword_prior": 0.063,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.595938
+        },
+        {
+          "source_id": "SRC-CONSULT-001",
+          "card_id": "CARD-SRC-CONSULT-001-METHOD",
+          "base_score": 0.582691,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.582691
+        },
+        {
+          "source_id": "SRC-CONSULT-004",
+          "card_id": "CARD-SRC-CONSULT-004-DELIV",
+          "base_score": 0.555016,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.555016
+        },
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "base_score": 0.529177,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.547177
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-050",
+      "category": "refusal_unknown",
+      "allowed_source_ids": [
+        "SRC-CONSULT-010",
+        "SRC-CONSULT-011",
+        "SRC-CONSULT-012"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-011",
+          "card_id": "CARD-SRC-CONSULT-011-METHOD",
+          "base_score": 0.510654,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.09,
+          "rerank_score": 0.618654
+        },
+        {
+          "source_id": "SRC-CONSULT-010",
+          "card_id": "CARD-SRC-CONSULT-010-METHOD",
+          "base_score": 0.504268,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.09,
+          "rerank_score": 0.612268
+        },
+        {
+          "source_id": "SRC-CONSULT-012",
+          "card_id": "CARD-SRC-CONSULT-012-METHOD",
+          "base_score": 0.487289,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.09,
+          "rerank_score": 0.595289
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "base_score": 0.542217,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.578217
+        },
+        {
+          "source_id": "SRC-CONSULT-004",
+          "card_id": "CARD-SRC-CONSULT-004-DELIV",
+          "base_score": 0.541693,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.541693
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true,
+      "answerable_by_registered_source": true
+    }
+  ]
+}

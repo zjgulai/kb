@@ -1,0 +1,921 @@
+{
+  "metadata": {
+    "created_at": "2026-06-19",
+    "scope": "citation anchor precision PoC for consultant role KB typed cards",
+    "provider_call_boundary": "no KB provider call",
+    "production_impact": "production unchanged",
+    "implementation_status": "local PoC only; no live KB ingestion",
+    "input_cards": "tmp/consultant-role-kb-card-samples-20260619.jsonl",
+    "anchored_cards": "tmp/consultant-role-kb-card-samples-anchored-20260619.jsonl"
+  },
+  "summary": {
+    "card_count": 33,
+    "citation_precision_ready_count": 33,
+    "citation_precision_ready_rate": 1.0,
+    "anchor_status_counts": {
+      "resolved": 33
+    },
+    "by_modality": {
+      "docx": {
+        "card_count": 1,
+        "citation_precision_ready_count": 1,
+        "citation_precision_ready_rate": 1.0,
+        "anchor_status_counts": {
+          "resolved": 1
+        }
+      },
+      "pdf": {
+        "card_count": 7,
+        "citation_precision_ready_count": 7,
+        "citation_precision_ready_rate": 1.0,
+        "anchor_status_counts": {
+          "resolved": 7
+        }
+      },
+      "pptx": {
+        "card_count": 4,
+        "citation_precision_ready_count": 4,
+        "citation_precision_ready_rate": 1.0,
+        "anchor_status_counts": {
+          "resolved": 4
+        }
+      },
+      "xlsx": {
+        "card_count": 21,
+        "citation_precision_ready_count": 21,
+        "citation_precision_ready_rate": 1.0,
+        "anchor_status_counts": {
+          "resolved": 21
+        }
+      }
+    }
+  },
+  "results": [
+    {
+      "card_id": "CARD-SRC-CONSULT-001-METHOD",
+      "source_id": "SRC-CONSULT-001",
+      "source_modality": "pptx",
+      "anchor_status": "resolved",
+      "citation_precision_ready": true,
+      "best_anchor": {
+        "source_id": "SRC-CONSULT-001",
+        "locator_type": "slide",
+        "locator": "slide:3",
+        "anchor_label": "Table of Contents",
+        "matched_terms": [
+          "The McKinsey Approach to Problem Solving",
+          "Define the problem",
+          "approach",
+          "define",
+          "issue",
+          "mckinsey",
+          "problem",
+          "solving",
+          "statement",
+          "worksheet"
+        ],
+        "anchor_match_score": 2.8,
+        "anchor_confidence": "high"
+      },
+      "anchor_count": 5
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-002-METHOD",
+      "source_id": "SRC-CONSULT-002",
+      "source_modality": "pptx",
+      "anchor_status": "resolved",
+      "citation_precision_ready": true,
+      "best_anchor": {
+        "source_id": "SRC-CONSULT-002",
+        "locator_type": "slide",
+        "locator": "slide:3",
+        "anchor_label": "Table of Contents",
+        "matched_terms": [
+          "Umbrex",
+          "Porter's Generic Strategies",
+          "Galbraith Star Model",
+          "framework",
+          "galbraith",
+          "generic",
+          "model",
+          "porter",
+          "star",
+          "strategies"
+        ],
+        "anchor_match_score": 3.8,
+        "anchor_confidence": "high"
+      },
+      "anchor_count": 5
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-010-METHOD",
+      "source_id": "SRC-CONSULT-010",
+      "source_modality": "pdf",
+      "anchor_status": "resolved",
+      "citation_precision_ready": true,
+      "best_anchor": {
+        "source_id": "SRC-CONSULT-010",
+        "locator_type": "page",
+        "locator": "page:4",
+        "anchor_label": "Find an independent consultant at www.umbrex.com 4 Table of Contents Introduction Chapter 1: Abo",
+        "matched_terms": [
+          "Introduction",
+          "Chapter 1: About Commercial Due Diligence",
+          "1.1 The Importance of Commercial Due Diligence",
+          "1.2 Entities that Commonly Conduct CDD",
+          "1.3 Situations in Which CDD is Conducted",
+          "1.4 Length of CDD Process",
+          "1.5 Categorization of CDD Projects",
+          "about",
+          "categorization",
+          "cdd"
+        ],
+        "anchor_match_score": 8.0,
+        "anchor_confidence": "high"
+      },
+      "anchor_count": 5
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-011-METHOD",
+      "source_id": "SRC-CONSULT-011",
+      "source_modality": "pdf",
+      "anchor_status": "resolved",
+      "citation_precision_ready": true,
+      "best_anchor": {
+        "source_id": "SRC-CONSULT-011",
+        "locator_type": "page",
+        "locator": "page:5",
+        "anchor_label": "The Operational Due Diligence Playbook Table of Contents Chapter 1: Introduction 1.1 Definition ",
+        "matched_terms": [
+          "Table of Contents",
+          "Chapter 1: Introduction",
+          "Chapter 2: How Operational Due Diligence Fits into the Full Due Diligence Proces",
+          "Chapter 3: Strategy & Governance Analysis",
+          "Chapter 4: Organizational Structure & Leadership Assessment",
+          "Chapter 5: Talent & Workforce Management",
+          "analysis",
+          "assessment",
+          "chapter",
+          "contents"
+        ],
+        "anchor_match_score": 7.0,
+        "anchor_confidence": "high"
+      },
+      "anchor_count": 5
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-012-METHOD",
+      "source_id": "SRC-CONSULT-012",
+      "source_modality": "pdf",
+      "anchor_status": "resolved",
+      "citation_precision_ready": true,
+      "best_anchor": {
+        "source_id": "SRC-CONSULT-012",
+        "locator_type": "page",
+        "locator": "page:4",
+        "anchor_label": "The Umbrex Post-Merger Integration Playbook 0 Table of Contents 1. Pre-Merger Planning .........",
+        "matched_terms": [
+          "1. Pre-Merger Planning",
+          "1.1 Establish a Cross-Functional Team",
+          "1.2 Develop a Merger Integration Charter",
+          "1.3 Scope the Integration",
+          "1.4 Prepare an Integration Plan",
+          "1.5 Conduct a Cultural Assessment",
+          "1.6 Perform a Preliminary Financial Analysis",
+          "1.7 Review Legal and Regulatory Considerations",
+          "analysis",
+          "assessment"
+        ],
+        "anchor_match_score": 9.0,
+        "anchor_confidence": "high"
+      },
+      "anchor_count": 5
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-007-DIAG",
+      "source_id": "SRC-CONSULT-007",
+      "source_modality": "pdf",
+      "anchor_status": "resolved",
+      "citation_precision_ready": true,
+      "best_anchor": {
+        "source_id": "SRC-CONSULT-007",
+        "locator_type": "page",
+        "locator": "page:8",
+        "anchor_label": "Data Request1. Supply Chain StrategySupply chain strategic plan documents.Reports on supply ch",
+        "matched_terms": [
+          "Supply Chain Diagnostic",
+          "strategy",
+          "chain",
+          "diagnostic",
+          "distribution",
+          "infrastructure",
+          "logistics",
+          "management",
+          "process",
+          "procurement"
+        ],
+        "anchor_match_score": 5.0,
+        "anchor_confidence": "high"
+      },
+      "anchor_count": 5
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-008-DIAG",
+      "source_id": "SRC-CONSULT-008",
+      "source_modality": "pdf",
+      "anchor_status": "resolved",
+      "citation_precision_ready": true,
+      "best_anchor": {
+        "source_id": "SRC-CONSULT-008",
+        "locator_type": "page",
+        "locator": "page:13",
+        "anchor_label": "1. Chief Data Officer/Chief Analytics Officer1. Analytics StrategyCan you describe how the anal",
+        "matched_terms": [
+          "Business Analytics Diagnostic",
+          "advanced",
+          "ai",
+          "analytics",
+          "business",
+          "data",
+          "diagnostic",
+          "management",
+          "strategy"
+        ],
+        "anchor_match_score": 2.8,
+        "anchor_confidence": "high"
+      },
+      "anchor_count": 5
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-009-DIAG",
+      "source_id": "SRC-CONSULT-009",
+      "source_modality": "pdf",
+      "anchor_status": "resolved",
+      "citation_precision_ready": true,
+      "best_anchor": {
+        "source_id": "SRC-CONSULT-009",
+        "locator_type": "page",
+        "locator": "page:8",
+        "anchor_label": "Data Request1. CX StrategyqCX Strategy Documents: Detailed documents outlining the company’s cus",
+        "matched_terms": [
+          "Customer Experience Diagnostic",
+          "journey",
+          "retention",
+          "customer",
+          "diagnostic",
+          "experience",
+          "service",
+          "voice"
+        ],
+        "anchor_match_score": 5.7,
+        "anchor_confidence": "high"
+      },
+      "anchor_count": 5
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-003-DELIV",
+      "source_id": "SRC-CONSULT-003",
+      "source_modality": "pptx",
+      "anchor_status": "resolved",
+      "citation_precision_ready": true,
+      "best_anchor": {
+        "source_id": "SRC-CONSULT-003",
+        "locator_type": "slide",
+        "locator": "slide:4",
+        "anchor_label": "Table of Contents",
+        "matched_terms": [
+          "scope",
+          "deliverables",
+          "resources",
+          "action",
+          "items",
+          "kickoff",
+          "management",
+          "problem",
+          "project"
+        ],
+        "anchor_match_score": 4.0,
+        "anchor_confidence": "high"
+      },
+      "anchor_count": 5
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-004-DELIV",
+      "source_id": "SRC-CONSULT-004",
+      "source_modality": "pptx",
+      "anchor_status": "resolved",
+      "citation_precision_ready": true,
+      "best_anchor": {
+        "source_id": "SRC-CONSULT-004",
+        "locator_type": "slide",
+        "locator": "slide:3",
+        "anchor_label": "About the",
+        "matched_terms": [
+          "situation",
+          "insight",
+          "recommendation",
+          "risk",
+          "2. STRATEGIC PLANNING",
+          "executive",
+          "market",
+          "planning",
+          "strategic"
+        ],
+        "anchor_match_score": 7.0,
+        "anchor_confidence": "high"
+      },
+      "anchor_count": 5
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-005-DELIV",
+      "source_id": "SRC-CONSULT-005",
+      "source_modality": "docx",
+      "anchor_status": "resolved",
+      "citation_precision_ready": true,
+      "best_anchor": {
+        "source_id": "SRC-CONSULT-005",
+        "locator_type": "paragraph",
+        "locator": "paragraph:7",
+        "anchor_label": "The following sections detail the context, objectives, scope, approach, team, timing, and profes",
+        "matched_terms": [
+          "context",
+          "objectives",
+          "scope",
+          "approach",
+          "team"
+        ],
+        "anchor_match_score": 6.5,
+        "anchor_confidence": "high"
+      },
+      "anchor_count": 5
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-006-DELIV",
+      "source_id": "SRC-CONSULT-006",
+      "source_modality": "pdf",
+      "anchor_status": "resolved",
+      "citation_precision_ready": true,
+      "best_anchor": {
+        "source_id": "SRC-CONSULT-006",
+        "locator_type": "page",
+        "locator": "page:8",
+        "anchor_label": "RFP Playbook: Introduction 8 1. Introduction The Importance of a Structured RFP Process The Requ",
+        "matched_terms": [
+          "requirements",
+          "1. Introduction",
+          "The Importance of a Structured RFP Process",
+          "The Request for Proposal (RFP) process is an indispensable part of modern busine",
+          "A structured RFP process offers multiple benefits:",
+          "Clarity and Consistency: A systematic approach ensures all stakeholders understa",
+          "Efficiency: With a clear framework, teams can avoid repetitive tasks, reduce adm",
+          "Comprehensive Vendor Evaluation: A structured process provides a holistic framew",
+          "Risk Mitigation: With a well-defined RFP process, potential risks — whether rela",
+          "across"
+        ],
+        "anchor_match_score": 10.0,
+        "anchor_confidence": "high"
+      },
+      "anchor_count": 5
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-013-FUNCTION-KPI-01",
+      "source_id": "SRC-CONSULT-013",
+      "source_modality": "xlsx",
+      "anchor_status": "resolved",
+      "citation_precision_ready": true,
+      "best_anchor": {
+        "source_id": "SRC-CONSULT-013",
+        "locator_type": "sheet_row",
+        "locator": "sheet:Library of KPIs by Function#row:2",
+        "anchor_label": "Finance Accounts Receivable Days sales outstanding (DSO) The average number of days it takes for",
+        "matched_terms": [
+          "Days sales outstanding (DSO)",
+          "Finance",
+          "Accounts Receivable",
+          "accounts",
+          "days",
+          "dso",
+          "finance",
+          "outstanding",
+          "receivable",
+          "sales"
+        ],
+        "anchor_match_score": 6.7,
+        "anchor_confidence": "high"
+      },
+      "anchor_count": 5
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-013-FUNCTION-KPI-02",
+      "source_id": "SRC-CONSULT-013",
+      "source_modality": "xlsx",
+      "anchor_status": "resolved",
+      "citation_precision_ready": true,
+      "best_anchor": {
+        "source_id": "SRC-CONSULT-013",
+        "locator_type": "sheet_row",
+        "locator": "sheet:Library of KPIs by Function#row:3",
+        "anchor_label": "Finance Accounts Receivable Payment delinquency rate The percentage of customers who are overdue",
+        "matched_terms": [
+          "Payment delinquency rate",
+          "Finance",
+          "Accounts Receivable",
+          "accounts",
+          "delinquency",
+          "finance",
+          "payment",
+          "rate",
+          "receivable"
+        ],
+        "anchor_match_score": 6.6,
+        "anchor_confidence": "high"
+      },
+      "anchor_count": 5
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-013-FUNCTION-KPI-03",
+      "source_id": "SRC-CONSULT-013",
+      "source_modality": "xlsx",
+      "anchor_status": "resolved",
+      "citation_precision_ready": true,
+      "best_anchor": {
+        "source_id": "SRC-CONSULT-013",
+        "locator_type": "sheet_row",
+        "locator": "sheet:Library of KPIs by Function#row:4",
+        "anchor_label": "Finance Accounts Receivable Write-off rate The percentage of accounts that are written off as un",
+        "matched_terms": [
+          "Write-off rate",
+          "Finance",
+          "Accounts Receivable",
+          "accounts",
+          "finance",
+          "rate",
+          "receivable",
+          "write-off"
+        ],
+        "anchor_match_score": 6.5,
+        "anchor_confidence": "high"
+      },
+      "anchor_count": 5
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-013-FUNCTION-KPI-04",
+      "source_id": "SRC-CONSULT-013",
+      "source_modality": "xlsx",
+      "anchor_status": "resolved",
+      "citation_precision_ready": true,
+      "best_anchor": {
+        "source_id": "SRC-CONSULT-013",
+        "locator_type": "sheet_row",
+        "locator": "sheet:Library of KPIs by Function#row:5",
+        "anchor_label": "Finance Accounts Receivable Collection efficiency The efficiency of the collection process, incl",
+        "matched_terms": [
+          "Collection efficiency",
+          "Finance",
+          "Accounts Receivable",
+          "accounts",
+          "collection",
+          "efficiency",
+          "finance",
+          "receivable"
+        ],
+        "anchor_match_score": 6.5,
+        "anchor_confidence": "high"
+      },
+      "anchor_count": 5
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-013-FUNCTION-KPI-05",
+      "source_id": "SRC-CONSULT-013",
+      "source_modality": "xlsx",
+      "anchor_status": "resolved",
+      "citation_precision_ready": true,
+      "best_anchor": {
+        "source_id": "SRC-CONSULT-013",
+        "locator_type": "sheet_row",
+        "locator": "sheet:Library of KPIs by Function#row:6",
+        "anchor_label": "Finance Accounts Receivable Cash application accuracy The accuracy with which the AR department ",
+        "matched_terms": [
+          "Cash application accuracy",
+          "Finance",
+          "Accounts Receivable",
+          "accounts",
+          "accuracy",
+          "application",
+          "cash",
+          "finance",
+          "receivable"
+        ],
+        "anchor_match_score": 6.6,
+        "anchor_confidence": "high"
+      },
+      "anchor_count": 5
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-013-FUNCTION-KPI-06",
+      "source_id": "SRC-CONSULT-013",
+      "source_modality": "xlsx",
+      "anchor_status": "resolved",
+      "citation_precision_ready": true,
+      "best_anchor": {
+        "source_id": "SRC-CONSULT-013",
+        "locator_type": "sheet_row",
+        "locator": "sheet:Library of KPIs by Function#row:7",
+        "anchor_label": "Finance Accounts Receivable Customer satisfaction with the billing and payment process The level",
+        "matched_terms": [
+          "Customer satisfaction with the billing and payment process",
+          "Finance",
+          "Accounts Receivable",
+          "accounts",
+          "billing",
+          "customer",
+          "finance",
+          "payment",
+          "process",
+          "receivable"
+        ],
+        "anchor_match_score": 6.8,
+        "anchor_confidence": "high"
+      },
+      "anchor_count": 5
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-013-FUNCTION-KPI-07",
+      "source_id": "SRC-CONSULT-013",
+      "source_modality": "xlsx",
+      "anchor_status": "resolved",
+      "citation_precision_ready": true,
+      "best_anchor": {
+        "source_id": "SRC-CONSULT-013",
+        "locator_type": "sheet_row",
+        "locator": "sheet:Library of KPIs by Function#row:8",
+        "anchor_label": "Finance Accounts Receivable Number of disputes resolved The number of billing or payment dispute",
+        "matched_terms": [
+          "Number of disputes resolved",
+          "Finance",
+          "Accounts Receivable",
+          "accounts",
+          "disputes",
+          "finance",
+          "number",
+          "receivable",
+          "resolved"
+        ],
+        "anchor_match_score": 6.6,
+        "anchor_confidence": "high"
+      },
+      "anchor_count": 5
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-013-FUNCTION-KPI-08",
+      "source_id": "SRC-CONSULT-013",
+      "source_modality": "xlsx",
+      "anchor_status": "resolved",
+      "citation_precision_ready": true,
+      "best_anchor": {
+        "source_id": "SRC-CONSULT-013",
+        "locator_type": "sheet_row",
+        "locator": "sheet:Library of KPIs by Function#row:9",
+        "anchor_label": "Finance Accounts Receivable Turnaround time for processing customer requests The average length ",
+        "matched_terms": [
+          "Turnaround time for processing customer requests",
+          "Finance",
+          "Accounts Receivable",
+          "accounts",
+          "customer",
+          "finance",
+          "processing",
+          "receivable",
+          "requests",
+          "time"
+        ],
+        "anchor_match_score": 6.8,
+        "anchor_confidence": "high"
+      },
+      "anchor_count": 5
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-01",
+      "source_id": "SRC-CONSULT-014",
+      "source_modality": "xlsx",
+      "anchor_status": "resolved",
+      "citation_precision_ready": true,
+      "best_anchor": {
+        "source_id": "SRC-CONSULT-014",
+        "locator_type": "sheet_row",
+        "locator": "sheet:Consolidated - all industries#row:2",
+        "anchor_label": "Aerospace & Defense Accident Rate This measures the number of accidents involving a company's pr",
+        "matched_terms": [
+          "Accident Rate",
+          "Aerospace & Defense",
+          "accident",
+          "aerospace",
+          "defense",
+          "rate"
+        ],
+        "anchor_match_score": 4.4,
+        "anchor_confidence": "high"
+      },
+      "anchor_count": 5
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-02",
+      "source_id": "SRC-CONSULT-014",
+      "source_modality": "xlsx",
+      "anchor_status": "resolved",
+      "citation_precision_ready": true,
+      "best_anchor": {
+        "source_id": "SRC-CONSULT-014",
+        "locator_type": "sheet_row",
+        "locator": "sheet:Consolidated - all industries#row:3",
+        "anchor_label": "Aerospace & Defense Asset Utilization Ratio This ratio measures how efficiently a company is usi",
+        "matched_terms": [
+          "Asset Utilization Ratio",
+          "Aerospace & Defense",
+          "aerospace",
+          "asset",
+          "defense",
+          "ratio",
+          "utilization"
+        ],
+        "anchor_match_score": 4.5,
+        "anchor_confidence": "high"
+      },
+      "anchor_count": 5
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-03",
+      "source_id": "SRC-CONSULT-014",
+      "source_modality": "xlsx",
+      "anchor_status": "resolved",
+      "citation_precision_ready": true,
+      "best_anchor": {
+        "source_id": "SRC-CONSULT-014",
+        "locator_type": "sheet_row",
+        "locator": "sheet:Consolidated - all industries#row:4",
+        "anchor_label": "Aerospace & Defense Average Contract Value (ACV) Given the large contract sizes in the aerospace",
+        "matched_terms": [
+          "Average Contract Value (ACV)",
+          "Aerospace & Defense",
+          "acv",
+          "aerospace",
+          "average",
+          "contract",
+          "defense",
+          "value"
+        ],
+        "anchor_match_score": 4.6,
+        "anchor_confidence": "high"
+      },
+      "anchor_count": 5
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-04",
+      "source_id": "SRC-CONSULT-014",
+      "source_modality": "xlsx",
+      "anchor_status": "resolved",
+      "citation_precision_ready": true,
+      "best_anchor": {
+        "source_id": "SRC-CONSULT-014",
+        "locator_type": "sheet_row",
+        "locator": "sheet:Consolidated - all industries#row:5",
+        "anchor_label": "Aerospace & Defense Break-Even Load Factor For commercial aerospace companies, this measures the",
+        "matched_terms": [
+          "Break-Even Load Factor",
+          "Aerospace & Defense",
+          "aerospace",
+          "break-even",
+          "defense",
+          "factor",
+          "load"
+        ],
+        "anchor_match_score": 4.5,
+        "anchor_confidence": "high"
+      },
+      "anchor_count": 5
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-05",
+      "source_id": "SRC-CONSULT-014",
+      "source_modality": "xlsx",
+      "anchor_status": "resolved",
+      "citation_precision_ready": true,
+      "best_anchor": {
+        "source_id": "SRC-CONSULT-014",
+        "locator_type": "sheet_row",
+        "locator": "sheet:Consolidated - all industries#row:6",
+        "anchor_label": "Aerospace & Defense Capability Maturity Model Integration (CMMI) Level For software-intensive de",
+        "matched_terms": [
+          "Capability Maturity Model Integration (CMMI) Level",
+          "Aerospace & Defense",
+          "aerospace",
+          "capability",
+          "cmmi",
+          "defense",
+          "integration",
+          "level",
+          "maturity",
+          "model"
+        ],
+        "anchor_match_score": 4.8,
+        "anchor_confidence": "high"
+      },
+      "anchor_count": 5
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-06",
+      "source_id": "SRC-CONSULT-014",
+      "source_modality": "xlsx",
+      "anchor_status": "resolved",
+      "citation_precision_ready": true,
+      "best_anchor": {
+        "source_id": "SRC-CONSULT-014",
+        "locator_type": "sheet_row",
+        "locator": "sheet:Consolidated - all industries#row:7",
+        "anchor_label": "Aerospace & Defense Contract Wins and Renewals Winning new contracts and renewing existing ones ",
+        "matched_terms": [
+          "Contract Wins and Renewals",
+          "Aerospace & Defense",
+          "aerospace",
+          "contract",
+          "defense",
+          "renewals",
+          "wins"
+        ],
+        "anchor_match_score": 4.5,
+        "anchor_confidence": "high"
+      },
+      "anchor_count": 5
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-07",
+      "source_id": "SRC-CONSULT-014",
+      "source_modality": "xlsx",
+      "anchor_status": "resolved",
+      "citation_precision_ready": true,
+      "best_anchor": {
+        "source_id": "SRC-CONSULT-014",
+        "locator_type": "sheet_row",
+        "locator": "sheet:Consolidated - all industries#row:8",
+        "anchor_label": "Aerospace & Defense Cybersecurity Breach Incidents For defense companies dealing with sensitive ",
+        "matched_terms": [
+          "Cybersecurity Breach Incidents",
+          "Aerospace & Defense",
+          "aerospace",
+          "breach",
+          "cybersecurity",
+          "defense",
+          "incidents"
+        ],
+        "anchor_match_score": 4.5,
+        "anchor_confidence": "high"
+      },
+      "anchor_count": 5
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-08",
+      "source_id": "SRC-CONSULT-014",
+      "source_modality": "xlsx",
+      "anchor_status": "resolved",
+      "citation_precision_ready": true,
+      "best_anchor": {
+        "source_id": "SRC-CONSULT-014",
+        "locator_type": "sheet_row",
+        "locator": "sheet:Consolidated - all industries#row:9",
+        "anchor_label": "Aerospace & Defense Cybersecurity Effectiveness For defense companies, particularly those dealin",
+        "matched_terms": [
+          "Cybersecurity Effectiveness",
+          "Aerospace & Defense",
+          "aerospace",
+          "cybersecurity",
+          "defense",
+          "effectiveness"
+        ],
+        "anchor_match_score": 4.4,
+        "anchor_confidence": "high"
+      },
+      "anchor_count": 5
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-015-ACRONYM-01",
+      "source_id": "SRC-CONSULT-015",
+      "source_modality": "xlsx",
+      "anchor_status": "resolved",
+      "citation_precision_ready": true,
+      "best_anchor": {
+        "source_id": "SRC-CONSULT-015",
+        "locator_type": "sheet_row",
+        "locator": "sheet:All industries consolidated#row:4",
+        "anchor_label": "Aerospace & Defense AAM Air-to-Air Missile A missile designed for use against airborne targets, ",
+        "matched_terms": [
+          "Air-to-Air Missile",
+          "aam",
+          "air-to-air",
+          "missile"
+        ],
+        "anchor_match_score": 2.3,
+        "anchor_confidence": "high"
+      },
+      "anchor_count": 5
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-015-ACRONYM-02",
+      "source_id": "SRC-CONSULT-015",
+      "source_modality": "xlsx",
+      "anchor_status": "resolved",
+      "citation_precision_ready": true,
+      "best_anchor": {
+        "source_id": "SRC-CONSULT-015",
+        "locator_type": "sheet_row",
+        "locator": "sheet:All industries consolidated#row:5",
+        "anchor_label": "Aerospace & Defense ACARS Aircraft Communications Addressing and Reporting System A digital data",
+        "matched_terms": [
+          "ACARS",
+          "Aircraft Communications Addressing and Reporting System",
+          "acars",
+          "addressing",
+          "aircraft",
+          "communications",
+          "reporting",
+          "system"
+        ],
+        "anchor_match_score": 4.6,
+        "anchor_confidence": "high"
+      },
+      "anchor_count": 5
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-015-ACRONYM-03",
+      "source_id": "SRC-CONSULT-015",
+      "source_modality": "xlsx",
+      "anchor_status": "resolved",
+      "citation_precision_ready": true,
+      "best_anchor": {
+        "source_id": "SRC-CONSULT-015",
+        "locator_type": "sheet_row",
+        "locator": "sheet:All industries consolidated#row:6",
+        "anchor_label": "Aerospace & Defense ACMI Aircraft, Crew, Maintenance, and Insurance Refers to a type of leasing ",
+        "matched_terms": [
+          "ACMI",
+          "Aircraft, Crew, Maintenance, and Insurance",
+          "acmi",
+          "aircraft",
+          "crew",
+          "insurance",
+          "maintenance"
+        ],
+        "anchor_match_score": 4.5,
+        "anchor_confidence": "high"
+      },
+      "anchor_count": 5
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-015-ACRONYM-04",
+      "source_id": "SRC-CONSULT-015",
+      "source_modality": "xlsx",
+      "anchor_status": "resolved",
+      "citation_precision_ready": true,
+      "best_anchor": {
+        "source_id": "SRC-CONSULT-015",
+        "locator_type": "sheet_row",
+        "locator": "sheet:All industries consolidated#row:7",
+        "anchor_label": "Aerospace & Defense AES Airborne Electronic Surveillance Refers to systems and equipment used fo",
+        "matched_terms": [
+          "Airborne Electronic Surveillance",
+          "aes",
+          "airborne",
+          "electronic",
+          "surveillance"
+        ],
+        "anchor_match_score": 2.4,
+        "anchor_confidence": "high"
+      },
+      "anchor_count": 5
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-015-ACRONYM-05",
+      "source_id": "SRC-CONSULT-015",
+      "source_modality": "xlsx",
+      "anchor_status": "resolved",
+      "citation_precision_ready": true,
+      "best_anchor": {
+        "source_id": "SRC-CONSULT-015",
+        "locator_type": "sheet_row",
+        "locator": "sheet:All industries consolidated#row:8",
+        "anchor_label": "Aerospace & Defense AESA Active Electronically Scanned Array A type of radar system that uses el",
+        "matched_terms": [
+          "AESA",
+          "Active Electronically Scanned Array",
+          "active",
+          "aesa",
+          "array",
+          "electronically",
+          "scanned"
+        ],
+        "anchor_match_score": 4.5,
+        "anchor_confidence": "high"
+      },
+      "anchor_count": 5
+    }
+  ]
+}

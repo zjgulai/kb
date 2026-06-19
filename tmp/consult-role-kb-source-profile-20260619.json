@@ -1,0 +1,3094 @@
+{
+  "summary": {
+    "generated_at": "2026-06-19T00:00:00+08:00",
+    "boundary": "read-only local source profiling; no ingestion; no provider call; production unchanged",
+    "source_root": "/Users/pray/project/kb/consult",
+    "total_files_profiled": 81,
+    "counts_by_suffix": {
+      ".epub": 1,
+      ".pdf": 68,
+      ".pptx": 6,
+      ".csv": 2,
+      ".docx": 1,
+      ".xlsx": 3
+    },
+    "counts_by_category": {
+      "consulting-playbook": 26,
+      "strategy-management": 7,
+      "consultant-delivery-craft": 4,
+      "client-development": 5,
+      "transaction-advisory": 4,
+      "diagnostic-guide": 11,
+      "industry-analysis": 29,
+      "reference-data": 6,
+      "unclassified": 3
+    },
+    "total_pdf_pages_reported": 9407,
+    "parse_errors": []
+  },
+  "records": [
+    {
+      "path": "consult/B2B Go-to-Market Strategy Handbook.epub",
+      "name": "B2B Go-to-Market Strategy Handbook.epub",
+      "size_bytes": 555412,
+      "sha256": "c21805b294a3fe01dfcca34fff1d8b7471b1326a23b0659efb20189f1494b20f",
+      "suffix": ".epub",
+      "candidate_categories": [
+        "consulting-playbook",
+        "strategy-management"
+      ],
+      "candidate_layers": [
+        "methodology",
+        "operations"
+      ],
+      "parser": "zip+html-strip",
+      "html_files": 5,
+      "text_sample": "B2B Go-to-Market Strategy Handbook The B2B Go-to-Market Strategy Handbook by Will Bachman © 2024 by Will Bachman First Edition All rights reserved. No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without permission in writing from the publisher, except by a reviewer who may quote brief passages in a review. Published by Umbrex Astoria, NY Book design by Umbrex Consulting LLC Printed in the United States of America ISBN: 978-1-961779-38-9 For more information on our publications, visit our website at www.umbrex.com This book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, resold, hired out, or otherwise circulated without the publisher’s prior consent in any form of binding or cover other than that in which it is published and without a similar condi"
+    },
+    {
+      "path": "consult/B2B Go-to-Market Strategy Handbook.pdf",
+      "name": "B2B Go-to-Market Strategy Handbook.pdf",
+      "size_bytes": 1629013,
+      "sha256": "5f51b257a3efdab8dbf9e8f21898d39abb75425eb6568ce38907c464a4972a50",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "consulting-playbook",
+        "strategy-management"
+      ],
+      "candidate_layers": [
+        "methodology",
+        "operations"
+      ],
+      "parser": "pypdf",
+      "pages": 245,
+      "text_sample": "The B2B Go-to-Market Strategy Handbook 1 The B2B Go-to-Market Strategy Handbook 2 © 2024 by Will Bachman First Edition All rights reserved. No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without permission in writing from the publisher, except by a reviewer who may quote brief passages in a review. Published by Umbrex Astoria, NY Book design by Umbrex Consulting LLC Printed in the United States of America ISBN: 978-1-961779-38-9 For more information on our publications, visit our website at www.umbrex.com This book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, resold, hired out, or otherwise circulated without the publisher’s prior consent in any form of binding or cover other than that in which it is published and without a similar condition inc"
+    },
+    {
+      "path": "consult/Business Plan Playbook.pdf",
+      "name": "Business Plan Playbook.pdf",
+      "size_bytes": 1739600,
+      "sha256": "94527df2d6713764ba15e771c691f733eb083c00ffadb762df711499445195a7",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "consulting-playbook",
+        "strategy-management"
+      ],
+      "candidate_layers": [
+        "methodology",
+        "operations"
+      ],
+      "parser": "pypdf",
+      "pages": 122,
+      "text_sample": "The Umbrex Business Plan Playbook 1 The Umbrex Business Plan Playbook 2 © 2024 by Will Bachman First Edition All rights reserved. No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without permission in writing from the publisher, except by a reviewer who may quote brief passages in a review. Published by Umbrex Astoria, NY Book design by Umbrex Consulting LLC Printed in the United States of America ISBN: 978-1-961779-30-3 For more information on our publications, visit our website at www.umbrex.com This book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, resold, hired out, or otherwise circulated without the publisher’s prior consent in any form of binding or cover other than that in which it is published and without a similar condition including thi"
+    },
+    {
+      "path": "consult/Busy-Consultants-Guide-to-PowerPoint.pptx",
+      "name": "Busy-Consultants-Guide-to-PowerPoint.pptx",
+      "size_bytes": 6572285,
+      "sha256": "4a72ef03e03b4cda5bf0394f6f8c88c6a1aa22904493dddcf60ade62e9bafa84",
+      "suffix": ".pptx",
+      "candidate_categories": [
+        "consultant-delivery-craft"
+      ],
+      "candidate_layers": [
+        "operations"
+      ],
+      "parser": "zip+xml",
+      "slide_count": 36,
+      "text_sample": "Renegade x MASTERING POWERPOINT 04 Align and Distribute www.renegade.llc 5 www.renegade.llc Use curated imagery & icons to add interest. Be judicious and keep it chic. DRIVERS INSPIRATION AMBITION PLANNING ACTION ADVENTURE DAY TWO DAY ONE Financials, trends, metrics and the levers that drive profitability Motivating case studies from the fields of publishing and beyond Goals, objectives and Big Dreams for the year ahead Resourcing, ownership and our definition of success A clear commitment to our efforts when we return to the office Hit the river for some team bonding and a Class 4 thrill ride 6 www.renegade.llc Communicate to be understood. Don’t complicate your message Keep the story tight Use big fonts! The Appendix can be your best friend Subtitle Template — Stacked bar chart xxx $$$ Source:_______ xxx Lorem ipsum dolor sit amet , consectetur adipiscing elit . Sed eget . Sample"
+    },
+    {
+      "path": "consult/Career Services Guide to Consulting.pdf",
+      "name": "Career Services Guide to Consulting.pdf",
+      "size_bytes": 578636,
+      "sha256": "2f0961b6effc92c6c442ad44739f1fd0f0f47889b89ba58239be57952999e251",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "client-development"
+      ],
+      "candidate_layers": [
+        "operations"
+      ],
+      "parser": "pypdf",
+      "pages": 52,
+      "text_sample": "TheUmbrexCareerServicesGuidetoConsulting Findanindependentconsultantatwww.umbrex.com 1 TheUmbrexCareerServicesGuidetoConsulting ©2024byWillBachman FirstEdition Allrightsreserved.Nopartofthisbookmaybereproducedinanyformorbyanyelectronicormechanicalmeans,includinginformationstorageandretrievalsystems,withoutpermissioninwritingfromthepublisher, exceptbyareviewerwhomayquotebriefpassagesinareview. PublishedbyUmbrexAstoria,NYBookdesignbyUmbrexConsultingLLCPrintedintheUnitedStatesofAmericaISBN:978-1-961779-73-0Formoreinformationonourpublications,visitourwebsiteatwww.umbrex.com Thisbookissoldsubjecttotheconditionthatitshallnot,bywayoftradeorotherwise,belent,resold,hiredout,orotherwisecirculatedwithoutthepublisher’spriorconsentinanyformofbindingorcoverotherthanthatinwhichitispublishedandwithoutasimilarconditionincludingthisconditionbeingimposedonthesubsequentpurchaser. Findanindependentconsultant"
+    },
+    {
+      "path": "consult/Chief Strategy Officer Handbook.pdf",
+      "name": "Chief Strategy Officer Handbook.pdf",
+      "size_bytes": 1513158,
+      "sha256": "03bbb9ce680e0dfa008f036aad3ae800d01a23302c02ed56394d42bc0fc215a6",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "consulting-playbook",
+        "strategy-management"
+      ],
+      "candidate_layers": [
+        "methodology",
+        "operations"
+      ],
+      "parser": "pypdf",
+      "pages": 200,
+      "text_sample": "1 2 © 2024 by Will Bachman First Edition All rights reserved. No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without permission in writing from the publisher, except by a reviewer who may quote brief passages in a review. Published by Umbrex Astoria, NY Book design by Umbrex Consulting LLC Printed in the United States of America ISBN: 978-1-961779-33-4 For more information on our publications, visit our website at www.umbrex.com This book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, resold, hired out, or otherwise circulated without the publisher’s prior consent in any form of binding or cover other than that in which it is published and without a similar condition including this condition being imposed on the subsequent purchaser. 3 Umbrex is t"
+    },
+    {
+      "path": "consult/Commercial Due Diligence Playbook 2024.pdf",
+      "name": "Commercial Due Diligence Playbook 2024.pdf",
+      "size_bytes": 1052984,
+      "sha256": "1cbbe17a4cd9cbacae3e41533255335a2178a5a062b4df9ae354e8abc9a3e32f",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "consulting-playbook",
+        "transaction-advisory"
+      ],
+      "candidate_layers": [
+        "methodology",
+        "operations"
+      ],
+      "parser": "pypdf",
+      "pages": 103,
+      "text_sample": "The Umbrex Commercial Due Diligence Playbook Find an independent consultant at www.umbrex.com 1 The Umbrex Commercial Due Diligence Playbook Find an independent consultant at www.umbrex.com 2 © 2024 by Will Bachman First Edition All rights reserved. No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without permission in writing from the publisher, except by a reviewer who may quote brief passages in a review. Published by Umbrex Astoria, NY Book design by Umbrex Consulting LLC Printed in the United States of America ISBN: 978-1-961779-16-7 For more information on our publications, visit our website at www.umbrex.com This book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, resold, hired out, or otherwise circulated without the publisher’s prior consen"
+    },
+    {
+      "path": "consult/Company Culture Diagnostic Guide.pdf",
+      "name": "Company Culture Diagnostic Guide.pdf",
+      "size_bytes": 1217014,
+      "sha256": "c2bddbf3a60e0d931ae03c26d73a5d6e671b59bfdb27e475b8ee81e15255dd95",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "diagnostic-guide"
+      ],
+      "candidate_layers": [
+        "methodology"
+      ],
+      "parser": "pypdf",
+      "pages": 126,
+      "text_sample": "Company Culture Diagnostic Guide 1 Umbrex can help you quickly find the right independent consultant for your project needs. Contact us at: inquiry@umbrex.com Company Culture Diagnostic Guide 2 Umbrex can help you quickly find the right independent consultant for your project needs. Contact us at: inquiry@umbrex.com © 2024 by Will Bachman First Edition All rights reserved. No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without permission in writing from the publisher, except by a reviewer who may quote brief passages in a review. Published by Umbrex Astoria, NY Book design by Umbrex Consulting LLC Printed in the United States of America ISBN: 978-1-961779-41-9 For more information on our publications, visit our website at www.umbrex.com This book is sold subject to the condition that it sha"
+    },
+    {
+      "path": "consult/Competitive Intelligence Playbook v3 2024.pdf",
+      "name": "Competitive Intelligence Playbook v3 2024.pdf",
+      "size_bytes": 909264,
+      "sha256": "2a8b43b3001d530f2edb5b814938022af827427e2193f033ed2aab9b29283c9c",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "consulting-playbook"
+      ],
+      "candidate_layers": [
+        "operations"
+      ],
+      "parser": "pypdf",
+      "pages": 135,
+      "text_sample": "© 2024 by Will Bachman First Edition All rights reserved. No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without permission in writing from the publisher, except by a reviewer who may quote brief passages in a review. Published by Umbrex Astoria, NY Book design by Umbrex Consulting LLC Printed in the United States of America ISBN: 978-1-961779-23-5 For more information on our publications, visit our website at www.umbrex.com This book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, resold, hired out, or otherwise circulated without the publisher’s prior consent in any form of binding or cover other than that in which it is published and without a similar condition including this condition being imposed on the subsequent purchaser. Umbrex is the fas"
+    },
+    {
+      "path": "consult/Consulting Frameworks Toolkit from Umbrex.pptx",
+      "name": "Consulting Frameworks Toolkit from Umbrex.pptx",
+      "size_bytes": 4163590,
+      "sha256": "c2ea7901b85eb27160192ce4b8cf6742a15765e9cef8cc6632e4527d4fa9352a",
+      "suffix": ".pptx",
+      "candidate_categories": [
+        "consulting-playbook"
+      ],
+      "candidate_layers": [
+        "operations"
+      ],
+      "parser": "zip+xml",
+      "slide_count": 108,
+      "text_sample": "Umbrex Toolkit of Consulting Frameworks Comprehensive toolkit of frameworks & templates for Independent Management Consultants Industries Umbrex Serves Aerospace & Defense Agriculture Automotive Biotechnology Chemicals Consumer Packaged Goods Cosmetics & Personal Care Education Energy Financial Services Healthcare Insurance Manufacturing Media & Entertainment Medical Devices Metals & Mining Nonprofit Oil & Gas Pharmaceuticals Private Equity Professional Services Pulp and Paper Real Estate & Construction Restaurant Retail Social Sector & NGOs Software Technology Telecommunications Travel & Logistics Waste Management Wine, Beer, and Spirits Find a consultant now Porter's Generic Strategies Porter's Generic Strategies — Overview Porter's Generic Strategies is a framework developed by Harvard Business School professor Michael Porter and first introduced by Michael Porter in his 1980 book Com"
+    },
+    {
+      "path": "consult/Consumer & Retail.pdf",
+      "name": "Consumer & Retail.pdf",
+      "size_bytes": 3125267,
+      "sha256": "50767e99027493469accd87d9bdc695292be32c6b75fe257ddd7fc615536cce6",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "industry-analysis"
+      ],
+      "candidate_layers": [
+        "crosswalk",
+        "methodology"
+      ],
+      "parser": "pypdf",
+      "pages": 439,
+      "text_sample": "How the Consumer & Retail Industry Works 1 How the Consumer & Retail Industry Works 2 © 2025 by Will Bachman First Edition All rights reserved. No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without permission in writing from the publisher, except by a reviewer who may quote brief passages in a review. Published by Umbrex Astoria, NY Book design by Umbrex Consulting LLC Printed in the United States of America ISBN: 978-1-961779-89-1 For more information on our publications, visit our website at www.umbrex.com This book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, resold, hired out, or otherwise circulated without the publisher’s prior consent in any form of binding or cover other than that in which it is published and without a similar condition"
+    },
+    {
+      "path": "consult/Create Your Own Internship.pdf",
+      "name": "Create Your Own Internship.pdf",
+      "size_bytes": 2115782,
+      "sha256": "ca2a25aacd59b394bd356224e12b0ca66307da9084602a0eec1d4f1b4a62f2b9",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "client-development"
+      ],
+      "candidate_layers": [
+        "operations"
+      ],
+      "parser": "pypdf",
+      "pages": 59,
+      "text_sample": "1 © 2024 by Will Bachman First Edition All rights reserved. No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without permission in writing from the publisher, except by a reviewer who may quote brief passages in a review. Published by Umbrex Astoria, NY Book design by Umbrex Consulting LLC Printed in the United States of America ISBN: 978-1-961779-26-6 For more information on our publications, visit our website at www.umbrex.com This book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, resold, hired out, or otherwise circulated without the publisher’s prior consent in any form of binding or cover other than that in which it is published and without a similar condition including this condition being imposed on the subsequent purchaser. 2 Umbrex is the"
+    },
+    {
+      "path": "consult/Email Deliverability Playbook - First Edition.pdf",
+      "name": "Email Deliverability Playbook - First Edition.pdf",
+      "size_bytes": 1629949,
+      "sha256": "bafda9108ab75c2cec3891f5002456ba7a9a3ca8f977989088b0fdcad86d3f62",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "consulting-playbook"
+      ],
+      "candidate_layers": [
+        "operations"
+      ],
+      "parser": "pypdf",
+      "pages": 141,
+      "text_sample": "The Umbrex Email Deliverability Playbook The Umbrex Email Deliverability Playbook 0 © 2023 by Will Bachman First Edition All rights reserved. No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without permission in writing from the publisher, except by a reviewer who may quote brief passages in a review. Published by Umbrex Astoria, NY Book design by Umbrex Consulting LLC Printed in the United States of America ISBN: 978-1-961779-11-2 For more information on our publications, visit our website at www.umbrex.com This book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, resold, hired out, or otherwise circulated without the publisher’s prior consent in any form of binding or cover other than that in which it is published and without a similar condition i"
+    },
+    {
+      "path": "consult/Executive Handover Playbook.pdf",
+      "name": "Executive Handover Playbook.pdf",
+      "size_bytes": 680915,
+      "sha256": "dbf95b4054115211716150d5f8287fd2bb84f2a6415c7786f19842ed7c906d60",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "consulting-playbook"
+      ],
+      "candidate_layers": [
+        "operations"
+      ],
+      "parser": "pypdf",
+      "pages": 44,
+      "text_sample": "The Umbrex Executive Handover Playbook 2 © 2023 by Will Bachman First Edition All rights reserved. No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without permission in writing from the publisher, except by a reviewer who may quote brief passages in a review. Published by Umbrex Astoria, NY Book design by Umbrex Consulting LLC Printed in the United States of America ISBN: 978-1-961779-12-9 For more information on our publications, visit our website at www.umbrex.com This book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, resold, hired out, or otherwise circulated without the publisher’s prior consent in any form of binding or cover other than that in which it is published and without a similar condition including this condition being imposed on th"
+    },
+    {
+      "path": "consult/Executive Summary Slides from Umbrex.pptx",
+      "name": "Executive Summary Slides from Umbrex.pptx",
+      "size_bytes": 1856978,
+      "sha256": "852c8e069fb17a67fde692ffa3e43c2a71dc662514eb719fc8db5f55a852f32e",
+      "suffix": ".pptx",
+      "candidate_categories": [
+        "consultant-delivery-craft"
+      ],
+      "candidate_layers": [
+        "operations"
+      ],
+      "parser": "zip+xml",
+      "slide_count": 78,
+      "text_sample": "TechWave Solutions Introduction TechWave Solutions, a leader in custom software development, is embarking on a new project to develop an innovative cloud-based enterprise resource planning (ERP) system. This project aims to streamline operations and improve efficiency for our clients in the manufacturing sector. Objectives, Milestones, and Benefits Expected Results and Next Steps Project Scope and Objectives: Develop a scalable and flexible ERP system tailored for manufacturing clients. Integrate advanced features such as real-time data analytics, supply chain management, and automated reporting. Project timeline: 18 months with a budget of $5 million. Key Milestones and Deliverables: Phase 1 (Months 1-6): Requirements gathering, system design, and initial prototype development. Phase 2 (Months 7-12): Full system development, integration of advanced features, and preliminary testing. Pha"
+    },
+    {
+      "path": "consult/Finance Department-The Umbrex Diagnostic Guide.pdf",
+      "name": "Finance Department-The Umbrex Diagnostic Guide.pdf",
+      "size_bytes": 865654,
+      "sha256": "a89279d483abf430ec9172e7f0c599dfe34e20c7976e9206bc74eeb0038aeb5a",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "diagnostic-guide"
+      ],
+      "candidate_layers": [
+        "methodology"
+      ],
+      "parser": "pypdf",
+      "pages": 45,
+      "text_sample": "Copyright © 2024 by Will BachmanAll rights reserved. No part of this publication may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the publisher, except in the case of brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law.First EditionPublished by Umbrex, Astoria, NYISBN: 978-1-961779-28-0Visit our website at www.umbrex.comBook design by Umbrex Consulting LLCPrinted in the United States of AmericaThis book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, re-sold, hired out, or otherwise circulated without the publisher's prior consent in any form of binding or cover other than that in which it is published and without a similar condition including th"
+    },
+    {
+      "path": "consult/Getting Started with Advanced Data Analysis/Getting Started with Advanced Data Analysis in ChatGPT v2023_10_02.pdf",
+      "name": "Getting Started with Advanced Data Analysis in ChatGPT v2023_10_02.pdf",
+      "size_bytes": 7348438,
+      "sha256": "82b2f0f929defe6b0e65b4ed0cb9735d2f75a56df497e7fe093bf56c242fd0e9",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "reference-data"
+      ],
+      "candidate_layers": [
+        "metrics-and-data"
+      ],
+      "parser": "pypdf",
+      "pages": 59,
+      "text_sample": "Source:_______ The Umbrex Guide toGetting Started With Advanced Data Analysis in ChatGPT A video, self-guided workbook, sample data set tohelp you master the basics in under an hour Copyright © 2023 by Adam Braff and Will BachmanAll rights reserved. No part of this publication may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the publisher, except in the case of briefquotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law.First EditionPublished by Umbrex, Astoria, NYISBN: 978-1-961779-13-6Visit our website at www.umbrex.comBook design by UmbrexConsulting LLCPrinted in the United States of AmericaThis book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, re-s"
+    },
+    {
+      "path": "consult/Getting Started with Advanced Data Analysis/Patagonia and TNF jacket search.csv",
+      "name": "Patagonia and TNF jacket search.csv",
+      "size_bytes": 46996,
+      "sha256": "f33f46cc7fd88589a9325528a6f6a551f3335fbaae81acb7cd12c68d2814309b",
+      "suffix": ".csv",
+      "candidate_categories": [
+        "reference-data"
+      ],
+      "candidate_layers": [
+        "metrics-and-data"
+      ],
+      "parser": "text",
+      "line_sample": [
+        "Month,Brand,Country,Adjusted Search Quantity",
+        "2004-01-01,Patagonia jacket,United States,6.5",
+        "2004-02-01,Patagonia jacket,United States,6.5",
+        "2004-03-01,Patagonia jacket,United States,2.6",
+        "2004-04-01,Patagonia jacket,United States,0.0",
+        "2004-05-01,Patagonia jacket,United States,1.9500000000000002"
+      ],
+      "text_sample": "Month,Brand,Country,Adjusted Search Quantity 2004-01-01,Patagonia jacket,United States,6.5 2004-02-01,Patagonia jacket,United States,6.5 2004-03-01,Patagonia jacket,United States,2.6 2004-04-01,Patagonia jacket,United States,0.0 2004-05-01,Patagonia jacket,United States,1.9500000000000002"
+    },
+    {
+      "path": "consult/Getting Started with Advanced Data Analysis/UNRATE.csv",
+      "name": "UNRATE.csv",
+      "size_bytes": 3794,
+      "sha256": "a7e733a2fc9a3fe11dff633b0567b9becf7d1ed0e697c093dcebd7a0806d4617",
+      "suffix": ".csv",
+      "candidate_categories": [
+        "reference-data"
+      ],
+      "candidate_layers": [
+        "metrics-and-data"
+      ],
+      "parser": "text",
+      "line_sample": [
+        "DATE,UNRATE",
+        "2004-01-01,5.7",
+        "2004-02-01,5.6",
+        "2004-03-01,5.8",
+        "2004-04-01,5.6",
+        "2004-05-01,5.6"
+      ],
+      "text_sample": "DATE,UNRATE 2004-01-01,5.7 2004-02-01,5.6 2004-03-01,5.8 2004-04-01,5.6 2004-05-01,5.6"
+    },
+    {
+      "path": "consult/Healthcare & Life Sciences.pdf",
+      "name": "Healthcare & Life Sciences.pdf",
+      "size_bytes": 2316210,
+      "sha256": "354b27738d2a98fad44f6b1a8ae385b54e9c96d9087e34377616e05f1f61c3f9",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "industry-analysis"
+      ],
+      "candidate_layers": [
+        "crosswalk",
+        "methodology"
+      ],
+      "parser": "pypdf",
+      "pages": 304,
+      "text_sample": "How the Healthcare & Life Sciences Industry Works 1 How the Healthcare & Life Sciences Industry Works 2 © 2025 by Will Bachman First Edition All rights reserved. No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without permission in writing from the publisher, except by a reviewer who may quote brief passages in a review. Published by Umbrex Astoria, NY Book design by Umbrex Consulting LLC Printed in the United States of America ISBN: 978-1-961779-87-7 For more information on our publications, visit our website at www.umbrex.com This book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, resold, hired out, or otherwise circulated without the publisher’s prior consent in any form of binding or cover other than that in which it is published and without a"
+    },
+    {
+      "path": "consult/How The Professional & Business Services Industr.pdf",
+      "name": "How The Professional & Business Services Industr.pdf",
+      "size_bytes": 1717075,
+      "sha256": "a93b502b366f7e0730539c73338411ee5f6e7fa1e0a0a4d887394fbe4d03b8ec",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "industry-analysis"
+      ],
+      "candidate_layers": [
+        "crosswalk",
+        "methodology"
+      ],
+      "parser": "pypdf",
+      "pages": 198,
+      "text_sample": "How the Professional & Business Services Industry Works 1 How the Professional & Business Services Industry Works 2 © 2025 by Will Bachman First Edition All rights reserved. No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without permission in writing from the publisher, except by a reviewer who may quote brief passages in a review. Published by Umbrex Astoria, NY Book design by Umbrex Consulting LLC Printed in the United States of America ISBN: 978-1-961779-96-9 For more information on our publications, visit our website at www.umbrex.com This book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, resold, hired out, or otherwise circulated without the publisher’s prior consent in any form of binding or cover other than that in which it is published a"
+    },
+    {
+      "path": "consult/How Waste Management & Sustainability Works.pdf",
+      "name": "How Waste Management & Sustainability Works.pdf",
+      "size_bytes": 1068781,
+      "sha256": "26c9d1fb4b226dedfbc10222cc9395061d9057a841f631efe90bc26a9b3b4e42",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "unclassified"
+      ],
+      "candidate_layers": [
+        "methodology"
+      ],
+      "parser": "pypdf",
+      "pages": 95,
+      "text_sample": "How the Waste Management & Sustainability Industry Works 1 How the Waste Management & Sustainability Industry Works 2 © 2025 by Will Bachman First Edition All rights reserved. No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without permission in writing from the publisher, except by a reviewer who may quote brief passages in a review. Published by Umbrex Astoria, NY Book design by Umbrex Consulting LLC Printed in the United States of America ISBN: 978-1-968040-04-8 For more information on our publications, visit our website at www.umbrex.com This book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, resold, hired out, or otherwise circulated without the publisher’s prior consent in any form of binding or cover other than that in which it is published"
+    },
+    {
+      "path": "consult/How the Aerospace & Defense Industry Works.pdf",
+      "name": "How the Aerospace & Defense Industry Works.pdf",
+      "size_bytes": 1049231,
+      "sha256": "42efbac337e40b478112e286ab17ef2f7dab7376988f90746c15f29858d63ce6",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "industry-analysis"
+      ],
+      "candidate_layers": [
+        "crosswalk",
+        "methodology"
+      ],
+      "parser": "pypdf",
+      "pages": 94,
+      "text_sample": "How the Aerospace & Defense Industry Works 1 How the Aerospace & Defense Industry Works 2 © 2025 by Will Bachman First Edition All rights reserved. No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without permission in writing from the publisher, except by a reviewer who may quote brief passages in a review. Published by Umbrex Astoria, NY Book design by Umbrex Consulting LLC Printed in the United States of America ISBN: 978-1-968040-01-7 For more information on our publications, visit our website at www.umbrex.com This book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, resold, hired out, or otherwise circulated without the publisher’s prior consent in any form of binding or cover other than that in which it is published and without a similar condi"
+    },
+    {
+      "path": "consult/How the Automotive & Transportation Industry Wor.pdf",
+      "name": "How the Automotive & Transportation Industry Wor.pdf",
+      "size_bytes": 2345582,
+      "sha256": "0b9c521b9e8ef7c0d0da2aa294276653e8d7c67df038d78bf7172511fe4c97ce",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "industry-analysis"
+      ],
+      "candidate_layers": [
+        "crosswalk",
+        "methodology"
+      ],
+      "parser": "pypdf",
+      "pages": 305,
+      "text_sample": "How the Automotive & Transportation Industry Works 1 How the Automotive & Transportation Industry Works 2 © 2025 by Will Bachman First Edition All rights reserved. No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without permission in writing from the publisher, except by a reviewer who may quote brief passages in a review. Published by Umbrex Astoria, NY Book design by Umbrex Consulting LLC Printed in the United States of America ISBN: 978-1-961779-91-4 For more information on our publications, visit our website at www.umbrex.com This book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, resold, hired out, or otherwise circulated without the publisher’s prior consent in any form of binding or cover other than that in which it is published and without"
+    },
+    {
+      "path": "consult/How the Technology & Telecom Industry Works.pdf",
+      "name": "How the Technology & Telecom Industry Works.pdf",
+      "size_bytes": 1706772,
+      "sha256": "d0aabcdf606242826352928c6db8e40d7d18d03ff71a94a5a693291003d32246",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "industry-analysis"
+      ],
+      "candidate_layers": [
+        "crosswalk",
+        "methodology"
+      ],
+      "parser": "pypdf",
+      "pages": 198,
+      "text_sample": "How the Technology & Telecom Industry Works 1 How the Technology & Telecom Industry Works 2 © 2025 by Will Bachman First Edition All rights reserved. No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without permission in writing from the publisher, except by a reviewer who may quote brief passages in a review. Published by Umbrex Astoria, NY Book design by Umbrex Consulting LLC Printed in the United States of America ISBN: 978-1-961779-97-6 For more information on our publications, visit our website at www.umbrex.com This book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, resold, hired out, or otherwise circulated without the publisher’s prior consent in any form of binding or cover other than that in which it is published and without a similar con"
+    },
+    {
+      "path": "consult/How to Analyze a Biotechnology Company.pdf",
+      "name": "How to Analyze a Biotechnology Company.pdf",
+      "size_bytes": 1566764,
+      "sha256": "b7da97098647755e6bdde7ac8ec59ffcb39fe28b7345efa887ec05fde1eb6059",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "industry-analysis"
+      ],
+      "candidate_layers": [
+        "crosswalk",
+        "methodology"
+      ],
+      "parser": "pypdf",
+      "pages": 173,
+      "text_sample": "HowtoAnalyzeaBiotechnologyCompany ©2024byWillBachman FirstEdition Allrightsreserved.Nopartofthisbookmaybereproducedinanyformorbyanyelectronicormechanicalmeans,includinginformationstorageandretrievalsystems,withoutpermissioninwritingfromthepublisher, exceptbyareviewerwhomayquotebriefpassagesinareview. PublishedbyUmbrexAstoria,NYBookdesignbyUmbrexConsultingLLCPrintedintheUnitedStatesofAmerica ISBN:978-1-961779-55-6 Formoreinformationonourpublications,visitourwebsiteatwww.umbrex.com Thisbookissoldsubjecttotheconditionthatitshallnot,bywayoftradeorotherwise,belent,resold,hiredout,orotherwisecirculatedwithoutthepublisher’spriorconsentinanyformofbindingorcoverotherthanthatinwhichitispublishedandwithoutasimilarconditionincludingthisconditionbeingimposedonthesubsequentpurchaser. Findanindependent consultant at www.umbrex.com 2 HowtoAnalyzeaBiotechnologyCompany Umbrexisthefastestwaytoﬁndtherightin"
+    },
+    {
+      "path": "consult/How to Analyze a Chemicals Company.pdf",
+      "name": "How to Analyze a Chemicals Company.pdf",
+      "size_bytes": 955836,
+      "sha256": "591b68bb42b6bb23cc08ed82c512da3dd5ff68943614e9b2f8b2b80ae424e5e1",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "industry-analysis"
+      ],
+      "candidate_layers": [
+        "crosswalk",
+        "methodology"
+      ],
+      "parser": "pypdf",
+      "pages": 117,
+      "text_sample": "HowtoAnalyzeaChemicalsCompany ©2024byWillBachman FirstEdition Allrightsreserved.Nopartofthisbookmaybereproducedinanyformorbyanyelectronicormechanicalmeans,includinginformationstorageandretrievalsystems,withoutpermissioninwritingfromthepublisher, exceptbyareviewerwhomayquotebriefpassagesinareview. PublishedbyUmbrexAstoria,NYBookdesignbyUmbrexConsultingLLCPrintedintheUnitedStatesofAmerica ISBN:978-1-961779-59-4 Formoreinformationonourpublications,visitourwebsiteatwww.umbrex.com Thisbookissoldsubjecttotheconditionthatitshallnot,bywayoftradeorotherwise,belent,resold,hiredout,orotherwisecirculatedwithoutthepublisher’spriorconsentinanyformofbindingorcoverotherthanthatinwhichitispublishedandwithoutasimilarconditionincludingthisconditionbeingimposedonthesubsequentpurchaser. Findanindependentconsultantatwww.umbrex.com 2 HowtoAnalyzeaChemicalsCompany Umbrexisthefastestwaytoﬁndtherightindependentma"
+    },
+    {
+      "path": "consult/How to Analyze a Commercial Bank.pdf",
+      "name": "How to Analyze a Commercial Bank.pdf",
+      "size_bytes": 749376,
+      "sha256": "d60d87211fbc446906c8726df370fe93903c1cdb23d7dfecf374b9b559ba97a9",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "industry-analysis"
+      ],
+      "candidate_layers": [
+        "crosswalk",
+        "methodology"
+      ],
+      "parser": "pypdf",
+      "pages": 86,
+      "text_sample": "How to Analyze a Commercial Bank Find an independent consultant at www.umbrex.com 1 How to Analyze a Commercial Bank Find an independent consultant at www.umbrex.com 2 © 2025 by Will Bachman First Edition All rights reserved. No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without permission in writing from the publisher, except by a reviewer who may quote brief passages in a review. Published by Umbrex Astoria, NY Book design by Umbrex Consulting LLC Printed in the United States of America ISBN: 978-1-968040-05-5 For more information on our publications, visit our website at www.umbrex.com This book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, resold, hired out, or otherwise circulated without the publisher’s prior consent in any form of binding"
+    },
+    {
+      "path": "consult/How to Analyze a Consumer Packaged Goods Company.pdf",
+      "name": "How to Analyze a Consumer Packaged Goods Company.pdf",
+      "size_bytes": 2108065,
+      "sha256": "0a240c5da5a910f0ffe07645c27a56454e4aae3746b26e06b3cbf43217c9783f",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "industry-analysis"
+      ],
+      "candidate_layers": [
+        "crosswalk",
+        "methodology"
+      ],
+      "parser": "pypdf",
+      "pages": 265,
+      "text_sample": "HowtoAnalyzeaConsumerPackagedGoodsCompany ©2024byWillBachman FirstEdition Allrightsreserved.Nopartofthisbookmaybereproducedinanyformorbyanyelectronicormechanicalmeans,includinginformationstorageandretrievalsystems,withoutpermissioninwritingfromthepublisher, exceptbyareviewerwhomayquotebriefpassagesinareview. PublishedbyUmbrexAstoria,NYBookdesignbyUmbrexConsultingLLCPrintedintheUnitedStatesofAmerica ISBN:978-1-961779-48-8 Formoreinformationonourpublications,visitourwebsiteatwww.umbrex.com Thisbookissoldsubjecttotheconditionthatitshallnot,bywayoftradeorotherwise,belent,resold,hiredout,orotherwisecirculatedwithoutthepublisher’spriorconsentinanyformofbindingorcoverotherthanthatinwhichitispublishedandwithoutasimilarconditionincludingthisconditionbeingimposedonthesubsequentpurchaser. Findanindependent consultant at www.umbrex.com 2 HowtoAnalyzeaConsumerPackagedGoodsCompany Umbrexisthefastestwa"
+    },
+    {
+      "path": "consult/How to Analyze a Cosmetics Company.pdf",
+      "name": "How to Analyze a Cosmetics Company.pdf",
+      "size_bytes": 1488121,
+      "sha256": "26e3ac6cee8b879a8dc2910b10236f99043d2d7faa4532e72449c4cfe32296f5",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "industry-analysis"
+      ],
+      "candidate_layers": [
+        "crosswalk",
+        "methodology"
+      ],
+      "parser": "pypdf",
+      "pages": 172,
+      "text_sample": "HowtoAnalyzeaCosmeticsCompany ©2024byWillBachman FirstEdition Allrightsreserved.Nopartofthisbookmaybereproducedinanyformorbyanyelectronicormechanicalmeans,includinginformationstorageandretrievalsystems,withoutpermissioninwritingfromthepublisher, exceptbyareviewerwhomayquotebriefpassagesinareview. PublishedbyUmbrexAstoria,NYBookdesignbyUmbrexConsultingLLCPrintedintheUnitedStatesofAmerica ISBN:978-1-961779-54-9 Formoreinformationonourpublications,visitourwebsiteatwww.umbrex.com Thisbookissoldsubjecttotheconditionthatitshallnot,bywayoftradeorotherwise,belent,resold,hiredout,orotherwisecirculatedwithoutthepublisher’spriorconsentinanyformofbindingorcoverotherthanthatinwhichitispublishedandwithoutasimilarconditionincludingthisconditionbeingimposedonthesubsequentpurchaser. Findanindependent consultant at www.umbrex.com 2 HowtoAnalyzeaCosmeticsCompany Umbrexisthefastestwaytoﬁndtherightindependen"
+    },
+    {
+      "path": "consult/How to Analyze a Health Payor.pdf",
+      "name": "How to Analyze a Health Payor.pdf",
+      "size_bytes": 852240,
+      "sha256": "04be213a98bdbf1139f72dbf821b6ac32c4795f8c8d400bd28c97f3c78c7d1a0",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "industry-analysis"
+      ],
+      "candidate_layers": [
+        "crosswalk",
+        "methodology"
+      ],
+      "parser": "pypdf",
+      "pages": 120,
+      "text_sample": "HowtoAnalyzeaHealthPayor Findanindependentconsultantatwww.umbrex.com 1 HowtoAnalyzeaHealthPayor ©2024byWillBachman FirstEdition Allrightsreserved.Nopartofthisbookmaybereproducedinanyformorbyanyelectronicormechanicalmeans,includinginformationstorageandretrievalsystems,withoutpermissioninwritingfromthepublisher, exceptbyareviewerwhomayquotebriefpassagesinareview. PublishedbyUmbrex Astoria,NY BookdesignbyUmbrexConsultingLLC PrintedintheUnitedStatesofAmerica ISBN:978-1-961779-64-8 Formoreinformationonourpublications,visitourwebsiteatwww.umbrex.com Thisbookissoldsubjecttotheconditionthatitshallnot,bywayoftradeorotherwise,belent,resold,hiredout,orotherwisecirculatedwithoutthepublisher’spriorconsentinanyformofbindingorcoverotherthanthatinwhichitispublishedandwithoutasimilarconditionincludingthisconditionbeingimposedonthesubsequentpurchaser. Findanindependentconsultantatwww.umbrex.com 2 HowtoAna"
+    },
+    {
+      "path": "consult/How to Analyze a Healthcare Provider.pdf",
+      "name": "How to Analyze a Healthcare Provider.pdf",
+      "size_bytes": 835626,
+      "sha256": "ab6d38a68fe0ee0158707315898a1c0ebf24782fff9d8f4b508e252f1c8230e0",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "industry-analysis"
+      ],
+      "candidate_layers": [
+        "crosswalk",
+        "methodology"
+      ],
+      "parser": "pypdf",
+      "pages": 146,
+      "text_sample": "Findanindependentconsultantatwww.umbrex.com 1 ©2024byWillBachman FirstEdition Allrightsreserved.Nopartofthisbookmaybereproducedinanyformorbyanyelectronicormechanicalmeans,includinginformationstorageandretrievalsystems,withoutpermissioninwritingfromthepublisher, exceptbyareviewerwhomayquotebriefpassagesinareview. PublishedbyUmbrex Astoria,NY BookdesignbyUmbrexConsultingLLC PrintedintheUnitedStatesofAmerica ISBN:978-1-961779-69-3 Formoreinformationonourpublications,visitourwebsiteatwww.umbrex.com Thisbookissoldsubjecttotheconditionthatitshallnot,bywayoftradeorotherwise,belent,resold,hiredout,orotherwisecirculatedwithoutthepublisher’spriorconsentinanyformofbindingorcoverotherthanthatinwhichitispublishedandwithoutasimilarconditionincludingthisconditionbeingimposedonthesubsequentpurchaser. Findanindependentconsultantatwww.umbrex.com 2 Umbrexisthefastestwaytoﬁndtherightindependentmanagementcon"
+    },
+    {
+      "path": "consult/How to Analyze a Hospitality Company.pdf",
+      "name": "How to Analyze a Hospitality Company.pdf",
+      "size_bytes": 856214,
+      "sha256": "3c32f0148091bc04cd7e667bafa24d4172ed24678e0d43b095bf1b0d12eb108c",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "industry-analysis"
+      ],
+      "candidate_layers": [
+        "crosswalk",
+        "methodology"
+      ],
+      "parser": "pypdf",
+      "pages": 74,
+      "text_sample": "How to Analyze a Hospitality Company Find an independent consultant at www.umbrex.com 1 How to Analyze a Hospitality Company © 2024 by Will Bachman First Edition All rights reserved. No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without permission in writing from the publisher, except by a reviewer who may quote brief passages in a review. Published by Umbrex Astoria, NY Book design by Umbrex Consulting LLC Printed in the United States of America ISBN: 978-1-961779-81-5 For more information on our publications, visit our website at www.umbrex.com This book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, resold, hired out, or otherwise circulated without the publisher’s prior consent in any form of binding or cover other than that in which it is pu"
+    },
+    {
+      "path": "consult/How to Analyze a Manufacturing Company.pdf",
+      "name": "How to Analyze a Manufacturing Company.pdf",
+      "size_bytes": 1409734,
+      "sha256": "fed1f423cce6446a3ec84feb82eb06c640e44448416d95ca4e155003211415c2",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "industry-analysis"
+      ],
+      "candidate_layers": [
+        "crosswalk",
+        "methodology"
+      ],
+      "parser": "pypdf",
+      "pages": 212,
+      "text_sample": "HowtoAnalyzeaManufacturingCompany ©2024byWillBachman FirstEdition Allrightsreserved.Nopartofthisbookmaybereproducedinanyformorbyanyelectronicormechanicalmeans,includinginformationstorageandretrievalsystems,withoutpermissioninwritingfromthepublisher, exceptbyareviewerwhomayquotebriefpassagesinareview. PublishedbyUmbrexAstoria,NYBookdesignbyUmbrexConsultingLLCPrintedintheUnitedStatesofAmerica ISBN:978-1-961779-50-1 Formoreinformationonourpublications,visitourwebsiteatwww.umbrex.com Thisbookissoldsubjecttotheconditionthatitshallnot,bywayoftradeorotherwise,belent,resold,hiredout,orotherwisecirculatedwithoutthepublisher’spriorconsentinanyformofbindingorcoverotherthanthatinwhichitispublishedandwithoutasimilarconditionincludingthisconditionbeingimposedonthesubsequentpurchaser. Findanindependent consultant at www.umbrex.com 2 HowtoAnalyzeaManufacturingCompany Umbrexisthefastestwaytoﬁndtherightin"
+    },
+    {
+      "path": "consult/How to Analyze a Media & Entertainment Company.pdf",
+      "name": "How to Analyze a Media & Entertainment Company.pdf",
+      "size_bytes": 920501,
+      "sha256": "678b708d31d6c0400ab68630ad74b92637e2f3c5a457917a7aa1c65a6506b337",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "industry-analysis"
+      ],
+      "candidate_layers": [
+        "crosswalk",
+        "methodology"
+      ],
+      "parser": "pypdf",
+      "pages": 81,
+      "text_sample": "Find an independent consultant at www.umbrex.com 1 © 2024 by Will Bachman First Edition All rights reserved. No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without permission in writing from the publisher, except by a reviewer who may quote brief passages in a review. Published by Umbrex Astoria, NY Book design by Umbrex Consulting LLC Printed in the United States of America ISBN: 978-1-961779-86-0 For more information on our publications, visit our website at www.umbrex.com This book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, resold, hired out, or otherwise circulated without the publisher’s prior consent in any form of binding or cover other than that in which it is published and without a similar condition including this condition being imp"
+    },
+    {
+      "path": "consult/How to Analyze a Medical Devices Company.pdf",
+      "name": "How to Analyze a Medical Devices Company.pdf",
+      "size_bytes": 1198786,
+      "sha256": "9f73e7602b402a73df6529b14f39df2727cb26cc6b28f7b58df015b110c21eb8",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "industry-analysis"
+      ],
+      "candidate_layers": [
+        "crosswalk",
+        "methodology"
+      ],
+      "parser": "pypdf",
+      "pages": 125,
+      "text_sample": "Find an independent consultant at www.umbrex.com 1 © 2024 by Will Bachman First Edition All rights reserved. No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without permission in writing from the publisher, except by a reviewer who may quote brief passages in a review. Published by Umbrex Astoria, NY Book design by Umbrex Consulting LLC Printed in the United States of America ISBN: 978-1-961779-78-5 For more information on our publications, visit our website at www.umbrex.com This book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, resold, hired out, or otherwise circulated without the publisher’s prior consent in any form of binding or cover other than that in which it is published and without a similar condition including this condition being imp"
+    },
+    {
+      "path": "consult/How to Analyze a Metals & Mining Company.pdf",
+      "name": "How to Analyze a Metals & Mining Company.pdf",
+      "size_bytes": 849096,
+      "sha256": "f3bf449a7bea39b51ab5c196afde2a07ec384829b6aa64736c41b4a1caa8f1fc",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "industry-analysis"
+      ],
+      "candidate_layers": [
+        "crosswalk",
+        "methodology"
+      ],
+      "parser": "pypdf",
+      "pages": 144,
+      "text_sample": "Findanindependentconsultantatwww.umbrex.com 1 ©2024byWillBachman FirstEdition Allrightsreserved.Nopartofthisbookmaybereproducedinanyformorbyanyelectronicormechanicalmeans,includinginformationstorageandretrievalsystems,withoutpermissioninwritingfromthepublisher, exceptbyareviewerwhomayquotebriefpassagesinareview. PublishedbyUmbrex Astoria,NY BookdesignbyUmbrexConsultingLLC PrintedintheUnitedStatesofAmerica ISBN:978-1-961779-67-9 Formoreinformationonourpublications,visitourwebsiteatwww.umbrex.com Thisbookissoldsubjecttotheconditionthatitshallnot,bywayoftradeorotherwise,belent,resold,hiredout,orotherwisecirculatedwithoutthepublisher’spriorconsentinanyformofbindingorcoverotherthanthatinwhichitispublishedandwithoutasimilarconditionincludingthisconditionbeingimposedonthesubsequentpurchaser. Findanindependentconsultantatwww.umbrex.com 2 Umbrexisthefastestwaytoﬁndtherightindependentmanagementcon"
+    },
+    {
+      "path": "consult/How to Analyze a Pharmaceutical Company.pdf",
+      "name": "How to Analyze a Pharmaceutical Company.pdf",
+      "size_bytes": 1553139,
+      "sha256": "c24f8d0a6cdd0d969ac92b46e0e8254e5bf905fe792615c32353521be09cc942",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "industry-analysis"
+      ],
+      "candidate_layers": [
+        "crosswalk",
+        "methodology"
+      ],
+      "parser": "pypdf",
+      "pages": 165,
+      "text_sample": "HowtoAnalyzeaPharmaceuticalCompany ©2024byWillBachman FirstEdition Allrightsreserved.Nopartofthisbookmaybereproducedinanyformorbyanyelectronicormechanicalmeans,includinginformationstorageandretrievalsystems,withoutpermissioninwritingfromthepublisher, exceptbyareviewerwhomayquotebriefpassagesinareview. PublishedbyUmbrexAstoria,NYBookdesignbyUmbrexConsultingLLCPrintedintheUnitedStatesofAmerica ISBN:978-1-961779-49-5 Formoreinformationonourpublications,visitourwebsiteatwww.umbrex.com Thisbookissoldsubjecttotheconditionthatitshallnot,bywayoftradeorotherwise,belent,resold,hiredout,orotherwisecirculatedwithoutthepublisher’spriorconsentinanyformofbindingorcoverotherthanthatinwhichitispublishedandwithoutasimilarconditionincludingthisconditionbeingimposedonthesubsequentpurchaser. Findanindependent consultant at www.umbrex.com 2 HowtoAnalyzeaPharmaceuticalCompany Umbrexisthefastestwaytoﬁndtheright"
+    },
+    {
+      "path": "consult/How to Analyze a Property & Casualty Insurance C.pdf",
+      "name": "How to Analyze a Property & Casualty Insurance C.pdf",
+      "size_bytes": 925783,
+      "sha256": "a6e34189797d5f8eb30de47c9b08f7841456b9876085dcb5704979ec273968b8",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "industry-analysis"
+      ],
+      "candidate_layers": [
+        "crosswalk",
+        "methodology"
+      ],
+      "parser": "pypdf",
+      "pages": 140,
+      "text_sample": "HowtoAnalyzeaProperty&CasualtyInsuranceCompany Findanindependentconsultantatwww.umbrex.com1 HowtoAnalyzeaProperty&CasualtyInsuranceCompany ©2024byWillBachman FirstEdition Allrightsreserved.Nopartofthisbookmaybereproducedinanyformorbyanyelectronicormechanicalmeans,includinginformationstorageandretrievalsystems,withoutpermissioninwritingfromthepublisher, exceptbyareviewerwhomayquotebriefpassagesinareview. PublishedbyUmbrex Astoria,NY BookdesignbyUmbrexConsultingLLC PrintedintheUnitedStatesofAmerica ISBN:978-1-961779-61-7 Formoreinformationonourpublications,visitourwebsiteatwww.umbrex.com Thisbookissoldsubjecttotheconditionthatitshallnot,bywayoftradeorotherwise,belent,resold,hiredout,orotherwisecirculatedwithoutthepublisher’spriorconsentinanyformofbindingorcoverotherthanthatinwhichitispublishedandwithoutasimilarconditionincludingthisconditionbeingimposedonthesubsequentpurchaser. Findanindep"
+    },
+    {
+      "path": "consult/How to Analyze a Retail Bank.pdf",
+      "name": "How to Analyze a Retail Bank.pdf",
+      "size_bytes": 793107,
+      "sha256": "fd9220c97aa2c6faaac9d784ca228b7991cc0fb2f6d8cc74144725e41811d24a",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "industry-analysis"
+      ],
+      "candidate_layers": [
+        "crosswalk",
+        "methodology"
+      ],
+      "parser": "pypdf",
+      "pages": 135,
+      "text_sample": "Findanindependentconsultantatwww.umbrex.com 1 ©2024byWillBachman FirstEdition Allrightsreserved.Nopartofthisbookmaybereproducedinanyformorbyanyelectronicormechanicalmeans,includinginformationstorageandretrievalsystems,withoutpermissioninwritingfromthepublisher, exceptbyareviewerwhomayquotebriefpassagesinareview. PublishedbyUmbrex Astoria,NY BookdesignbyUmbrexConsultingLLC PrintedintheUnitedStatesofAmerica ISBN:978-1-961779-68-6 Formoreinformationonourpublications,visitourwebsiteatwww.umbrex.com Thisbookissoldsubjecttotheconditionthatitshallnot,bywayoftradeorotherwise,belent,resold,hiredout,orotherwisecirculatedwithoutthepublisher’spriorconsentinanyformofbindingorcoverotherthanthatinwhichitispublishedandwithoutasimilarconditionincludingthisconditionbeingimposedonthesubsequentpurchaser. Findanindependentconsultantatwww.umbrex.com 2 Umbrexisthefastestwaytoﬁndtherightindependentmanagementcon"
+    },
+    {
+      "path": "consult/How to Analyze a Retail Company.pdf",
+      "name": "How to Analyze a Retail Company.pdf",
+      "size_bytes": 3086727,
+      "sha256": "dee905e97560943d8162b76ff047082f110b2734bc75636e29be65ce694ecb4e",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "industry-analysis"
+      ],
+      "candidate_layers": [
+        "crosswalk",
+        "methodology"
+      ],
+      "parser": "pypdf",
+      "pages": 126,
+      "text_sample": "How to Analyze a Retail Company Find an independent consultant at www.umbrex.com 2 © 2024 by Will Bachman First Edition All rights reserved. No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without permission in writing from the publisher, except by a reviewer who may quote brief passages in a review. Published by Umbrex Astoria, NY Book design by Umbrex Consulting LLC Printed in the United States of America ISBN: 978-1-961779-47-1 For more information on our publications, visit our website at www.umbrex.com This book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, resold, hired out, or otherwise circulated without the publisher’s prior consent in any form of binding or cover other than that in which it is published and without a similar condition in"
+    },
+    {
+      "path": "consult/How to Analyze a Telecommunications Company.pdf",
+      "name": "How to Analyze a Telecommunications Company.pdf",
+      "size_bytes": 1371341,
+      "sha256": "422e90c5008b2fe69bd973ef1f2ad1347f98a1c3185bba7651a7ac36cf66dacd",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "industry-analysis"
+      ],
+      "candidate_layers": [
+        "crosswalk",
+        "methodology"
+      ],
+      "parser": "pypdf",
+      "pages": 146,
+      "text_sample": "HowtoAnalyzeaTelecommunicationsCompany ©2024byWillBachman FirstEdition Allrightsreserved.Nopartofthisbookmaybereproducedinanyformorbyanyelectronicormechanicalmeans,includinginformationstorageandretrievalsystems,withoutpermissioninwritingfromthepublisher, exceptbyareviewerwhomayquotebriefpassagesinareview. PublishedbyUmbrexAstoria,NYBookdesignbyUmbrexConsultingLLCPrintedintheUnitedStatesofAmerica ISBN:978-1-961779-51-8 Formoreinformationonourpublications,visitourwebsiteatwww.umbrex.com Thisbookissoldsubjecttotheconditionthatitshallnot,bywayoftradeorotherwise,belent,resold,hiredout,orotherwisecirculatedwithoutthepublisher’spriorconsentinanyformofbindingorcoverotherthanthatinwhichitispublishedandwithoutasimilarconditionincludingthisconditionbeingimposedonthesubsequentpurchaser. Findanindependent consultant at www.umbrex.com 2 HowtoAnalyzeaTelecommunicationsCompany Umbrexisthefastestwaytoﬁnd"
+    },
+    {
+      "path": "consult/How to Analyze a Third Party Logistics Company.pdf",
+      "name": "How to Analyze a Third Party Logistics Company.pdf",
+      "size_bytes": 1099685,
+      "sha256": "dc9c293846a064d993337377249f5e9d01cb4730addf759e54ee45f1d6ce4c13",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "industry-analysis"
+      ],
+      "candidate_layers": [
+        "crosswalk",
+        "methodology"
+      ],
+      "parser": "pypdf",
+      "pages": 104,
+      "text_sample": "How to Analyze a Third Party Logistics Company Find an independent consultant at www.umbrex.com 1 How to Analyze a Third Party Logistics Company © 2024 by Will Bachman First Edition All rights reserved. No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without permission in writing from the publisher, except by a reviewer who may quote brief passages in a review. Published by Umbrex Astoria, NY Book design by Umbrex Consulting LLC Printed in the United States of America ISBN: 978-1-961779-84-6 For more information on our publications, visit our website at www.umbrex.com This book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, resold, hired out, or otherwise circulated without the publisher’s prior consent in any form of binding or cover other than th"
+    },
+    {
+      "path": "consult/How to Analyze a Waste Management Company.pdf",
+      "name": "How to Analyze a Waste Management Company.pdf",
+      "size_bytes": 1251889,
+      "sha256": "cee8a4956a6b1ea53adc0ea5094dbf029bb9bf7f26c7461108e8e0c519f72454",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "industry-analysis"
+      ],
+      "candidate_layers": [
+        "crosswalk",
+        "methodology"
+      ],
+      "parser": "pypdf",
+      "pages": 149,
+      "text_sample": "Find an independent consultant at www.umbrex.com 1 © 2025 by Will Bachman First Edition All rights reserved. No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without permission in writing from the publisher, except by a reviewer who may quote brief passages in a review. Published by Umbrex Astoria, NY Book design by Umbrex Consulting LLC Printed in the United States of America ISBN: 978-1-961779-79-2 For more information on our publications, visit our website at www.umbrex.com This book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, resold, hired out, or otherwise circulated without the publisher’s prior consent in any form of binding or cover other than that in which it is published and without a similar condition including this condition being imp"
+    },
+    {
+      "path": "consult/How to Analyze a Wine, Beer & Spirits Company.pdf",
+      "name": "How to Analyze a Wine, Beer & Spirits Company.pdf",
+      "size_bytes": 914190,
+      "sha256": "f73a4b243ddd922ea4e96b871ae8249bf7f5279a081983897a1040b0a406f657",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "industry-analysis"
+      ],
+      "candidate_layers": [
+        "crosswalk",
+        "methodology"
+      ],
+      "parser": "pypdf",
+      "pages": 144,
+      "text_sample": "Findanindependentconsultantatwww.umbrex.com 1 ©2024byWillBachman FirstEdition Allrightsreserved.Nopartofthisbookmaybereproducedinanyformorbyanyelectronicormechanicalmeans,includinginformationstorageandretrievalsystems,withoutpermissioninwritingfromthepublisher, exceptbyareviewerwhomayquotebriefpassagesinareview. PublishedbyUmbrex Astoria,NY BookdesignbyUmbrexConsultingLLC PrintedintheUnitedStatesofAmerica ISBN:978-1-961779-65-5 Formoreinformationonourpublications,visitourwebsiteatwww.umbrex.com Thisbookissoldsubjecttotheconditionthatitshallnot,bywayoftradeorotherwise,belent,resold,hiredout,orotherwisecirculatedwithoutthepublisher’spriorconsentinanyformofbindingorcoverotherthanthatinwhichitispublishedandwithoutasimilarconditionincludingthisconditionbeingimposedonthesubsequentpurchaser. Findanindependentconsultantatwww.umbrex.com 2 Umbrexisthefastestwaytoﬁndtherightindependentmanagementcon"
+    },
+    {
+      "path": "consult/How to Analyze an Aerospace & Defense Company.pdf",
+      "name": "How to Analyze an Aerospace & Defense Company.pdf",
+      "size_bytes": 1479861,
+      "sha256": "387c4cb9e2996de2f6f23962690e29d89eba789b57b986d4cd988048e5c573df",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "industry-analysis"
+      ],
+      "candidate_layers": [
+        "crosswalk",
+        "methodology"
+      ],
+      "parser": "pypdf",
+      "pages": 166,
+      "text_sample": "HowtoAnalyzeanAerospace&DefenseCompany ©2024byWillBachman FirstEdition Allrightsreserved.Nopartofthisbookmaybereproducedinanyformorbyanyelectronicormechanicalmeans,includinginformationstorageandretrievalsystems,withoutpermissioninwritingfromthepublisher, exceptbyareviewerwhomayquotebriefpassagesinareview. PublishedbyUmbrexAstoria,NYBookdesignbyUmbrexConsultingLLCPrintedintheUnitedStatesofAmerica ISBN:978-1-961779-52-5 Formoreinformationonourpublications,visitourwebsiteatwww.umbrex.com Thisbookissoldsubjecttotheconditionthatitshallnot,bywayoftradeorotherwise,belent,resold,hiredout,orotherwisecirculatedwithoutthepublisher’spriorconsentinanyformofbindingorcoverotherthanthatinwhichitispublishedandwithoutasimilarconditionincludingthisconditionbeingimposedonthesubsequentpurchaser. Findanindependent consultant at www.umbrex.com 2 HowtoAnalyzeanAerospace&DefenseCompany Umbrexisthefastestwaytoﬁnd"
+    },
+    {
+      "path": "consult/How to Analyze an Electricity Generation Company.pdf",
+      "name": "How to Analyze an Electricity Generation Company.pdf",
+      "size_bytes": 859449,
+      "sha256": "4805f9c3a47e879f1a0cb7b581b37003dffd3df56f3766b353b28f7c61ef69e2",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "industry-analysis"
+      ],
+      "candidate_layers": [
+        "crosswalk",
+        "methodology"
+      ],
+      "parser": "pypdf",
+      "pages": 137,
+      "text_sample": "Findanindependentconsultantatwww.umbrex.com 1 ©2024byWillBachman FirstEdition Allrightsreserved.Nopartofthisbookmaybereproducedinanyformorbyanyelectronicormechanicalmeans,includinginformationstorageandretrievalsystems,withoutpermissioninwritingfromthepublisher, exceptbyareviewerwhomayquotebriefpassagesinareview. PublishedbyUmbrex Astoria,NY BookdesignbyUmbrexConsultingLLC PrintedintheUnitedStatesofAmerica ISBN:978-1-961779-66-2 Formoreinformationonourpublications,visitourwebsiteatwww.umbrex.com Thisbookissoldsubjecttotheconditionthatitshallnot,bywayoftradeorotherwise,belent,resold,hiredout,orotherwisecirculatedwithoutthepublisher’spriorconsentinanyformofbindingorcoverotherthanthatinwhichitispublishedandwithoutasimilarconditionincludingthisconditionbeingimposedonthesubsequentpurchaser. Findanindependentconsultantatwww.umbrex.com 2 Umbrexisthefastestwaytoﬁndtherightindependentmanagementcon"
+    },
+    {
+      "path": "consult/How to Find Clients.pdf",
+      "name": "How to Find Clients.pdf",
+      "size_bytes": 369539,
+      "sha256": "2f81ff8cdd91d026dbb41022e9133742a58be31519729872f01b457081fdd838",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "client-development"
+      ],
+      "candidate_layers": [
+        "operations"
+      ],
+      "parser": "pypdf",
+      "pages": 21,
+      "text_sample": "1 Table of Contents 1. Adopt the mindset of a marketer 2 2. Identify your ideal target client 5 3. Craft your fishing line 7 4. Engage in meaningful personal interactions 10 5. Create and distribute content 16 6. Foster the five traits that bring leads to you 21 2 1. Adopt the mindset of a marketer The first step when casting a net for new clients is to create a strategy for marketing your brand and services. Start by asking yourself a few questions. Umbrex Managing Partner Will Bachman advises consultants to take an external view of themselves and their consulting practice in this process. • Do I need a project? • What do I know how to do? • Who can give me a project? “Put yourself in the clients’ shoes and be a marketer of yourself,” Bachman says. Marketing your business should almost be treated as a separate role: there is you, the consultant who provides services to the client. Then,"
+    },
+    {
+      "path": "consult/How to analyze a SaaS company.pdf",
+      "name": "How to analyze a SaaS company.pdf",
+      "size_bytes": 3567175,
+      "sha256": "db73c7c633df8125b50d3767cd16c005322c5d651d9ed1f1381acd35812508ad",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "industry-analysis"
+      ],
+      "candidate_layers": [
+        "crosswalk",
+        "methodology"
+      ],
+      "parser": "pypdf",
+      "pages": 115,
+      "text_sample": "How to Analyze a SaaS Company 1 Find an independent consultant at www.umbrex.com How to Analyze a SaaS Company 2 Find an independent consultant at www.umbrex.com © 2024 by Will Bachman First Edition All rights reserved. No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without permission in writing from the publisher, except by a reviewer who may quote brief passages in a review. Published by Umbrex Astoria, NY Book design by Umbrex Consulting LLC Printed in the United States of America ISBN: 978-1-961779-46-4 For more information on our publications, visit our website at www.umbrex.com This book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, resold, hired out, or otherwise circulated without the publisher’s prior consent in any form of binding or co"
+    },
+    {
+      "path": "consult/Library-of-Creativity-Exercises-1st-Edition.pdf",
+      "name": "Library-of-Creativity-Exercises-1st-Edition.pdf",
+      "size_bytes": 1606420,
+      "sha256": "61b309adceabb4440d6e479f05395d77bb8f4582d0bec538d53952d5d7381329",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "unclassified"
+      ],
+      "candidate_layers": [
+        "methodology"
+      ],
+      "parser": "pypdf",
+      "pages": 149,
+      "text_sample": "© 2023 by Umbrex Consulting LLC This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. You are free to: Share — copy and redistribute the material in any medium or format Adapt — remix, transform, and build upon the material The licensor cannot revoke these freedoms as long as you follow these license terms: Attribution — You must give appropriate credit to Will Bachman and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests that the author endorses you or your use. NonCommercial — You may not use the material for commercial purposes. ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original. No additional restrictions — You may not apply legal terms or technological measures that legally restrict"
+    },
+    {
+      "path": "consult/Marketing Plan Playbook.pdf",
+      "name": "Marketing Plan Playbook.pdf",
+      "size_bytes": 988081,
+      "sha256": "935ea713e4ebd3cc1aef3de4eac846d99a965a7785503ba5a6a8b844e229d81c",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "consulting-playbook"
+      ],
+      "candidate_layers": [
+        "operations"
+      ],
+      "parser": "pypdf",
+      "pages": 171,
+      "text_sample": "Umbrex Marketing Plan Playbook 1 Umbrex Marketing Plan Playbook 2 © 2024 by Will Bachman First Edition All rights reserved. No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without permission in writing from the publisher, except by a reviewer who may quote brief passages in a review. Published by Umbrex Astoria, NY Book design by Umbrex Consulting LLC Printed in the United States of America ISBN: 978-1-961779-32-7 For more information on our publications, visit our website at www.umbrex.com This book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, resold, hired out, or otherwise circulated without the publisher’s prior consent in any form of binding or cover other than that in which it is published and without a similar condition including this cond"
+    },
+    {
+      "path": "consult/McKinsey Approach to Problem Solving from Umbrex.pptx",
+      "name": "McKinsey Approach to Problem Solving from Umbrex.pptx",
+      "size_bytes": 3858221,
+      "sha256": "17f897bcb3341b8d0544053dce9fb90bba61630e4d9091230895e60b71249798",
+      "suffix": ".pptx",
+      "candidate_categories": [
+        "consultant-delivery-craft"
+      ],
+      "candidate_layers": [
+        "operations"
+      ],
+      "parser": "zip+xml",
+      "slide_count": 80,
+      "text_sample": "The McKinsey Approach to Problem Solving An Umbrex Toolkit Define the problem The most important step in your entire project is to first carefully define the problem. The problem definition will serve the guide all of the team’s work, so it is critical to ensure that all key stakeholders agree that it is the right problem to be solving. There are often dozens of issues that a team could focus on, and it is often not obvious how to define the problem. In any real-life situation, there are many possible problem statements. Your choice of problem statement will serve to constrain the range of possible solutions. Constraints can be a good thing (e.g., limit solutions to actions within the available budget.) And constraints can be a bad thing (e.g., eliminating the possibility of creative ideas.) So choose wisely. The problem statement may ignore many issues to focus on the priority that shou"
+    },
+    {
+      "path": "consult/Operational Due Diligence Playbook.pdf",
+      "name": "Operational Due Diligence Playbook.pdf",
+      "size_bytes": 3404543,
+      "sha256": "c8f40a546ccfb80e86fdb727877b6f5737e85e74b89a3f2cd2c10fd08447f5c7",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "consulting-playbook",
+        "transaction-advisory"
+      ],
+      "candidate_layers": [
+        "methodology",
+        "operations"
+      ],
+      "parser": "pypdf",
+      "pages": 244,
+      "text_sample": "The Operational Due Diligence Playbook Find an independent consultant at www.umbrex.com 1 The Operational Due Diligence Playbook © 2025 by Will Bachman First Edition All rights reserved. No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without permission in writing from the publisher, except by a reviewer who may quote brief passages in a review. Published by Umbrex Astoria, NY Book design by Umbrex Consulting LLC Printed in the United States of America ISBN: 978-1-961779-80-8 For more information on our publications, visit our website at www.umbrex.com This book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, resold, hired out, or otherwise circulated without the publisher’s prior consent in any form of binding or cover other than that in which it i"
+    },
+    {
+      "path": "consult/Organizational Design Diagnostic Playbook First .pdf",
+      "name": "Organizational Design Diagnostic Playbook First .pdf",
+      "size_bytes": 740976,
+      "sha256": "bd47dcfcc530f01aebeb16a97f9713a55b9e85b4994c97344549fe4ce5cbd00e",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "diagnostic-guide",
+        "consulting-playbook"
+      ],
+      "candidate_layers": [
+        "methodology",
+        "operations"
+      ],
+      "parser": "pypdf",
+      "pages": 39,
+      "text_sample": "Source:_______ Source:_______ Copyright © 2023 by Will BachmanAll rights reserved. No part of this publication may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the publisher, except in the case of brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law.First EditionPublished by Umbrex, Astoria, NYISBN: 978-1-961779-14-3Visit our website at www.umbrex.comBook design by Umbrex Consulting LLCPrinted in the United States of AmericaThis book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, re-sold, hired out, or otherwise circulated without the publisher's prior consent in any form of binding or cover other than that in which it is published and without a "
+    },
+    {
+      "path": "consult/PESTEL Analysis Playbook - First Edition.pdf",
+      "name": "PESTEL Analysis Playbook - First Edition.pdf",
+      "size_bytes": 1497669,
+      "sha256": "fca7195849f1d54dfdcc9f40acbbaa33352d5c88e46cc0d108955615d5755083",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "consulting-playbook",
+        "strategy-management"
+      ],
+      "candidate_layers": [
+        "methodology",
+        "operations"
+      ],
+      "parser": "pypdf",
+      "pages": 28,
+      "text_sample": "PESTEL Analysis Playbook Political Economic Social Technological Environmental Legal PESTEL Analysis Playbook 1 © 2023 by Umbrex Consulting LLC First Edition All rights reserved. No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without permission in writing from the publisher, except by a reviewer who may quote brief passages in a review. Published by Umbrex Astoria, NY Book design by Umbrex Consulting LLC Printed in the United States of America ISBN: 978-1-961779-06-8 For more information on our publications, visit our website at www.umbrex.com This book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, resold, hired out, or otherwise circulated without the publisher’s prior consent in any form of binding or cover other than that in which it is publis"
+    },
+    {
+      "path": "consult/Post merger integration playbook.pdf",
+      "name": "Post merger integration playbook.pdf",
+      "size_bytes": 1645998,
+      "sha256": "c63eccdb9bac8cc6ebb5a7326348f58da18c9e7e7af9b8f426f214648b3fe50b",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "consulting-playbook",
+        "transaction-advisory"
+      ],
+      "candidate_layers": [
+        "methodology",
+        "operations"
+      ],
+      "parser": "pypdf",
+      "pages": 277,
+      "text_sample": "The Umbrex Post-Merger Integration Playbook The Umbrex Post-Merger Integration Playbook © 2023 by Will Bachman Second Edition All rights reserved. No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without permission in writing from the publisher, except by a reviewer who may quote brief passages in a review. Published by Umbrex, Astoria, NY ISBN: 978-1-961779-00-6 Visit our website at www.umbrex.com This book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, resold, hired out, or otherwise circulated without the publisher’s prior consent in any form of binding or cover other than that in which it is published and without a similar condition including this condition being imposed on the subsequent purchaser. The Umbrex Post-Merger Integration Playbook Um"
+    },
+    {
+      "path": "consult/Private Equity Board Member Handbook.pdf",
+      "name": "Private Equity Board Member Handbook.pdf",
+      "size_bytes": 2139095,
+      "sha256": "c3ab79ea350c8840986e5131e2755b00ebf062054329df748077136d712282bd",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "consulting-playbook",
+        "transaction-advisory"
+      ],
+      "candidate_layers": [
+        "methodology",
+        "operations"
+      ],
+      "parser": "pypdf",
+      "pages": 307,
+      "text_sample": "Private Equity Portfolio Company Board Member Handbook Find an independent consultant at www.umbrex.com 1 Private Equity Portfolio Company Board Member Handbook Find an independent consultant at www.umbrex.com 2 © 2025 by Will Bachman First Edition All rights reserved. No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without permission in writing from the publisher, except by a reviewer who may quote brief passages in a review. Published by Umbrex Astoria, NY Book design by Umbrex Consulting LLC Printed in the United States of America ISBN: 978-1-961779-76-1 For more information on our publications, visit our website at www.umbrex.com This book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, resold, hired out, or otherwise circulated without the publ"
+    },
+    {
+      "path": "consult/Project Kickoff Toolkit from Umbrex.pptx",
+      "name": "Project Kickoff Toolkit from Umbrex.pptx",
+      "size_bytes": 954488,
+      "sha256": "0a4829bad9a5b6cc7556e2be5664b75afb36446dc734408d82816ea1eb0f7ea2",
+      "suffix": ".pptx",
+      "candidate_categories": [
+        "consulting-playbook"
+      ],
+      "candidate_layers": [
+        "operations"
+      ],
+      "parser": "zip+xml",
+      "slide_count": 40,
+      "text_sample": "Project Management Toolkit Subtitle goes here [Project Name] Problem Statement xxx xxx xxx xxx Problem definition Observations Solution constraints Insights/e valuation xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx [Project Name] Scope xxx Item (Ex: geography) Item (Ex: brand) Item (Ex: product line) In scope Item (Ex: marketing) Out of scope xxx xxx xxx xxx xxx xxx xxx [Project Name] Deliverables xxx Item (Ex: finance) Item (Ex: product roadmap) Item (Ex: organization) Deliverables Item (Ex: technology) xxx xxx xxx [Project Name] Resources Required Market research $ Technology $ Expert Interviews $ Surveys $ Item $ Item $ Item $ Item $ Item $ Item $ Item $ Item $ Item $ Item $ Item $ Item $ Total $ Annie Ernaux 50% from March to May Jon Fosse 25% from April to June Abdulrazak Gurnah 25% from April to June Louise Glück 40% from May to July Additional person Time commitment Additional p"
+    },
+    {
+      "path": "consult/Project Management Office Playbook.pdf",
+      "name": "Project Management Office Playbook.pdf",
+      "size_bytes": 946661,
+      "sha256": "a7c2691c11cef70373c61df579028e1ae8aa8651a6a80d1cf3c4a985afb8f1be",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "consulting-playbook"
+      ],
+      "candidate_layers": [
+        "operations"
+      ],
+      "parser": "pypdf",
+      "pages": 161,
+      "text_sample": "The Umbrex Project Management Office Handbook Find an independent consultant at www.umbrex.com 1 The Umbrex Project Management Office Handbook Find an independent consultant at www.umbrex.com 2 © 2023 by Will Bachman First Edition All rights reserved. No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without permission in writing from the publisher, except by a reviewer who may quote brief passages in a review. Published by Umbrex Astoria, NY Book design by Umbrex Consulting LLC Printed in the United States of America ISBN: 978-1-961779-02-0 For more information on our publications, visit our website at www.umbrex.com This book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, resold, hired out, or otherwise circulated without the publisher’s prior cons"
+    },
+    {
+      "path": "consult/Proposal-template-for-a-consulting-project.docx",
+      "name": "Proposal-template-for-a-consulting-project.docx",
+      "size_bytes": 2042537,
+      "sha256": "ca75afc70f4522eecd29628e92e9e513cfbd1d74dbe9e55d7c1d8370ecb5eb9f",
+      "suffix": ".docx",
+      "candidate_categories": [
+        "consulting-playbook",
+        "client-development"
+      ],
+      "candidate_layers": [
+        "operations"
+      ],
+      "parser": "python-docx",
+      "paragraph_count_sampled": 36,
+      "text_sample": "To CLIENT From Will Bachman, Managing Partner of Umbrex Date DATE Proposal TITLE Dear CLIENT, In this proposal, it is my pleasure to suggest a working arrangement between Client (“Client”) and Umbrex Consulting Firm, LLC (“Consultant”) with the objective of OBJECTIVE. The following sections detail the context, objectives, scope, approach, team, timing, and professional arrangements for our collaboration on this important initiative over the coming months. Project context From our discussion with you we understand that CONTEXT. OBJECTIVES We understand that …… 1. OBJECTIVE 1. xxxxx 2. OBJECTIVE 2. xxxxx SCOPE xxxx approach xx Diagnostic phase (~2 weeks): xxx Prioritization and future state design phase (~2 weeks): xx team xxxxx timing xx Professional arrangements Professional fees: xxxx use of this proposal This proposal is provided for the exclusive use of CLIENT and its Executive Team. "
+    },
+    {
+      "path": "consult/RFP Playbook.pdf",
+      "name": "RFP Playbook.pdf",
+      "size_bytes": 1139465,
+      "sha256": "b91883bc30b5224dc52e58ebfc73dd9c2d0a0c64ac5b470ca04ac17a627ce35b",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "consulting-playbook",
+        "client-development"
+      ],
+      "candidate_layers": [
+        "operations"
+      ],
+      "parser": "pypdf",
+      "pages": 156,
+      "text_sample": "1 2 © 2023 by Will Bachman First Edition All rights reserved. No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without permission in writing from the publisher, except by a reviewer who may quote brief passages in a review. Published by Umbrex Astoria, NY Book design by Umbrex Consulting LLC Printed in the United States of America ISBN: 978-1-961779-09-9 For more information on our publications, visit our website at www.umbrex.com This book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, resold, hired out, or otherwise circulated without the publisher’s prior consent in any form of binding or cover other than that in which it is published and without a similar condition including this condition being imposed on the subsequent purchaser. 3 Umbrex is t"
+    },
+    {
+      "path": "consult/Rapid IT Assessment Guide.pdf",
+      "name": "Rapid IT Assessment Guide.pdf",
+      "size_bytes": 992405,
+      "sha256": "53f468d44ef1a78e7c54ba4b120c369b1c76f886baff67112fbbb9dd0f630927",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "diagnostic-guide"
+      ],
+      "candidate_layers": [
+        "methodology"
+      ],
+      "parser": "pypdf",
+      "pages": 52,
+      "text_sample": "TheUmbrexRapidITAssessmentGuide ©2024byWillBachman FirstEdition Allrightsreserved.Nopartofthisbookmaybereproducedinanyformorbyanyelectronicormechanicalmeans,includinginformationstorageandretrievalsystems,withoutpermissioninwritingfromthepublisher, exceptbyareviewerwhomayquotebriefpassagesinareview. PublishedbyUmbrex Astoria,NY BookdesignbyUmbrexConsultingLLC PrintedintheUnitedStatesofAmerica ISBN:978-1-961779-63-1 Formoreinformationonourpublications,visitourwebsiteatwww.umbrex.com Thisbookissoldsubjecttotheconditionthatitshallnot,bywayoftradeorotherwise,belent,resold,hiredout,orotherwisecirculatedwithoutthepublisher’spriorconsentinanyformofbindingorcoverotherthanthatinwhichitispublishedandwithoutasimilarconditionincludingthisconditionbeingimposedonthesubsequentpurchaser. 2 Findanindependentconsultantatwww.umbrex.com TheUmbrexRapidITAssessmentGuide Umbrexisthefastestwaytoﬁndtherightindepe"
+    },
+    {
+      "path": "consult/Sales Operations Diagnostic v3 2023_10_26.pdf",
+      "name": "Sales Operations Diagnostic v3 2023_10_26.pdf",
+      "size_bytes": 821529,
+      "sha256": "9772217084298baaa4040338b8e276ab8f3acc72e8d71961692a6b29fde7908b",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "diagnostic-guide"
+      ],
+      "candidate_layers": [
+        "methodology"
+      ],
+      "parser": "pypdf",
+      "pages": 47,
+      "text_sample": "Copyright © 2023 by Will BachmanAll rights reserved. No part of this publication may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the publisher, except in the case of brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law.First EditionPublished by Umbrex, Astoria, NYISBN: 978-1-961779-15-0Visit our website at www.umbrex.comBook design by Umbrex Consulting LLCPrinted in the United States of AmericaThis book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, re-sold, hired out, or otherwise circulated without the publisher's prior consent in any form of binding or cover other than that in which it is published and without a similar condition including th"
+    },
+    {
+      "path": "consult/Search Engine Optimization Playbook.pdf",
+      "name": "Search Engine Optimization Playbook.pdf",
+      "size_bytes": 1027661,
+      "sha256": "02e042af76700eada3d38c623d0535960d34688d3b1c8dafde1cc5e8d093f73a",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "consulting-playbook"
+      ],
+      "candidate_layers": [
+        "operations"
+      ],
+      "parser": "pypdf",
+      "pages": 103,
+      "text_sample": "Search Engine Optimization Playbook Search Engine Optimization Playbook © 2024 by Will Bachman and Mathooshan Manoharan First Edition All rights reserved. No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without permission in writing from the publisher, except by a reviewer who may quote brief passages in a review. Published by Umbrex Astoria, NY Book design by Umbrex Consulting LLC Printed in the United States of America ISBN: 978-1-961779-34-1 For more information on our publications, visit our website at www.umbrex.com This book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, resold, hired out, or otherwise circulated without the publisher’s prior consent in any form of binding or cover other than that in which it is published and without a simila"
+    },
+    {
+      "path": "consult/Strategic Planning Playbook First Edition.pdf",
+      "name": "Strategic Planning Playbook First Edition.pdf",
+      "size_bytes": 743405,
+      "sha256": "f79494d017014c4dd4ce01181e9f860c7b73dad52af64eb619da78d79f9fcf35",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "consulting-playbook"
+      ],
+      "candidate_layers": [
+        "operations"
+      ],
+      "parser": "pypdf",
+      "pages": 79,
+      "text_sample": "Strategic Planning Playbook 1 Strategic Planning Playbook 2 © 2024 by Will Bachman First Edition All rights reserved. No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without permission in writing from the publisher, except by a reviewer who may quote brief passages in a review. Published by Umbrex Astoria, NY Book design by Umbrex Consulting LLC Printed in the United States of America ISBN: 978-1-961779-35-8 For more information on our publications, visit our website at www.umbrex.com This book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, resold, hired out, or otherwise circulated without the publisher’s prior consent in any form of binding or cover other than that in which it is published and without a similar condition including this condition "
+    },
+    {
+      "path": "consult/Strategy Offsite Playbook.pdf",
+      "name": "Strategy Offsite Playbook.pdf",
+      "size_bytes": 2230446,
+      "sha256": "3afa626f082ff601b4fcd9c96fa5da8b328cc5bb635da754f567a93f63eff12f",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "consulting-playbook",
+        "strategy-management"
+      ],
+      "candidate_layers": [
+        "methodology",
+        "operations"
+      ],
+      "parser": "pypdf",
+      "pages": 293,
+      "text_sample": "The Strategy Offsite Playbook: How to Design and Facilitate Transformative Events Find an independent consultant at www.umbrex.com 2 © 2024 by Will Bachman First Edition All rights reserved. No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without permission in writing from the publisher, except by a reviewer who may quote brief passages in a review. Published by Umbrex Astoria, NY Book design by Umbrex Consulting LLC Printed in the United States of America ISBN:978-1-961779-53-2 For more information on our publications, visit our website at www.umbrex.com This book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, resold, hired out, or otherwise circulated without the publisher’s prior consent in any form of binding or cover other than that in which i"
+    },
+    {
+      "path": "consult/Supply Chain Diagnostic Guide.pdf",
+      "name": "Supply Chain Diagnostic Guide.pdf",
+      "size_bytes": 975538,
+      "sha256": "de92082cddab4b8a1bd3ff539212f427ffc9dd58dd7fa228f148002a827d6437",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "diagnostic-guide"
+      ],
+      "candidate_layers": [
+        "methodology"
+      ],
+      "parser": "pypdf",
+      "pages": 56,
+      "text_sample": "Copyright © 2023 by Will BachmanAll rights reserved. No part of this publication may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the publisher, except in the case of brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law.First EditionPublished by Umbrex, Astoria, NYISBN: 978-1-961779-18-1Visit our website at www.umbrex.comBook design by Umbrex Consulting LLCPrinted in the United States of AmericaThis book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, re-sold, hired out, or otherwise circulated without the publisher's prior consent in any form of binding or cover other than that in which it is published and without a similar condition including th"
+    },
+    {
+      "path": "consult/Talent Management Diagnostic v2 2024_05_21.pdf",
+      "name": "Talent Management Diagnostic v2 2024_05_21.pdf",
+      "size_bytes": 831208,
+      "sha256": "db5806d6a5152ecb267bae18e6d6cd4b57084dbc306b185014a8160984d258e6",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "diagnostic-guide"
+      ],
+      "candidate_layers": [
+        "methodology"
+      ],
+      "parser": "pypdf",
+      "pages": 53,
+      "text_sample": "Copyright © 2023 by Will BachmanAll rights reserved. No part of this publication may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the publisher, except in the case of brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law.First EditionPublished by Umbrex, Astoria, NYISBN: 978-1-961779-17-4 Visit our website at www.umbrex.comBook design by Umbrex Consulting LLCPrinted in the United States of AmericaThis book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, re-sold, hired out, or otherwise circulated without the publisher's prior consent in any form of binding or cover other than that in which it is published and without a similar condition including t"
+    },
+    {
+      "path": "consult/The Busy Consultant’s Mini-MBA.pdf",
+      "name": "The Busy Consultant’s Mini-MBA.pdf",
+      "size_bytes": 4282318,
+      "sha256": "ad3b29c7ae9c329e33248bfde5ff098604f09fa5349a9ee920d6be75f4287e7f",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "strategy-management"
+      ],
+      "candidate_layers": [
+        "methodology"
+      ],
+      "parser": "pypdf",
+      "pages": 420,
+      "text_sample": "The Busy Consultant’s Mini-MBA © 2025 by Will Bachman First Edition All rights reserved. No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without permission in writing from the publisher, except by a reviewer who may quote brief passages in a review. Published by Umbrex Astoria, NY Book design by Umbrex Consulting LLC Printed in the United States of America ISBN: 978-1-961779-98-3 For more information on our publications, visit our website at www.umbrex.com This book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, resold, hired out, or otherwise circulated without the publisher’s prior consent in any form of binding or cover other than that in which it is published and without a similar condition including this condition being imposed on the subseque"
+    },
+    {
+      "path": "consult/The Umbrex Library of Functional Key Performance.xlsx",
+      "name": "The Umbrex Library of Functional Key Performance.xlsx",
+      "size_bytes": 254029,
+      "sha256": "1792badaf123b07ff129eec4cedff598faf40bcf5715749d31fbb815e9854e36",
+      "suffix": ".xlsx",
+      "candidate_categories": [
+        "reference-data"
+      ],
+      "candidate_layers": [
+        "metrics-and-data"
+      ],
+      "parser": "openpyxl",
+      "sheet_count": 3,
+      "sheets": [
+        {
+          "name": "About Umbrex",
+          "dimension_after_reset": "B2:B20",
+          "sample_non_empty_rows": 5,
+          "sample_observed_cols": 1,
+          "sample_rows": [
+            [
+              "",
+              "About Umbrex"
+            ],
+            [
+              "",
+              "Umbrex is the fastest way to find the right independent management consultant."
+            ],
+            [
+              "",
+              "Are you seeking support from an independent consultant?"
+            ]
+          ]
+        },
+        {
+          "name": "Library of KPIs by Function",
+          "dimension_after_reset": "A1:T1002",
+          "sample_non_empty_rows": 5,
+          "sample_observed_cols": 4,
+          "sample_rows": [
+            [
+              "Department",
+              "Group",
+              "KPI",
+              "Description",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Finance",
+              "Accounts Receivable",
+              "Days sales outstanding (DSO)",
+              "The average number of days it takes for a company to collect payment from its customers. A lower DSO is generally better, as it indicates that the AR department is effectively managing the collection process.",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Finance",
+              "Accounts Receivable",
+              "Payment delinquency rate",
+              "The percentage of customers who are overdue on their payments. A lower delinquency rate is generally better, as it indicates that the AR department is effectively managing the collection process and minimizing the risk of default.",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ]
+          ]
+        },
+        {
+          "name": "Departments and Groups",
+          "dimension_after_reset": "A1:Z110",
+          "sample_non_empty_rows": 5,
+          "sample_observed_cols": 2,
+          "sample_rows": [
+            [
+              "Department",
+              "Group",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Data",
+              "Big Data Team"
+            ],
+            [
+              "",
+              "Business Intelligence Team"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "path": "consult/The Umbrex Library of Industry Acronyms - First .xlsx",
+      "name": "The Umbrex Library of Industry Acronyms - First .xlsx",
+      "size_bytes": 473927,
+      "sha256": "504db47ba1fdca7192019e818e468c06aa7bc409cc885f577a7637dec14538b3",
+      "suffix": ".xlsx",
+      "candidate_categories": [
+        "reference-data"
+      ],
+      "candidate_layers": [
+        "metrics-and-data"
+      ],
+      "parser": "openpyxl",
+      "sheet_count": 33,
+      "sheets": [
+        {
+          "name": "Table of contents",
+          "dimension_after_reset": "A1:B40",
+          "sample_non_empty_rows": 5,
+          "sample_observed_cols": 1,
+          "sample_rows": [
+            [
+              "The Umbrex Library of Industry Acronyms"
+            ],
+            [
+              "",
+              "Umbrex is the fastest way to find the right independent consultant for your project."
+            ],
+            [
+              "",
+              "Contact us: inquiry@umbrex.com"
+            ]
+          ]
+        },
+        {
+          "name": "Copyright notice",
+          "dimension_after_reset": "B3:B17",
+          "sample_non_empty_rows": 5,
+          "sample_observed_cols": 1,
+          "sample_rows": [
+            [
+              "",
+              "Copyright © 2023 by Umbrex Consulting LLC"
+            ],
+            [
+              "",
+              "All rights reserved."
+            ],
+            [
+              "",
+              "Published by Umbrex Consulting LLC Astoria, NY"
+            ]
+          ]
+        },
+        {
+          "name": "All industries consolidated",
+          "dimension_after_reset": "A1:D4145",
+          "sample_non_empty_rows": 5,
+          "sample_observed_cols": 4,
+          "sample_rows": [
+            [
+              "The Umbrex Library of Industry Acronyms",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Industry",
+              "Acronym",
+              "Stands for",
+              "Definition"
+            ],
+            [
+              "Aerospace & Defense",
+              "AAM",
+              "Air-to-Air Missile",
+              "A missile designed for use against airborne targets, typically launched from aircraft."
+            ]
+          ]
+        },
+        {
+          "name": "Aerospace & Defense",
+          "dimension_after_reset": "A1:V138",
+          "sample_non_empty_rows": 5,
+          "sample_observed_cols": 4,
+          "sample_rows": [
+            [
+              "The Umbrex Library of Industry Acronyms",
+              "",
+              "",
+              "Table of contents",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Industry",
+              "Acronym",
+              "Stands for",
+              "Definition",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Aerospace & Defense",
+              "AAM",
+              "Air-to-Air Missile",
+              "A missile designed for use against airborne targets, typically launched from aircraft."
+            ]
+          ]
+        },
+        {
+          "name": "Agriculture",
+          "dimension_after_reset": "A1:V129",
+          "sample_non_empty_rows": 5,
+          "sample_observed_cols": 4,
+          "sample_rows": [
+            [
+              "The Umbrex Library of Industry Acronyms",
+              "",
+              "",
+              "Table of contents",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Industry",
+              "Acronym",
+              "Stands for",
+              "Definition",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Agriculture",
+              "ABCD",
+              "Agricultural Bank for Cooperation and Development",
+              "A financial institution that provides specialized banking and financial services tailored to the needs of the agricultural sector, supporting agricultural development and rural livelihoods."
+            ]
+          ]
+        },
+        {
+          "name": "Automotive",
+          "dimension_after_reset": "A1:V127",
+          "sample_non_empty_rows": 5,
+          "sample_observed_cols": 4,
+          "sample_rows": [
+            [
+              "The Umbrex Library of Industry Acronyms",
+              "",
+              "",
+              "Table of contents",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Industry",
+              "Acronym",
+              "Stands for",
+              "Definition",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Automotive",
+              "4WD",
+              "Four Wheel Drive",
+              "A term used to describe vehicles in which power can be directed to all four wheels, generally used for off-road driving."
+            ]
+          ]
+        },
+        {
+          "name": "Biotechnology",
+          "dimension_after_reset": "A1:V75",
+          "sample_non_empty_rows": 5,
+          "sample_observed_cols": 4,
+          "sample_rows": [
+            [
+              "The Umbrex Library of Industry Acronyms",
+              "",
+              "",
+              "Table of contents",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Industry",
+              "Acronym",
+              "Stands for",
+              "Definition",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Biotechnology",
+              "3DP",
+              "3D Printing",
+              "The process of making a physical object from a three-dimensional digital model, typically by laying down many thin layers of a material in succession."
+            ]
+          ]
+        },
+        {
+          "name": "Chemicals",
+          "dimension_after_reset": "A1:V140",
+          "sample_non_empty_rows": 5,
+          "sample_observed_cols": 4,
+          "sample_rows": [
+            [
+              "The Umbrex Library of Industry Acronyms",
+              "",
+              "",
+              "Table of contents",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Industry",
+              "Acronym",
+              "Stands for",
+              "Definition",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Chemicals",
+              "ABS",
+              "Acrylonitrile Butadiene Styrene",
+              "A type of thermoplastic polymer used in various industries for products such as pipes, automotive parts, and toys."
+            ]
+          ]
+        },
+        {
+          "name": "Consumer Packaged Goods",
+          "dimension_after_reset": "A1:V86",
+          "sample_non_empty_rows": 5,
+          "sample_observed_cols": 4,
+          "sample_rows": [
+            [
+              "The Umbrex Library of Industry Acronyms",
+              "",
+              "",
+              "Table of contents",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Industry",
+              "Acronym",
+              "Stands for",
+              "Definition",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Consumer Packaged Goods",
+              "ASN",
+              "Advanced Shipping Notice",
+              "A document that provides detailed information about a pending delivery, such as the description of the items and their physical characteristics."
+            ]
+          ]
+        },
+        {
+          "name": "Cosmetics & personal care",
+          "dimension_after_reset": "A1:V137",
+          "sample_non_empty_rows": 5,
+          "sample_observed_cols": 4,
+          "sample_rows": [
+            [
+              "The Umbrex Library of Industry Acronyms",
+              "",
+              "",
+              "Table of contents",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Industry",
+              "Acronym",
+              "Stands for",
+              "Definition",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Cosmetics & personal care",
+              "AAK",
+              "Acetyl Alkyl Ketone",
+              "A type of fragrance ingredient used in some cosmetic and personal care products."
+            ]
+          ]
+        },
+        {
+          "name": "Education",
+          "dimension_after_reset": "A1:V129",
+          "sample_non_empty_rows": 5,
+          "sample_observed_cols": 4,
+          "sample_rows": [
+            [
+              "The Umbrex Library of Industry Acronyms",
+              "",
+              "",
+              "Table of contents",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Industry",
+              "Acronym",
+              "Stands for",
+              "Definition",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Education",
+              "ACT",
+              "American College Testing",
+              "A standardized test used for college admissions in the United States."
+            ]
+          ]
+        },
+        {
+          "name": "Energy",
+          "dimension_after_reset": "A1:V127",
+          "sample_non_empty_rows": 5,
+          "sample_observed_cols": 4,
+          "sample_rows": [
+            [
+              "The Umbrex Library of Industry Acronyms",
+              "",
+              "",
+              "Table of contents",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Industry",
+              "Acronym",
+              "Stands for",
+              "Definition",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Energy",
+              "ACR",
+              "Annual Charge Rate",
+              "The rate of annual fees that power entities must pay to regulatory agencies."
+            ]
+          ]
+        },
+        {
+          "name": "Financial services",
+          "dimension_after_reset": "A1:V124",
+          "sample_non_empty_rows": 5,
+          "sample_observed_cols": 4,
+          "sample_rows": [
+            [
+              "The Umbrex Library of Industry Acronyms",
+              "",
+              "",
+              "Table of contents",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Industry",
+              "Acronym",
+              "Stands for",
+              "Definition",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Financial services",
+              "AAA",
+              "American Arbitration Association",
+              "A not-for-profit organization in the field of alternative dispute resolution."
+            ]
+          ]
+        },
+        {
+          "name": "Healthcare",
+          "dimension_after_reset": "A1:V136",
+          "sample_non_empty_rows": 5,
+          "sample_observed_cols": 4,
+          "sample_rows": [
+            [
+              "The Umbrex Library of Industry Acronyms",
+              "",
+              "",
+              "Table of contents",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Industry",
+              "Acronym",
+              "Stands for",
+              "Definition",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Healthcare",
+              "AAFP",
+              "American Academy of Family Physicians",
+              "A national association of family doctors providing resources for family medicine education and research."
+            ]
+          ]
+        },
+        {
+          "name": "Insurance",
+          "dimension_after_reset": "A1:V139",
+          "sample_non_empty_rows": 5,
+          "sample_observed_cols": 4,
+          "sample_rows": [
+            [
+              "The Umbrex Library of Industry Acronyms",
+              "",
+              "",
+              "Table of contents",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Industry",
+              "Acronym",
+              "Stands for",
+              "Definition",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Insurance",
+              "ACV",
+              "Actual Cash Value",
+              "It refers to the value of an insured item for the purpose of pay-out in case of a claim. ACV is often calculated as the replacement cost of the item less depreciation."
+            ]
+          ]
+        },
+        {
+          "name": "Manufacturing",
+          "dimension_after_reset": "A1:V133",
+          "sample_non_empty_rows": 5,
+          "sample_observed_cols": 4,
+          "sample_rows": [
+            [
+              "The Umbrex Library of Industry Acronyms",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Industry",
+              "Acronym",
+              "Stands for",
+              "Definition",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Manufacturing",
+              "3P",
+              "Production Preparation Process",
+              "A method to eliminate waste through product and process design."
+            ]
+          ]
+        },
+        {
+          "name": "Media & entertainment",
+          "dimension_after_reset": "A1:V133",
+          "sample_non_empty_rows": 5,
+          "sample_observed_cols": 4,
+          "sample_rows": [
+            [
+              "The Umbrex Library of Industry Acronyms",
+              "",
+              "",
+              "Table of contents",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Industry",
+              "Acronym",
+              "Stands for",
+              "Definition",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Media & entertainment",
+              "3D",
+              "Three Dimensional",
+              "an image that provides the perception of depth into an illusion."
+            ]
+          ]
+        },
+        {
+          "name": "Medical devices",
+          "dimension_after_reset": "A1:V128",
+          "sample_non_empty_rows": 5,
+          "sample_observed_cols": 4,
+          "sample_rows": [
+            [
+              "The Umbrex Library of Industry Acronyms",
+              "",
+              "",
+              "Table of contents",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Industry",
+              "Acronym",
+              "Stands for",
+              "Definition",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Medical devices",
+              "510(k)",
+              "Premarket Notification 510(k)",
+              "It's a type of premarket submission made to FDA to demonstrate that the device to be marketed is safe and effective."
+            ]
+          ]
+        },
+        {
+          "name": "Metals & mining",
+          "dimension_after_reset": "A1:V136",
+          "sample_non_empty_rows": 5,
+          "sample_observed_cols": 4,
+          "sample_rows": [
+            [
+              "The Umbrex Library of Industry Acronyms",
+              "",
+              "",
+              "Table of contents",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Industry",
+              "Acronym",
+              "Stands for",
+              "Definition",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Metals & mining",
+              "AAO",
+              "Atmospheric Alkaline Oxidation",
+              "A method used to treat refractory ores to make them more amenable to cyanide leaching."
+            ]
+          ]
+        },
+        {
+          "name": "Nonprofit",
+          "dimension_after_reset": "A1:V133",
+          "sample_non_empty_rows": 5,
+          "sample_observed_cols": 4,
+          "sample_rows": [
+            [
+              "The Umbrex Library of Industry Acronyms",
+              "",
+              "",
+              "Table of contents",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Industry",
+              "Acronym",
+              "Stands for",
+              "Definition",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Nonprofit",
+              "501(c)(3)",
+              "Section of the Internal Revenue Code",
+              "This IRS code denotes tax-exempt, charitable organizations in the United States."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "path": "consult/Umbrex Branding Diagnostic Guide First Edition.pdf",
+      "name": "Umbrex Branding Diagnostic Guide First Edition.pdf",
+      "size_bytes": 982903,
+      "sha256": "5099e2fa59bbc731182ad82ada81139398498a6cb6ed02c790eebada28355b11",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "diagnostic-guide"
+      ],
+      "candidate_layers": [
+        "methodology"
+      ],
+      "parser": "pypdf",
+      "pages": 56,
+      "text_sample": "Copyright © 2023 by Will BachmanAll rights reserved. No part of this publication may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the publisher, except in the case of brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law.First EditionPublished by Umbrex, Astoria, NYISBN: 978-1-961779-19-8Visit our website at www.umbrex.comBook design by Umbrex Consulting LLCPrinted in the United States of AmericaThis book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, re-sold, hired out, or otherwise circulated without the publisher's prior consent in any form of binding or cover other than that in which it is published and without a similar condition including th"
+    },
+    {
+      "path": "consult/Umbrex Business Analytics Diagnostic Guide.pdf",
+      "name": "Umbrex Business Analytics Diagnostic Guide.pdf",
+      "size_bytes": 905299,
+      "sha256": "49b5d0566b544d9c24d2d72294bb6506cd36af76948f62af9f65148488e55663",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "diagnostic-guide"
+      ],
+      "candidate_layers": [
+        "methodology"
+      ],
+      "parser": "pypdf",
+      "pages": 43,
+      "text_sample": "Copyright © 2024 by Adam Braff andWill BachmanAll rights reserved. No part of this publication may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the publisher, except in the case of brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law.First EditionPublished by Umbrex, Astoria, NYISBN: 978-1-961779-24-2Visit our website at www.umbrex.comBook design by Umbrex Consulting LLCPrinted in the United States of AmericaThis book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, re-sold, hired out, or otherwise circulated without the publisher's prior consent in any form of binding or cover other than that in which it is published and without a similar conditio"
+    },
+    {
+      "path": "consult/Umbrex Customer Experience Diagnostic Guide Firs.pdf",
+      "name": "Umbrex Customer Experience Diagnostic Guide Firs.pdf",
+      "size_bytes": 944294,
+      "sha256": "318351bcf459327dabacca11353523a6a65888b1842f7c69b098f5e7cfcf3c7c",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "diagnostic-guide"
+      ],
+      "candidate_layers": [
+        "methodology"
+      ],
+      "parser": "pypdf",
+      "pages": 57,
+      "text_sample": "Copyright © 2023 by Will BachmanAll rights reserved. No part of this publication may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the publisher, except in the case of brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law.First EditionPublished by Umbrex, Astoria, NYISBN: 978-1-961779-21-1Visit our website at www.umbrex.comBook design by Umbrex Consulting LLCPrinted in the United States of AmericaThis book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, re-sold, hired out, or otherwise circulated without the publisher's prior consent in any form of binding or cover other than that in which it is published and without a similar condition including th"
+    },
+    {
+      "path": "consult/Umbrex Field Guide to Change Management Framewor.pdf",
+      "name": "Umbrex Field Guide to Change Management Framewor.pdf",
+      "size_bytes": 3621261,
+      "sha256": "2eac826ba64a9bddb69d559afcc1da1e5afb93d445bf1753469cd43af197a70e",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "consulting-playbook"
+      ],
+      "candidate_layers": [
+        "operations"
+      ],
+      "parser": "pypdf",
+      "pages": 190,
+      "text_sample": "FieldGuidetoChangeManagementFrameworks ©2024byWill Bachman First Edition All rightsreserved. Nopart of thisbookmaybereproducedinanyformor byanyelectronicor mechanical means, includinginformationstorageandretrieval systems,without permissioninwritingfromthepublisher, except byareviewer whomayquotebrief passagesinareview. PublishedbyUmbrexAstoria, NYBookdesignbyUmbrexConsultingLLCPrintedintheUnitedStatesof America ISBN: 978-1-961779-39-6 For moreinformationonour publications, visit our websiteat www.umbrex.com Thisbookissoldsubject totheconditionthat it shall not, bywayof tradeorotherwise, belent, resold, hiredout, or otherwisecirculatedwithout thepublisher’sprior consent inanyformof bindingor cover other thanthat inwhichit ispublishedandwithout asimilar conditionincludingthisconditionbeingimposedonthesubsequent purchaser. 1 FieldGuidetoChangeManagementFrameworks Wehopeyouﬁndthisﬁeldguidet"
+    },
+    {
+      "path": "consult/Umbrex Field Guide to Sales Methodologies.pdf",
+      "name": "Umbrex Field Guide to Sales Methodologies.pdf",
+      "size_bytes": 653128,
+      "sha256": "2183a4ad7a21e7856d2f8ad5a5df97a568cb8e98e26a988f4765914d5043a658",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "consulting-playbook"
+      ],
+      "candidate_layers": [
+        "operations"
+      ],
+      "parser": "pypdf",
+      "pages": 62,
+      "text_sample": "The Umbrex Field Guide to Sales Methodologies 1 The Umbrex Field Guide to Sales Methodologies 2 © 2024 by Will Bachman First Edition All rights reserved. No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without permission in writing from the publisher, except by a reviewer who may quote brief passages in a review. Published by Umbrex Astoria, NY Book design by Umbrex Consulting LLC Printed in the United States of America ISBN: 978-1-961779-31-0 For more information on our publications, visit our website at www.umbrex.com This book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, resold, hired out, or otherwise circulated without the publisher’s prior consent in any form of binding or cover other than that in which it is published and without a similar"
+    },
+    {
+      "path": "consult/Umbrex Library of Industry-specific KPIs.xlsx",
+      "name": "Umbrex Library of Industry-specific KPIs.xlsx",
+      "size_bytes": 550838,
+      "sha256": "5ddd88f7f30f5898245eb786ca3d2cb0c4b0a6adec3de2ffc9a2ac578f00533c",
+      "suffix": ".xlsx",
+      "candidate_categories": [
+        "reference-data"
+      ],
+      "candidate_layers": [
+        "metrics-and-data"
+      ],
+      "parser": "openpyxl",
+      "sheet_count": 35,
+      "sheets": [
+        {
+          "name": "About Umbrex",
+          "dimension_after_reset": "A1:A20",
+          "sample_non_empty_rows": 5,
+          "sample_observed_cols": 1,
+          "sample_rows": [
+            [
+              "About Umbrex"
+            ],
+            [
+              "Umbrex is the fastest way to find the right independent management consultant."
+            ],
+            [
+              "Are you seeking support from an independent consultant?"
+            ]
+          ]
+        },
+        {
+          "name": "Consolidated - all industries",
+          "dimension_after_reset": "A1:Z1634",
+          "sample_non_empty_rows": 5,
+          "sample_observed_cols": 3,
+          "sample_rows": [
+            [
+              "Industry",
+              "KPI",
+              "Description",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Aerospace & Defense",
+              "Accident Rate",
+              "This measures the number of accidents involving a company's products or during its operations. This is particularly relevant for both commercial aerospace and defense companies, where safety is paramount."
+            ],
+            [
+              "Aerospace & Defense",
+              "Asset Utilization Ratio",
+              "This ratio measures how efficiently a company is using its assets to generate revenue. For capital-intensive aerospace & defense companies, this can be a key indicator of operational efficiency."
+            ]
+          ]
+        },
+        {
+          "name": "Aerospace & Defense",
+          "dimension_after_reset": "A1:Z1000",
+          "sample_non_empty_rows": 5,
+          "sample_observed_cols": 2,
+          "sample_rows": [
+            [
+              "KPI",
+              "Description",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Accident Rate",
+              "This measures the number of accidents involving a company's products or during its operations. This is particularly relevant for both commercial aerospace and defense companies, where safety is paramount."
+            ],
+            [
+              "Asset Utilization Ratio",
+              "This ratio measures how efficiently a company is using its assets to generate revenue. For capital-intensive aerospace & defense companies, this can be a key indicator of operational efficiency."
+            ]
+          ]
+        },
+        {
+          "name": "Agriculture",
+          "dimension_after_reset": "A1:Z1000",
+          "sample_non_empty_rows": 5,
+          "sample_observed_cols": 2,
+          "sample_rows": [
+            [
+              "KPI",
+              "Description",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Age of Orchard/Vineyard",
+              "For businesses in the fruit and wine industry, the age of the orchards or vineyards can affect both the quantity and quality of production. Older trees/vines can sometimes produce fewer, but higher quality fruits."
+            ],
+            [
+              "Agricultural Worker Turnover Rate",
+              "This KPI measures how often workers leave the company. High turnover can suggest issues with pay, conditions, or morale, while low turnover can indicate a stable, satisfied workforce."
+            ]
+          ]
+        },
+        {
+          "name": "Automotive",
+          "dimension_after_reset": "A1:Z1000",
+          "sample_non_empty_rows": 5,
+          "sample_observed_cols": 2,
+          "sample_rows": [
+            [
+              "KPI",
+              "Description",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Autonomous Driving Level",
+              "This KPI measures the advancement of a company's autonomous driving technology, often rated on a scale of 0-5 as defined by the Society of Automotive Engineers. Higher levels indicate more sophisticated self-driving capabilities."
+            ],
+            [
+              "Average Incentive per Vehicle Sold",
+              "This KPI tracks the average value of financial incentives (like cash rebates or discounted financing) offered to customers per vehicle sold. High values can indicate aggressive sales tactics but may also affect profitability."
+            ]
+          ]
+        },
+        {
+          "name": "Biotechnology",
+          "dimension_after_reset": "A1:Z1000",
+          "sample_non_empty_rows": 5,
+          "sample_observed_cols": 2,
+          "sample_rows": [
+            [
+              "KPI",
+              "Description",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Adaptive Trial Designs Implemented",
+              "The use of adaptive trial designs, which allow modifications during the trial based on interim results, can improve the efficiency of clinical trials. The number of such trials can be a measure of the company's adaptability and innovation in clinical development."
+            ],
+            [
+              "Adoption Rate of Digital Health Technologies",
+              "For patient-centric biotech companies, the rate of adopting digital health technologies like telemedicine, remote patient monitoring, and digital therapeutics can indicate their innovation capacity and patient engagement approach."
+            ]
+          ]
+        },
+        {
+          "name": "Chemicals",
+          "dimension_after_reset": "A1:Z1000",
+          "sample_non_empty_rows": 5,
+          "sample_observed_cols": 2,
+          "sample_rows": [
+            [
+              "KPI",
+              "Description",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Average Age of Plant and Equipment",
+              "Given the capital-intensive nature of the chemicals industry, the age of plant and equipment can have a significant impact on operational efficiency, maintenance costs, and the need for capital investment."
+            ],
+            [
+              "Average Cost of Compliance",
+              "The chemicals industry is heavily regulated, and the cost of maintaining regulatory compliance can be a significant factor in a company's overall costs."
+            ]
+          ]
+        },
+        {
+          "name": "Consumer Packaged Goods",
+          "dimension_after_reset": "A1:Z1000",
+          "sample_non_empty_rows": 5,
+          "sample_observed_cols": 2,
+          "sample_rows": [
+            [
+              "KPI",
+              "Description",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "After-Sales Service Costs",
+              "Particularly important for the consumer electronics segment, this KPI tracks the costs associated with servicing products after sale, which can indicate product quality and impact on profitability."
+            ],
+            [
+              "Age Demographic Sales Breakdown",
+              "This KPI measures the sales distribution across different age demographics. It can provide insights into which age groups are more attracted to a company's products and help in product positioning and marketing."
+            ]
+          ]
+        },
+        {
+          "name": "Cosmetics & Personal Care",
+          "dimension_after_reset": "A1:Z1000",
+          "sample_non_empty_rows": 5,
+          "sample_observed_cols": 2,
+          "sample_rows": [
+            [
+              "KPI",
+              "Description",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Active Membership Count and Activity Level",
+              "For brands with membership or loyalty programs, tracking the number of active members and their purchasing activity can indicate customer loyalty and the success of these programs."
+            ],
+            [
+              "Beauty Box Subscription Retention Rate",
+              "For brands offering subscription services, measuring the retention rate can offer insights into customer satisfaction and the value offered."
+            ]
+          ]
+        },
+        {
+          "name": "Education",
+          "dimension_after_reset": "A1:Z1000",
+          "sample_non_empty_rows": 5,
+          "sample_observed_cols": 2,
+          "sample_rows": [
+            [
+              "KPI",
+              "Description",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Accreditation Status and Rankings",
+              "The number and status of accreditations and where an institution ranks on various educational leaderboards can be a significant indicator of reputation and quality."
+            ],
+            [
+              "Admissions Selectivity",
+              "The percentage of applicants who are admitted can be a sign of an institution's reputation and desirability. A lower admission rate typically signals higher selectivity."
+            ]
+          ]
+        },
+        {
+          "name": "Energy",
+          "dimension_after_reset": "A1:Z1000",
+          "sample_non_empty_rows": 5,
+          "sample_observed_cols": 2,
+          "sample_rows": [
+            [
+              "KPI",
+              "Description",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Average Energy Demand",
+              "The average amount of energy required over a specific period. This is particularly important for utility companies in understanding consumption patterns and predicting future demand."
+            ],
+            [
+              "Baseload Capacity",
+              "For power generation companies, the amount of continuous power that can be produced to meet basic demand. This can be a crucial indicator of a company's ability to fulfill its supply obligations."
+            ]
+          ]
+        },
+        {
+          "name": "Financial Services",
+          "dimension_after_reset": "A1:Z1000",
+          "sample_non_empty_rows": 5,
+          "sample_observed_cols": 2,
+          "sample_rows": [
+            [
+              "KPI",
+              "Description",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Active Users (Financial Technology Firms)",
+              "This KPI measures the number of active users for a financial technology platform. It can indicate the reach and popularity of a platform."
+            ],
+            [
+              "Alpha (Investment Industry)",
+              "Alpha measures the performance of an investment relative to a benchmark index. A positive alpha means the investment has outperformed the benchmark."
+            ]
+          ]
+        },
+        {
+          "name": "Healthcare",
+          "dimension_after_reset": "A1:Z1000",
+          "sample_non_empty_rows": 5,
+          "sample_observed_cols": 2,
+          "sample_rows": [
+            [
+              "KPI",
+              "Description",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Average Length of Stay",
+              "For hospitals and inpatient care centers, this KPI measures the average number of days that patients stay in the facility. A lower length of stay can indicate more efficient care but may also reflect patient case mix."
+            ],
+            [
+              "Average Length of Stay (ALOS)",
+              "For hospitals and other inpatient facilities, this measures the average number of days a patient stays. Lower ALOS can indicate efficient operations and strong patient outcomes, while higher ALOS may indicate potential inefficiencies or more complex patient cases."
+            ]
+          ]
+        },
+        {
+          "name": "Insurance",
+          "dimension_after_reset": "A1:Z1000",
+          "sample_non_empty_rows": 5,
+          "sample_observed_cols": 2,
+          "sample_rows": [
+            [
+              "KPI",
+              "Description",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Annuity Net Flows",
+              "This is relevant to life insurers who sell annuities. It represents the inflows (premiums) and outflows (benefit payments, surrenders, and withdrawals) of cash in the annuity business."
+            ],
+            [
+              "Annuity Surrender Rate",
+              "Particularly relevant for life insurers, this is the rate at which policyholders surrender their annuities before the end of the surrender period."
+            ]
+          ]
+        },
+        {
+          "name": "Manufacturing",
+          "dimension_after_reset": "A1:Z1000",
+          "sample_non_empty_rows": 5,
+          "sample_observed_cols": 2,
+          "sample_rows": [
+            [
+              "KPI",
+              "Description",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Aging Work in Progress (WIP)",
+              "This measures the amount of time a partially completed product has been in the production process. High aging WIP can indicate inefficiencies in the production process."
+            ],
+            [
+              "Backorder Rate",
+              "This KPI measures the number of orders that cannot be fulfilled at the time of order placement due to insufficient inventory. A lower backorder rate signifies better inventory management and higher customer satisfaction levels."
+            ]
+          ]
+        },
+        {
+          "name": "Media & Entertainment",
+          "dimension_after_reset": "A1:Z1000",
+          "sample_non_empty_rows": 5,
+          "sample_observed_cols": 2,
+          "sample_rows": [
+            [
+              "KPI",
+              "Description",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Ad-Blocker Impact",
+              "This KPI measures the percentage of users employing ad-blockers, which can significantly impact revenue for platforms relying on ad revenues."
+            ],
+            [
+              "Audience Demographics",
+              "Understanding who is consuming content can help companies target their offerings more effectively. Metrics might include age, gender, geographical location, and more."
+            ]
+          ]
+        },
+        {
+          "name": "Medical Devices",
+          "dimension_after_reset": "A1:Z1000",
+          "sample_non_empty_rows": 5,
+          "sample_observed_cols": 2,
+          "sample_rows": [
+            [
+              "KPI",
+              "Description",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Adoption Rate for New Devices",
+              "After a company launches a new product, this KPI measures the speed and extent of market penetration. High adoption rates can signify effective marketing and sales strategies and the strong market demand for the product."
+            ],
+            [
+              "Clinical Trial Success Rate",
+              "Clinical trials are a necessary part of bringing new medical devices to market. A company with a high success rate in these trials may be more likely to introduce successful new products in the future."
+            ]
+          ]
+        },
+        {
+          "name": "Metals & Mining",
+          "dimension_after_reset": "A1:Z1000",
+          "sample_non_empty_rows": 5,
+          "sample_observed_cols": 2,
+          "sample_rows": [
+            [
+              "KPI",
+              "Description",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Average Realized Price (ARP)",
+              "This is the average price per unit (such as ounce for gold, pound for copper) that the company sold its product for. This helps to understand the financial realization of the company compared to the spot or benchmark prices."
+            ],
+            [
+              "Blast Efficiency",
+              "For mining operations that require blasting, this measures the volume of rock broken per unit of explosive used. Higher efficiency can lead to lower operational costs."
+            ]
+          ]
+        },
+        {
+          "name": "Nonprofit",
+          "dimension_after_reset": "A1:Z1000",
+          "sample_non_empty_rows": 5,
+          "sample_observed_cols": 2,
+          "sample_rows": [
+            [
+              "KPI",
+              "Description",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Advocacy Impact",
+              "For nonprofits engaged in policy work, this could involve measures such as the number of policies influenced or changed. This is a crucial KPI to understand the societal impact of such organizations."
+            ],
+            [
+              "Artistic Impact",
+              "For cultural and arts nonprofits, this KPI might track the number of exhibitions held, the number of new works commissioned, or the number of individuals reached through educational programs."
+            ]
+          ]
+        },
+        {
+          "name": "Oil & Gas",
+          "dimension_after_reset": "A1:Z1000",
+          "sample_non_empty_rows": 5,
+          "sample_observed_cols": 2,
+          "sample_rows": [
+            [
+              "KPI",
+              "Description",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "3D Seismic Coverage",
+              "For exploration companies, this KPI indicates the extent of 3D seismic survey coverage. A higher percentage typically indicates a more extensive understanding of the subsurface, aiding exploration decisions."
+            ],
+            [
+              "Asset Turnover Ratio",
+              "This ratio measures how effectively a company uses its assets to generate revenue. It's calculated by dividing the total revenue by the company's total assets. Higher values indicate better utilization of assets."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "path": "consult/Umbrex Playbook for Corrective and Preventive Ac.pdf",
+      "name": "Umbrex Playbook for Corrective and Preventive Ac.pdf",
+      "size_bytes": 1949372,
+      "sha256": "a7905974f2741e5860253194b88ac42c4a81178c7e5dee1b781c021becf5a3be",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "consulting-playbook"
+      ],
+      "candidate_layers": [
+        "operations"
+      ],
+      "parser": "pypdf",
+      "pages": 46,
+      "text_sample": "© 2024 by Will Bachman First Edition All rights reserved. No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without permission in writing from the publisher, except by a reviewer who may quote brief passages in a review. Published by Umbrex Astoria, NY Book design by Umbrex Consulting LLC Printed in the United States of America ISBN: 978-1-961779-29-7 For more information on our publications, visit our website at www.umbrex.com This book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, resold, hired out, or otherwise circulated without the publisher’s prior consent in any form of binding or cover other than that in which it is published and without a similar condition including this condition being imposed on the subsequent purchaser. Corrective and Pr"
+    },
+    {
+      "path": "consult/Umbrex PowerPoint Template for Consultants Third Edition.pptx",
+      "name": "Umbrex PowerPoint Template for Consultants Third Edition.pptx",
+      "size_bytes": 8004106,
+      "sha256": "9733f55be1905c79ae2894d3c6f1eed1d2b932076c8c3f18c06e58213854492c",
+      "suffix": ".pptx",
+      "candidate_categories": [
+        "consulting-playbook",
+        "consultant-delivery-craft"
+      ],
+      "candidate_layers": [
+        "operations"
+      ],
+      "parser": "zip+xml",
+      "slide_count": 230,
+      "text_sample": "Presentation title goes here Subtitle goes here Join our community We create opportunities for our members to meet, build relationships, share lessons learned, and collaborate Umbrex connects you with a community of other top-tier independent consultants Free access to resources Mastermind Groups In-person events Private online forum Online events Subtitle Your Title Your Title Your Title Your Title xxxx xxxx xxxx xxxx xxxx Lorem ipsum dolor sit amet , consectetur adipiscing elit Source:_______ Template - Harvey Ball Slide Subtitle Lorem ipsum dolor sit amet , consectetur Lorem ipsum dolor sit amet , consectetur Lorem ipsum dolor sit amet , consectetur Lorem ipsum dolor sit amet , consectetur . Lorem ipsum dolor sit amet , consectetur Lorem ipsum dolor sit amet , consectetur Source:_______ Template - Harvey Ball Slide Subtitle Lorem ipsum dolor sit amet , consectetur Your Title Lorem ips"
+    },
+    {
+      "path": "consult/Umbrex Product Management Diagnostic Guide First.pdf",
+      "name": "Umbrex Product Management Diagnostic Guide First.pdf",
+      "size_bytes": 969315,
+      "sha256": "3ba16c5d8b2b8b90c72153cad09e245229042e5c708e6fd486b16f1bcb26e323",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "diagnostic-guide"
+      ],
+      "candidate_layers": [
+        "methodology"
+      ],
+      "parser": "pypdf",
+      "pages": 50,
+      "text_sample": "Copyright © 2023 by Will BachmanAll rights reserved. No part of this publication may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the publisher, except in the case of brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law.First EditionPublished by Umbrex, Astoria, NYISBN: 978-1-961779-20-4Visit our website at www.umbrex.comBook design by Umbrex Consulting LLCPrinted in the United States of AmericaThis book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, re-sold, hired out, or otherwise circulated without the publisher's prior consent in any form of binding or cover other than that in which it is published and without a similar condition including th"
+    },
+    {
+      "path": "consult/Voice of the Customer Interview Guide - First Ed.pdf",
+      "name": "Voice of the Customer Interview Guide - First Ed.pdf",
+      "size_bytes": 330879,
+      "sha256": "9de84031966c98bcc519c2e3fa7e46cf8bfd9ca5ab5b57e4e226500ac880254c",
+      "suffix": ".pdf",
+      "candidate_categories": [
+        "unclassified"
+      ],
+      "candidate_layers": [
+        "methodology"
+      ],
+      "parser": "pypdf",
+      "pages": 41,
+      "text_sample": "y y p p p y as your perception of [Company A]'s brand changed over time? If so, co hat aspects of [Company A]'s brand do you find most appealing or attra e there any aspects of [Company A]'s brand that you find less appealing ow does [Company A]'s brand influence your purchasing decisions rela Compared to other companies in the [Industry Name] industry, where w How would you describe [Company A]'s value proposition in the [Indus hat key benefits or advantages does [Company A] offer to customers th ow does [Company A]'s value proposition compare to other providers in ow does [Company A]'s value proposition align with your organization's e there any aspects of [Company A]'s value proposition that you find pa ow important is [Company A]'s value proposition in influencing your or n you share any specific instances where [Company A]'s value proposit Have you encountered any challenges or draw"
+    }
+  ]
+}

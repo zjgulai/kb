@@ -1,0 +1,516 @@
+{
+  "profile_version": "kb-p1-excel-table-profile-v1",
+  "generated_at": "2026-06-18T02:44:27+00:00",
+  "read_policy": "readonly; headers and structural metadata only; no business data rows emitted",
+  "max_rows_per_sheet": 20000,
+  "max_sheets_per_workbook": 3,
+  "workbook_count": 9,
+  "workbooks": [
+    {
+      "path": "/Users/pray/project/ecom_ana_overview/scm/system_data/库存查询字段说明.xlsx",
+      "file_name": "库存查询字段说明.xlsx",
+      "size_bytes": 7442,
+      "sha256": "9224fbd8cb4237c316ce5656d732e21ee211118997edf69a4b3af9058f36bf18",
+      "sheet_count_profiled": 1,
+      "sheets": [
+        {
+          "sheet_name": "Sheet1",
+          "reported_dimension": "A1:A1",
+          "reported_max_row": 1,
+          "reported_max_col": 1,
+          "reset_dimensions_applied": true,
+          "rows_scanned_limit": 20000,
+          "rows_scanned_actual": 16,
+          "nonempty_rows_observed": 16,
+          "max_seen_col_observed": 3,
+          "first_nonempty_row_index": 1,
+          "first_header_cells": [
+            "序号",
+            "字段",
+            "业务含义"
+          ],
+          "second_header_cells_present": true,
+          "blank_header_cells_in_first_row": 0,
+          "duplicate_headers_in_first_row": [],
+          "value_type_counts": {
+            "number": 15,
+            "text": 30
+          },
+          "dimension_warning": true
+        }
+      ],
+      "warnings": [
+        "dimension_warning:Sheet1"
+      ]
+    },
+    {
+      "path": "/Users/pray/project/ecom_ana_overview/scm/system_data/库存周转-库龄20260601.xlsx",
+      "file_name": "库存周转-库龄20260601.xlsx",
+      "size_bytes": 7642191,
+      "sha256": "e51befcf62a99ab4b6425d5eaa45533ba3d00c1d3406889e49802685b1b01bc4",
+      "sheet_count_profiled": 2,
+      "sheets": [
+        {
+          "sheet_name": "库存周转",
+          "reported_dimension": "A1:A1",
+          "reported_max_row": 1,
+          "reported_max_col": 1,
+          "reset_dimensions_applied": true,
+          "rows_scanned_limit": 20000,
+          "rows_scanned_actual": 20000,
+          "nonempty_rows_observed": 20000,
+          "max_seen_col_observed": 49,
+          "first_nonempty_row_index": 1,
+          "first_header_cells": [
+            "GTM组",
+            "品线",
+            "品类",
+            "品牌",
+            "三级类目名称",
+            "四级类目名称",
+            "SKU编码",
+            "产品SKU中文名称",
+            "SPU编码",
+            "SPU名称",
+            "店铺sku",
+            "仓库名称",
+            "子ASIN",
+            "父ASIN",
+            "尺码",
+            "颜色",
+            "运营人名称",
+            "销售状态",
+            "周转分类",
+            "滞销分类",
+            "上架天数",
+            "新老品",
+            "30天日均销量",
+            "15天日均销量",
+            "7天日均销量",
+            "平台仓可售",
+            "平台仓在库",
+            "平台仓在途",
+            "平台仓总库存",
+            "已创单未发货量",
+            "海外仓在库",
+            "海外仓在途",
+            "海外仓总库存",
+            "总库存",
+            "总周转天数_7天",
+            "总周转天数_30天",
+            "平台仓可售周转",
+            "平台仓在库周转",
+            "平台仓在途周转",
+            "在库周转_30天",
+            "在途周转_30天",
+            "0~30",
+            "31~60",
+            "61~90",
+            "91~180",
+            "181~365",
+            "365+",
+            "90+",
+            "180+"
+          ],
+          "second_header_cells_present": true,
+          "blank_header_cells_in_first_row": 0,
+          "duplicate_headers_in_first_row": [],
+          "value_type_counts": {
+            "blank": 329940,
+            "number": 519850,
+            "text": 130210
+          },
+          "dimension_warning": true
+        },
+        {
+          "sheet_name": "库存周转_过滤条件",
+          "reported_dimension": "A1:A1",
+          "reported_max_row": 1,
+          "reported_max_col": 1,
+          "reset_dimensions_applied": true,
+          "rows_scanned_limit": 20000,
+          "rows_scanned_actual": 1,
+          "nonempty_rows_observed": 1,
+          "max_seen_col_observed": 2,
+          "first_nonempty_row_index": 1,
+          "first_header_cells": [
+            "Filter Component",
+            "[渠道.渠道]In All Values"
+          ],
+          "second_header_cells_present": false,
+          "blank_header_cells_in_first_row": 0,
+          "duplicate_headers_in_first_row": [],
+          "value_type_counts": {
+            "text": 2
+          },
+          "dimension_warning": true
+        }
+      ],
+      "warnings": [
+        "dimension_warning:库存周转",
+        "dimension_warning:库存周转_过滤条件"
+      ]
+    },
+    {
+      "path": "/Users/pray/project/ecom_ana_overview/scm/system_data/仓库资料导出_2026-06-04_20260604122810331.xlsx",
+      "file_name": "仓库资料导出_2026-06-04_20260604122810331.xlsx",
+      "size_bytes": 45393,
+      "sha256": "a9b240cffe47c377c66deeafbdb1515d39c984f7325cf08cf9b786d9eda5d968",
+      "sheet_count_profiled": 1,
+      "sheets": [
+        {
+          "sheet_name": "仓库资料导出_2026-06-04.xlsx",
+          "reported_dimension": "A1:A1",
+          "reported_max_row": 1,
+          "reported_max_col": 1,
+          "reset_dimensions_applied": true,
+          "rows_scanned_limit": 20000,
+          "rows_scanned_actual": 409,
+          "nonempty_rows_observed": 409,
+          "max_seen_col_observed": 18,
+          "first_nonempty_row_index": 1,
+          "first_header_cells": [
+            "仓库编码",
+            "仓库ID",
+            "仓库名称",
+            "仓库类型",
+            "积加仓库ID",
+            "积加仓库名称",
+            "服务商",
+            "国家/地区",
+            "省份",
+            "成品调拨出库扣减包材",
+            "组合产品调拨出库扣减包材",
+            "采购方式",
+            "中转仓库",
+            "是否中仓",
+            "状态",
+            "创建时间",
+            "更新时间",
+            "易仓仓库名称"
+          ],
+          "second_header_cells_present": true,
+          "blank_header_cells_in_first_row": 0,
+          "duplicate_headers_in_first_row": [],
+          "value_type_counts": {
+            "blank": 782,
+            "number": 816,
+            "text": 5764
+          },
+          "dimension_warning": true
+        }
+      ],
+      "warnings": [
+        "dimension_warning:仓库资料导出_2026-06-04.xlsx"
+      ]
+    },
+    {
+      "path": "/Users/pray/project/ecom_ana_overview/scm/system_data/仓库库存列表_20260602190444851.xlsx",
+      "file_name": "仓库库存列表_20260602190444851.xlsx",
+      "size_bytes": 19867344,
+      "sha256": "d5c2d2b5e8b84696023d8544dad6e04b645e3b0ffbf252ee2368f397c3b1075a",
+      "sheet_count_profiled": 1,
+      "sheets": [
+        {
+          "sheet_name": "0",
+          "reported_dimension": "A1:A1",
+          "reported_max_row": 1,
+          "reported_max_col": 1,
+          "reset_dimensions_applied": true,
+          "rows_scanned_limit": 20000,
+          "rows_scanned_actual": 20000,
+          "nonempty_rows_observed": 20000,
+          "max_seen_col_observed": 15,
+          "first_nonempty_row_index": 1,
+          "first_header_cells": [
+            "供应链SKU",
+            "产品SKU",
+            "产品名称",
+            "仓库",
+            "仓库类型",
+            "在制库存",
+            "在途库存",
+            "实物库存",
+            "良品库存",
+            "收货未上架数量",
+            "不良数量",
+            "可用数量",
+            "预占数量",
+            "锁库数量",
+            "单位"
+          ],
+          "second_header_cells_present": true,
+          "blank_header_cells_in_first_row": 0,
+          "duplicate_headers_in_first_row": [],
+          "value_type_counts": {
+            "blank": 19999,
+            "number": 179991,
+            "text": 100010
+          },
+          "dimension_warning": true
+        }
+      ],
+      "warnings": [
+        "dimension_warning:0"
+      ]
+    },
+    {
+      "path": "/Users/pray/project/ecom_ana_overview/scm/system_data/fba计划库存_20260602190118540.xlsx",
+      "file_name": "fba计划库存_20260602190118540.xlsx",
+      "size_bytes": 2328228,
+      "sha256": "e7372a056b6ec8432b3c75493cd8e101ef23107c2ab10d70ffe315b295c3069d",
+      "sheet_count_profiled": 1,
+      "sheets": [
+        {
+          "sheet_name": "0",
+          "reported_dimension": "A1:A1",
+          "reported_max_row": 1,
+          "reported_max_col": 1,
+          "reset_dimensions_applied": true,
+          "rows_scanned_limit": 20000,
+          "rows_scanned_actual": 20000,
+          "nonempty_rows_observed": 20000,
+          "max_seen_col_observed": 15,
+          "first_nonempty_row_index": 1,
+          "first_header_cells": [
+            "仓库",
+            "ASIN",
+            "MSKU",
+            "FNSKU",
+            "产品名称",
+            "供应链SKU",
+            "产品SKU",
+            "计划库存",
+            "在途库存",
+            "可用库存",
+            "预占库存",
+            "冻结库存",
+            "在库库存",
+            "在库良品库存",
+            "不良品库存"
+          ],
+          "second_header_cells_present": true,
+          "blank_header_cells_in_first_row": 0,
+          "duplicate_headers_in_first_row": [],
+          "value_type_counts": {
+            "blank": 16042,
+            "number": 159992,
+            "text": 123966
+          },
+          "dimension_warning": true
+        }
+      ],
+      "warnings": [
+        "dimension_warning:0"
+      ]
+    },
+    {
+      "path": "/Users/pray/project/ecom_ana_overview/scm/system_data/沃尔玛计划库存_20260602190140263.xlsx",
+      "file_name": "沃尔玛计划库存_20260602190140263.xlsx",
+      "size_bytes": 210778,
+      "sha256": "a7bcedba2a2b98e5e461562230068a856249892000299c9354da8abafb4872a5",
+      "sheet_count_profiled": 1,
+      "sheets": [
+        {
+          "sheet_name": "0",
+          "reported_dimension": "A1:A1",
+          "reported_max_row": 1,
+          "reported_max_col": 1,
+          "reset_dimensions_applied": true,
+          "rows_scanned_limit": 20000,
+          "rows_scanned_actual": 2396,
+          "nonempty_rows_observed": 2396,
+          "max_seen_col_observed": 16,
+          "first_nonempty_row_index": 1,
+          "first_header_cells": [
+            "仓库",
+            "ItemId",
+            "国家",
+            "MSKU",
+            "GTIN",
+            "产品名称",
+            "供应链SKU",
+            "产品SKU",
+            "计划库存",
+            "在途库存",
+            "可用库存",
+            "预占库存",
+            "冻结库存",
+            "在库库存",
+            "在库良品库存",
+            "不良品库存"
+          ],
+          "second_header_cells_present": true,
+          "blank_header_cells_in_first_row": 0,
+          "duplicate_headers_in_first_row": [],
+          "value_type_counts": {
+            "blank": 112,
+            "number": 19160,
+            "text": 19064
+          },
+          "dimension_warning": true
+        }
+      ],
+      "warnings": [
+        "dimension_warning:0"
+      ]
+    },
+    {
+      "path": "/Users/pray/project/ecom_ana_overview/scm/system_data/Shopify计划库存_20260602190146714.xlsx",
+      "file_name": "Shopify计划库存_20260602190146714.xlsx",
+      "size_bytes": 4040739,
+      "sha256": "cef4b2d5fddc2444271a85e954c01ba27c83c82f93b24a737ffdf37e84daf282",
+      "sheet_count_profiled": 1,
+      "sheets": [
+        {
+          "sheet_name": "0",
+          "reported_dimension": "A1:A1",
+          "reported_max_row": 1,
+          "reported_max_col": 1,
+          "reset_dimensions_applied": true,
+          "rows_scanned_limit": 20000,
+          "rows_scanned_actual": 20000,
+          "nonempty_rows_observed": 20000,
+          "max_seen_col_observed": 16,
+          "first_nonempty_row_index": 1,
+          "first_header_cells": [
+            "仓库",
+            "仓库地点",
+            "站点",
+            "产品名称",
+            "供应链SKU",
+            "产品SKU",
+            "productLine",
+            "productCategory",
+            "计划库存",
+            "在途库存",
+            "可用库存",
+            "预占库存",
+            "冻结库存",
+            "在库库存",
+            "在库良品库存",
+            "不良品库存"
+          ],
+          "second_header_cells_present": true,
+          "blank_header_cells_in_first_row": 0,
+          "duplicate_headers_in_first_row": [],
+          "value_type_counts": {
+            "blank": 6689,
+            "number": 159992,
+            "text": 153319
+          },
+          "dimension_warning": true
+        }
+      ],
+      "warnings": [
+        "dimension_warning:0"
+      ]
+    },
+    {
+      "path": "/Users/pray/project/ecom_ana_overview/scm/system_data/TikTok计划库存_20260602190147986.xlsx",
+      "file_name": "TikTok计划库存_20260602190147986.xlsx",
+      "size_bytes": 228693,
+      "sha256": "132d64d38b4c211ffd4a4def2fe80b3fbcf06f6842a8862b7240772a51c7d40e",
+      "sheet_count_profiled": 1,
+      "sheets": [
+        {
+          "sheet_name": "0",
+          "reported_dimension": "A1:A1",
+          "reported_max_row": 1,
+          "reported_max_col": 1,
+          "reset_dimensions_applied": true,
+          "rows_scanned_limit": 20000,
+          "rows_scanned_actual": 2938,
+          "nonempty_rows_observed": 2938,
+          "max_seen_col_observed": 15,
+          "first_nonempty_row_index": 1,
+          "first_header_cells": [
+            "仓库",
+            "MSKU",
+            "国家",
+            "站点",
+            "产品名称",
+            "供应链SKU",
+            "产品SKU",
+            "计划库存",
+            "在途库存",
+            "可用库存",
+            "预占库存",
+            "冻结库存",
+            "在库库存",
+            "在库良品库存",
+            "不良品库存"
+          ],
+          "second_header_cells_present": true,
+          "blank_header_cells_in_first_row": 0,
+          "duplicate_headers_in_first_row": [],
+          "value_type_counts": {
+            "blank": 1384,
+            "number": 23496,
+            "text": 19190
+          },
+          "dimension_warning": true
+        }
+      ],
+      "warnings": [
+        "dimension_warning:0"
+      ]
+    },
+    {
+      "path": "/Users/pray/project/ecom_ana_overview/scm/system_data/三方系统库存对账导出2026-06-02_20260602191334628.xlsx",
+      "file_name": "三方系统库存对账导出2026-06-02_20260602191334628.xlsx",
+      "size_bytes": 1025568,
+      "sha256": "29ff98fb582079ad65a6dc45d5de9eea63a6f5ed3e0e6a81060ed426c7d6f6c7",
+      "sheet_count_profiled": 1,
+      "sheets": [
+        {
+          "sheet_name": "Sheet1",
+          "reported_dimension": "A1:X4",
+          "reported_max_row": 4,
+          "reported_max_col": 24,
+          "reset_dimensions_applied": true,
+          "rows_scanned_limit": 20000,
+          "rows_scanned_actual": 9424,
+          "nonempty_rows_observed": 9424,
+          "max_seen_col_observed": 23,
+          "first_nonempty_row_index": 1,
+          "first_header_cells": [
+            "日期",
+            "时间",
+            "供应链SKU",
+            "产品名称",
+            "富勒",
+            "",
+            "",
+            "",
+            "",
+            "ERP",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "积加",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "second_header_cells_present": true,
+          "blank_header_cells_in_first_row": 16,
+          "duplicate_headers_in_first_row": [],
+          "value_type_counts": {
+            "blank": 5812,
+            "number": 141330,
+            "text": 69610
+          },
+          "dimension_warning": false
+        }
+      ],
+      "warnings": []
+    }
+  ]
+}

@@ -1,0 +1,1855 @@
+{
+  "metrics": {
+    "embedding_method": "local_hash_embedding",
+    "embedding_dimension": 1024,
+    "provider_call_boundary": "no KB provider call",
+    "production_impact": "production unchanged",
+    "indexed_card_count": 33,
+    "eval_count": 50,
+    "source_recall_at_1": 0.76,
+    "source_recall_at_5": 0.86,
+    "category_metrics": {
+      "deliverable_workflow": {
+        "count": 10,
+        "source_recall_at_1": 0.9,
+        "source_recall_at_5": 0.9
+      },
+      "diagnostic_planning": {
+        "count": 10,
+        "source_recall_at_1": 0.8,
+        "source_recall_at_5": 0.9
+      },
+      "methodology_selection": {
+        "count": 10,
+        "source_recall_at_1": 0.8,
+        "source_recall_at_5": 0.9
+      },
+      "refusal_unknown": {
+        "count": 10,
+        "source_recall_at_1": 0.4,
+        "source_recall_at_5": 0.6
+      },
+      "source_lookup": {
+        "count": 10,
+        "source_recall_at_1": 0.9,
+        "source_recall_at_5": 1.0
+      }
+    }
+  },
+  "results": [
+    {
+      "eval_id": "CONSULT-EVAL-001",
+      "category": "source_lookup",
+      "allowed_source_ids": [
+        "SRC-CONSULT-001"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-001",
+          "card_id": "CARD-SRC-CONSULT-001-METHOD",
+          "score": 0.188422
+        },
+        {
+          "source_id": "SRC-CONSULT-015",
+          "card_id": "CARD-SRC-CONSULT-015-ACRONYM-01",
+          "score": 0.027217
+        },
+        {
+          "source_id": "SRC-CONSULT-012",
+          "card_id": "CARD-SRC-CONSULT-012-METHOD",
+          "score": 0.026647
+        },
+        {
+          "source_id": "SRC-CONSULT-014",
+          "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-04",
+          "score": 0.025198
+        },
+        {
+          "source_id": "SRC-CONSULT-011",
+          "card_id": "CARD-SRC-CONSULT-011-METHOD",
+          "score": 0.01575
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-002",
+      "category": "source_lookup",
+      "allowed_source_ids": [
+        "SRC-CONSULT-002"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "score": 0.22458
+        },
+        {
+          "source_id": "SRC-CONSULT-014",
+          "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-04",
+          "score": 0.099602
+        },
+        {
+          "source_id": "SRC-CONSULT-015",
+          "card_id": "CARD-SRC-CONSULT-015-ACRONYM-03",
+          "score": 0.083225
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "score": 0.070933
+        },
+        {
+          "source_id": "SRC-CONSULT-013",
+          "card_id": "CARD-SRC-CONSULT-013-FUNCTION-KPI-03",
+          "score": 0.054772
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-003",
+      "category": "source_lookup",
+      "allowed_source_ids": [
+        "SRC-CONSULT-003"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-003",
+          "card_id": "CARD-SRC-CONSULT-003-DELIV",
+          "score": 0.275107
+        },
+        {
+          "source_id": "SRC-CONSULT-014",
+          "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-08",
+          "score": 0.102378
+        },
+        {
+          "source_id": "SRC-CONSULT-015",
+          "card_id": "CARD-SRC-CONSULT-015-ACRONYM-01",
+          "score": 0.079455
+        },
+        {
+          "source_id": "SRC-CONSULT-013",
+          "card_id": "CARD-SRC-CONSULT-013-FUNCTION-KPI-07",
+          "score": 0.078581
+        },
+        {
+          "source_id": "SRC-CONSULT-009",
+          "card_id": "CARD-SRC-CONSULT-009-DIAG",
+          "score": 0.071067
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-004",
+      "category": "source_lookup",
+      "allowed_source_ids": [
+        "SRC-CONSULT-004"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-004",
+          "card_id": "CARD-SRC-CONSULT-004-DELIV",
+          "score": 0.089984
+        },
+        {
+          "source_id": "SRC-CONSULT-015",
+          "card_id": "CARD-SRC-CONSULT-015-ACRONYM-05",
+          "score": 0.075431
+        },
+        {
+          "source_id": "SRC-CONSULT-014",
+          "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-04",
+          "score": 0.070799
+        },
+        {
+          "source_id": "SRC-CONSULT-013",
+          "card_id": "CARD-SRC-CONSULT-013-FUNCTION-KPI-05",
+          "score": 0.047048
+        },
+        {
+          "source_id": "SRC-CONSULT-011",
+          "card_id": "CARD-SRC-CONSULT-011-METHOD",
+          "score": 0.044254
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-005",
+      "category": "source_lookup",
+      "allowed_source_ids": [
+        "SRC-CONSULT-005"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "score": 0.142773
+        },
+        {
+          "source_id": "SRC-CONSULT-003",
+          "card_id": "CARD-SRC-CONSULT-003-DELIV",
+          "score": 0.07668
+        },
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "score": 0.067494
+        },
+        {
+          "source_id": "SRC-CONSULT-014",
+          "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-07",
+          "score": 0.057639
+        },
+        {
+          "source_id": "SRC-CONSULT-006",
+          "card_id": "CARD-SRC-CONSULT-006-DELIV",
+          "score": 0.054443
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-006",
+      "category": "source_lookup",
+      "allowed_source_ids": [
+        "SRC-CONSULT-006"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-009",
+          "card_id": "CARD-SRC-CONSULT-009-DIAG",
+          "score": 0.181084
+        },
+        {
+          "source_id": "SRC-CONSULT-006",
+          "card_id": "CARD-SRC-CONSULT-006-DELIV",
+          "score": 0.141393
+        },
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "score": 0.110432
+        },
+        {
+          "source_id": "SRC-CONSULT-014",
+          "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-02",
+          "score": 0.101044
+        },
+        {
+          "source_id": "SRC-CONSULT-015",
+          "card_id": "CARD-SRC-CONSULT-015-ACRONYM-04",
+          "score": 0.091394
+        }
+      ],
+      "source_recall_at_1": false,
+      "source_recall_at_5": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-007",
+      "category": "source_lookup",
+      "allowed_source_ids": [
+        "SRC-CONSULT-007"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-007",
+          "card_id": "CARD-SRC-CONSULT-007-DIAG",
+          "score": 0.209256
+        },
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "score": 0.151635
+        },
+        {
+          "source_id": "SRC-CONSULT-011",
+          "card_id": "CARD-SRC-CONSULT-011-METHOD",
+          "score": 0.055125
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "score": 0.044862
+        },
+        {
+          "source_id": "SRC-CONSULT-012",
+          "card_id": "CARD-SRC-CONSULT-012-METHOD",
+          "score": 0.035529
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-008",
+      "category": "source_lookup",
+      "allowed_source_ids": [
+        "SRC-CONSULT-008"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "score": 0.299943
+        },
+        {
+          "source_id": "SRC-CONSULT-007",
+          "card_id": "CARD-SRC-CONSULT-007-DIAG",
+          "score": 0.096334
+        },
+        {
+          "source_id": "SRC-CONSULT-009",
+          "card_id": "CARD-SRC-CONSULT-009-DIAG",
+          "score": 0.068041
+        },
+        {
+          "source_id": "SRC-CONSULT-014",
+          "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-04",
+          "score": 0.042258
+        },
+        {
+          "source_id": "SRC-CONSULT-012",
+          "card_id": "CARD-SRC-CONSULT-012-METHOD",
+          "score": 0.029792
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-009",
+      "category": "source_lookup",
+      "allowed_source_ids": [
+        "SRC-CONSULT-013"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-013",
+          "card_id": "CARD-SRC-CONSULT-013-FUNCTION-KPI-03",
+          "score": 0.116667
+        },
+        {
+          "source_id": "SRC-CONSULT-007",
+          "card_id": "CARD-SRC-CONSULT-007-DIAG",
+          "score": 0.088834
+        },
+        {
+          "source_id": "SRC-CONSULT-014",
+          "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-04",
+          "score": 0.054554
+        },
+        {
+          "source_id": "SRC-CONSULT-004",
+          "card_id": "CARD-SRC-CONSULT-004-DELIV",
+          "score": 0.046225
+        },
+        {
+          "source_id": "SRC-CONSULT-012",
+          "card_id": "CARD-SRC-CONSULT-012-METHOD",
+          "score": 0.025641
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-010",
+      "category": "source_lookup",
+      "allowed_source_ids": [
+        "SRC-CONSULT-015"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-015",
+          "card_id": "CARD-SRC-CONSULT-015-ACRONYM-01",
+          "score": 0.310517
+        },
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "score": 0.056033
+        },
+        {
+          "source_id": "SRC-CONSULT-014",
+          "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-01",
+          "score": 0.045124
+        },
+        {
+          "source_id": "SRC-CONSULT-013",
+          "card_id": "CARD-SRC-CONSULT-013-FUNCTION-KPI-03",
+          "score": 0.027735
+        },
+        {
+          "source_id": "SRC-CONSULT-004",
+          "card_id": "CARD-SRC-CONSULT-004-DELIV",
+          "score": 0.025641
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-011",
+      "category": "methodology_selection",
+      "allowed_source_ids": [
+        "SRC-CONSULT-001",
+        "SRC-CONSULT-002"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "score": 0.077575
+        },
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "score": 0.07581
+        },
+        {
+          "source_id": "SRC-CONSULT-009",
+          "card_id": "CARD-SRC-CONSULT-009-DIAG",
+          "score": 0.067806
+        },
+        {
+          "source_id": "SRC-CONSULT-010",
+          "card_id": "CARD-SRC-CONSULT-010-METHOD",
+          "score": 0.062284
+        },
+        {
+          "source_id": "SRC-CONSULT-004",
+          "card_id": "CARD-SRC-CONSULT-004-DELIV",
+          "score": 0.05947
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-012",
+      "category": "methodology_selection",
+      "allowed_source_ids": [
+        "SRC-CONSULT-002",
+        "SRC-CONSULT-007"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-007",
+          "card_id": "CARD-SRC-CONSULT-007-DIAG",
+          "score": 0.307496
+        },
+        {
+          "source_id": "SRC-CONSULT-009",
+          "card_id": "CARD-SRC-CONSULT-009-DIAG",
+          "score": 0.130312
+        },
+        {
+          "source_id": "SRC-CONSULT-011",
+          "card_id": "CARD-SRC-CONSULT-011-METHOD",
+          "score": 0.121783
+        },
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "score": 0.099391
+        },
+        {
+          "source_id": "SRC-CONSULT-004",
+          "card_id": "CARD-SRC-CONSULT-004-DELIV",
+          "score": 0.088893
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-013",
+      "category": "methodology_selection",
+      "allowed_source_ids": [
+        "SRC-CONSULT-008"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "score": 0.198959
+        },
+        {
+          "source_id": "SRC-CONSULT-007",
+          "card_id": "CARD-SRC-CONSULT-007-DIAG",
+          "score": 0.139973
+        },
+        {
+          "source_id": "SRC-CONSULT-009",
+          "card_id": "CARD-SRC-CONSULT-009-DIAG",
+          "score": 0.069205
+        },
+        {
+          "source_id": "SRC-CONSULT-004",
+          "card_id": "CARD-SRC-CONSULT-004-DELIV",
+          "score": 0.048557
+        },
+        {
+          "source_id": "SRC-CONSULT-006",
+          "card_id": "CARD-SRC-CONSULT-006-DELIV",
+          "score": 0.041608
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-014",
+      "category": "methodology_selection",
+      "allowed_source_ids": [
+        "SRC-CONSULT-009"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-009",
+          "card_id": "CARD-SRC-CONSULT-009-DIAG",
+          "score": 0.161955
+        },
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "score": 0.129337
+        },
+        {
+          "source_id": "SRC-CONSULT-007",
+          "card_id": "CARD-SRC-CONSULT-007-DIAG",
+          "score": 0.095541
+        },
+        {
+          "source_id": "SRC-CONSULT-013",
+          "card_id": "CARD-SRC-CONSULT-013-FUNCTION-KPI-03",
+          "score": 0.076822
+        },
+        {
+          "source_id": "SRC-CONSULT-014",
+          "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-08",
+          "score": 0.069438
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-015",
+      "category": "methodology_selection",
+      "allowed_source_ids": [
+        "SRC-CONSULT-010"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-010",
+          "card_id": "CARD-SRC-CONSULT-010-METHOD",
+          "score": 0.219603
+        },
+        {
+          "source_id": "SRC-CONSULT-006",
+          "card_id": "CARD-SRC-CONSULT-006-DELIV",
+          "score": 0.073922
+        },
+        {
+          "source_id": "SRC-CONSULT-011",
+          "card_id": "CARD-SRC-CONSULT-011-METHOD",
+          "score": 0.064965
+        },
+        {
+          "source_id": "SRC-CONSULT-007",
+          "card_id": "CARD-SRC-CONSULT-007-DIAG",
+          "score": 0.058026
+        },
+        {
+          "source_id": "SRC-CONSULT-012",
+          "card_id": "CARD-SRC-CONSULT-012-METHOD",
+          "score": 0.05234
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-016",
+      "category": "methodology_selection",
+      "allowed_source_ids": [
+        "SRC-CONSULT-011"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-011",
+          "card_id": "CARD-SRC-CONSULT-011-METHOD",
+          "score": 0.202504
+        },
+        {
+          "source_id": "SRC-CONSULT-010",
+          "card_id": "CARD-SRC-CONSULT-010-METHOD",
+          "score": 0.133333
+        },
+        {
+          "source_id": "SRC-CONSULT-007",
+          "card_id": "CARD-SRC-CONSULT-007-DIAG",
+          "score": 0.110096
+        },
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "score": 0.091287
+        },
+        {
+          "source_id": "SRC-CONSULT-013",
+          "card_id": "CARD-SRC-CONSULT-013-FUNCTION-KPI-03",
+          "score": 0.05164
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-017",
+      "category": "methodology_selection",
+      "allowed_source_ids": [
+        "SRC-CONSULT-012"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-009",
+          "card_id": "CARD-SRC-CONSULT-009-DIAG",
+          "score": 0.143019
+        },
+        {
+          "source_id": "SRC-CONSULT-014",
+          "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-01",
+          "score": 0.065407
+        },
+        {
+          "source_id": "SRC-CONSULT-013",
+          "card_id": "CARD-SRC-CONSULT-013-FUNCTION-KPI-03",
+          "score": 0.060302
+        },
+        {
+          "source_id": "SRC-CONSULT-012",
+          "card_id": "CARD-SRC-CONSULT-012-METHOD",
+          "score": 0.057983
+        },
+        {
+          "source_id": "SRC-CONSULT-015",
+          "card_id": "CARD-SRC-CONSULT-015-ACRONYM-04",
+          "score": 0.052934
+        }
+      ],
+      "source_recall_at_1": false,
+      "source_recall_at_5": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-018",
+      "category": "methodology_selection",
+      "allowed_source_ids": [
+        "SRC-CONSULT-001"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "score": 0.143819
+        },
+        {
+          "source_id": "SRC-CONSULT-003",
+          "card_id": "CARD-SRC-CONSULT-003-DELIV",
+          "score": 0.090774
+        },
+        {
+          "source_id": "SRC-CONSULT-014",
+          "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-07",
+          "score": 0.08188
+        },
+        {
+          "source_id": "SRC-CONSULT-009",
+          "card_id": "CARD-SRC-CONSULT-009-DIAG",
+          "score": 0.08004
+        },
+        {
+          "source_id": "SRC-CONSULT-015",
+          "card_id": "CARD-SRC-CONSULT-015-ACRONYM-01",
+          "score": 0.067116
+        }
+      ],
+      "source_recall_at_1": false,
+      "source_recall_at_5": false
+    },
+    {
+      "eval_id": "CONSULT-EVAL-019",
+      "category": "methodology_selection",
+      "allowed_source_ids": [
+        "SRC-CONSULT-013",
+        "SRC-CONSULT-014"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-014",
+          "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-04",
+          "score": 0.222718
+        },
+        {
+          "source_id": "SRC-CONSULT-013",
+          "card_id": "CARD-SRC-CONSULT-013-FUNCTION-KPI-03",
+          "score": 0.217732
+        },
+        {
+          "source_id": "SRC-CONSULT-015",
+          "card_id": "CARD-SRC-CONSULT-015-ACRONYM-01",
+          "score": 0.080188
+        },
+        {
+          "source_id": "SRC-CONSULT-009",
+          "card_id": "CARD-SRC-CONSULT-009-DIAG",
+          "score": 0.071722
+        },
+        {
+          "source_id": "SRC-CONSULT-004",
+          "card_id": "CARD-SRC-CONSULT-004-DELIV",
+          "score": 0.062904
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-020",
+      "category": "methodology_selection",
+      "allowed_source_ids": [
+        "SRC-CONSULT-005",
+        "SRC-CONSULT-006"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-006",
+          "card_id": "CARD-SRC-CONSULT-006-DELIV",
+          "score": 0.152589
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "score": 0.116929
+        },
+        {
+          "source_id": "SRC-CONSULT-009",
+          "card_id": "CARD-SRC-CONSULT-009-DIAG",
+          "score": 0.101518
+        },
+        {
+          "source_id": "SRC-CONSULT-014",
+          "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-07",
+          "score": 0.077889
+        },
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "score": 0.069687
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-021",
+      "category": "diagnostic_planning",
+      "allowed_source_ids": [
+        "SRC-CONSULT-007"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-007",
+          "card_id": "CARD-SRC-CONSULT-007-DIAG",
+          "score": 0.268608
+        },
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "score": 0.114541
+        },
+        {
+          "source_id": "SRC-CONSULT-011",
+          "card_id": "CARD-SRC-CONSULT-011-METHOD",
+          "score": 0.068739
+        },
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "score": 0.054697
+        },
+        {
+          "source_id": "SRC-CONSULT-003",
+          "card_id": "CARD-SRC-CONSULT-003-DELIV",
+          "score": 0.040164
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-022",
+      "category": "diagnostic_planning",
+      "allowed_source_ids": [
+        "SRC-CONSULT-008"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-007",
+          "card_id": "CARD-SRC-CONSULT-007-DIAG",
+          "score": 0.298481
+        },
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "score": 0.282843
+        },
+        {
+          "source_id": "SRC-CONSULT-009",
+          "card_id": "CARD-SRC-CONSULT-009-DIAG",
+          "score": 0.126491
+        },
+        {
+          "source_id": "SRC-CONSULT-003",
+          "card_id": "CARD-SRC-CONSULT-003-DELIV",
+          "score": 0.063758
+        },
+        {
+          "source_id": "SRC-CONSULT-006",
+          "card_id": "CARD-SRC-CONSULT-006-DELIV",
+          "score": 0.045268
+        }
+      ],
+      "source_recall_at_1": false,
+      "source_recall_at_5": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-023",
+      "category": "diagnostic_planning",
+      "allowed_source_ids": [
+        "SRC-CONSULT-009"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-009",
+          "card_id": "CARD-SRC-CONSULT-009-DIAG",
+          "score": 0.176908
+        },
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "score": 0.065205
+        },
+        {
+          "source_id": "SRC-CONSULT-007",
+          "card_id": "CARD-SRC-CONSULT-007-DIAG",
+          "score": 0.055048
+        },
+        {
+          "source_id": "SRC-CONSULT-004",
+          "card_id": "CARD-SRC-CONSULT-004-DELIV",
+          "score": 0.047741
+        },
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "score": 0.046707
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-024",
+      "category": "diagnostic_planning",
+      "allowed_source_ids": [
+        "SRC-CONSULT-010"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-010",
+          "card_id": "CARD-SRC-CONSULT-010-METHOD",
+          "score": 0.28265
+        },
+        {
+          "source_id": "SRC-CONSULT-011",
+          "card_id": "CARD-SRC-CONSULT-011-METHOD",
+          "score": 0.170647
+        },
+        {
+          "source_id": "SRC-CONSULT-007",
+          "card_id": "CARD-SRC-CONSULT-007-DIAG",
+          "score": 0.111139
+        },
+        {
+          "source_id": "SRC-CONSULT-014",
+          "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-05",
+          "score": 0.066307
+        },
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "score": 0.063189
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-025",
+      "category": "diagnostic_planning",
+      "allowed_source_ids": [
+        "SRC-CONSULT-011"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-011",
+          "card_id": "CARD-SRC-CONSULT-011-METHOD",
+          "score": 0.242814
+        },
+        {
+          "source_id": "SRC-CONSULT-007",
+          "card_id": "CARD-SRC-CONSULT-007-DIAG",
+          "score": 0.101209
+        },
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "score": 0.083918
+        },
+        {
+          "source_id": "SRC-CONSULT-010",
+          "card_id": "CARD-SRC-CONSULT-010-METHOD",
+          "score": 0.076606
+        },
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "score": 0.034349
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-026",
+      "category": "diagnostic_planning",
+      "allowed_source_ids": [
+        "SRC-CONSULT-012"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-012",
+          "card_id": "CARD-SRC-CONSULT-012-METHOD",
+          "score": 0.268576
+        },
+        {
+          "source_id": "SRC-CONSULT-003",
+          "card_id": "CARD-SRC-CONSULT-003-DELIV",
+          "score": 0.097391
+        },
+        {
+          "source_id": "SRC-CONSULT-011",
+          "card_id": "CARD-SRC-CONSULT-011-METHOD",
+          "score": 0.059529
+        },
+        {
+          "source_id": "SRC-CONSULT-010",
+          "card_id": "CARD-SRC-CONSULT-010-METHOD",
+          "score": 0.042258
+        },
+        {
+          "source_id": "SRC-CONSULT-015",
+          "card_id": "CARD-SRC-CONSULT-015-ACRONYM-01",
+          "score": 0.025717
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-027",
+      "category": "diagnostic_planning",
+      "allowed_source_ids": [
+        "SRC-CONSULT-013",
+        "SRC-CONSULT-014"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-013",
+          "card_id": "CARD-SRC-CONSULT-013-FUNCTION-KPI-03",
+          "score": 0.311127
+        },
+        {
+          "source_id": "SRC-CONSULT-014",
+          "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-04",
+          "score": 0.262316
+        },
+        {
+          "source_id": "SRC-CONSULT-009",
+          "card_id": "CARD-SRC-CONSULT-009-DIAG",
+          "score": 0.089443
+        },
+        {
+          "source_id": "SRC-CONSULT-015",
+          "card_id": "CARD-SRC-CONSULT-015-ACRONYM-01",
+          "score": 0.083333
+        },
+        {
+          "source_id": "SRC-CONSULT-004",
+          "card_id": "CARD-SRC-CONSULT-004-DELIV",
+          "score": 0.078446
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-028",
+      "category": "diagnostic_planning",
+      "allowed_source_ids": [
+        "SRC-CONSULT-015"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-015",
+          "card_id": "CARD-SRC-CONSULT-015-ACRONYM-03",
+          "score": 0.193429
+        },
+        {
+          "source_id": "SRC-CONSULT-014",
+          "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-04",
+          "score": 0.067344
+        },
+        {
+          "source_id": "SRC-CONSULT-013",
+          "card_id": "CARD-SRC-CONSULT-013-FUNCTION-KPI-04",
+          "score": 0.061113
+        },
+        {
+          "source_id": "SRC-CONSULT-010",
+          "card_id": "CARD-SRC-CONSULT-010-METHOD",
+          "score": 0.029881
+        },
+        {
+          "source_id": "SRC-CONSULT-004",
+          "card_id": "CARD-SRC-CONSULT-004-DELIV",
+          "score": 0.014265
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-029",
+      "category": "diagnostic_planning",
+      "allowed_source_ids": [
+        "SRC-CONSULT-001",
+        "SRC-CONSULT-003"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-003",
+          "card_id": "CARD-SRC-CONSULT-003-DELIV",
+          "score": 0.25923
+        },
+        {
+          "source_id": "SRC-CONSULT-001",
+          "card_id": "CARD-SRC-CONSULT-001-METHOD",
+          "score": 0.105769
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "score": 0.06868
+        },
+        {
+          "source_id": "SRC-CONSULT-015",
+          "card_id": "CARD-SRC-CONSULT-015-ACRONYM-01",
+          "score": 0.041667
+        },
+        {
+          "source_id": "SRC-CONSULT-012",
+          "card_id": "CARD-SRC-CONSULT-012-METHOD",
+          "score": 0.040795
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-030",
+      "category": "diagnostic_planning",
+      "allowed_source_ids": [
+        "SRC-CONSULT-001",
+        "SRC-CONSULT-002"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "score": 0.130952
+        },
+        {
+          "source_id": "SRC-CONSULT-014",
+          "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-04",
+          "score": 0.09001
+        },
+        {
+          "source_id": "SRC-CONSULT-011",
+          "card_id": "CARD-SRC-CONSULT-011-METHOD",
+          "score": 0.080374
+        },
+        {
+          "source_id": "SRC-CONSULT-012",
+          "card_id": "CARD-SRC-CONSULT-012-METHOD",
+          "score": 0.054393
+        },
+        {
+          "source_id": "SRC-CONSULT-003",
+          "card_id": "CARD-SRC-CONSULT-003-DELIV",
+          "score": 0.052597
+        }
+      ],
+      "source_recall_at_1": false,
+      "source_recall_at_5": false
+    },
+    {
+      "eval_id": "CONSULT-EVAL-031",
+      "category": "deliverable_workflow",
+      "allowed_source_ids": [
+        "SRC-CONSULT-003"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-003",
+          "card_id": "CARD-SRC-CONSULT-003-DELIV",
+          "score": 0.118547
+        },
+        {
+          "source_id": "SRC-CONSULT-011",
+          "card_id": "CARD-SRC-CONSULT-011-METHOD",
+          "score": 0.092222
+        },
+        {
+          "source_id": "SRC-CONSULT-013",
+          "card_id": "CARD-SRC-CONSULT-013-FUNCTION-KPI-03",
+          "score": 0.050709
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "score": 0.049253
+        },
+        {
+          "source_id": "SRC-CONSULT-010",
+          "card_id": "CARD-SRC-CONSULT-010-METHOD",
+          "score": 0.021822
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-032",
+      "category": "deliverable_workflow",
+      "allowed_source_ids": [
+        "SRC-CONSULT-004"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-004",
+          "card_id": "CARD-SRC-CONSULT-004-DELIV",
+          "score": 0.096471
+        },
+        {
+          "source_id": "SRC-CONSULT-007",
+          "card_id": "CARD-SRC-CONSULT-007-DIAG",
+          "score": 0.063564
+        },
+        {
+          "source_id": "SRC-CONSULT-013",
+          "card_id": "CARD-SRC-CONSULT-013-FUNCTION-KPI-06",
+          "score": 0.057378
+        },
+        {
+          "source_id": "SRC-CONSULT-015",
+          "card_id": "CARD-SRC-CONSULT-015-ACRONYM-02",
+          "score": 0.050637
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "score": 0.043437
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-033",
+      "category": "deliverable_workflow",
+      "allowed_source_ids": [
+        "SRC-CONSULT-005"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "score": 0.15553
+        },
+        {
+          "source_id": "SRC-CONSULT-004",
+          "card_id": "CARD-SRC-CONSULT-004-DELIV",
+          "score": 0.118431
+        },
+        {
+          "source_id": "SRC-CONSULT-009",
+          "card_id": "CARD-SRC-CONSULT-009-DIAG",
+          "score": 0.101274
+        },
+        {
+          "source_id": "SRC-CONSULT-013",
+          "card_id": "CARD-SRC-CONSULT-013-FUNCTION-KPI-06",
+          "score": 0.077042
+        },
+        {
+          "source_id": "SRC-CONSULT-006",
+          "card_id": "CARD-SRC-CONSULT-006-DELIV",
+          "score": 0.072487
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-034",
+      "category": "deliverable_workflow",
+      "allowed_source_ids": [
+        "SRC-CONSULT-005",
+        "SRC-CONSULT-006"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-006",
+          "card_id": "CARD-SRC-CONSULT-006-DELIV",
+          "score": 0.087726
+        },
+        {
+          "source_id": "SRC-CONSULT-004",
+          "card_id": "CARD-SRC-CONSULT-004-DELIV",
+          "score": 0.08269
+        },
+        {
+          "source_id": "SRC-CONSULT-009",
+          "card_id": "CARD-SRC-CONSULT-009-DIAG",
+          "score": 0.078567
+        },
+        {
+          "source_id": "SRC-CONSULT-010",
+          "card_id": "CARD-SRC-CONSULT-010-METHOD",
+          "score": 0.057735
+        },
+        {
+          "source_id": "SRC-CONSULT-014",
+          "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-06",
+          "score": 0.047946
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-035",
+      "category": "deliverable_workflow",
+      "allowed_source_ids": [
+        "SRC-CONSULT-010"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-010",
+          "card_id": "CARD-SRC-CONSULT-010-METHOD",
+          "score": 0.334719
+        },
+        {
+          "source_id": "SRC-CONSULT-011",
+          "card_id": "CARD-SRC-CONSULT-011-METHOD",
+          "score": 0.208972
+        },
+        {
+          "source_id": "SRC-CONSULT-012",
+          "card_id": "CARD-SRC-CONSULT-012-METHOD",
+          "score": 0.072524
+        },
+        {
+          "source_id": "SRC-CONSULT-015",
+          "card_id": "CARD-SRC-CONSULT-015-ACRONYM-01",
+          "score": 0.055556
+        },
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "score": 0.047619
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-036",
+      "category": "deliverable_workflow",
+      "allowed_source_ids": [
+        "SRC-CONSULT-011"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-011",
+          "card_id": "CARD-SRC-CONSULT-011-METHOD",
+          "score": 0.232643
+        },
+        {
+          "source_id": "SRC-CONSULT-010",
+          "card_id": "CARD-SRC-CONSULT-010-METHOD",
+          "score": 0.178907
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "score": 0.062124
+        },
+        {
+          "source_id": "SRC-CONSULT-013",
+          "card_id": "CARD-SRC-CONSULT-013-FUNCTION-KPI-07",
+          "score": 0.062124
+        },
+        {
+          "source_id": "SRC-CONSULT-015",
+          "card_id": "CARD-SRC-CONSULT-015-ACRONYM-01",
+          "score": 0.050252
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-037",
+      "category": "deliverable_workflow",
+      "allowed_source_ids": [
+        "SRC-CONSULT-012"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-012",
+          "card_id": "CARD-SRC-CONSULT-012-METHOD",
+          "score": 0.17272
+        },
+        {
+          "source_id": "SRC-CONSULT-013",
+          "card_id": "CARD-SRC-CONSULT-013-FUNCTION-KPI-05",
+          "score": 0.098667
+        },
+        {
+          "source_id": "SRC-CONSULT-014",
+          "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-05",
+          "score": 0.086548
+        },
+        {
+          "source_id": "SRC-CONSULT-009",
+          "card_id": "CARD-SRC-CONSULT-009-DIAG",
+          "score": 0.06455
+        },
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "score": 0.061859
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-038",
+      "category": "deliverable_workflow",
+      "allowed_source_ids": [
+        "SRC-CONSULT-004",
+        "SRC-CONSULT-007"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-007",
+          "card_id": "CARD-SRC-CONSULT-007-DIAG",
+          "score": 0.184637
+        },
+        {
+          "source_id": "SRC-CONSULT-011",
+          "card_id": "CARD-SRC-CONSULT-011-METHOD",
+          "score": 0.088594
+        },
+        {
+          "source_id": "SRC-CONSULT-015",
+          "card_id": "CARD-SRC-CONSULT-015-ACRONYM-05",
+          "score": 0.050337
+        },
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "score": 0.043741
+        },
+        {
+          "source_id": "SRC-CONSULT-013",
+          "card_id": "CARD-SRC-CONSULT-013-FUNCTION-KPI-05",
+          "score": 0.041861
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-039",
+      "category": "deliverable_workflow",
+      "allowed_source_ids": [
+        "SRC-CONSULT-004",
+        "SRC-CONSULT-008"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "score": 0.271052
+        },
+        {
+          "source_id": "SRC-CONSULT-007",
+          "card_id": "CARD-SRC-CONSULT-007-DIAG",
+          "score": 0.143019
+        },
+        {
+          "source_id": "SRC-CONSULT-009",
+          "card_id": "CARD-SRC-CONSULT-009-DIAG",
+          "score": 0.117851
+        },
+        {
+          "source_id": "SRC-CONSULT-011",
+          "card_id": "CARD-SRC-CONSULT-011-METHOD",
+          "score": 0.060999
+        },
+        {
+          "source_id": "SRC-CONSULT-014",
+          "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-06",
+          "score": 0.047946
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-040",
+      "category": "deliverable_workflow",
+      "allowed_source_ids": [
+        "SRC-CONSULT-004"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-009",
+          "card_id": "CARD-SRC-CONSULT-009-DIAG",
+          "score": 0.122474
+        },
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "score": 0.117369
+        },
+        {
+          "source_id": "SRC-CONSULT-007",
+          "card_id": "CARD-SRC-CONSULT-007-DIAG",
+          "score": 0.06881
+        },
+        {
+          "source_id": "SRC-CONSULT-015",
+          "card_id": "CARD-SRC-CONSULT-015-ACRONYM-01",
+          "score": 0.045644
+        },
+        {
+          "source_id": "SRC-CONSULT-013",
+          "card_id": "CARD-SRC-CONSULT-013-FUNCTION-KPI-08",
+          "score": 0.037268
+        }
+      ],
+      "source_recall_at_1": false,
+      "source_recall_at_5": false
+    },
+    {
+      "eval_id": "CONSULT-EVAL-041",
+      "category": "refusal_unknown",
+      "allowed_source_ids": [
+        "SRC-CONSULT-006"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-006",
+          "card_id": "CARD-SRC-CONSULT-006-DELIV",
+          "score": 0.158472
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "score": 0.127509
+        },
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "score": 0.073673
+        },
+        {
+          "source_id": "SRC-CONSULT-012",
+          "card_id": "CARD-SRC-CONSULT-012-METHOD",
+          "score": 0.067322
+        },
+        {
+          "source_id": "SRC-CONSULT-015",
+          "card_id": "CARD-SRC-CONSULT-015-ACRONYM-03",
+          "score": 0.049869
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-042",
+      "category": "refusal_unknown",
+      "allowed_source_ids": [
+        "SRC-CONSULT-005",
+        "SRC-CONSULT-006"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-006",
+          "card_id": "CARD-SRC-CONSULT-006-DELIV",
+          "score": 0.08686
+        },
+        {
+          "source_id": "SRC-CONSULT-013",
+          "card_id": "CARD-SRC-CONSULT-013-FUNCTION-KPI-02",
+          "score": 0.063022
+        },
+        {
+          "source_id": "SRC-CONSULT-004",
+          "card_id": "CARD-SRC-CONSULT-004-DELIV",
+          "score": 0.059131
+        },
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "score": 0.043073
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "score": 0.041416
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-043",
+      "category": "refusal_unknown",
+      "allowed_source_ids": [
+        "SRC-CONSULT-010",
+        "SRC-CONSULT-011"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-010",
+          "card_id": "CARD-SRC-CONSULT-010-METHOD",
+          "score": 0.12002
+        },
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "score": 0.085373
+        },
+        {
+          "source_id": "SRC-CONSULT-004",
+          "card_id": "CARD-SRC-CONSULT-004-DELIV",
+          "score": 0.046881
+        },
+        {
+          "source_id": "SRC-CONSULT-011",
+          "card_id": "CARD-SRC-CONSULT-011-METHOD",
+          "score": 0.046111
+        },
+        {
+          "source_id": "SRC-CONSULT-015",
+          "card_id": "CARD-SRC-CONSULT-015-ACRONYM-01",
+          "score": 0.039841
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-044",
+      "category": "refusal_unknown",
+      "allowed_source_ids": [
+        "SRC-CONSULT-004"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-014",
+          "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-04",
+          "score": 0.081325
+        },
+        {
+          "source_id": "SRC-CONSULT-009",
+          "card_id": "CARD-SRC-CONSULT-009-DIAG",
+          "score": 0.078567
+        },
+        {
+          "source_id": "SRC-CONSULT-004",
+          "card_id": "CARD-SRC-CONSULT-004-DELIV",
+          "score": 0.068908
+        },
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "score": 0.060234
+        },
+        {
+          "source_id": "SRC-CONSULT-013",
+          "card_id": "CARD-SRC-CONSULT-013-FUNCTION-KPI-03",
+          "score": 0.059628
+        }
+      ],
+      "source_recall_at_1": false,
+      "source_recall_at_5": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-045",
+      "category": "refusal_unknown",
+      "allowed_source_ids": [
+        "SRC-CONSULT-001",
+        "SRC-CONSULT-002",
+        "SRC-CONSULT-013"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "score": 0.070041
+        },
+        {
+          "source_id": "SRC-CONSULT-014",
+          "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-04",
+          "score": 0.045392
+        },
+        {
+          "source_id": "SRC-CONSULT-015",
+          "card_id": "CARD-SRC-CONSULT-015-ACRONYM-01",
+          "score": 0.032686
+        },
+        {
+          "source_id": "SRC-CONSULT-007",
+          "card_id": "CARD-SRC-CONSULT-007-DIAG",
+          "score": 0.029566
+        },
+        {
+          "source_id": "SRC-CONSULT-012",
+          "card_id": "CARD-SRC-CONSULT-012-METHOD",
+          "score": 0.021335
+        }
+      ],
+      "source_recall_at_1": false,
+      "source_recall_at_5": false
+    },
+    {
+      "eval_id": "CONSULT-EVAL-046",
+      "category": "refusal_unknown",
+      "allowed_source_ids": [],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "score": 0.053995
+        },
+        {
+          "source_id": "SRC-CONSULT-012",
+          "card_id": "CARD-SRC-CONSULT-012-METHOD",
+          "score": 0.051396
+        },
+        {
+          "source_id": "SRC-CONSULT-015",
+          "card_id": "CARD-SRC-CONSULT-015-ACRONYM-01",
+          "score": 0.047246
+        },
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "score": 0.038677
+        },
+        {
+          "source_id": "SRC-CONSULT-014",
+          "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-03",
+          "score": 0.028653
+        }
+      ],
+      "source_recall_at_1": false,
+      "source_recall_at_5": false
+    },
+    {
+      "eval_id": "CONSULT-EVAL-047",
+      "category": "refusal_unknown",
+      "allowed_source_ids": [
+        "SRC-CONSULT-001",
+        "SRC-CONSULT-006",
+        "SRC-CONSULT-014"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-013",
+          "card_id": "CARD-SRC-CONSULT-013-FUNCTION-KPI-07",
+          "score": 0.089924
+        },
+        {
+          "source_id": "SRC-CONSULT-007",
+          "card_id": "CARD-SRC-CONSULT-007-DIAG",
+          "score": 0.082244
+        },
+        {
+          "source_id": "SRC-CONSULT-009",
+          "card_id": "CARD-SRC-CONSULT-009-DIAG",
+          "score": 0.081325
+        },
+        {
+          "source_id": "SRC-CONSULT-014",
+          "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-08",
+          "score": 0.066946
+        },
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "score": 0.062348
+        }
+      ],
+      "source_recall_at_1": false,
+      "source_recall_at_5": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-048",
+      "category": "refusal_unknown",
+      "allowed_source_ids": [],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-014",
+          "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-03",
+          "score": 0.08596
+        },
+        {
+          "source_id": "SRC-CONSULT-007",
+          "card_id": "CARD-SRC-CONSULT-007-DIAG",
+          "score": 0.05698
+        },
+        {
+          "source_id": "SRC-CONSULT-009",
+          "card_id": "CARD-SRC-CONSULT-009-DIAG",
+          "score": 0.056344
+        },
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "score": 0.053995
+        },
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-METHOD",
+          "score": 0.038677
+        }
+      ],
+      "source_recall_at_1": false,
+      "source_recall_at_5": false
+    },
+    {
+      "eval_id": "CONSULT-EVAL-049",
+      "category": "refusal_unknown",
+      "allowed_source_ids": [
+        "SRC-CONSULT-005"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "score": 0.08094
+        },
+        {
+          "source_id": "SRC-CONSULT-009",
+          "card_id": "CARD-SRC-CONSULT-009-DIAG",
+          "score": 0.070273
+        },
+        {
+          "source_id": "SRC-CONSULT-015",
+          "card_id": "CARD-SRC-CONSULT-015-ACRONYM-01",
+          "score": 0.058926
+        },
+        {
+          "source_id": "SRC-CONSULT-014",
+          "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-08",
+          "score": 0.036155
+        },
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "score": 0.033672
+        }
+      ],
+      "source_recall_at_1": true,
+      "source_recall_at_5": true
+    },
+    {
+      "eval_id": "CONSULT-EVAL-050",
+      "category": "refusal_unknown",
+      "allowed_source_ids": [
+        "SRC-CONSULT-010",
+        "SRC-CONSULT-011",
+        "SRC-CONSULT-012"
+      ],
+      "top_sources": [
+        {
+          "source_id": "SRC-CONSULT-007",
+          "card_id": "CARD-SRC-CONSULT-007-DIAG",
+          "score": 0.044781
+        },
+        {
+          "source_id": "SRC-CONSULT-005",
+          "card_id": "CARD-SRC-CONSULT-005-DELIV",
+          "score": 0.040802
+        },
+        {
+          "source_id": "SRC-CONSULT-014",
+          "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-08",
+          "score": 0.030376
+        },
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "score": 0.02829
+        },
+        {
+          "source_id": "SRC-CONSULT-013",
+          "card_id": "CARD-SRC-CONSULT-013-FUNCTION-KPI-07",
+          "score": 0.027201
+        }
+      ],
+      "source_recall_at_1": false,
+      "source_recall_at_5": false
+    }
+  ]
+}

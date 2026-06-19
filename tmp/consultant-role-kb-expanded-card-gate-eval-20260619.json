@@ -1,0 +1,1546 @@
+{
+  "summary": {
+    "card_count": 150,
+    "metadata_completeness": 1.0,
+    "unit_locator_coverage": 1.0,
+    "source_only_citation_violation_count": 0,
+    "long_text_violation_count": 0,
+    "provider_call_count": 0,
+    "live_kb_write_count": 0,
+    "by_source": {
+      "SRC-CONSULT-001": 10,
+      "SRC-CONSULT-002": 10,
+      "SRC-CONSULT-003": 10,
+      "SRC-CONSULT-004": 10,
+      "SRC-CONSULT-005": 10,
+      "SRC-CONSULT-006": 10,
+      "SRC-CONSULT-007": 10,
+      "SRC-CONSULT-008": 10,
+      "SRC-CONSULT-009": 10,
+      "SRC-CONSULT-010": 10,
+      "SRC-CONSULT-011": 10,
+      "SRC-CONSULT-012": 10,
+      "SRC-CONSULT-013": 10,
+      "SRC-CONSULT-014": 10,
+      "SRC-CONSULT-015": 10
+    },
+    "by_card_type": {
+      "consult_method_card": 50,
+      "consulting_kpi_card": 20,
+      "deliverable_template_card": 40,
+      "diagnostic_dimension_card": 30,
+      "terminology_crosswalk_card": 10
+    }
+  },
+  "results": [
+    {
+      "card_id": "CARD-SRC-CONSULT-001-EXP-001",
+      "source_id": "SRC-CONSULT-001",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-001-EXP-002",
+      "source_id": "SRC-CONSULT-001",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-001-EXP-003",
+      "source_id": "SRC-CONSULT-001",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-001-EXP-004",
+      "source_id": "SRC-CONSULT-001",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-001-EXP-005",
+      "source_id": "SRC-CONSULT-001",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-001-EXP-006",
+      "source_id": "SRC-CONSULT-001",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-001-EXP-007",
+      "source_id": "SRC-CONSULT-001",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-001-EXP-008",
+      "source_id": "SRC-CONSULT-001",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-001-EXP-009",
+      "source_id": "SRC-CONSULT-001",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-001-EXP-010",
+      "source_id": "SRC-CONSULT-001",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-002-EXP-001",
+      "source_id": "SRC-CONSULT-002",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-002-EXP-002",
+      "source_id": "SRC-CONSULT-002",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-002-EXP-003",
+      "source_id": "SRC-CONSULT-002",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-002-EXP-004",
+      "source_id": "SRC-CONSULT-002",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-002-EXP-005",
+      "source_id": "SRC-CONSULT-002",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-002-EXP-006",
+      "source_id": "SRC-CONSULT-002",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-002-EXP-007",
+      "source_id": "SRC-CONSULT-002",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-002-EXP-008",
+      "source_id": "SRC-CONSULT-002",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-002-EXP-009",
+      "source_id": "SRC-CONSULT-002",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-002-EXP-010",
+      "source_id": "SRC-CONSULT-002",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-003-EXP-001",
+      "source_id": "SRC-CONSULT-003",
+      "card_type": "deliverable_template_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-003-EXP-002",
+      "source_id": "SRC-CONSULT-003",
+      "card_type": "deliverable_template_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-003-EXP-003",
+      "source_id": "SRC-CONSULT-003",
+      "card_type": "deliverable_template_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-003-EXP-004",
+      "source_id": "SRC-CONSULT-003",
+      "card_type": "deliverable_template_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-003-EXP-005",
+      "source_id": "SRC-CONSULT-003",
+      "card_type": "deliverable_template_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-003-EXP-006",
+      "source_id": "SRC-CONSULT-003",
+      "card_type": "deliverable_template_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-003-EXP-007",
+      "source_id": "SRC-CONSULT-003",
+      "card_type": "deliverable_template_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-003-EXP-008",
+      "source_id": "SRC-CONSULT-003",
+      "card_type": "deliverable_template_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-003-EXP-009",
+      "source_id": "SRC-CONSULT-003",
+      "card_type": "deliverable_template_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-003-EXP-010",
+      "source_id": "SRC-CONSULT-003",
+      "card_type": "deliverable_template_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-004-EXP-001",
+      "source_id": "SRC-CONSULT-004",
+      "card_type": "deliverable_template_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-004-EXP-002",
+      "source_id": "SRC-CONSULT-004",
+      "card_type": "deliverable_template_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-004-EXP-003",
+      "source_id": "SRC-CONSULT-004",
+      "card_type": "deliverable_template_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-004-EXP-004",
+      "source_id": "SRC-CONSULT-004",
+      "card_type": "deliverable_template_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-004-EXP-005",
+      "source_id": "SRC-CONSULT-004",
+      "card_type": "deliverable_template_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-004-EXP-006",
+      "source_id": "SRC-CONSULT-004",
+      "card_type": "deliverable_template_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-004-EXP-007",
+      "source_id": "SRC-CONSULT-004",
+      "card_type": "deliverable_template_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-004-EXP-008",
+      "source_id": "SRC-CONSULT-004",
+      "card_type": "deliverable_template_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-004-EXP-009",
+      "source_id": "SRC-CONSULT-004",
+      "card_type": "deliverable_template_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-004-EXP-010",
+      "source_id": "SRC-CONSULT-004",
+      "card_type": "deliverable_template_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-005-EXP-001",
+      "source_id": "SRC-CONSULT-005",
+      "card_type": "deliverable_template_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-005-EXP-002",
+      "source_id": "SRC-CONSULT-005",
+      "card_type": "deliverable_template_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-005-EXP-003",
+      "source_id": "SRC-CONSULT-005",
+      "card_type": "deliverable_template_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-005-EXP-004",
+      "source_id": "SRC-CONSULT-005",
+      "card_type": "deliverable_template_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-005-EXP-005",
+      "source_id": "SRC-CONSULT-005",
+      "card_type": "deliverable_template_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-005-EXP-006",
+      "source_id": "SRC-CONSULT-005",
+      "card_type": "deliverable_template_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-005-EXP-007",
+      "source_id": "SRC-CONSULT-005",
+      "card_type": "deliverable_template_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-005-EXP-008",
+      "source_id": "SRC-CONSULT-005",
+      "card_type": "deliverable_template_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-005-EXP-009",
+      "source_id": "SRC-CONSULT-005",
+      "card_type": "deliverable_template_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-005-EXP-010",
+      "source_id": "SRC-CONSULT-005",
+      "card_type": "deliverable_template_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-006-EXP-001",
+      "source_id": "SRC-CONSULT-006",
+      "card_type": "deliverable_template_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-006-EXP-002",
+      "source_id": "SRC-CONSULT-006",
+      "card_type": "deliverable_template_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-006-EXP-003",
+      "source_id": "SRC-CONSULT-006",
+      "card_type": "deliverable_template_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-006-EXP-004",
+      "source_id": "SRC-CONSULT-006",
+      "card_type": "deliverable_template_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-006-EXP-005",
+      "source_id": "SRC-CONSULT-006",
+      "card_type": "deliverable_template_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-006-EXP-006",
+      "source_id": "SRC-CONSULT-006",
+      "card_type": "deliverable_template_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-006-EXP-007",
+      "source_id": "SRC-CONSULT-006",
+      "card_type": "deliverable_template_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-006-EXP-008",
+      "source_id": "SRC-CONSULT-006",
+      "card_type": "deliverable_template_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-006-EXP-009",
+      "source_id": "SRC-CONSULT-006",
+      "card_type": "deliverable_template_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-006-EXP-010",
+      "source_id": "SRC-CONSULT-006",
+      "card_type": "deliverable_template_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-007-EXP-001",
+      "source_id": "SRC-CONSULT-007",
+      "card_type": "diagnostic_dimension_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-007-EXP-002",
+      "source_id": "SRC-CONSULT-007",
+      "card_type": "diagnostic_dimension_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-007-EXP-003",
+      "source_id": "SRC-CONSULT-007",
+      "card_type": "diagnostic_dimension_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-007-EXP-004",
+      "source_id": "SRC-CONSULT-007",
+      "card_type": "diagnostic_dimension_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-007-EXP-005",
+      "source_id": "SRC-CONSULT-007",
+      "card_type": "diagnostic_dimension_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-007-EXP-006",
+      "source_id": "SRC-CONSULT-007",
+      "card_type": "diagnostic_dimension_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-007-EXP-007",
+      "source_id": "SRC-CONSULT-007",
+      "card_type": "diagnostic_dimension_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-007-EXP-008",
+      "source_id": "SRC-CONSULT-007",
+      "card_type": "diagnostic_dimension_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-007-EXP-009",
+      "source_id": "SRC-CONSULT-007",
+      "card_type": "diagnostic_dimension_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-007-EXP-010",
+      "source_id": "SRC-CONSULT-007",
+      "card_type": "diagnostic_dimension_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-008-EXP-001",
+      "source_id": "SRC-CONSULT-008",
+      "card_type": "diagnostic_dimension_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-008-EXP-002",
+      "source_id": "SRC-CONSULT-008",
+      "card_type": "diagnostic_dimension_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-008-EXP-003",
+      "source_id": "SRC-CONSULT-008",
+      "card_type": "diagnostic_dimension_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-008-EXP-004",
+      "source_id": "SRC-CONSULT-008",
+      "card_type": "diagnostic_dimension_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-008-EXP-005",
+      "source_id": "SRC-CONSULT-008",
+      "card_type": "diagnostic_dimension_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-008-EXP-006",
+      "source_id": "SRC-CONSULT-008",
+      "card_type": "diagnostic_dimension_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-008-EXP-007",
+      "source_id": "SRC-CONSULT-008",
+      "card_type": "diagnostic_dimension_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-008-EXP-008",
+      "source_id": "SRC-CONSULT-008",
+      "card_type": "diagnostic_dimension_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-008-EXP-009",
+      "source_id": "SRC-CONSULT-008",
+      "card_type": "diagnostic_dimension_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-008-EXP-010",
+      "source_id": "SRC-CONSULT-008",
+      "card_type": "diagnostic_dimension_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-009-EXP-001",
+      "source_id": "SRC-CONSULT-009",
+      "card_type": "diagnostic_dimension_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-009-EXP-002",
+      "source_id": "SRC-CONSULT-009",
+      "card_type": "diagnostic_dimension_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-009-EXP-003",
+      "source_id": "SRC-CONSULT-009",
+      "card_type": "diagnostic_dimension_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-009-EXP-004",
+      "source_id": "SRC-CONSULT-009",
+      "card_type": "diagnostic_dimension_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-009-EXP-005",
+      "source_id": "SRC-CONSULT-009",
+      "card_type": "diagnostic_dimension_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-009-EXP-006",
+      "source_id": "SRC-CONSULT-009",
+      "card_type": "diagnostic_dimension_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-009-EXP-007",
+      "source_id": "SRC-CONSULT-009",
+      "card_type": "diagnostic_dimension_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-009-EXP-008",
+      "source_id": "SRC-CONSULT-009",
+      "card_type": "diagnostic_dimension_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-009-EXP-009",
+      "source_id": "SRC-CONSULT-009",
+      "card_type": "diagnostic_dimension_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-009-EXP-010",
+      "source_id": "SRC-CONSULT-009",
+      "card_type": "diagnostic_dimension_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-010-EXP-001",
+      "source_id": "SRC-CONSULT-010",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-010-EXP-002",
+      "source_id": "SRC-CONSULT-010",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-010-EXP-003",
+      "source_id": "SRC-CONSULT-010",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-010-EXP-004",
+      "source_id": "SRC-CONSULT-010",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-010-EXP-005",
+      "source_id": "SRC-CONSULT-010",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-010-EXP-006",
+      "source_id": "SRC-CONSULT-010",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-010-EXP-007",
+      "source_id": "SRC-CONSULT-010",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-010-EXP-008",
+      "source_id": "SRC-CONSULT-010",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-010-EXP-009",
+      "source_id": "SRC-CONSULT-010",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-010-EXP-010",
+      "source_id": "SRC-CONSULT-010",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-011-EXP-001",
+      "source_id": "SRC-CONSULT-011",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-011-EXP-002",
+      "source_id": "SRC-CONSULT-011",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-011-EXP-003",
+      "source_id": "SRC-CONSULT-011",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-011-EXP-004",
+      "source_id": "SRC-CONSULT-011",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-011-EXP-005",
+      "source_id": "SRC-CONSULT-011",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-011-EXP-006",
+      "source_id": "SRC-CONSULT-011",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-011-EXP-007",
+      "source_id": "SRC-CONSULT-011",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-011-EXP-008",
+      "source_id": "SRC-CONSULT-011",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-011-EXP-009",
+      "source_id": "SRC-CONSULT-011",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-011-EXP-010",
+      "source_id": "SRC-CONSULT-011",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-012-EXP-001",
+      "source_id": "SRC-CONSULT-012",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-012-EXP-002",
+      "source_id": "SRC-CONSULT-012",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-012-EXP-003",
+      "source_id": "SRC-CONSULT-012",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-012-EXP-004",
+      "source_id": "SRC-CONSULT-012",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-012-EXP-005",
+      "source_id": "SRC-CONSULT-012",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-012-EXP-006",
+      "source_id": "SRC-CONSULT-012",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-012-EXP-007",
+      "source_id": "SRC-CONSULT-012",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-012-EXP-008",
+      "source_id": "SRC-CONSULT-012",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-012-EXP-009",
+      "source_id": "SRC-CONSULT-012",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-012-EXP-010",
+      "source_id": "SRC-CONSULT-012",
+      "card_type": "consult_method_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-013-EXP-001",
+      "source_id": "SRC-CONSULT-013",
+      "card_type": "consulting_kpi_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-013-EXP-002",
+      "source_id": "SRC-CONSULT-013",
+      "card_type": "consulting_kpi_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-013-EXP-003",
+      "source_id": "SRC-CONSULT-013",
+      "card_type": "consulting_kpi_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-013-EXP-004",
+      "source_id": "SRC-CONSULT-013",
+      "card_type": "consulting_kpi_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-013-EXP-005",
+      "source_id": "SRC-CONSULT-013",
+      "card_type": "consulting_kpi_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-013-EXP-006",
+      "source_id": "SRC-CONSULT-013",
+      "card_type": "consulting_kpi_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-013-EXP-007",
+      "source_id": "SRC-CONSULT-013",
+      "card_type": "consulting_kpi_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-013-EXP-008",
+      "source_id": "SRC-CONSULT-013",
+      "card_type": "consulting_kpi_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-013-EXP-009",
+      "source_id": "SRC-CONSULT-013",
+      "card_type": "consulting_kpi_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-013-EXP-010",
+      "source_id": "SRC-CONSULT-013",
+      "card_type": "consulting_kpi_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-014-EXP-001",
+      "source_id": "SRC-CONSULT-014",
+      "card_type": "consulting_kpi_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-014-EXP-002",
+      "source_id": "SRC-CONSULT-014",
+      "card_type": "consulting_kpi_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-014-EXP-003",
+      "source_id": "SRC-CONSULT-014",
+      "card_type": "consulting_kpi_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-014-EXP-004",
+      "source_id": "SRC-CONSULT-014",
+      "card_type": "consulting_kpi_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-014-EXP-005",
+      "source_id": "SRC-CONSULT-014",
+      "card_type": "consulting_kpi_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-014-EXP-006",
+      "source_id": "SRC-CONSULT-014",
+      "card_type": "consulting_kpi_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-014-EXP-007",
+      "source_id": "SRC-CONSULT-014",
+      "card_type": "consulting_kpi_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-014-EXP-008",
+      "source_id": "SRC-CONSULT-014",
+      "card_type": "consulting_kpi_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-014-EXP-009",
+      "source_id": "SRC-CONSULT-014",
+      "card_type": "consulting_kpi_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-014-EXP-010",
+      "source_id": "SRC-CONSULT-014",
+      "card_type": "consulting_kpi_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-015-EXP-001",
+      "source_id": "SRC-CONSULT-015",
+      "card_type": "terminology_crosswalk_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-015-EXP-002",
+      "source_id": "SRC-CONSULT-015",
+      "card_type": "terminology_crosswalk_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-015-EXP-003",
+      "source_id": "SRC-CONSULT-015",
+      "card_type": "terminology_crosswalk_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-015-EXP-004",
+      "source_id": "SRC-CONSULT-015",
+      "card_type": "terminology_crosswalk_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-015-EXP-005",
+      "source_id": "SRC-CONSULT-015",
+      "card_type": "terminology_crosswalk_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-015-EXP-006",
+      "source_id": "SRC-CONSULT-015",
+      "card_type": "terminology_crosswalk_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-015-EXP-007",
+      "source_id": "SRC-CONSULT-015",
+      "card_type": "terminology_crosswalk_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-015-EXP-008",
+      "source_id": "SRC-CONSULT-015",
+      "card_type": "terminology_crosswalk_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-015-EXP-009",
+      "source_id": "SRC-CONSULT-015",
+      "card_type": "terminology_crosswalk_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-015-EXP-010",
+      "source_id": "SRC-CONSULT-015",
+      "card_type": "terminology_crosswalk_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-06-19",
+    "scope": "controlled local small-batch consultant-role card expansion",
+    "provider_call_boundary": "no KB provider call",
+    "production_impact": "production unchanged",
+    "implementation_status": "local expanded cards only; no live KB ingestion",
+    "source_register": "drafts/analysis/consultant-role-kb-source-register-candidates-20260619.csv",
+    "expanded_cards": "tmp/consultant-role-kb-expanded-cards-20260619.jsonl"
+  }
+}

@@ -1,0 +1,279 @@
+{
+  "metadata": {
+    "created_at": "2026-06-19",
+    "embedding_method": "real_local_model",
+    "model_id": "BAAI/bge-small-zh-v1.5",
+    "model_snapshot": "7999e1d3359715c523056ef9478215996d62a620",
+    "model_license": "MIT",
+    "embedding_dimension": 512,
+    "provider_call_boundary": "no KB provider call",
+    "production_impact": "production unchanged",
+    "source": "tmp/consultant-role-kb-card-samples-20260619.jsonl"
+  },
+  "cards": [
+    {
+      "card_id": "CARD-SRC-CONSULT-001-METHOD",
+      "card_type": "consult_method_card",
+      "source_id": "SRC-CONSULT-001",
+      "workspace": "consultant-p1",
+      "evidence_grade": "C",
+      "text_sha256": "0913a81af4cd28454d31db7d1f3ff6b7c31ff1ed1009d10399f7093a70fbcf26"
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-002-METHOD",
+      "card_type": "consult_method_card",
+      "source_id": "SRC-CONSULT-002",
+      "workspace": "consultant-p1",
+      "evidence_grade": "C",
+      "text_sha256": "4d3ad6df1b89f792741cda869144be4a4f40952e5e5b7b503a201d482e74fc63"
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-010-METHOD",
+      "card_type": "consult_method_card",
+      "source_id": "SRC-CONSULT-010",
+      "workspace": "consultant-p1",
+      "evidence_grade": "C",
+      "text_sha256": "1be8603002c3deef868b84f28433a1f1f61bd1c67b2b603e00ea0e9d9b7475ec"
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-011-METHOD",
+      "card_type": "consult_method_card",
+      "source_id": "SRC-CONSULT-011",
+      "workspace": "consultant-p1",
+      "evidence_grade": "C",
+      "text_sha256": "c2b9224a92b7e6744d6eb796a65ee3394f49dcb6462e07ead62ddd08909518bd"
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-012-METHOD",
+      "card_type": "consult_method_card",
+      "source_id": "SRC-CONSULT-012",
+      "workspace": "consultant-p1",
+      "evidence_grade": "C",
+      "text_sha256": "13b404f6f4d2d43e26a88f7ede9a1af318f76f0dd54ebf939a7f8fc1e8894ab4"
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-007-DIAG",
+      "card_type": "diagnostic_dimension_card",
+      "source_id": "SRC-CONSULT-007",
+      "workspace": "consultant-p1",
+      "evidence_grade": "C",
+      "text_sha256": "faf9f471979156feaedbac14b67212d38610388111ff87a8f8f9ed89072e9955"
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-008-DIAG",
+      "card_type": "diagnostic_dimension_card",
+      "source_id": "SRC-CONSULT-008",
+      "workspace": "consultant-p1",
+      "evidence_grade": "C",
+      "text_sha256": "e52e74286df27e9f9cc2166ac1c44dab7cf8ca6d3299735743fa8c4e2555995c"
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-009-DIAG",
+      "card_type": "diagnostic_dimension_card",
+      "source_id": "SRC-CONSULT-009",
+      "workspace": "consultant-p1",
+      "evidence_grade": "C",
+      "text_sha256": "4833426ac1df257787299e3a88a65a0394c528b59ffcb918fbfd54ed0520d927"
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-003-DELIV",
+      "card_type": "deliverable_template_card",
+      "source_id": "SRC-CONSULT-003",
+      "workspace": "consultant-p1",
+      "evidence_grade": "C",
+      "text_sha256": "02007309d7ed03ecf79da7ebaba38b49907d91b2c6cd8bca3d3225eb987cbc8a"
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-004-DELIV",
+      "card_type": "deliverable_template_card",
+      "source_id": "SRC-CONSULT-004",
+      "workspace": "consultant-p1",
+      "evidence_grade": "C",
+      "text_sha256": "0ccffc460ee365c09ee37f5bc59a629a96a1f22387e040a28cc2e2040a3eb2e6"
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-005-DELIV",
+      "card_type": "deliverable_template_card",
+      "source_id": "SRC-CONSULT-005",
+      "workspace": "consultant-p1",
+      "evidence_grade": "C",
+      "text_sha256": "f666fd81e481c26ebc238d7da6db837f849ae6aeba92f159bb611ff26a3f5e22"
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-006-DELIV",
+      "card_type": "deliverable_template_card",
+      "source_id": "SRC-CONSULT-006",
+      "workspace": "consultant-p1",
+      "evidence_grade": "C",
+      "text_sha256": "87554a7bd64d7c94a88a63d131d345d8d0468652dcbf6969099014a1c3958978"
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-013-FUNCTION-KPI-01",
+      "card_type": "consulting_kpi_card",
+      "source_id": "SRC-CONSULT-013",
+      "workspace": "consultant-p1",
+      "evidence_grade": "C",
+      "text_sha256": "21799dd1f7cc6a4064b78717ceafd3aeeaa70c274eef5dd2aa03e1c989f45e9e"
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-013-FUNCTION-KPI-02",
+      "card_type": "consulting_kpi_card",
+      "source_id": "SRC-CONSULT-013",
+      "workspace": "consultant-p1",
+      "evidence_grade": "C",
+      "text_sha256": "a2a64c51d6b91d2e460e15da527ec15abdea3b5d0436c59bc81926e583e2fcf4"
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-013-FUNCTION-KPI-03",
+      "card_type": "consulting_kpi_card",
+      "source_id": "SRC-CONSULT-013",
+      "workspace": "consultant-p1",
+      "evidence_grade": "C",
+      "text_sha256": "dd3acb04e924d22ba6f90c007a10464e53886796a76ce3046dff193efd93ba3e"
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-013-FUNCTION-KPI-04",
+      "card_type": "consulting_kpi_card",
+      "source_id": "SRC-CONSULT-013",
+      "workspace": "consultant-p1",
+      "evidence_grade": "C",
+      "text_sha256": "55033909c9c60a002407f03df9d17f744f0170eb303fdc341cf4635afb35a347"
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-013-FUNCTION-KPI-05",
+      "card_type": "consulting_kpi_card",
+      "source_id": "SRC-CONSULT-013",
+      "workspace": "consultant-p1",
+      "evidence_grade": "C",
+      "text_sha256": "44832a8509473ee681a382d0d95e20de9f836cde21e5f1cd330f5a9c34ce1f1c"
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-013-FUNCTION-KPI-06",
+      "card_type": "consulting_kpi_card",
+      "source_id": "SRC-CONSULT-013",
+      "workspace": "consultant-p1",
+      "evidence_grade": "C",
+      "text_sha256": "e7572e25cf1b02be07b1f9bf5a4e5241b57a82be82b3dab0937fd62a47c93682"
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-013-FUNCTION-KPI-07",
+      "card_type": "consulting_kpi_card",
+      "source_id": "SRC-CONSULT-013",
+      "workspace": "consultant-p1",
+      "evidence_grade": "C",
+      "text_sha256": "2f44a3334d6fd3d58a3c2befae74fdbde72feaf36dc97e1d56cc35bc5dbe7c07"
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-013-FUNCTION-KPI-08",
+      "card_type": "consulting_kpi_card",
+      "source_id": "SRC-CONSULT-013",
+      "workspace": "consultant-p1",
+      "evidence_grade": "C",
+      "text_sha256": "e541f8ec438b3738d135c88efea860d5d454f776728894804bade98ee06a2dee"
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-01",
+      "card_type": "consulting_kpi_card",
+      "source_id": "SRC-CONSULT-014",
+      "workspace": "consultant-p1",
+      "evidence_grade": "C",
+      "text_sha256": "032f4b281ffd56695af3a2e586f533a6227fa5a7379114aa821ca93179b2efce"
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-02",
+      "card_type": "consulting_kpi_card",
+      "source_id": "SRC-CONSULT-014",
+      "workspace": "consultant-p1",
+      "evidence_grade": "C",
+      "text_sha256": "7d5b183dada8dcadf9fc99a3cfce78df40be01e6e7916af936b6d64c28a3949c"
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-03",
+      "card_type": "consulting_kpi_card",
+      "source_id": "SRC-CONSULT-014",
+      "workspace": "consultant-p1",
+      "evidence_grade": "C",
+      "text_sha256": "ae04948fa4e468c7f55db0e1c02cfbb6316d895e3d07da26d92957c8082a8606"
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-04",
+      "card_type": "consulting_kpi_card",
+      "source_id": "SRC-CONSULT-014",
+      "workspace": "consultant-p1",
+      "evidence_grade": "C",
+      "text_sha256": "97bb6eb7a5f699e3ef2be39b9fd54e08ecbdddd600c1e69c4a02fcb97f577760"
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-05",
+      "card_type": "consulting_kpi_card",
+      "source_id": "SRC-CONSULT-014",
+      "workspace": "consultant-p1",
+      "evidence_grade": "C",
+      "text_sha256": "6e51b80b302eeb859b037ef6a85467a4ee1642135dda5aeea14c4757e2be1958"
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-06",
+      "card_type": "consulting_kpi_card",
+      "source_id": "SRC-CONSULT-014",
+      "workspace": "consultant-p1",
+      "evidence_grade": "C",
+      "text_sha256": "8160562104828936668aebc3ddd6e04afbbe114e340049022009096f362638f5"
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-07",
+      "card_type": "consulting_kpi_card",
+      "source_id": "SRC-CONSULT-014",
+      "workspace": "consultant-p1",
+      "evidence_grade": "C",
+      "text_sha256": "d55985914c92ef7c4ab017cc16b425eec3f0a8cade1838977a6e21392f504835"
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-08",
+      "card_type": "consulting_kpi_card",
+      "source_id": "SRC-CONSULT-014",
+      "workspace": "consultant-p1",
+      "evidence_grade": "C",
+      "text_sha256": "41ec8082707ba10f643d83a59cfa0b65dff040ceeb67a8681c890efae53f8ccb"
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-015-ACRONYM-01",
+      "card_type": "terminology_crosswalk_card",
+      "source_id": "SRC-CONSULT-015",
+      "workspace": "consultant-p1",
+      "evidence_grade": "C",
+      "text_sha256": "6afe211bbff8ac9778123dca36e0d07727eab68e03b66fcc528f0ce51ce426d5"
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-015-ACRONYM-02",
+      "card_type": "terminology_crosswalk_card",
+      "source_id": "SRC-CONSULT-015",
+      "workspace": "consultant-p1",
+      "evidence_grade": "C",
+      "text_sha256": "9329c2c148e86fa3d478ce6663ad3004b76218cb8591673d8e957e3dcd695949"
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-015-ACRONYM-03",
+      "card_type": "terminology_crosswalk_card",
+      "source_id": "SRC-CONSULT-015",
+      "workspace": "consultant-p1",
+      "evidence_grade": "C",
+      "text_sha256": "6a882d4de135816b52c34421c044c07e44be3c45b7d4d655939a2db2399f1622"
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-015-ACRONYM-04",
+      "card_type": "terminology_crosswalk_card",
+      "source_id": "SRC-CONSULT-015",
+      "workspace": "consultant-p1",
+      "evidence_grade": "C",
+      "text_sha256": "53e4fd5faecd0f9f5b8d27c19b0317287bae320416f0999e940e56c8f666c2c0"
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-015-ACRONYM-05",
+      "card_type": "terminology_crosswalk_card",
+      "source_id": "SRC-CONSULT-015",
+      "workspace": "consultant-p1",
+      "evidence_grade": "C",
+      "text_sha256": "647ad3fe676fa410ca4ea459d7a86a03a696efb7e6ccb6c0dd3986bf62d5c96a"
+    }
+  ]
+}

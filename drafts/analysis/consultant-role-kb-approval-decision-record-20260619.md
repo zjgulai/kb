@@ -46,7 +46,7 @@ approve production launch.
 | `tmp/consultant-role-kb-all-extractable-anchored-retrieval-citation-eval-20260619.json` | answerable anchored_citation@1 `0.9792`, @5 `1.0`, source-only citation violations `0` |
 | `tmp/consultant-role-kb-all-extractable-answer-trace-eval-20260619.json` | answer trace `12/12`, trace pass rate `1.0` |
 | `drafts/analysis/consultant-role-kb-csv-loader-support-report-20260619.md` | `SRC-CONSULT-030` and `SRC-CONSULT-031` now have `csv_row` locator cards in the all-extractable set |
-| `shared/indexes/consultant-agent/all-extractable-bge-small-zh-v1-5-20260619/manifest.json` | pre-CSV durable local vector store with 780 records, 780 embedding rows, 78 sources, 512-dim local BGE embeddings |
+| `shared/indexes/consultant-agent/all-extractable-bge-small-zh-v1-5-20260619/manifest.json` | durable local vector store with 800 records, 800 embedding rows, 80 sources, 512-dim local BGE embeddings |
 | `tmp/consultant-role-kb-all-extractable-vector-store-smoke-20260619.json` | vector plus deterministic rerank answerable source_recall@1 `0.9583`, @5 `1.0`; raw vector-only @5 `0.75`; provider calls `0`; live KB writes `0` |
 | `shared/eval/consultant-agent/human-gold-locator-labels.seed-20260619.jsonl` | 50 pending-review label seeds; 48 locator candidates; 2 policy-only refusal labels; no human-approved labels yet |
 | `tmp/consultant-role-kb-human-gold-locator-labels-qa-20260619.json` | label QA `failure_count=0`, locator coverage `1.0`, provider calls `0`, live KB writes `0` |
@@ -54,7 +54,7 @@ approve production launch.
 | `shared/eval/consultant-agent/human-gold-locator-label-decisions.template-20260619.jsonl` | decision template with 50 pending decisions and 0 approvals |
 | `tmp/consultant-role-kb-human-label-review-workflow-validation-20260619.json` | workflow validation `failure_count=0`, approved decisions `0`, provider calls `0`, live KB writes `0` |
 | `agents/consultant-agent/runtime/local_retrieval_api.py` | private localhost no-provider retrieval API prototype with `/health`, `/retrieve`, and `/eval/label-seed` |
-| `tmp/consultant-role-kb-private-retrieval-api-smoke-20260619.json` | API smoke `failure_count=0`, label_seed_match_at_5 `1.0`, policy_refusal_pass_rate `1.0`, provider calls `0`, live KB writes `0` |
+| `tmp/consultant-role-kb-private-retrieval-api-smoke-20260619.json` | API smoke `record_count=800`, `failure_count=0`, label_seed_match_at_5 `1.0`, policy_refusal_pass_rate `1.0`, provider calls `0`, live KB writes `0` |
 | `drafts/analysis/consultant-role-kb-staging-auth-audit-design-20260619.md` | private-staging auth/audit contract drafted; no staging deployment |
 | `shared/audit/consultant-agent/staging-audit-event.schema-20260619.json` | audit event schema for allowed/denied retrieval events |
 | `tmp/consultant-role-kb-staging-auth-audit-contract-validation-20260619.json` | local contract validation `failure_count=0`, provider calls `0`, live KB writes `0`, source text returned `false` |
@@ -72,12 +72,11 @@ The all-extractable batch now selects 80 non-duplicate sources after CSV loader
 support. `SRC-CONSULT-016` remains skipped as the duplicate EPUB secondary to
 the preferred PDF source. `SRC-CONSULT-030` and `SRC-CONSULT-031` now produce
 `csv_row` locator cards and are included in the 800-card all-extractable set.
-The durable local vector store and local retrieval API still index the previous
-780-card set and must be rebuilt before claiming runtime retrieval coverage for
-these CSV cards.
+The durable local vector store and local retrieval API smoke now cover the
+current 800-card all-extractable set, including the CSV cards.
 
 ## 4. Next Decision Candidates
 
 - Whether and when a human reviewer should approve, override, reject, or mark pending locator labels as needing discussion.
 - Whether to implement staging auth, audit logging, and deployment topology for the no-provider retrieval API after legal/security approval.
-- Whether to rebuild durable local indexing and the local retrieval API from the 800-card all-extractable set.
+- Whether to run actual human review over locator labels and implement security-approved staging for the no-provider API.

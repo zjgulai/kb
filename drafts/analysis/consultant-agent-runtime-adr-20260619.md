@@ -35,7 +35,7 @@ The local consultant-role KB PoC now has:
 - full parser unit manifest with 81/81 parse success;
 - 150 QA-checked local cards from the first 15 sources;
 - 800 QA-checked local cards from 80 non-duplicate extractable sources after CSV loader support;
-- durable local vector-store package for the previous 780 all-extractable cards, pending rebuild for CSV coverage;
+- durable local vector-store package for the current 800 all-extractable cards;
 - pending-review locator label seed for 50 eval items;
 - private no-provider local retrieval API prototype;
 - all-extractable answerable anchored_citation@1 = 0.9792 and anchored_citation@5 = 1.0;
@@ -116,7 +116,7 @@ Private staging must additionally enforce:
 - source-only citation violations = 0;
 - audit logs and rollback path are implemented.
 - staging auth/audit contract validation has `failure_count = 0`.
-- durable vector store and local retrieval API are rebuilt from the current 800-card set before claiming CSV runtime retrieval coverage.
+- durable vector store and local retrieval API remain aligned with the current all-extractable card set before staging.
 
 ## 7. Consequences
 

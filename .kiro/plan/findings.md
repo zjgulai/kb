@@ -481,7 +481,7 @@ Skipped sources:
 Interpretation:
 
 - Fact: under the current local parser/loader stack, all 80 non-duplicate registered sources have typed-card extraction coverage.
-- Inference: extraction coverage is no longer the main blocker; the next engineering bottleneck is rebuilding durable local indexing/API from the 800-card set, human-gold evaluation labels, or security-approved private staging.
+- Inference: extraction and durable local indexing now cover the current 800-card set; the next engineering bottleneck is human-gold evaluation labels or security-approved private staging.
 - Boundary: this remains local draft evidence only; no legal clearance, provider call, live ingestion, staging deployment, or production launch has occurred.
 
 ## Durable Local Vector Store
@@ -500,10 +500,10 @@ Artifacts created:
 
 Evidence:
 
-- Indexed records = 780.
-- Embedding rows = 780.
+- Indexed records = 800.
+- Embedding rows = 800.
 - Embedding dimension = 512.
-- Source count = 78.
+- Source count = 80.
 - Model = local cached `BAAI/bge-small-zh-v1.5`, snapshot `7999e1d3359715c523056ef9478215996d62a620`, recorded license MIT.
 - Raw vector-only answerable source_recall@1 = 0.5833 and @5 = 0.75.
 - Vector plus deterministic rerank answerable source_recall@1 = 0.9583 and @5 = 1.0.
@@ -567,7 +567,7 @@ API surface:
 
 Evidence:
 
-- record_count = 780.
+- record_count = 800.
 - eval001_top1_source = `SRC-CONSULT-001`.
 - eval016 target source/locator appears in top5.
 - workspace-forbidden smoke returned HTTP 403.
@@ -581,7 +581,7 @@ Evidence:
 Implementation note:
 
 - The first smoke failed because the API used a vector topN prefilter before deterministic rerank, which diverged from the accepted full-record rerank evaluation path.
-- The API now reranks all 780 local records, preserving the accepted evaluation path.
+- The API now reranks all 800 local records, preserving the accepted evaluation path.
 - Workspace-forbidden policy labels are counted as no-retrieval policy compliance when the eval is explicitly testing workspace isolation.
 
 Boundary:

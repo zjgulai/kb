@@ -86,8 +86,8 @@ provider-backed `consultant-agent` use.
 | all-extractable answer trace pass rate | 1.0 |
 | all-extractable skipped sources | SRC-CONSULT-016 |
 | CSV loader support | SRC-CONSULT-030 and SRC-CONSULT-031 selected with csv_row locators |
-| durable local vector-store records | 780 pre-CSV |
-| durable local vector-store embedding rows | 780 pre-CSV |
+| durable local vector-store records | 800 |
+| durable local vector-store embedding rows | 800 |
 | durable local vector-store answerable reranked source_recall@5 | 1.0 |
 | durable local vector-store provider calls | 0 |
 | durable local vector-store live KB writes | 0 |
@@ -97,6 +97,7 @@ provider-backed `consultant-agent` use.
 | human label review queue items | 50 |
 | human label review approved decisions | 0 |
 | human label review workflow failure_count | 0 |
+| private no-provider retrieval API smoke record_count | 800 |
 | private no-provider retrieval API smoke failure_count | 0 |
 | private no-provider retrieval API label_seed_match_at_5 | 1.0 |
 | private no-provider retrieval API live KB writes | 0 |
@@ -179,10 +180,10 @@ retention, `approve_batch_expansion_30`, `approve_batch_expansion_60`,
 pending locator label seeding, locator label review workflow generation,
 runtime ADR acceptance, and draft staging auth/audit contract design are now
 recorded. CSV loader support now covers the two previously insufficient-unit
-registered CSV sources in the 800-card all-extractable set. The next local step
-should move to rebuilding the durable vector store/API from the 800-card set,
-actual human review of locator labels, or security-approved staging
-implementation.
+registered CSV sources in the 800-card all-extractable set, and the durable
+vector store plus local retrieval API smoke have been rebuilt against that
+800-card set. The next local step should move to actual human review of locator
+labels or security-approved staging implementation.
 
 Do not approve online provider-backed `consultant-agent` until legal/source-owner
 and security review explicitly permits retrieved KB content to leave the local

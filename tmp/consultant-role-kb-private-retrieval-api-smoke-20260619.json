@@ -1,7 +1,7 @@
 {
   "metrics": {
     "health_ok": true,
-    "record_count": 780,
+    "record_count": 800,
     "eval001_top1_source": "SRC-CONSULT-001",
     "eval001_top1_locator": "slide:3",
     "eval016_target_in_top5": true,
@@ -26,8 +26,8 @@
       "production_impact": "production unchanged",
       "provider_call_boundary": "no KB provider call",
       "live_kb_ingestion": "no live KB ingestion",
-      "record_count": 780,
-      "embedding_rows": 780,
+      "record_count": 800,
+      "embedding_rows": 800,
       "embedding_dimension": 512,
       "label_seed_status": "pending_human_review",
       "_http_status": 200

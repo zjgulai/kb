@@ -124,7 +124,7 @@ def main() -> None:
     failures = []
     if not metrics["health_ok"]:
         failures.append("health_not_ok")
-    if metrics["record_count"] != 780:
+    if metrics["record_count"] != 800:
         failures.append("record_count_mismatch")
     if metrics["eval001_top1_source"] != "SRC-CONSULT-001":
         failures.append("eval001_top1_source_mismatch")

@@ -32,7 +32,7 @@ call a provider, write into a live KB, deploy staging, or deploy production.
 
 | metric | value |
 |---|---:|
-| record_count | 780 |
+| record_count | 800 |
 | eval001_top1_source | `SRC-CONSULT-001` |
 | eval016_target_in_top5 | true |
 | eval046_status | `policy_refusal` |

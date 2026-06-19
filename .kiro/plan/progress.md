@@ -193,3 +193,11 @@ provider_call_boundary: "no KB provider call"
 - All-extractable answer-trace remains green: trace_pass_count = 12/12 and trace_pass_rate = 1.0.
 - Durable local vector store and local retrieval API still point at the previous 780-record index; they must be rebuilt from the 800-card set before claiming CSV coverage in runtime retrieval.
 - Boundary remains: local draft artifacts only, `production unchanged`, no KB provider call, no live KB ingestion, no human label approval, and no legal/source-owner clearance.
+- User approved continuing the next recommended round; rebuilt the durable local vector store and local retrieval API smoke from the current 800-card all-extractable set.
+- Reran `tmp/consultant_role_kb_all_extractable_vector_store_20260619.py` with local cached `BAAI/bge-small-zh-v1.5`.
+- Updated `shared/indexes/consultant-agent/all-extractable-bge-small-zh-v1-5-20260619/manifest.json`, `records.jsonl`, `embeddings.float32.npy`, and `checksums.json`.
+- Vector-store rebuild result: records = 800, embedding_rows = 800, source_count = 80, embedding_dimension = 512.
+- Vector-store smoke result: answerable_vector_source_recall@1 = 0.5833, answerable_vector_source_recall@5 = 0.75, answerable_reranked_source_recall@1 = 0.9583, answerable_reranked_source_recall@5 = 1.0, fixture_answerable_reranked_source_recall@5 = 1.0, top1_unit_anchor_rate = 1.0, provider_call_count = 0, live_kb_write_count = 0.
+- Updated `tmp/consultant_role_kb_private_retrieval_api_smoke_20260619.py` to expect the 800-record index.
+- Reran private no-provider retrieval API smoke: record_count = 800, label_seed_match_at_1 = 0.9375, label_seed_match_at_5 = 1.0, policy_refusal_pass_rate = 1.0, forbidden_status = 403, failure_count = 0, provider_call_count = 0, live_kb_write_count = 0.
+- Boundary remains: local draft artifacts only, `production unchanged`, no KB provider call, no live KB ingestion, no human label approval, no staging deployment, and no legal/source-owner clearance.

@@ -33,8 +33,8 @@ source text.
 
 | metric | value |
 |---|---:|
-| indexed_card_count | 780 |
-| embedding_rows | 780 |
+| indexed_card_count | 800 |
+| embedding_rows | 800 |
 | embedding_dimension | 512 |
 | answerable_vector_source_recall@1 | 0.5833 |
 | answerable_vector_source_recall@5 | 0.75 |

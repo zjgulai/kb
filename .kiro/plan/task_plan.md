@@ -41,7 +41,7 @@ Resolved on 2026-06-19:
 2. Existing 150 draft derived cards may remain persisted before legal review as local/draft artifacts.
 3. Batch extraction is approved to expand to 30 sources.
 4. Runtime ADR is accepted: local-only now, private staging next, provider/hybrid only after approval.
-5. Durable local vector store/index has been built for the 780 all-extractable local cards.
+5. Durable local vector store/index has been rebuilt for the 800 all-extractable local cards.
 6. Human-gold locator label seed has been built, but all labels remain `pending_human_review`.
 7. Private no-provider retrieval API prototype has been built and locally smoked; this is not a staging deployment.
 8. Staging auth/audit contract has been designed and locally validated; this is not a staging deployment.
@@ -54,4 +54,4 @@ Still open:
 2. Whether raw `consult/` third-party source files can ever be committed after legal/license review.
 3. Whether to run actual manual reviewer decisions over the locator label queue.
 4. Whether to implement staging auth, audit logs, and deployment topology for the no-provider API after legal/security approval.
-5. Whether to rebuild the durable vector store and local retrieval API from the 800-card all-extractable set after CSV loader support.
+5. Whether to run actual human review over the locator label queue and implement security-approved staging for the no-provider API.

@@ -54,6 +54,7 @@ Resolved on 2026-06-19:
 15. Manual decision intake smoke has been generated and locally validated with temporary synthetic fixtures; default templates block, synthetic all-approved fixtures pass, invalid synthetic human decisions fail, and no synthetic approval fixture is retained as evidence.
 16. Product-owner Q1-Q7 decisions have been recorded as product intent: all 80 selected sources are intended for internal no-provider staging pending legal/source-owner clearance; raw `consult/` source files must not be committed to GitHub; future Tencent Cloud Lighthouse upload is a separate deployment gate; security controls enter a pending-to-approval lane; provider staging is allowed only as future design, with current provider calls disabled.
 17. Staging runtime config preflight has been generated and wired into shared-staging readiness; it validates only redacted external configuration status and currently blocks on missing auth token hash, external audit path, rate limit status, and rollback owner.
+18. Combined clearance execution pack has been generated for the next manual review step; it contains 88 checklist rows: 80 selected legal/source-owner source rows and 8 security/operations controls.
 
 Still open:
 

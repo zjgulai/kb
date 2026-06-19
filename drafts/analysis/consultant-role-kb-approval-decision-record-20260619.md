@@ -61,9 +61,12 @@ approve production launch.
 | `agents/consultant-agent/runtime/staging_auth_audit.py` | localhost-only staging auth/audit harness; not a staging deployment |
 | `tmp/consultant-role-kb-local-staging-auth-audit-smoke-20260619.json` | local harness smoke `record_count=800`, missing-token `401`, RBAC denial `403`, audit events `5`, `failure_count=0`, provider calls `0`, live KB writes `0` |
 | `tmp/consultant-role-kb-local-staging-audit-events-20260619.jsonl` | audit events store hashed actor/query identifiers and source/card/locator refs only; no raw token/header/question/source leakage detected by smoke |
-| `tmp/consultant-role-kb-shared-staging-readiness-preflight-20260619.json` | shared staging readiness preflight is `blocked`, `ready_for_shared_staging=false`, `pass_count=14`, `blocker_count=6`, provider calls `0`, live KB writes `0` |
+| `tmp/consultant-role-kb-shared-staging-readiness-preflight-20260619.json` | shared staging readiness preflight is `blocked`, `ready_for_shared_staging=false`, `check_count=24`, `pass_count=18`, `blocker_count=6`, provider calls `0`, live KB writes `0` |
 | `drafts/analysis/consultant-role-kb-shared-staging-runbook-20260619.md` | draft runbook for future approved shared staging; not an approval or deployment |
 | `tmp/consultant-role-kb-legal-source-owner-decision-validation-20260619.json` | structured legal/source-owner decision workflow has 81 pending decisions, 80 selected sources pending, 0 internal-staging approvals, failure_count `0` |
+| `tmp/consultant-role-kb-security-staging-control-validation-20260619.json` | structured security/staging-control workflow has 8 pending controls, 0 approved controls, 0 configured external controls, failure_count `0` |
+| `tmp/consultant-role-kb-staging-runtime-config-preflight-20260619.json` | runtime config preflight is `blocked` with 4 external config blockers; no secret value or private contact detail is logged |
+| `tmp/consultant-role-kb-clearance-execution-pack-validation-20260619.json` | combined clearance execution pack is `blocked` with 80 selected legal/source-owner rows pending, 8 security controls pending, and 4 runtime config blockers |
 
 ## 3.1 Batch-60 Selection Note
 
@@ -85,5 +88,6 @@ current 800-card all-extractable set, including the CSV cards.
 
 - Whether and when a human reviewer should approve, override, reject, or mark pending locator labels as needing discussion.
 - Whether to run actual human review over locator labels.
-- Whether to record legal/source-owner clearance.
-- Whether to configure security-approved shared staging deployment, external secret storage, append-only audit storage, rate limiting, rollback owner, and private ingress for the no-provider API.
+- Whether legal/source-owner reviewers approve, restrict, quarantine, reject, or mark pending the 80 selected sources needed for shared staging.
+- Whether security/operations reviewers approve, reject, or mark pending the 8 shared-staging controls.
+- Whether to configure approved external secret storage, append-only audit storage, rate limiting, rollback owner, and private ingress for the no-provider API after security approval.

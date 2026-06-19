@@ -35,6 +35,7 @@ provider_call_boundary: "no KB provider call"
 - Manual decision intake smoke completed: default pending templates block, synthetic all-approved fixtures pass, invalid synthetic human decisions fail, provider/live-write counts stay 0, and synthetic fixtures are removed before exit.
 - Product-owner decision record completed: Q1-Q7 captured as product intent only, raw `consult/` files remain excluded from GitHub, future Tencent Cloud Lighthouse upload is a separate deployment gate, and provider calls remain disabled.
 - Staging runtime config preflight completed: current runtime_config_ready is false with 4 external config blockers: auth token hash, external audit path, rate limit status, and rollback owner. It logs no secret value, private contact detail, source text, provider call, or live KB write.
+- Clearance execution pack completed: combined checklist has 88 rows, covering 80 selected legal/source-owner source rows and 8 security/operations controls; current clearance_execution_ready is false.
 
 ## Active Next Work
 
@@ -62,6 +63,7 @@ Evidence:
 - manual decision intake smoke: ok true, scenario_count 3, default pending blocked, synthetic all-approved ready, invalid synthetic human rejected, no retained synthetic approval evidence
 - staging runtime config preflight: runtime_config_ready false, blocker_count 4, secret_value_logged false, private_contact_detail_logged false, provider_call_count 0, live_kb_write_count 0
 - shared staging preflight: ready_for_shared_staging false, status blocked, check_count 24, pass_count 18, blocker_count 6, provider_call_count 0, live_kb_write_count 0
+- clearance execution pack: checklist rows 88, legal selected pending 80, security pending 8, runtime config blockers 4, provider_call_count 0, live_kb_write_count 0
 
 Raw `consult/` source files remain excluded by `.gitignore`; only `consult/README.md` is tracked.
 

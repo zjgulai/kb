@@ -21,3 +21,8 @@ Allowed draft outputs:
 
 Blocked actions include publishing client deliverables, sending client email, submitting RFPs, approving transactions, committing budget, exposing PII, and redistributing source text.
 
+Local runtime prototype:
+
+- `agents/consultant-agent/runtime/local_retrieval_api.py`
+- endpoints: `GET /health`, `POST /retrieve`, `POST /eval/label-seed`
+- boundary: localhost/private only, no provider call, no live KB ingestion, no raw source text response, no staging deployment

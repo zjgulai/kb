@@ -24,6 +24,7 @@ provider_call_boundary: "no KB provider call"
 - Durable local vector store completed: 780 records, 780 embedding rows, 512 dimensions, local `BAAI/bge-small-zh-v1.5`, row-aligned metadata in `shared/indexes/consultant-agent/all-extractable-bge-small-zh-v1-5-20260619/`.
 - Vector-store smoke: raw vector answerable source_recall@1 0.5833 and @5 0.75; vector plus deterministic rerank answerable source_recall@1 0.9583 and @5 1.0; fixture answerable reranked @5 1.0.
 - Human-gold locator label seed completed: 50 pending-review labels, 48 locator candidates, 2 policy-only refusal labels, QA failure_count 0; no labels are human-approved yet.
+- Private no-provider retrieval API prototype completed: localhost/private `/health`, `/retrieve`, and `/eval/label-seed`; smoke failure_count 0, label_seed_match_at_5 1.0, policy_refusal_pass_rate 1.0.
 
 ## Active Next Work
 
@@ -41,6 +42,7 @@ Evidence:
 - durable local vector store: 780 records, 780 embedding rows, local BGE 512-dim embeddings
 - vector-store smoke: answerable reranked source_recall@1 0.9583, @5 1.0; raw vector-only @5 0.75 is diagnostic, not acceptance path
 - human-gold locator label seed: 50 labels, 48 locator candidates, 2 no-source refusal labels, all `pending_human_review`, QA failure_count 0
+- private no-provider retrieval API smoke: record_count 780, label_seed_match_at_1 0.9375, label_seed_match_at_5 1.0, policy_refusal_pass_rate 1.0, workspace forbidden 403, failure_count 0
 
 Raw `consult/` source files remain excluded by `.gitignore`; only `consult/README.md` is tracked.
 
@@ -50,5 +52,6 @@ Next blockers:
 - human-gold locator labels require manual reviewer decisions before they can be treated as approved gold labels;
 - persistent derived-card storage policy is pending;
 - runtime ADR 002 is accepted for local-only now, private staging next, provider/hybrid only after explicit approval;
+- private no-provider retrieval API is local prototype only; no staging deployment has occurred;
 - no provider call, live KB ingestion, staging deployment, or production launch has occurred.
-- next local build choices: private no-provider retrieval API, human-review workflow for locator labels, CSV loader support, or PRD addendum promotion after human/legal review.
+- next local build choices: human-review workflow for locator labels, staging auth/audit design, CSV loader support, or PRD addendum promotion after human/legal review.

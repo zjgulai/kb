@@ -31,7 +31,7 @@ Use `KB_Platform_PRD.md` and the local `consult/` source folder to design a role
 | P3 | complete | Run parser/chunk/eval local PoC if authorized, including local hash baseline, real local embedding candidate, and rerank/source-prior check | Local PoC reports and embedding ADR |
 | P4 | complete | Add citation anchors, run controlled expansion, and prepare PRD deltas/directory blueprint after review | Anchored card samples, expanded regression, and PRD addendum draft |
 | P5 | complete | Initialize project structure, Git repository, and remote push | `.codex/` context, repository metadata, GitHub push |
-| P6 | in_progress | Move from role-KB PoC toward full extraction, agent runtime, staging, and launch | Full extraction, durable local index, pending-review locator labels, and agent launch sprint artifacts |
+| P6 | in_progress | Move from role-KB PoC toward full extraction, agent runtime, staging, and launch | Full extraction, durable local index, pending-review locator labels, local retrieval API, and agent launch sprint artifacts |
 
 ## Current Decisions Needed
 
@@ -43,11 +43,12 @@ Resolved on 2026-06-19:
 4. Runtime ADR is accepted: local-only now, private staging next, provider/hybrid only after approval.
 5. Durable local vector store/index has been built for the 780 all-extractable local cards.
 6. Human-gold locator label seed has been built, but all labels remain `pending_human_review`.
+7. Private no-provider retrieval API prototype has been built and locally smoked; this is not a staging deployment.
 
 Still open:
 
 1. Whether to later promote the PRD addendum into `KB_Platform_PRD.md` after human/legal review.
 2. Whether raw `consult/` third-party source files can ever be committed after legal/license review.
-3. Whether to implement a private no-provider retrieval API as the next agent runtime slice.
-4. Whether to run manual human review and approval over the locator label seed.
+3. Whether to run manual human review and approval over the locator label seed.
+4. Whether to design staging auth, audit logs, and deployment topology for the no-provider API.
 5. Whether to add special CSV extraction support for `SRC-CONSULT-030` and `SRC-CONSULT-031`.

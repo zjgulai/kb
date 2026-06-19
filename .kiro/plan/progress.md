@@ -156,3 +156,10 @@ provider_call_boundary: "no KB provider call"
 - Generated `shared/eval/consultant-agent/human-gold-locator-labels.seed-20260619.jsonl`, `tmp/consultant-role-kb-human-gold-locator-labels-qa-20260619.json`, and `drafts/analysis/consultant-role-kb-human-gold-locator-labels-report-20260619.md`.
 - Label seed result: 50 labels, 48 locator candidates, 2 policy-only no-source refusal labels, all `pending_human_review`.
 - Label QA result: locator_coverage_rate = 1.0 for the 48 citable evals, rank_not_top1_count = 1 (`CONSULT-EVAL-016`), failure_count = 0, provider_call_count = 0, live_kb_write_count = 0.
+- User approved continuing the next round; proceeded with private no-provider retrieval API prototype.
+- Created `agents/consultant-agent/runtime/local_retrieval_api.py` with localhost/private `/health`, `/retrieve`, and `/eval/label-seed` endpoints.
+- Created and ran `tmp/consultant_role_kb_private_retrieval_api_smoke_20260619.py`.
+- First API smoke failed because the API used a vector topN prefilter before deterministic rerank, while accepted evals used full-record rerank; the evaluator also treated workspace-forbidden policy refusals too narrowly.
+- Wrote one self-evolution candidate lesson to `~/.codex/evolution/inbox/candidates.jsonl` after the smoke failure; no long-term memory promotion was performed.
+- Fixed API retrieval to rerank all 780 records and fixed label-seed eval to treat workspace forbidden as no-retrieval policy compliance.
+- Final API smoke result: record_count = 780, label_seed_match_at_1 = 0.9375, label_seed_match_at_5 = 1.0, policy_refusal_pass_rate = 1.0, forbidden_status = 403, failure_count = 0, provider_call_count = 0, live_kb_write_count = 0.

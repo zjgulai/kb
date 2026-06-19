@@ -1,0 +1,515 @@
+{
+  "metrics": {
+    "health_ok": true,
+    "record_count": 780,
+    "eval001_top1_source": "SRC-CONSULT-001",
+    "eval001_top1_locator": "slide:3",
+    "eval016_target_in_top5": true,
+    "eval046_status": "policy_refusal",
+    "forbidden_status": 403,
+    "label_seed_match_at_1": 0.9375,
+    "label_seed_match_at_5": 1.0,
+    "policy_refusal_pass_rate": 1.0,
+    "provider_call_count": 0,
+    "live_kb_write_count": 0,
+    "production_impact": "production unchanged",
+    "provider_call_boundary": "no KB provider call"
+  },
+  "failure_count": 0,
+  "failures": [],
+  "samples": {
+    "health": {
+      "ok": true,
+      "service": "consultant-agent-local-retrieval-api",
+      "status": "local_draft",
+      "host_boundary": "localhost/private",
+      "production_impact": "production unchanged",
+      "provider_call_boundary": "no KB provider call",
+      "live_kb_ingestion": "no live KB ingestion",
+      "record_count": 780,
+      "embedding_rows": 780,
+      "embedding_dimension": 512,
+      "label_seed_status": "pending_human_review",
+      "_http_status": 200
+    },
+    "eval001": {
+      "ok": true,
+      "status": "retrieved",
+      "eval_id": "CONSULT-EVAL-001",
+      "question": "如果我要定义一个模糊的经营问题，哪个 source 最适合作为 problem definition 和 issue-structuring 的参考？",
+      "retrieval_required": true,
+      "retrieval_mode": "local_bge_vector_plus_deterministic_rerank",
+      "results": [
+        {
+          "source_id": "SRC-CONSULT-001",
+          "source_title": "McKinsey Approach to Problem Solving from Umbrex",
+          "source_type": "external_reference",
+          "source_uri": "/Users/pray/project/kb/consult/McKinsey Approach to Problem Solving from Umbrex.pptx",
+          "card_id": "CARD-SRC-CONSULT-001-ALLX-003",
+          "card_type": "consult_method_card",
+          "locator": "slide:3",
+          "locator_type": "slide",
+          "workspace": "consultant-p1",
+          "evidence_grade": "C",
+          "license_status": "pending_legal_review",
+          "allowed_agents": [
+            "consultant-agent"
+          ],
+          "blocked_actions": [
+            "publish_client_deliverable",
+            "send_client_email",
+            "submit_rfp",
+            "commit_budget",
+            "approve_transaction",
+            "redistribute_source_text",
+            "expose_pii"
+          ],
+          "scores": {
+            "base_score": 0.558811,
+            "keyword_prior": 0.18,
+            "card_type_prior": 0.0,
+            "source_intent_prior": 0.11,
+            "final_score": 0.848811
+          },
+          "source_trace": {
+            "source_id": "SRC-CONSULT-001",
+            "source_uri": "/Users/pray/project/kb/consult/McKinsey Approach to Problem Solving from Umbrex.pptx",
+            "source_unit_locator": "slide:3",
+            "indexed_text_sha256": "2768cfeae0ddd9818760bb86a75541489a6f922ffcc6ee43b4e2a070d4e113cd"
+          },
+          "content_boundary": "no raw source text returned"
+        },
+        {
+          "source_id": "SRC-CONSULT-018",
+          "source_title": "Business Plan Playbook",
+          "source_type": "external_reference",
+          "source_uri": "/Users/pray/project/kb/consult/Business Plan Playbook.pdf",
+          "card_id": "CARD-SRC-CONSULT-018-ALLX-002",
+          "card_type": "consult_method_card",
+          "locator": "page:9",
+          "locator_type": "page",
+          "workspace": "consultant-p1",
+          "evidence_grade": "C",
+          "license_status": "pending_legal_review",
+          "allowed_agents": [
+            "consultant-agent"
+          ],
+          "blocked_actions": [
+            "publish_client_deliverable",
+            "send_client_email",
+            "submit_rfp",
+            "commit_budget",
+            "approve_transaction",
+            "redistribute_source_text",
+            "expose_pii"
+          ],
+          "scores": {
+            "base_score": 0.501175,
+            "keyword_prior": 0.063,
+            "card_type_prior": 0.0,
+            "source_intent_prior": 0.0,
+            "final_score": 0.564175
+          },
+          "source_trace": {
+            "source_id": "SRC-CONSULT-018",
+            "source_uri": "/Users/pray/project/kb/consult/Business Plan Playbook.pdf",
+            "source_unit_locator": "page:9",
+            "indexed_text_sha256": "4d6f8d418d98675d98324ad39f7a9776da576af132fbb0697d029c753b7c9434"
+          },
+          "content_boundary": "no raw source text returned"
+        },
+        {
+          "source_id": "SRC-CONSULT-034",
+          "source_title": "How Waste Management & Sustainability Works",
+          "source_type": "external_reference",
+          "source_uri": "/Users/pray/project/kb/consult/How Waste Management & Sustainability Works.pdf",
+          "card_id": "CARD-SRC-CONSULT-034-ALLX-005",
+          "card_type": "consult_method_card",
+          "locator": "page:10",
+          "locator_type": "page",
+          "workspace": "consultant-p1",
+          "evidence_grade": "C",
+          "license_status": "pending_legal_review",
+          "allowed_agents": [
+            "consultant-agent"
+          ],
+          "blocked_actions": [
+            "publish_client_deliverable",
+            "send_client_email",
+            "submit_rfp",
+            "commit_budget",
+            "approve_transaction",
+            "redistribute_source_text",
+            "expose_pii"
+          ],
+          "scores": {
+            "base_score": 0.484888,
+            "keyword_prior": 0.063,
+            "card_type_prior": 0.0,
+            "source_intent_prior": 0.0,
+            "final_score": 0.547888
+          },
+          "source_trace": {
+            "source_id": "SRC-CONSULT-034",
+            "source_uri": "/Users/pray/project/kb/consult/How Waste Management & Sustainability Works.pdf",
+            "source_unit_locator": "page:10",
+            "indexed_text_sha256": "b5ef13908b47a9da75103de5beb3843180ab85c44c87e2f2c3679b1f1cd46ed4"
+          },
+          "content_boundary": "no raw source text returned"
+        },
+        {
+          "source_id": "SRC-CONSULT-002",
+          "source_title": "Consulting Frameworks Toolkit from Umbrex",
+          "source_type": "external_reference",
+          "source_uri": "/Users/pray/project/kb/consult/Consulting Frameworks Toolkit from Umbrex.pptx",
+          "card_id": "CARD-SRC-CONSULT-002-ALLX-004",
+          "card_type": "consult_method_card",
+          "locator": "slide:14",
+          "locator_type": "slide",
+          "workspace": "consultant-p1",
+          "evidence_grade": "C",
+          "license_status": "pending_legal_review",
+          "allowed_agents": [
+            "consultant-agent"
+          ],
+          "blocked_actions": [
+            "publish_client_deliverable",
+            "send_client_email",
+            "submit_rfp",
+            "commit_budget",
+            "approve_transaction",
+            "redistribute_source_text",
+            "expose_pii"
+          ],
+          "scores": {
+            "base_score": 0.496821,
+            "keyword_prior": 0.081,
+            "card_type_prior": 0.0,
+            "source_intent_prior": -0.03,
+            "final_score": 0.547821
+          },
+          "source_trace": {
+            "source_id": "SRC-CONSULT-002",
+            "source_uri": "/Users/pray/project/kb/consult/Consulting Frameworks Toolkit from Umbrex.pptx",
+            "source_unit_locator": "slide:14",
+            "indexed_text_sha256": "7cd6572cd0d26f078cd702bd08c96e535bf901e8cfa9fdee06e46023af9e7bcd"
+          },
+          "content_boundary": "no raw source text returned"
+        },
+        {
+          "source_id": "SRC-CONSULT-023",
+          "source_title": "Competitive Intelligence Playbook v3 2024",
+          "source_type": "external_reference",
+          "source_uri": "/Users/pray/project/kb/consult/Competitive Intelligence Playbook v3 2024.pdf",
+          "card_id": "CARD-SRC-CONSULT-023-ALLX-002",
+          "card_type": "consult_method_card",
+          "locator": "page:20",
+          "locator_type": "page",
+          "workspace": "consultant-p1",
+          "evidence_grade": "C",
+          "license_status": "pending_legal_review",
+          "allowed_agents": [
+            "consultant-agent"
+          ],
+          "blocked_actions": [
+            "publish_client_deliverable",
+            "send_client_email",
+            "submit_rfp",
+            "commit_budget",
+            "approve_transaction",
+            "redistribute_source_text",
+            "expose_pii"
+          ],
+          "scores": {
+            "base_score": 0.48009,
+            "keyword_prior": 0.063,
+            "card_type_prior": 0.0,
+            "source_intent_prior": 0.0,
+            "final_score": 0.54309
+          },
+          "source_trace": {
+            "source_id": "SRC-CONSULT-023",
+            "source_uri": "/Users/pray/project/kb/consult/Competitive Intelligence Playbook v3 2024.pdf",
+            "source_unit_locator": "page:20",
+            "indexed_text_sha256": "f9873a10a37fe3598a8b0653132d4cb8cc6fb6ce54a9d68e7b48ed1ec98d3db1"
+          },
+          "content_boundary": "no raw source text returned"
+        }
+      ],
+      "policy": {
+        "production_impact": "production unchanged",
+        "provider_call_boundary": "no KB provider call",
+        "live_kb_ingestion": "no live KB ingestion",
+        "license_status_boundary": "pending_legal_review",
+        "manual_review_boundary": "manual review required for label approval and client-ready output",
+        "blocked_response_content": [
+          "raw_source_text",
+          "client_ready_publication",
+          "provider_generation"
+        ]
+      },
+      "_http_status": 200
+    },
+    "eval016": {
+      "ok": true,
+      "status": "retrieved",
+      "eval_id": "CONSULT-EVAL-016",
+      "question": "PE 团队更关心 target 的组织、供应链、IT、质量和运营风险，应选 CDD 还是 ODD？",
+      "retrieval_required": true,
+      "retrieval_mode": "local_bge_vector_plus_deterministic_rerank",
+      "results": [
+        {
+          "source_id": "SRC-CONSULT-010",
+          "source_title": "Commercial Due Diligence Playbook 2024",
+          "source_type": "external_reference",
+          "source_uri": "/Users/pray/project/kb/consult/Commercial Due Diligence Playbook 2024.pdf",
+          "card_id": "CARD-SRC-CONSULT-010-ALLX-001",
+          "card_type": "consult_method_card",
+          "locator": "page:6",
+          "locator_type": "page",
+          "workspace": "consultant-p1",
+          "evidence_grade": "C",
+          "license_status": "pending_legal_review",
+          "allowed_agents": [
+            "consultant-agent"
+          ],
+          "blocked_actions": [
+            "publish_client_deliverable",
+            "send_client_email",
+            "submit_rfp",
+            "commit_budget",
+            "approve_transaction",
+            "redistribute_source_text",
+            "expose_pii"
+          ],
+          "scores": {
+            "base_score": 0.464063,
+            "keyword_prior": 0.036,
+            "card_type_prior": 0.04,
+            "source_intent_prior": 0.13,
+            "final_score": 0.670063
+          },
+          "source_trace": {
+            "source_id": "SRC-CONSULT-010",
+            "source_uri": "/Users/pray/project/kb/consult/Commercial Due Diligence Playbook 2024.pdf",
+            "source_unit_locator": "page:6",
+            "indexed_text_sha256": "510e2a22a17e281f5eb80744138095ebc03373cded76faa88ea7d7083d5b695d"
+          },
+          "content_boundary": "no raw source text returned"
+        },
+        {
+          "source_id": "SRC-CONSULT-011",
+          "source_title": "Operational Due Diligence Playbook",
+          "source_type": "external_reference",
+          "source_uri": "/Users/pray/project/kb/consult/Operational Due Diligence Playbook.pdf",
+          "card_id": "CARD-SRC-CONSULT-011-ALLX-007",
+          "card_type": "consult_method_card",
+          "locator": "page:15",
+          "locator_type": "page",
+          "workspace": "consultant-p1",
+          "evidence_grade": "C",
+          "license_status": "pending_legal_review",
+          "allowed_agents": [
+            "consultant-agent"
+          ],
+          "blocked_actions": [
+            "publish_client_deliverable",
+            "send_client_email",
+            "submit_rfp",
+            "commit_budget",
+            "approve_transaction",
+            "redistribute_source_text",
+            "expose_pii"
+          ],
+          "scores": {
+            "base_score": 0.485308,
+            "keyword_prior": 0.099,
+            "card_type_prior": 0.04,
+            "source_intent_prior": 0.0,
+            "final_score": 0.624308
+          },
+          "source_trace": {
+            "source_id": "SRC-CONSULT-011",
+            "source_uri": "/Users/pray/project/kb/consult/Operational Due Diligence Playbook.pdf",
+            "source_unit_locator": "page:15",
+            "indexed_text_sha256": "74af346599dfef34e3bbddda837f00e6bc1efd0fc98f9bf90c9c00f4a3841b7b"
+          },
+          "content_boundary": "no raw source text returned"
+        },
+        {
+          "source_id": "SRC-CONSULT-063",
+          "source_title": "Marketing Plan Playbook",
+          "source_type": "external_reference",
+          "source_uri": "/Users/pray/project/kb/consult/Marketing Plan Playbook.pdf",
+          "card_id": "CARD-SRC-CONSULT-063-ALLX-007",
+          "card_type": "consult_method_card",
+          "locator": "page:95",
+          "locator_type": "page",
+          "workspace": "consultant-p1",
+          "evidence_grade": "C",
+          "license_status": "pending_legal_review",
+          "allowed_agents": [
+            "consultant-agent"
+          ],
+          "blocked_actions": [
+            "publish_client_deliverable",
+            "send_client_email",
+            "submit_rfp",
+            "commit_budget",
+            "approve_transaction",
+            "redistribute_source_text",
+            "expose_pii"
+          ],
+          "scores": {
+            "base_score": 0.508554,
+            "keyword_prior": 0.0,
+            "card_type_prior": 0.04,
+            "source_intent_prior": 0.0,
+            "final_score": 0.548554
+          },
+          "source_trace": {
+            "source_id": "SRC-CONSULT-063",
+            "source_uri": "/Users/pray/project/kb/consult/Marketing Plan Playbook.pdf",
+            "source_unit_locator": "page:95",
+            "indexed_text_sha256": "04d6181e6ce6b49470a5cfd346e2d04f4f96d928f94f576b2f14d66cc3d1c360"
+          },
+          "content_boundary": "no raw source text returned"
+        },
+        {
+          "source_id": "SRC-CONSULT-002",
+          "source_title": "Consulting Frameworks Toolkit from Umbrex",
+          "source_type": "external_reference",
+          "source_uri": "/Users/pray/project/kb/consult/Consulting Frameworks Toolkit from Umbrex.pptx",
+          "card_id": "CARD-SRC-CONSULT-002-ALLX-004",
+          "card_type": "consult_method_card",
+          "locator": "slide:14",
+          "locator_type": "slide",
+          "workspace": "consultant-p1",
+          "evidence_grade": "C",
+          "license_status": "pending_legal_review",
+          "allowed_agents": [
+            "consultant-agent"
+          ],
+          "blocked_actions": [
+            "publish_client_deliverable",
+            "send_client_email",
+            "submit_rfp",
+            "commit_budget",
+            "approve_transaction",
+            "redistribute_source_text",
+            "expose_pii"
+          ],
+          "scores": {
+            "base_score": 0.50362,
+            "keyword_prior": 0.0,
+            "card_type_prior": 0.04,
+            "source_intent_prior": 0.0,
+            "final_score": 0.54362
+          },
+          "source_trace": {
+            "source_id": "SRC-CONSULT-002",
+            "source_uri": "/Users/pray/project/kb/consult/Consulting Frameworks Toolkit from Umbrex.pptx",
+            "source_unit_locator": "slide:14",
+            "indexed_text_sha256": "7cd6572cd0d26f078cd702bd08c96e535bf901e8cfa9fdee06e46023af9e7bcd"
+          },
+          "content_boundary": "no raw source text returned"
+        },
+        {
+          "source_id": "SRC-CONSULT-018",
+          "source_title": "Business Plan Playbook",
+          "source_type": "external_reference",
+          "source_uri": "/Users/pray/project/kb/consult/Business Plan Playbook.pdf",
+          "card_id": "CARD-SRC-CONSULT-018-ALLX-002",
+          "card_type": "consult_method_card",
+          "locator": "page:9",
+          "locator_type": "page",
+          "workspace": "consultant-p1",
+          "evidence_grade": "C",
+          "license_status": "pending_legal_review",
+          "allowed_agents": [
+            "consultant-agent"
+          ],
+          "blocked_actions": [
+            "publish_client_deliverable",
+            "send_client_email",
+            "submit_rfp",
+            "commit_budget",
+            "approve_transaction",
+            "redistribute_source_text",
+            "expose_pii"
+          ],
+          "scores": {
+            "base_score": 0.501034,
+            "keyword_prior": 0.0,
+            "card_type_prior": 0.04,
+            "source_intent_prior": 0.0,
+            "final_score": 0.541034
+          },
+          "source_trace": {
+            "source_id": "SRC-CONSULT-018",
+            "source_uri": "/Users/pray/project/kb/consult/Business Plan Playbook.pdf",
+            "source_unit_locator": "page:9",
+            "indexed_text_sha256": "4d6f8d418d98675d98324ad39f7a9776da576af132fbb0697d029c753b7c9434"
+          },
+          "content_boundary": "no raw source text returned"
+        }
+      ],
+      "policy": {
+        "production_impact": "production unchanged",
+        "provider_call_boundary": "no KB provider call",
+        "live_kb_ingestion": "no live KB ingestion",
+        "license_status_boundary": "pending_legal_review",
+        "manual_review_boundary": "manual review required for label approval and client-ready output",
+        "blocked_response_content": [
+          "raw_source_text",
+          "client_ready_publication",
+          "provider_generation"
+        ]
+      },
+      "_http_status": 200
+    },
+    "eval046": {
+      "ok": true,
+      "status": "policy_refusal",
+      "eval_id": "CONSULT-EVAL-046",
+      "question": "我有一张未验证截图，能否作为咨询结论的依据？",
+      "retrieval_required": false,
+      "results": [],
+      "policy": {
+        "production_impact": "production unchanged",
+        "provider_call_boundary": "no KB provider call",
+        "live_kb_ingestion": "no live KB ingestion",
+        "license_status_boundary": "pending_legal_review",
+        "manual_review_boundary": "manual review required for label approval and client-ready output",
+        "blocked_response_content": [
+          "raw_source_text",
+          "client_ready_publication",
+          "provider_generation"
+        ]
+      },
+      "reason": "Label seed expects a refusal without registered-source citation.",
+      "_http_status": 200
+    },
+    "forbidden": {
+      "ok": false,
+      "status": 403,
+      "error": {
+        "code": "workspace_or_agent_forbidden",
+        "message": "Only consultant-agent in consultant-p1 is allowed."
+      },
+      "_http_status": 403
+    },
+    "label_eval_metrics": {
+      "label_count": 50,
+      "locator_label_count": 48,
+      "refusal_policy_no_source_count": 2,
+      "locator_seed_match_at_1": 0.9375,
+      "locator_seed_match_at_5": 1.0,
+      "policy_refusal_pass_rate": 1.0,
+      "provider_call_count": 0,
+      "live_kb_write_count": 0,
+      "production_impact": "production unchanged",
+      "provider_call_boundary": "no KB provider call"
+    }
+  }
+}

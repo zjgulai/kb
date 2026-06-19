@@ -545,3 +545,44 @@ Interpretation:
 - Fact: no label is approved human-gold yet; all labels are explicitly `pending_human_review`.
 - Inference: this unblocks private no-provider retrieval API contract work, but not a claim of human-approved locator precision.
 - Boundary: local draft labels only; no legal clearance, provider call, live KB ingestion, staging deployment, or production launch has occurred.
+
+## Private No-Provider Retrieval API Prototype
+
+The local retrieval API slice was implemented for `consultant-agent`.
+
+Artifacts created:
+
+- API module: `agents/consultant-agent/runtime/local_retrieval_api.py`.
+- Smoke script: `tmp/consultant_role_kb_private_retrieval_api_smoke_20260619.py`.
+- Smoke output: `tmp/consultant-role-kb-private-retrieval-api-smoke-20260619.json`.
+- Report: `drafts/analysis/consultant-role-kb-private-retrieval-api-report-20260619.md`.
+
+API surface:
+
+- `GET /health`
+- `POST /retrieve`
+- `POST /eval/label-seed`
+
+Evidence:
+
+- record_count = 780.
+- eval001_top1_source = `SRC-CONSULT-001`.
+- eval016 target source/locator appears in top5.
+- workspace-forbidden smoke returned HTTP 403.
+- label_seed_match_at_1 = 0.9375.
+- label_seed_match_at_5 = 1.0.
+- policy_refusal_pass_rate = 1.0.
+- failure_count = 0.
+- provider_call_count = 0.
+- live_kb_write_count = 0.
+
+Implementation note:
+
+- The first smoke failed because the API used a vector topN prefilter before deterministic rerank, which diverged from the accepted full-record rerank evaluation path.
+- The API now reranks all 780 local records, preserving the accepted evaluation path.
+- Workspace-forbidden policy labels are counted as no-retrieval policy compliance when the eval is explicitly testing workspace isolation.
+
+Boundary:
+
+- This is a local/private API prototype only.
+- It is not a staging deployment, production deployment, provider-backed agent, live KB ingestion, or legal/source-owner approval.

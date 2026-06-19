@@ -11,6 +11,7 @@ source_documents:
   - "drafts/analysis/consultant-role-kb-all-extractable-regression-eval-report-20260619.md"
   - "drafts/analysis/consultant-role-kb-all-extractable-vector-store-report-20260619.md"
   - "drafts/analysis/consultant-role-kb-human-gold-locator-labels-report-20260619.md"
+  - "drafts/analysis/consultant-role-kb-private-retrieval-api-report-20260619.md"
 scope: "runtime decision for consultant-agent from full extraction to staging"
 production_impact: "production unchanged"
 provider_call_boundary: "no KB provider call"
@@ -34,8 +35,10 @@ The local consultant-role KB PoC now has:
 - 780 QA-checked local cards from 78 currently extractable sources;
 - durable local vector-store package for 780 all-extractable cards;
 - pending-review locator label seed for 50 eval items;
+- private no-provider local retrieval API prototype;
 - all-extractable answerable anchored_citation@1 = 0.9792 and anchored_citation@5 = 1.0;
 - vector plus deterministic rerank answerable source_recall@1 = 0.9583 and @5 = 1.0;
+- API smoke label_seed_match_at_5 = 1.0 and policy_refusal_pass_rate = 1.0;
 - answer-trace fixture pass rate = 1.0.
 
 The unresolved blockers are legal/license review, human approval of locator
@@ -112,7 +115,7 @@ Positive:
 Tradeoff:
 
 - no online natural-language generation is approved yet;
-- staging UX work must wait for legal/source-owner and security gates;
+- staging UX/deployment work must wait for legal/source-owner, auth, audit, and security gates;
 - local BGE/rerank metrics are still proxy evidence, not human gold answer quality.
 - raw vector-only retrieval is not sufficient as an acceptance path; deterministic rerank/source-prior logic remains part of the local retrieval contract.
 

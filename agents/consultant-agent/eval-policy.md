@@ -28,3 +28,8 @@ Current locator label seed:
 - `shared/eval/consultant-agent/human-gold-locator-labels.seed-20260619.jsonl`
 - status: `pending_human_review`
 - use boundary: can support local no-provider retrieval API tests, but cannot be cited as approved human-gold precision until reviewer decisions are recorded.
+
+Current local API smoke:
+
+- `tmp/consultant-role-kb-private-retrieval-api-smoke-20260619.json`
+- required: `failure_count=0`, `label_seed_match_at_5=1.0`, `policy_refusal_pass_rate=1.0`, `provider_call_count=0`, `live_kb_write_count=0`

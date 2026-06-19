@@ -36,6 +36,7 @@ provider_call_boundary: "no KB provider call"
 - Product-owner decision record completed: Q1-Q7 captured as product intent only, raw `consult/` files remain excluded from GitHub, future Tencent Cloud Lighthouse upload is a separate deployment gate, and provider calls remain disabled.
 - Staging runtime config preflight completed: current runtime_config_ready is false with 4 external config blockers: auth token hash, external audit path, rate limit status, and rollback owner. It logs no secret value, private contact detail, source text, provider call, or live KB write.
 - Clearance execution pack completed: combined checklist has 88 rows, covering 80 selected legal/source-owner source rows and 8 security/operations controls; current clearance_execution_ready is false.
+- Reviewer decision questionnaire completed: 88 reviewer-facing question rows generated from the clearance execution pack, with 80 legal/source-owner questions and 8 security/operations questions; official decision templates were not edited and approval_effect_count remains 0.
 
 ## Active Next Work
 
@@ -64,6 +65,7 @@ Evidence:
 - staging runtime config preflight: runtime_config_ready false, blocker_count 4, secret_value_logged false, private_contact_detail_logged false, provider_call_count 0, live_kb_write_count 0
 - shared staging preflight: ready_for_shared_staging false, status blocked, check_count 24, pass_count 18, blocker_count 6, provider_call_count 0, live_kb_write_count 0
 - clearance execution pack: checklist rows 88, legal selected pending 80, security pending 8, runtime config blockers 4, provider_call_count 0, live_kb_write_count 0
+- reviewer decision questionnaire: questionnaire_row_count 88, legal_question_count 80, security_question_count 8, official_decision_templates_updated false, approval_effect_count 0, provider_call_count 0, live_kb_write_count 0
 
 Raw `consult/` source files remain excluded by `.gitignore`; only `consult/README.md` is tracked.
 
@@ -75,5 +77,6 @@ Next blockers:
 - runtime ADR 002 is accepted for local-only now, private staging next, provider/hybrid only after explicit approval;
 - private no-provider retrieval API and staging auth/audit harness are local prototypes only; no staging deployment has occurred;
 - shared staging readiness is blocked by legal/source-owner clearance over the 80 selected sources, security/operations control approval, external token hash, external audit path, rate limit configuration, and rollback owner; human-gold metrics still require separate reviewer-approved labels before they can be claimed;
+- the reviewer decision questionnaire can guide human review, but the official legal/source-owner and security/operations JSONL decision files still require real reviewer input;
 - no provider call, live KB ingestion, staging deployment, or production launch has occurred.
-- next local build choices: actual human-review decisions for locator labels, security-approved staging implementation, or PRD addendum promotion after human/legal review.
+- next local build choices: official reviewer decision intake, redacted runtime-config fixture validation, human-label review decisions, or PRD addendum promotion after human/legal review.

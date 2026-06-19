@@ -55,11 +55,12 @@ Resolved on 2026-06-19:
 16. Product-owner Q1-Q7 decisions have been recorded as product intent: all 80 selected sources are intended for internal no-provider staging pending legal/source-owner clearance; raw `consult/` source files must not be committed to GitHub; future Tencent Cloud Lighthouse upload is a separate deployment gate; security controls enter a pending-to-approval lane; provider staging is allowed only as future design, with current provider calls disabled.
 17. Staging runtime config preflight has been generated and wired into shared-staging readiness; it validates only redacted external configuration status and currently blocks on missing auth token hash, external audit path, rate limit status, and rollback owner.
 18. Combined clearance execution pack has been generated for the next manual review step; it contains 88 checklist rows: 80 selected legal/source-owner source rows and 8 security/operations controls.
+19. Reviewer decision questionnaire has been generated from the clearance execution pack; it contains 88 question rows and maps choices to the official legal/source-owner and security/operations decision templates, but records 0 approvals and has no staging effect.
 
 Still open:
 
 1. Whether to later promote the PRD addendum into `KB_Platform_PRD.md` after human/legal review.
 2. Whether any future non-GitHub runtime upload of raw `consult/` third-party source files is approved after legal/security/deployment review.
 3. Whether to run actual manual reviewer decisions over the locator label queue before claiming human-gold metrics.
-4. Whether to record legal/source-owner clearance for internal staged retrieval over the selected corpus.
-5. Whether to approve security/operations controls and externally configure approved secret storage, append-only audit storage, rate limiting, rollback ownership, and private ingress for the no-provider API.
+4. Whether legal/source-owner reviewers fill the official JSONL decision file to clear, restrict, quarantine, reject, or discuss the 80 selected sources.
+5. Whether security/operations reviewers fill the official JSONL decision file and whether approved external secret storage, append-only audit storage, rate limiting, rollback ownership, and private ingress are configured outside Git.

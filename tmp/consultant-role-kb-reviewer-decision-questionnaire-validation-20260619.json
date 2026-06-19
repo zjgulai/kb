@@ -1,0 +1,33 @@
+{
+  "ok": true,
+  "questionnaire_ready": true,
+  "questionnaire": "shared/governance/consultant-agent/reviewer-decision-questionnaire-20260619.csv",
+  "questionnaire_row_count": 88,
+  "legal_question_count": 80,
+  "security_question_count": 8,
+  "legal_choice_options": [
+    "approve_internal_staging_retrieval",
+    "approve_local_only",
+    "quarantine_source",
+    "reject_source",
+    "needs_discussion",
+    "pending_review"
+  ],
+  "security_choice_options": [
+    "approved",
+    "rejected",
+    "needs_discussion",
+    "pending_review"
+  ],
+  "official_decision_templates_updated": false,
+  "approval_effect_count": 0,
+  "source_text_included": false,
+  "raw_secret_included": false,
+  "private_contact_detail_included": false,
+  "provider_call_count": 0,
+  "live_kb_write_count": 0,
+  "production_impact": "production unchanged",
+  "provider_call_boundary": "no KB provider call",
+  "live_kb_ingestion": "no live KB ingestion",
+  "manual_review_boundary": "questionnaire only; official reviewer decision files remain required"
+}

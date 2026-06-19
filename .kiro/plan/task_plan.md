@@ -60,6 +60,7 @@ Resolved on 2026-06-19:
 21. Runtime-config redacted fixture smoke has been generated and locally validated; default config remains blocked, a redacted-ready fixture passes, and a secret-like/private-contact fixture blocks without leaking raw values.
 22. Human-label reviewer questionnaire and intake converter have been generated and locally validated; the unfilled questionnaire derives 50 pending candidate decisions, 0 approvals, and leaves the official decision template unchanged.
 23. Human-label candidate promotion preflight has been generated and locally validated; current candidate is blocked with 50 pending decisions, 0 approved decisions, and official template writes 0.
+24. Legal/source-owner and security official decision promotion preflight has been generated and locally validated; current candidates are blocked with 81 legal pending decisions, 8 security pending decisions, 0 approvals, and official template writes 0.
 
 Still open:
 
@@ -72,3 +73,4 @@ Still open:
 7. Whether externally approved runtime config evidence should be supplied to preflight after security approval; current redacted fixtures are validation evidence only, not applied configuration.
 8. Whether filled human-label questionnaire candidate JSONL should be accepted into the official human-label decision file before claiming reviewer-approved human-gold metrics.
 9. Whether to supply a fully reviewed human-label candidate and explicit acceptance authorization for a later deliberate official decision-file update step.
+10. Whether to supply reviewed legal/source-owner and security candidate files plus explicit acceptance authorization for a later deliberate official decision-file update step.

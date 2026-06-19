@@ -73,6 +73,7 @@ approve production launch.
 | `tmp/consultant-role-kb-human-label-reviewer-questionnaire-validation-20260619.json` | human-label reviewer questionnaire is structurally ready with 50 rows, 48 locator questions, 2 refusal questions, official decision template unchanged, approval effect `0`, provider calls `0`, live KB writes `0` |
 | `tmp/consultant-role-kb-human-label-questionnaire-intake-validation-20260619.json` | human-label questionnaire intake generated a valid temporary candidate JSONL from the unfilled questionnaire; answered responses `0`, pending decisions `50`, approved decisions `0`, official template writes `0`, approval effect `0` |
 | `tmp/consultant-role-kb-human-label-candidate-promotion-preflight-20260620.json` | human-label candidate promotion preflight is blocked with 50 pending candidate decisions, 0 approved decisions, 0 changed rows, 4 blockers, official template writes `0`, approval effect `0` |
+| `tmp/consultant-role-kb-legal-security-official-decision-promotion-preflight-20260620.json` | legal/security official decision promotion preflight is blocked with 81 legal pending decisions, 8 security pending decisions, 0 approvals, 0 changed rows, 5 blockers, official template writes `0`, approval effect `0` |
 
 ## 3.1 Batch-60 Selection Note
 
@@ -99,5 +100,6 @@ current 800-card all-extractable set, including the CSV cards.
 - Whether a filled questionnaire candidate JSONL should be accepted into official decision files after human review.
 - Whether a filled human-label questionnaire candidate JSONL should be accepted into the official human-label decision file before claiming reviewer-approved human-gold metrics.
 - Whether to supply a fully reviewed human-label candidate and explicit acceptance authorization for a later deliberate official decision-file update step.
+- Whether to supply reviewed legal/source-owner and security candidate files plus explicit acceptance authorization for a later deliberate official decision-file update step.
 - Whether to configure approved external secret storage, append-only audit storage, rate limiting, rollback owner, and private ingress for the no-provider API after security approval.
 - Whether externally approved runtime config evidence should be supplied to the preflight after legal/source-owner and security gates clear.

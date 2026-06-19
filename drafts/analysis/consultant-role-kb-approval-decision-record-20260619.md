@@ -45,6 +45,8 @@ approve production launch.
 | `tmp/consultant-role-kb-all-extractable-card-qa-validation-20260619.json` | QA `failure_count=0` |
 | `tmp/consultant-role-kb-all-extractable-anchored-retrieval-citation-eval-20260619.json` | answerable anchored_citation@1 `0.9792`, @5 `1.0`, source-only citation violations `0` |
 | `tmp/consultant-role-kb-all-extractable-answer-trace-eval-20260619.json` | answer trace `12/12`, trace pass rate `1.0` |
+| `shared/indexes/consultant-agent/all-extractable-bge-small-zh-v1-5-20260619/manifest.json` | durable local vector store with 780 records, 780 embedding rows, 78 sources, 512-dim local BGE embeddings |
+| `tmp/consultant-role-kb-all-extractable-vector-store-smoke-20260619.json` | vector plus deterministic rerank answerable source_recall@1 `0.9583`, @5 `1.0`; raw vector-only @5 `0.75`; provider calls `0`; live KB writes `0` |
 
 ## 3.1 Batch-60 Selection Note
 
@@ -62,6 +64,6 @@ extractable units for each.
 
 ## 4. Next Decision Candidates
 
-- Whether to build a durable local vector store/index from the 780 all-extractable cards.
 - Whether to first stabilize human-gold eval locator labels.
 - Whether to implement a private no-provider retrieval API for staging UX tests.
+- Whether to add CSV extraction support for `SRC-CONSULT-030` and `SRC-CONSULT-031`.

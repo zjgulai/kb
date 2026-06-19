@@ -11,8 +11,8 @@ provider_call_boundary: "no KB provider call"
 
 ## Project Context
 
-- The project folder has no local `AGENTS.md` or `.codex/context-pack.md`; current behavior follows the user-provided AGENTS instructions in chat.
-- `/Users/pray/project/kb` is not a Git repository.
+- The project folder now has local `AGENTS.md` and `.codex/context-pack.md`; current behavior follows the project-local instructions plus the active plan files.
+- `/Users/pray/project/kb` is a Git repository on `main`, tracking `origin/main`.
 - The PRD declares `v2.1-draft`, `docs-only draft`, `production unchanged`, `no KB provider call`, and `not production ready`.
 - Existing draft assets include source-register, eval-set, evidence-register, P1 PoC plan, and enterprise directory blueprint under `drafts/analysis/`.
 
@@ -481,3 +481,37 @@ Interpretation:
 - Fact: under the current local parser/loader stack, 78 of 81 registered sources have typed-card extraction coverage.
 - Inference: expansion is no longer the main blocker; the next engineering bottleneck is durable local indexing, human-gold evaluation labels, or a private no-provider retrieval API.
 - Boundary: this remains local draft evidence only; no legal clearance, provider call, live ingestion, staging deployment, or production launch has occurred.
+
+## Durable Local Vector Store
+
+The all-extractable cards were packaged into a durable local vector-store index.
+
+Artifacts created:
+
+- Build script: `tmp/consultant_role_kb_all_extractable_vector_store_20260619.py`.
+- Index manifest: `shared/indexes/consultant-agent/all-extractable-bge-small-zh-v1-5-20260619/manifest.json`.
+- Index records: `shared/indexes/consultant-agent/all-extractable-bge-small-zh-v1-5-20260619/records.jsonl`.
+- Embedding matrix: `shared/indexes/consultant-agent/all-extractable-bge-small-zh-v1-5-20260619/embeddings.float32.npy`.
+- Checksums: `shared/indexes/consultant-agent/all-extractable-bge-small-zh-v1-5-20260619/checksums.json`.
+- Smoke output: `tmp/consultant-role-kb-all-extractable-vector-store-smoke-20260619.json`.
+- Report: `drafts/analysis/consultant-role-kb-all-extractable-vector-store-report-20260619.md`.
+
+Evidence:
+
+- Indexed records = 780.
+- Embedding rows = 780.
+- Embedding dimension = 512.
+- Source count = 78.
+- Model = local cached `BAAI/bge-small-zh-v1.5`, snapshot `7999e1d3359715c523056ef9478215996d62a620`, recorded license MIT.
+- Raw vector-only answerable source_recall@1 = 0.5833 and @5 = 0.75.
+- Vector plus deterministic rerank answerable source_recall@1 = 0.9583 and @5 = 1.0.
+- Fixture answerable reranked source_recall@5 = 1.0.
+- top1_unit_anchor_rate = 1.0.
+- provider_call_count = 0.
+- live_kb_write_count = 0.
+
+Interpretation:
+
+- Fact: the all-extractable draft card set now has a reusable local vector-store package with row-aligned metadata, routing text, normalized embeddings, and checksums.
+- Inference: raw vector-only retrieval is insufficient as the acceptance path; local agent retrieval should use vector search plus deterministic rerank/source-prior behavior.
+- Boundary: this is still local draft infrastructure only; no legal clearance, provider call, live KB ingestion, staging deployment, or production launch has occurred.

@@ -143,3 +143,11 @@ provider_call_boundary: "no KB provider call"
 - Ran all-extractable card QA: card_count = 780, registered_source_coverage = 1.0, locator_manifest_coverage = 1.0, blocked_actions_complete_rate = 1.0, high_risk_review_routed_rate = 1.0, failure_count = 0.
 - Ran all-extractable retrieval/citation regression: answerable anchored_citation@1 = 0.9792, answerable anchored_citation@5 = 1.0, source_only_citation_violation_count = 0, gate_threshold_pass = true.
 - All-extractable answer-trace result: trace_pass_count = 12/12 and trace_pass_rate = 1.0.
+- User approved continuing the next round; proceeded with durable local vector-store packaging before private staging work.
+- Created and ran `tmp/consultant_role_kb_all_extractable_vector_store_20260619.py` with cached local `BAAI/bge-small-zh-v1.5`.
+- Generated local index package under `shared/indexes/consultant-agent/all-extractable-bge-small-zh-v1-5-20260619/` with `manifest.json`, `records.jsonl`, `embeddings.float32.npy`, and `checksums.json`.
+- Generated `tmp/consultant-role-kb-all-extractable-vector-store-smoke-20260619.json` and `drafts/analysis/consultant-role-kb-all-extractable-vector-store-report-20260619.md`.
+- Vector-store result: 780 indexed records, 780 embedding rows, embedding_dimension = 512.
+- Raw vector-only answerable source_recall@1 = 0.5833 and @5 = 0.75; this is retained as diagnostic lower-bound evidence.
+- Vector plus deterministic rerank answerable source_recall@1 = 0.9583 and @5 = 1.0; fixture answerable reranked @5 = 1.0.
+- Vector-store smoke preserved unit anchors and local-only boundaries: top1_unit_anchor_rate = 1.0, provider_call_count = 0, live_kb_write_count = 0.

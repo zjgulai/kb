@@ -10,6 +10,7 @@ source_documents:
   - "drafts/analysis/consultant-role-kb-batch30-card-qa-validation-report-20260619.md"
   - "drafts/analysis/consultant-role-kb-batch60-card-qa-validation-report-20260619.md"
   - "drafts/analysis/consultant-role-kb-all-extractable-card-qa-validation-report-20260619.md"
+  - "drafts/analysis/consultant-role-kb-all-extractable-vector-store-report-20260619.md"
 scope: "human review packet for full consultant-agent source and derived-card governance"
 production_impact: "production unchanged"
 provider_call_boundary: "no KB provider call"
@@ -79,6 +80,11 @@ provider-backed `consultant-agent` use.
 | all-extractable answerable anchored_citation@5 | 1.0 |
 | all-extractable answer trace pass rate | 1.0 |
 | all-extractable skipped sources | SRC-CONSULT-016; SRC-CONSULT-030; SRC-CONSULT-031 |
+| durable local vector-store records | 780 |
+| durable local vector-store embedding rows | 780 |
+| durable local vector-store answerable reranked source_recall@5 | 1.0 |
+| durable local vector-store provider calls | 0 |
+| durable local vector-store live KB writes | 0 |
 
 ## 2. High-Risk Review Buckets
 
@@ -144,10 +150,11 @@ Human interpretation:
 
 The project-local gates `approve_local_metadata`, existing draft-card
 retention, `approve_batch_expansion_30`, `approve_batch_expansion_60`,
-`approve_all_extractable_expansion`, and runtime ADR acceptance are now
-recorded. The next local step should move from extraction expansion to durable
-local index/storage, human-gold locator labels, or private no-provider staging
-architecture.
+`approve_all_extractable_expansion`, durable local vector-store packaging, and
+runtime ADR acceptance are now recorded. The next local step should move from
+extraction expansion to human-gold locator labels, private no-provider staging
+architecture, or CSV loader support for the two registered insufficient-unit
+CSV sources.
 
 Do not approve online provider-backed `consultant-agent` until legal/source-owner
 and security review explicitly permits retrieved KB content to leave the local

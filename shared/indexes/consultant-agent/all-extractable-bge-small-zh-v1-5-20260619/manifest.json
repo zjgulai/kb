@@ -1,0 +1,64 @@
+{
+  "created_at": "2026-06-19",
+  "index_id": "consultant-agent-all-extractable-bge-small-zh-v1-5-20260619",
+  "role_agent": "consultant-agent",
+  "domain": "consulting-kb",
+  "workspace": "consultant-p1",
+  "status": "local_draft",
+  "production_impact": "production unchanged",
+  "provider_call_boundary": "no KB provider call",
+  "implementation_status": "local vector index only; no live KB ingestion",
+  "source_cards": "tmp/consultant-role-kb-all-extractable-cards-20260619.jsonl",
+  "source_register": "drafts/analysis/consultant-role-kb-full-source-register-20260619.csv",
+  "model": {
+    "model_id": "BAAI/bge-small-zh-v1.5",
+    "model_snapshot": "7999e1d3359715c523056ef9478215996d62a620",
+    "model_path": "/Users/pray/.cache/huggingface/hub/models--BAAI--bge-small-zh-v1.5/snapshots/7999e1d3359715c523056ef9478215996d62a620",
+    "model_license": "MIT",
+    "embedding_dimension": 512,
+    "normalize_embeddings": true,
+    "query_instruction": "为这个句子生成表示以用于检索相关文章："
+  },
+  "runtime": {
+    "python": "/opt/homebrew/opt/python@3.12/bin/python3.12",
+    "python_version": "3.12.13",
+    "torch_version": "2.10.0",
+    "transformers_version": "5.0.0",
+    "sentence_transformers_version": "5.2.2"
+  },
+  "counts": {
+    "records": 780,
+    "embedding_rows": 780,
+    "source_count": 78
+  },
+  "files": {
+    "manifest": "shared/indexes/consultant-agent/all-extractable-bge-small-zh-v1-5-20260619/manifest.json",
+    "records": "shared/indexes/consultant-agent/all-extractable-bge-small-zh-v1-5-20260619/records.jsonl",
+    "embeddings": "shared/indexes/consultant-agent/all-extractable-bge-small-zh-v1-5-20260619/embeddings.float32.npy",
+    "checksums": "shared/indexes/consultant-agent/all-extractable-bge-small-zh-v1-5-20260619/checksums.json"
+  },
+  "checksums": {
+    "records_sha256": "a444b2ae2ccbac8e309d5e31abda36f07c2b513ba39b339ab41eb374e2a0ac09",
+    "embeddings_sha256": "9970ad0ff059919615f9c9851054176371828cb06320ee23464de554573f5d94",
+    "source_cards_sha256": "373c766f852a3a42b351e7ae687cca3b6be9f51b2cb8ed2e27f37e424be649bf",
+    "manifest_sha256": "95997dc49de9231fc0d7eab1ba2bc48ab5f3919aa9b06fa69d5c42c12dd3b7b9"
+  },
+  "elapsed_seconds": 8.04,
+  "smoke_metrics": {
+    "indexed_card_count": 780,
+    "embedding_rows": 780,
+    "embedding_dimension": 512,
+    "eval_count": 50,
+    "answerable_eval_count": 48,
+    "answerable_vector_source_recall_at_1": 0.5833,
+    "answerable_vector_source_recall_at_5": 0.75,
+    "answerable_reranked_source_recall_at_1": 0.9583,
+    "answerable_reranked_source_recall_at_5": 1.0,
+    "fixture_answerable_reranked_source_recall_at_5": 1.0,
+    "top1_unit_anchor_rate": 1.0,
+    "provider_call_count": 0,
+    "live_kb_write_count": 0,
+    "production_impact": "production unchanged",
+    "provider_call_boundary": "no KB provider call"
+  }
+}

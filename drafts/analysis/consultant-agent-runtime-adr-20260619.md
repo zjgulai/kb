@@ -9,6 +9,7 @@ source_documents:
   - "drafts/analysis/consultant-role-kb-batch30-regression-eval-report-20260619.md"
   - "drafts/analysis/consultant-role-kb-batch60-regression-eval-report-20260619.md"
   - "drafts/analysis/consultant-role-kb-all-extractable-regression-eval-report-20260619.md"
+  - "drafts/analysis/consultant-role-kb-all-extractable-vector-store-report-20260619.md"
 scope: "runtime decision for consultant-agent from full extraction to staging"
 production_impact: "production unchanged"
 provider_call_boundary: "no KB provider call"
@@ -30,7 +31,9 @@ The local consultant-role KB PoC now has:
 - full parser unit manifest with 81/81 parse success;
 - 150 QA-checked local cards from the first 15 sources;
 - 780 QA-checked local cards from 78 currently extractable sources;
+- durable local vector-store package for 780 all-extractable cards;
 - all-extractable answerable anchored_citation@1 = 0.9792 and anchored_citation@5 = 1.0;
+- vector plus deterministic rerank answerable source_recall@1 = 0.9583 and @5 = 1.0;
 - answer-trace fixture pass rate = 1.0.
 
 The unresolved blockers are legal/license review, persistent derived-card policy,
@@ -107,9 +110,11 @@ Tradeoff:
 - no online natural-language generation is approved yet;
 - staging UX work must wait for legal/source-owner and security gates;
 - local BGE/rerank metrics are still proxy evidence, not human gold answer quality.
+- raw vector-only retrieval is not sufficient as an acceptance path; deterministic rerank/source-prior logic remains part of the local retrieval contract.
 
 ## 8. Current Recommendation
 
-Proceed with local-only full extraction infrastructure and batch expansion. Do
+Proceed with local-only full extraction infrastructure, durable local indexing,
+human-gold locator labels, and a private no-provider retrieval API design. Do
 not enable provider-backed or public online use until legal, security, product,
 and source-owner review explicitly approves retrieved-content handling.

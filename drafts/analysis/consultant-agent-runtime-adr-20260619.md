@@ -14,6 +14,7 @@ source_documents:
   - "drafts/analysis/consultant-role-kb-human-gold-locator-labels-report-20260619.md"
   - "drafts/analysis/consultant-role-kb-private-retrieval-api-report-20260619.md"
   - "drafts/analysis/consultant-role-kb-staging-auth-audit-design-20260619.md"
+  - "drafts/analysis/consultant-role-kb-local-staging-auth-audit-smoke-report-20260619.md"
 scope: "runtime decision for consultant-agent from full extraction to staging"
 production_impact: "production unchanged"
 provider_call_boundary: "no KB provider call"
@@ -38,9 +39,13 @@ The local consultant-role KB PoC now has:
 - durable local vector-store package for the current 800 all-extractable cards;
 - pending-review locator label seed for 50 eval items;
 - private no-provider local retrieval API prototype;
+- localhost-only staging auth/audit harness smoke with failure_count = 0;
 - all-extractable answerable anchored_citation@1 = 0.9792 and anchored_citation@5 = 1.0;
 - vector plus deterministic rerank answerable source_recall@1 = 0.9583 and @5 = 1.0;
 - API smoke label_seed_match_at_5 = 1.0 and policy_refusal_pass_rate = 1.0;
+- local staging auth/audit smoke has audit_event_count = 5,
+  audit_schema_failure_count = 0, audit_forbidden_leak_count = 0,
+  provider_call_count = 0, and live_kb_write_count = 0;
 - answer-trace fixture pass rate = 1.0.
 
 The unresolved blockers are legal/license review, human approval of locator
@@ -94,7 +99,8 @@ Runtime must enforce:
 - workspace isolation on `consultant-p1`;
 - provider-call logging if provider generation is later enabled.
 
-Private staging must additionally enforce:
+Private staging, and the current localhost-only staging harness, must
+additionally enforce:
 
 - bearer-token validation through external secret storage, with no token stored
   in the repository;
@@ -103,6 +109,9 @@ Private staging must additionally enforce:
 - role-based access for `retrieval_reader`, `reviewer`, and `admin`;
 - one audit event per allowed or denied retrieval/eval request;
 - audit logs with hashed actor/query identifiers and no raw source text.
+
+The localhost-only harness is validation evidence for the auth/audit contract,
+not a shared staging deployment.
 
 ## 6. Acceptance Gates Before Staging
 
@@ -116,6 +125,8 @@ Private staging must additionally enforce:
 - source-only citation violations = 0;
 - audit logs and rollback path are implemented.
 - staging auth/audit contract validation has `failure_count = 0`.
+- local staging auth/audit harness smoke has `failure_count = 0` and
+  `audit_forbidden_leak_count = 0`.
 - durable vector store and local retrieval API remain aligned with the current all-extractable card set before staging.
 
 ## 7. Consequences
@@ -136,6 +147,8 @@ Tradeoff:
 ## 8. Current Recommendation
 
 Proceed with local-only full extraction infrastructure, durable local indexing,
-human-gold locator labels, and a private no-provider retrieval API design. Do
-not enable provider-backed or public online use until legal, security, product,
-and source-owner review explicitly approves retrieved-content handling.
+human-gold locator labels, and the private no-provider retrieval API plus local
+auth/audit harness. Do not run shared staging or enable provider-backed/public
+online use until legal, security, product, and source-owner review explicitly
+approves retrieved-content handling, external secret storage, append-only audit
+storage, rate limiting, and rollback.

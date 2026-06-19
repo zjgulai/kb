@@ -201,3 +201,11 @@ provider_call_boundary: "no KB provider call"
 - Updated `tmp/consultant_role_kb_private_retrieval_api_smoke_20260619.py` to expect the 800-record index.
 - Reran private no-provider retrieval API smoke: record_count = 800, label_seed_match_at_1 = 0.9375, label_seed_match_at_5 = 1.0, policy_refusal_pass_rate = 1.0, forbidden_status = 403, failure_count = 0, provider_call_count = 0, live_kb_write_count = 0.
 - Boundary remains: local draft artifacts only, `production unchanged`, no KB provider call, no live KB ingestion, no human label approval, no staging deployment, and no legal/source-owner clearance.
+- User approved continuing the next recommended round; implemented a localhost-only staging auth/audit harness around the private no-provider retrieval API.
+- Created `agents/consultant-agent/runtime/staging_auth_audit.py`.
+- Created and ran `tmp/consultant_role_kb_local_staging_auth_audit_smoke_20260619.py`.
+- Generated `tmp/consultant-role-kb-local-staging-auth-audit-smoke-20260619.json`, `tmp/consultant-role-kb-local-staging-audit-events-20260619.jsonl`, and `drafts/analysis/consultant-role-kb-local-staging-auth-audit-smoke-report-20260619.md`.
+- First local harness smoke failed because audit result reference collection assumed `/eval/label-seed` rows had retrieval result fields; fixed by skipping non-retrieval rows for audit `result_refs`.
+- Second local harness smoke failed because an allowed `/eval/label-seed` audit event lacked `retrieval_mode`; fixed by defaulting allowed non-retrieval events to `local_bge_vector_plus_deterministic_rerank`.
+- Final local harness smoke result: record_count = 800, allowed_http_status = 200, policy_refusal_http_status = 200, missing_token_status = 401, rbac_denied_status = 403, label_seed_match_at_5 = 1.0, policy_refusal_pass_rate = 1.0, audit_event_count = 5, audit_schema_failure_count = 0, audit_forbidden_leak_count = 0, failure_count = 0, provider_call_count = 0, live_kb_write_count = 0.
+- Boundary remains: localhost-only validation; no staging deployment, no provider call, no live KB ingestion, no human label approval, and no legal/source-owner clearance.

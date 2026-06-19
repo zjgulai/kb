@@ -630,6 +630,71 @@ Interpretation:
 - Boundary: legal/source-owner approval, secret storage, private ingress,
   append-only audit storage, rate limiting, and rollback remain unimplemented.
 
+## Local Staging Auth/Audit Harness
+
+The local staging auth/audit harness was implemented around the existing
+`LocalRetrievalService`. It remains localhost-only validation and is separate
+from any shared staging deployment.
+
+Artifacts:
+
+- Harness module: `agents/consultant-agent/runtime/staging_auth_audit.py`
+- Smoke script: `tmp/consultant_role_kb_local_staging_auth_audit_smoke_20260619.py`
+- Smoke output: `tmp/consultant-role-kb-local-staging-auth-audit-smoke-20260619.json`
+- Audit events: `tmp/consultant-role-kb-local-staging-audit-events-20260619.jsonl`
+- Report: `drafts/analysis/consultant-role-kb-local-staging-auth-audit-smoke-report-20260619.md`
+
+Implemented controls:
+
+- Bearer auth validates against a runtime-provided SHA-256 token hash; the
+  token itself is not persisted.
+- Protected endpoints require `X-KB-Agent`, `X-KB-Workspace`, `X-KB-Reviewer`,
+  `X-KB-Request-Id`, and `X-KB-Role`.
+- RBAC allows `retrieval_reader` on `/retrieve`, and `reviewer`/`admin` on
+  `/retrieve` plus `/eval/label-seed`.
+- Every allowed, denied, and policy-refusal protected request emits one audit
+  event.
+- Audit events store hashed actor/query identifiers plus source/card/locator
+  refs only; they do not store raw questions, raw source text, bearer headers,
+  or bearer tokens.
+
+Smoke result:
+
+- record_count = 800.
+- allowed_http_status = 200.
+- policy_refusal_http_status = 200.
+- missing_token_status = 401.
+- rbac_denied_status = 403.
+- label_seed_match_at_5 = 1.0.
+- policy_refusal_pass_rate = 1.0.
+- audit_event_count = 5.
+- allowed_event_count = 2.
+- denied_event_count = 2.
+- policy_refusal_event_count = 1.
+- audit_schema_failure_count = 0.
+- audit_forbidden_leak_count = 0.
+- provider_call_count = 0.
+- live_kb_write_count = 0.
+- failure_count = 0.
+
+Implementation notes:
+
+- The first smoke failed because audit result reference collection assumed
+  `/eval/label-seed` response rows had retrieval result fields; it now skips
+  non-retrieval rows for `result_refs`.
+- The second smoke failed because the allowed `/eval/label-seed` audit event
+  had no `retrieval_mode`; it now defaults allowed non-retrieval events to
+  `local_bge_vector_plus_deterministic_rerank`.
+
+Boundary:
+
+- Local validation only.
+- No provider call.
+- No live KB ingestion.
+- No staging deployment.
+- No human label approvals.
+- No legal/source-owner clearance.
+
 ## Human Label Review Workflow
 
 The pending locator label seed now has a local manual-review workflow. The

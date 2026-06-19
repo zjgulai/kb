@@ -10,7 +10,7 @@ source_documents:
 scope: "draft staging auth and audit contract for consultant-agent no-provider retrieval API"
 production_impact: "production unchanged"
 provider_call_boundary: "no KB provider call"
-implementation_status: "design and local contract validation only; no staging deployment"
+implementation_status: "local harness implemented and smoke-validated; no staging deployment"
 ---
 
 # Consultant Role KB Staging Auth And Audit Design
@@ -25,7 +25,8 @@ client-ready usage.
 Current facts:
 
 - local API prototype exists at `agents/consultant-agent/runtime/local_retrieval_api.py`;
-- durable local index has 780 all-extractable records and local BGE embeddings;
+- local staging auth/audit harness exists at `agents/consultant-agent/runtime/staging_auth_audit.py`;
+- durable local index has 800 all-extractable records and local BGE embeddings;
 - human locator labels remain `pending_human_review`;
 - all source licenses remain `pending_legal_review`;
 - raw `consult/` files remain local-only and must not be committed.
@@ -55,6 +56,7 @@ Every staging request to `/retrieve` and `/eval/label-seed` must include:
 | `X-KB-Workspace` | must equal `consultant-p1` |
 | `X-KB-Reviewer` | reviewer or actor identifier; audit stores only a hash |
 | `X-KB-Request-Id` | caller-provided idempotency/correlation ID |
+| `X-KB-Role` | one of `retrieval_reader`, `reviewer`, or `admin` |
 
 Fail-closed rules:
 
@@ -160,6 +162,39 @@ The validator checks that sample allowed and denied events:
 - keep `live_kb_write_count=0`;
 - keep `source_text_returned=false`;
 - preserve `production_impact=production unchanged`.
+
+Local staging harness smoke:
+
+- module: `agents/consultant-agent/runtime/staging_auth_audit.py`;
+- smoke script: `tmp/consultant_role_kb_local_staging_auth_audit_smoke_20260619.py`;
+- smoke output: `tmp/consultant-role-kb-local-staging-auth-audit-smoke-20260619.json`;
+- audit events: `tmp/consultant-role-kb-local-staging-audit-events-20260619.jsonl`;
+- report: `drafts/analysis/consultant-role-kb-local-staging-auth-audit-smoke-report-20260619.md`.
+
+Smoke result:
+
+- record_count = 800;
+- allowed_http_status = 200;
+- policy_refusal_http_status = 200;
+- missing_token_status = 401;
+- rbac_denied_status = 403;
+- label_seed_match_at_5 = 1.0;
+- policy_refusal_pass_rate = 1.0;
+- audit_event_count = 5;
+- allowed_event_count = 2;
+- denied_event_count = 2;
+- policy_refusal_event_count = 1;
+- audit_schema_failure_count = 0;
+- audit_forbidden_leak_count = 0;
+- provider_call_count = 0;
+- live_kb_write_count = 0;
+- failure_count = 0.
+
+The harness validates bearer-token auth with a runtime token hash, requires
+agent/workspace/reviewer/request/role headers on protected endpoints, and emits
+one audit event for allowed, denied, and policy-refusal requests. The smoke also
+checks that audit output does not contain the runtime token, bearer header, raw
+questions, or raw source text.
 
 ## 10. Open Decisions
 

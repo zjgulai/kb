@@ -58,6 +58,9 @@ approve production launch.
 | `drafts/analysis/consultant-role-kb-staging-auth-audit-design-20260619.md` | private-staging auth/audit contract drafted; no staging deployment |
 | `shared/audit/consultant-agent/staging-audit-event.schema-20260619.json` | audit event schema for allowed/denied retrieval events |
 | `tmp/consultant-role-kb-staging-auth-audit-contract-validation-20260619.json` | local contract validation `failure_count=0`, provider calls `0`, live KB writes `0`, source text returned `false` |
+| `agents/consultant-agent/runtime/staging_auth_audit.py` | localhost-only staging auth/audit harness; not a staging deployment |
+| `tmp/consultant-role-kb-local-staging-auth-audit-smoke-20260619.json` | local harness smoke `record_count=800`, missing-token `401`, RBAC denial `403`, audit events `5`, `failure_count=0`, provider calls `0`, live KB writes `0` |
+| `tmp/consultant-role-kb-local-staging-audit-events-20260619.jsonl` | audit events store hashed actor/query identifiers and source/card/locator refs only; no raw token/header/question/source leakage detected by smoke |
 
 ## 3.1 Batch-60 Selection Note
 
@@ -78,5 +81,5 @@ current 800-card all-extractable set, including the CSV cards.
 ## 4. Next Decision Candidates
 
 - Whether and when a human reviewer should approve, override, reject, or mark pending locator labels as needing discussion.
-- Whether to implement staging auth, audit logging, and deployment topology for the no-provider retrieval API after legal/security approval.
-- Whether to run actual human review over locator labels and implement security-approved staging for the no-provider API.
+- Whether to run actual human review over locator labels.
+- Whether to implement security-approved shared staging deployment, external secret storage, append-only audit storage, rate limiting, and rollback for the no-provider API.

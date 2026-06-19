@@ -44,7 +44,7 @@ Resolved on 2026-06-19:
 5. Durable local vector store/index has been rebuilt for the 800 all-extractable local cards.
 6. Human-gold locator label seed has been built, but all labels remain `pending_human_review`.
 7. Private no-provider retrieval API prototype has been built and locally smoked; this is not a staging deployment.
-8. Staging auth/audit contract has been designed and locally validated; this is not a staging deployment.
+8. Staging auth/audit contract has been designed, locally validated, and wrapped in a localhost-only auth/audit harness smoke; this is not a staging deployment.
 9. Human label review workflow has been generated and locally validated; no label approvals have been recorded.
 10. CSV loader support has been added for `SRC-CONSULT-030` and `SRC-CONSULT-031`; the all-extractable local card set now has 800 cards across 80 non-duplicate sources.
 
@@ -53,5 +53,5 @@ Still open:
 1. Whether to later promote the PRD addendum into `KB_Platform_PRD.md` after human/legal review.
 2. Whether raw `consult/` third-party source files can ever be committed after legal/license review.
 3. Whether to run actual manual reviewer decisions over the locator label queue.
-4. Whether to implement staging auth, audit logs, and deployment topology for the no-provider API after legal/security approval.
-5. Whether to run actual human review over the locator label queue and implement security-approved staging for the no-provider API.
+4. Whether to run actual manual reviewer decisions over the locator label queue.
+5. Whether to implement security-approved shared staging deployment, external secret storage, append-only audit storage, rate limiting, and rollback for the no-provider API.

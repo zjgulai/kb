@@ -1,0 +1,107 @@
+---
+title: "ADR 002 Consultant Agent Runtime Boundary"
+status: "proposed"
+created_at: "2026-06-19"
+source_documents:
+  - "drafts/analysis/consultant-role-kb-full-extraction-agent-launch-plan-20260619.md"
+  - "drafts/analysis/consultant-role-kb-legal-source-owner-review-packet-20260619.md"
+  - "drafts/analysis/consultant-role-kb-expanded-regression-eval-report-20260619.md"
+scope: "runtime decision for consultant-agent from full extraction to staging"
+production_impact: "production unchanged"
+provider_call_boundary: "no KB provider call"
+implementation_status: "architecture decision record only; no deployment"
+---
+
+# ADR 002 Consultant Agent Runtime Boundary
+
+## 1. Status
+
+Proposed. This ADR is not a production approval and does not enable provider
+calls.
+
+## 2. Context
+
+The local consultant-role KB PoC now has:
+
+- full 81-source draft register;
+- full parser unit manifest with 81/81 parse success;
+- 150 QA-checked local cards from the first 15 sources;
+- expanded answerable anchored_citation@1 = 1.0 after rerank tuning;
+- answer-trace fixture pass rate = 1.0.
+
+The unresolved blockers are legal/license review, persistent derived-card policy,
+provider policy, staging auth, audit logging, and production deployment target.
+
+## 3. Decision
+
+Use a staged runtime path:
+
+1. **Local extraction/runtime now**: local parser, card QA, local BGE embedding,
+   deterministic rerank, no provider generation.
+2. **Private staging later**: retrieval API plus policy/answer schema behind
+   auth, still no provider by default.
+3. **Hybrid generation only after approval**: local retrieval and citation
+   enforcement, provider generation only if legal/security/product approve
+   retrieved-content handling and logging.
+
+## 4. Options Considered
+
+| option | summary | decision |
+|---|---|---|
+| local-only | safest for full extraction and eval | use now |
+| private staging no provider | good for UX, policy, logs, and pilot workflows | next after legal/source-owner review |
+| provider-only | fastest answer quality iteration but highest data-governance risk | reject for now |
+| local LLM only | preserves data boundary but answer quality and ops are uncertain | keep as fallback research |
+| hybrid | best long-term balance if provider policy is approved | target future architecture |
+
+## 5. Runtime Contract
+
+Every `consultant-agent` answer must carry:
+
+- conclusion;
+- evidence with source IDs and unit locators;
+- assumptions;
+- uncertainty;
+- confidence;
+- blocked actions;
+- next human action.
+
+Runtime must enforce:
+
+- no answer without unit-level citation for substantive claims;
+- no D-grade evidence for final conclusions;
+- no raw source-text redistribution;
+- no client-ready publish/send/submit/approval action;
+- workspace isolation on `consultant-p1`;
+- provider-call logging if provider generation is later enabled.
+
+## 6. Acceptance Gates Before Staging
+
+- legal/source-owner review packet has explicit outcome;
+- full extraction batch has card QA failure_count = 0;
+- answerable anchored_citation@5 >= 0.95;
+- answerable anchored_citation@1 target >= 0.90;
+- answer-trace pass rate = 1.0;
+- blocked-action pass rate = 1.0;
+- source-only citation violations = 0;
+- audit logs and rollback path are implemented.
+
+## 7. Consequences
+
+Positive:
+
+- preserves source governance while full extraction continues;
+- avoids provider data-boundary risk during corpus expansion;
+- lets retrieval, citation, QA, and policy mature before UI launch.
+
+Tradeoff:
+
+- no online natural-language generation is approved yet;
+- staging UX work must wait for legal/source-owner and security gates;
+- local BGE/rerank metrics are still proxy evidence, not human gold answer quality.
+
+## 8. Current Recommendation
+
+Proceed with local-only full extraction infrastructure and batch expansion. Do
+not enable provider-backed or public online use until this ADR is approved by
+product, legal, security, and source owner.

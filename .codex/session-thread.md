@@ -18,13 +18,23 @@ provider_call_boundary: "no KB provider call"
 
 ## Active Next Work
 
-Git initialization and first push completed.
+Full extraction readiness sprint is now in progress.
 
 Evidence:
 
 - branch: `main`
-- root commit: `9cb0309`
 - remote: `https://github.com/zjgulai/kb.git`
-- push result: `[new branch] main -> main`
+- full source register: 81/81 sources registered
+- parser manifest: 81/81 parse success, 0 parse errors, 23310 structural units
+- card QA: 150 cards, failure_count 0, locator_manifest_coverage 1.0
+- expanded retrieval regression after rerank tuning: answerable anchored_citation@1 1.0, @5 1.0
+- answer trace: 12/12
 
 Raw `consult/` source files remain excluded by `.gitignore`; only `consult/README.md` is tracked.
+
+Next blockers:
+
+- legal/source-owner review packet requires human decisions;
+- persistent derived-card storage policy is pending;
+- runtime ADR is proposed, not approved;
+- no provider call, live KB ingestion, staging deployment, or production launch has occurred.

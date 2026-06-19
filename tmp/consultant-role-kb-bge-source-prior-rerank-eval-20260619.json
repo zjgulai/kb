@@ -11,15 +11,15 @@
     "eval_count": 50,
     "answerable_eval_count": 48,
     "no_allowed_source_eval_count": 2,
-    "elapsed_seconds": 7.927,
+    "elapsed_seconds": 5.899,
     "all_eval": {
       "count": 50,
-      "source_recall_at_1": 0.92,
+      "source_recall_at_1": 0.94,
       "source_recall_at_5": 0.96
     },
     "answerable_eval": {
       "count": 48,
-      "source_recall_at_1": 0.9583,
+      "source_recall_at_1": 0.9792,
       "source_recall_at_5": 1.0
     },
     "category_metrics": {
@@ -40,7 +40,7 @@
       },
       "refusal_unknown": {
         "count": 10,
-        "source_recall_at_1": 0.6,
+        "source_recall_at_1": 0.7,
         "source_recall_at_5": 0.8
       },
       "source_lookup": {
@@ -60,7 +60,7 @@
       }
     },
     "failure_counts": {
-      "answerable_top1_failures": 2,
+      "answerable_top1_failures": 1,
       "answerable_top5_failures": 0
     },
     "rerank_weights": {
@@ -79,7 +79,13 @@
       "premature_framework_penalty": -0.03,
       "client_ready_ppt_executive_summary_source": 0.12,
       "client_ready_non_slide_deliverable_penalty": -0.02,
-      "high_stakes_due_diligence_source": 0.09
+      "high_stakes_due_diligence_source": 0.09,
+      "cx_retention_diagnostic_source": 0.13,
+      "analytics_overroute_penalty_for_cx": -0.03,
+      "post_sign_pmi_source": 0.14,
+      "presentation_after_diagnostic_source": 0.11,
+      "license_redistribution_governance_source": 0.16,
+      "license_redistribution_client_template_penalty": -0.06
     }
   },
   "results": [
@@ -839,17 +845,8 @@
           "base_score": 0.615539,
           "keyword_prior": 0.018,
           "card_type_prior": 0.025,
-          "source_intent_prior": 0.0,
-          "rerank_score": 0.658539
-        },
-        {
-          "source_id": "SRC-CONSULT-008",
-          "card_id": "CARD-SRC-CONSULT-008-DIAG",
-          "base_score": 0.590318,
-          "keyword_prior": 0.036,
-          "card_type_prior": 0.025,
-          "source_intent_prior": 0.0,
-          "rerank_score": 0.651318
+          "source_intent_prior": 0.13,
+          "rerank_score": 0.788539
         },
         {
           "source_id": "SRC-CONSULT-002",
@@ -868,6 +865,15 @@
           "card_type_prior": 0.04,
           "source_intent_prior": 0.0,
           "rerank_score": 0.632124
+        },
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-DIAG",
+          "base_score": 0.590318,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.025,
+          "source_intent_prior": -0.03,
+          "rerank_score": 0.621318
         },
         {
           "source_id": "SRC-CONSULT-005",
@@ -1010,8 +1016,8 @@
           "base_score": 0.612039,
           "keyword_prior": 0.063,
           "card_type_prior": 0.04,
-          "source_intent_prior": 0.0,
-          "rerank_score": 0.715039
+          "source_intent_prior": 0.14,
+          "rerank_score": 0.855039
         },
         {
           "source_id": "SRC-CONSULT-002",
@@ -1354,8 +1360,8 @@
           "base_score": 0.644555,
           "keyword_prior": 0.117,
           "card_type_prior": 0.055,
-          "source_intent_prior": 0.0,
-          "rerank_score": 0.816555
+          "source_intent_prior": 0.13,
+          "rerank_score": 0.946555
         },
         {
           "source_id": "SRC-CONSULT-008",
@@ -1363,8 +1369,8 @@
           "base_score": 0.628615,
           "keyword_prior": 0.036,
           "card_type_prior": 0.055,
-          "source_intent_prior": 0.0,
-          "rerank_score": 0.719615
+          "source_intent_prior": -0.03,
+          "rerank_score": 0.689615
         },
         {
           "source_id": "SRC-CONSULT-007",
@@ -2214,8 +2220,17 @@
           "base_score": 0.570609,
           "keyword_prior": 0.036,
           "card_type_prior": 0.055,
-          "source_intent_prior": 0.0,
-          "rerank_score": 0.661609
+          "source_intent_prior": 0.11,
+          "rerank_score": 0.771609
+        },
+        {
+          "source_id": "SRC-CONSULT-007",
+          "card_id": "CARD-SRC-CONSULT-007-DIAG",
+          "base_score": 0.567062,
+          "keyword_prior": 0.045,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.11,
+          "rerank_score": 0.722062
         },
         {
           "source_id": "SRC-CONSULT-005",
@@ -2243,15 +2258,6 @@
           "card_type_prior": 0.0,
           "source_intent_prior": 0.0,
           "rerank_score": 0.63554
-        },
-        {
-          "source_id": "SRC-CONSULT-003",
-          "card_id": "CARD-SRC-CONSULT-003-DELIV",
-          "base_score": 0.545284,
-          "keyword_prior": 0.018,
-          "card_type_prior": 0.055,
-          "source_intent_prior": 0.0,
-          "rerank_score": 0.618284
         }
       ],
       "source_recall_at_1": true,
@@ -2727,6 +2733,33 @@
       ],
       "top_sources": [
         {
+          "source_id": "SRC-CONSULT-001",
+          "card_id": "CARD-SRC-CONSULT-001-METHOD",
+          "base_score": 0.55911,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.16,
+          "rerank_score": 0.71911
+        },
+        {
+          "source_id": "SRC-CONSULT-006",
+          "card_id": "CARD-SRC-CONSULT-006-DELIV",
+          "base_score": 0.518045,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.16,
+          "rerank_score": 0.678045
+        },
+        {
+          "source_id": "SRC-CONSULT-014",
+          "card_id": "CARD-SRC-CONSULT-014-INDUSTRY-KPI-04",
+          "base_score": 0.545496,
+          "keyword_prior": 0.0,
+          "card_type_prior": -0.04,
+          "source_intent_prior": 0.16,
+          "rerank_score": 0.665496
+        },
+        {
           "source_id": "SRC-CONSULT-002",
           "card_id": "CARD-SRC-CONSULT-002-METHOD",
           "base_score": 0.562235,
@@ -2734,33 +2767,6 @@
           "card_type_prior": 0.0,
           "source_intent_prior": 0.0,
           "rerank_score": 0.580235
-        },
-        {
-          "source_id": "SRC-CONSULT-005",
-          "card_id": "CARD-SRC-CONSULT-005-DELIV",
-          "base_score": 0.543223,
-          "keyword_prior": 0.018,
-          "card_type_prior": 0.0,
-          "source_intent_prior": 0.0,
-          "rerank_score": 0.561223
-        },
-        {
-          "source_id": "SRC-CONSULT-001",
-          "card_id": "CARD-SRC-CONSULT-001-METHOD",
-          "base_score": 0.55911,
-          "keyword_prior": 0.0,
-          "card_type_prior": 0.0,
-          "source_intent_prior": 0.0,
-          "rerank_score": 0.55911
-        },
-        {
-          "source_id": "SRC-CONSULT-004",
-          "card_id": "CARD-SRC-CONSULT-004-DELIV",
-          "base_score": 0.555382,
-          "keyword_prior": 0.0,
-          "card_type_prior": 0.0,
-          "source_intent_prior": 0.0,
-          "rerank_score": 0.555382
         },
         {
           "source_id": "SRC-CONSULT-003",
@@ -2772,7 +2778,7 @@
           "rerank_score": 0.544791
         }
       ],
-      "source_recall_at_1": false,
+      "source_recall_at_1": true,
       "source_recall_at_5": true,
       "answerable_by_registered_source": true
     },

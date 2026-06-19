@@ -1,0 +1,30 @@
+{
+  "created_at": "2026-06-19",
+  "scope": "full consultant-role parser unit manifest",
+  "production_impact": "production unchanged",
+  "provider_call_boundary": "no KB provider call",
+  "implementation_status": "local parser manifests only; no live KB ingestion",
+  "source_count": 81,
+  "parse_success_count": 81,
+  "parse_error_count": 0,
+  "total_unit_count": 23310,
+  "empty_unit_count": 29,
+  "empty_unit_rate": 0.0012,
+  "by_suffix": {
+    ".csv": 2,
+    ".docx": 1,
+    ".epub": 1,
+    ".pdf": 68,
+    ".pptx": 6,
+    ".xlsx": 3
+  },
+  "by_locator_type": {
+    "csv_row": 1178,
+    "page": 9407,
+    "paragraph": 36,
+    "section": 5,
+    "sheet_row": 12112,
+    "slide": 572
+  },
+  "sources_with_warnings": 0
+}

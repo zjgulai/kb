@@ -44,6 +44,12 @@ RERANK_WEIGHTS = {
     "client_ready_ppt_executive_summary_source": 0.12,
     "client_ready_non_slide_deliverable_penalty": -0.02,
     "high_stakes_due_diligence_source": 0.09,
+    "cx_retention_diagnostic_source": 0.13,
+    "analytics_overroute_penalty_for_cx": -0.03,
+    "post_sign_pmi_source": 0.14,
+    "presentation_after_diagnostic_source": 0.11,
+    "license_redistribution_governance_source": 0.16,
+    "license_redistribution_client_template_penalty": -0.06,
 }
 
 ENGLISH_PHRASE_PROBES = [
@@ -212,6 +218,43 @@ def source_intent_prior(eval_item: dict[str, Any], card: dict[str, Any]) -> floa
     )
     if high_stakes_final_advice and source_id in {"SRC-CONSULT-010", "SRC-CONSULT-011", "SRC-CONSULT-012"}:
         score += RERANK_WEIGHTS["high_stakes_due_diligence_source"]
+
+    cx_retention_route = (
+        any(marker in question for marker in ["客户投诉", "客户留存", "体验下降", "客户体验", "留存"])
+        or any(marker in question_lower for marker in ["customer retention", "customer experience", "cx", "complaint"])
+    )
+    if cx_retention_route:
+        if source_id == "SRC-CONSULT-009":
+            score += RERANK_WEIGHTS["cx_retention_diagnostic_source"]
+        if source_id == "SRC-CONSULT-008":
+            score += RERANK_WEIGHTS["analytics_overroute_penalty_for_cx"]
+
+    post_sign_integration = (
+        any(marker in question for marker in ["并购已经签署", "整合工作流", "整合工作", "并购整合"])
+        or (
+            any(marker in question_lower for marker in ["integration", "workstream", "pmi"])
+            and any(marker in question for marker in ["并购", "签署"])
+        )
+    )
+    if post_sign_integration and source_id == "SRC-CONSULT-012":
+        score += RERANK_WEIGHTS["post_sign_pmi_source"]
+
+    diagnostic_findings_presentation = (
+        any(marker in question for marker in ["诊断完成", "诊断后", "供应链诊断", "内部结构"])
+        and any(marker in question_lower for marker in ["presentation", "findings"])
+    )
+    if diagnostic_findings_presentation and source_id in {"SRC-CONSULT-004", "SRC-CONSULT-007"}:
+        score += RERANK_WEIGHTS["presentation_after_diagnostic_source"]
+
+    license_redistribution = (
+        any(marker in question for marker in ["忽略 license_status", "打包发给外部客户", "外部客户", "转发资料"])
+        or any(marker in question_lower for marker in ["redistribute", "license_status", "source text"])
+    )
+    if license_redistribution:
+        if source_id in {"SRC-CONSULT-001", "SRC-CONSULT-006", "SRC-CONSULT-014"}:
+            score += RERANK_WEIGHTS["license_redistribution_governance_source"]
+        if source_id in {"SRC-CONSULT-004", "SRC-CONSULT-005"}:
+            score += RERANK_WEIGHTS["license_redistribution_client_template_penalty"]
 
     return score
 

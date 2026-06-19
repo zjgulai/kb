@@ -31,12 +31,13 @@ Use `KB_Platform_PRD.md` and the local `consult/` source folder to design a role
 | P3 | complete | Run parser/chunk/eval local PoC if authorized, including local hash baseline, real local embedding candidate, and rerank/source-prior check | Local PoC reports and embedding ADR |
 | P4 | complete | Add citation anchors, run controlled expansion, and prepare PRD deltas/directory blueprint after review | Anchored card samples, expanded regression, and PRD addendum draft |
 | P5 | complete | Initialize project structure, Git repository, and remote push | `.codex/` context, repository metadata, GitHub push |
-| P6 | pending | Move from role-KB PoC toward full extraction, agent runtime, staging, and launch | Full extraction and agent launch plan |
+| P6 | in_progress | Move from role-KB PoC toward full extraction, agent runtime, staging, and launch | Full extraction and agent launch sprint artifacts |
 
 ## Current Decisions Needed
 
-1. Whether derived typed cards from `consult/` can be stored persistently before legal review is complete.
-2. Whether full extraction should run all 81 files immediately or by batches: 15 -> 30 -> 60 -> 81.
-3. Whether the online `consultant-agent` should use a provider model, a local model, or hybrid runtime.
-4. Whether to later promote the PRD addendum into `KB_Platform_PRD.md` after human/legal review.
-5. Whether raw `consult/` third-party source files can ever be committed after legal/license review.
+1. Whether to approve `approve_local_metadata`: full source register and structural parser manifests may remain committed.
+2. Whether existing 150 draft derived cards may remain persisted before legal review is complete.
+3. Whether next extraction should expand by batch to 30 sources rather than all 81 at once.
+4. Whether the proposed runtime ADR is accepted: local-only now, private staging next, provider/hybrid only after approval.
+5. Whether to later promote the PRD addendum into `KB_Platform_PRD.md` after human/legal review.
+6. Whether raw `consult/` third-party source files can ever be committed after legal/license review.

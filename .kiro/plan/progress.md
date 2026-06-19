@@ -95,3 +95,21 @@ provider_call_boundary: "no KB provider call"
 - Created `drafts/analysis/consultant-role-kb-full-extraction-agent-launch-plan-20260619.md`.
 - Added P6 to the task plan as the next pending phase: full extraction, agent runtime, staging, and launch planning.
 - Current recommended next sprint: full 81-source register, parser unit-manifest CLI, card QA validator, rerank tuning for four rank-1 misses, legal/source-owner review packet, and runtime decision.
+- User agreed to the recommended next sprint and asked to start execution.
+- Marked P6 as in_progress.
+- Created and ran `tmp/consultant_role_kb_full_source_register_20260619.py`.
+- Generated `drafts/analysis/consultant-role-kb-full-source-register-20260619.csv` and `drafts/analysis/consultant-role-kb-full-source-register-report-20260619.md`.
+- Full source register result: 81/81 profiled sources registered; 15 remain `ready_for_poc`, 66 are `registered` pending review, all 81 remain `license_status=pending_legal_review`.
+- Created and ran `tmp/consultant_role_kb_parser_unit_manifest_20260619.py` with the Codex bundled Python runtime.
+- Generated `tmp/consultant-role-kb-parser-unit-manifest-20260619.jsonl`, `tmp/consultant-role-kb-parser-unit-manifest-summary-20260619.json`, and `drafts/analysis/consultant-role-kb-parser-unit-manifest-report-20260619.md`.
+- Parser manifest result: 81/81 parse success, parse_error_count = 0, total_unit_count = 23310, empty_unit_rate = 0.0012; pypdf emitted pointer warnings during parsing but no parse failures were recorded.
+- Created and ran `tmp/consultant_role_kb_card_qa_validator_20260619.py`.
+- Generated `tmp/consultant-role-kb-card-qa-validation-20260619.json` and `drafts/analysis/consultant-role-kb-card-qa-validation-report-20260619.md`.
+- Card QA result over 150 expanded cards: metadata_completeness = 1.0, registered_source_coverage = 1.0, locator_manifest_coverage = 1.0, source_only_citation_violation_count = 0, long_text_violation_count = 0, failure_count = 0.
+- Tuned source-intent rerank rules for CX retention, post-sign PMI, diagnostic findings presentation, and license redistribution refusal.
+- Reran local rerank and expanded regression with Homebrew Python and local `BAAI/bge-small-zh-v1.5`.
+- Expanded regression result after tuning: answerable anchored_citation@1 = 1.0, answerable anchored_citation@5 = 1.0, source_only_citation_violation_count = 0, answer-trace pass rate = 1.0.
+- Created `drafts/analysis/consultant-role-kb-legal-source-owner-review-packet-20260619.md`.
+- Created `drafts/analysis/consultant-agent-runtime-adr-20260619.md`.
+- Created `drafts/analysis/consultant-role-kb-next-sprint-execution-report-20260619.md`.
+- Current boundary remains: production unchanged, no KB provider call, no live KB ingestion, and no legal/source-owner approval yet.

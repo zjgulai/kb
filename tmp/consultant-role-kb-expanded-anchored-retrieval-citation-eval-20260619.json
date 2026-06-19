@@ -12,20 +12,20 @@
     "eval_count": 50,
     "answerable_eval_count": 48,
     "no_allowed_source_eval_count": 2,
-    "elapsed_seconds": 7.029,
+    "elapsed_seconds": 4.527,
     "all_eval": {
       "count": 50,
-      "source_recall_at_1": 0.88,
+      "source_recall_at_1": 0.96,
       "source_recall_at_5": 0.96,
-      "anchored_citation_at_1": 0.88,
+      "anchored_citation_at_1": 0.96,
       "anchored_citation_at_5": 0.96,
       "top1_has_unit_anchor": 1.0
     },
     "answerable_eval": {
       "count": 48,
-      "source_recall_at_1": 0.9167,
+      "source_recall_at_1": 1.0,
       "source_recall_at_5": 1.0,
-      "anchored_citation_at_1": 0.9167,
+      "anchored_citation_at_1": 1.0,
       "anchored_citation_at_5": 1.0,
       "top1_has_unit_anchor": 1.0
     },
@@ -40,9 +40,9 @@
     "category_metrics": {
       "deliverable_workflow": {
         "count": 10,
-        "source_recall_at_1": 0.9,
+        "source_recall_at_1": 1.0,
         "source_recall_at_5": 1.0,
-        "anchored_citation_at_1": 0.9,
+        "anchored_citation_at_1": 1.0,
         "anchored_citation_at_5": 1.0,
         "top1_has_unit_anchor": 1.0
       },
@@ -56,17 +56,17 @@
       },
       "methodology_selection": {
         "count": 10,
-        "source_recall_at_1": 0.8,
+        "source_recall_at_1": 1.0,
         "source_recall_at_5": 1.0,
-        "anchored_citation_at_1": 0.8,
+        "anchored_citation_at_1": 1.0,
         "anchored_citation_at_5": 1.0,
         "top1_has_unit_anchor": 1.0
       },
       "refusal_unknown": {
         "count": 10,
-        "source_recall_at_1": 0.7,
+        "source_recall_at_1": 0.8,
         "source_recall_at_5": 0.8,
-        "anchored_citation_at_1": 0.7,
+        "anchored_citation_at_1": 0.8,
         "anchored_citation_at_5": 0.8,
         "top1_has_unit_anchor": 1.0
       },
@@ -82,9 +82,9 @@
     "answerable_category_metrics": {
       "deliverable_workflow": {
         "count": 10,
-        "source_recall_at_1": 0.9,
+        "source_recall_at_1": 1.0,
         "source_recall_at_5": 1.0,
-        "anchored_citation_at_1": 0.9,
+        "anchored_citation_at_1": 1.0,
         "anchored_citation_at_5": 1.0,
         "top1_has_unit_anchor": 1.0
       },
@@ -98,17 +98,17 @@
       },
       "methodology_selection": {
         "count": 10,
-        "source_recall_at_1": 0.8,
+        "source_recall_at_1": 1.0,
         "source_recall_at_5": 1.0,
-        "anchored_citation_at_1": 0.8,
+        "anchored_citation_at_1": 1.0,
         "anchored_citation_at_5": 1.0,
         "top1_has_unit_anchor": 1.0
       },
       "refusal_unknown": {
         "count": 8,
-        "source_recall_at_1": 0.875,
+        "source_recall_at_1": 1.0,
         "source_recall_at_5": 1.0,
-        "anchored_citation_at_1": 0.875,
+        "anchored_citation_at_1": 1.0,
         "anchored_citation_at_5": 1.0,
         "top1_has_unit_anchor": 1.0
       },
@@ -123,7 +123,7 @@
     },
     "source_only_citation_violation_count": 0,
     "failure_counts": {
-      "answerable_anchored_citation_at_1_failures": 4,
+      "answerable_anchored_citation_at_1_failures": 0,
       "answerable_anchored_citation_at_5_failures": 0
     },
     "gate_thresholds": {
@@ -2140,41 +2140,13 @@
       "answerable_by_registered_source": true,
       "top_sources": [
         {
-          "source_id": "SRC-CONSULT-008",
-          "card_id": "CARD-SRC-CONSULT-008-EXP-004",
-          "base_score": 0.604304,
-          "keyword_prior": 0.036,
-          "card_type_prior": 0.025,
-          "source_intent_prior": 0.0,
-          "rerank_score": 0.665304,
-          "has_unit_anchor": true,
-          "citation_anchor": {
-            "anchor_confidence": "high",
-            "anchor_label": "No formal framework for data governance in place; lack of clear policies, standards, or procedu",
-            "anchor_match_score": 1.0,
-            "locator": "page:29",
-            "locator_type": "page",
-            "matched_terms": [
-              "formal",
-              "framework",
-              "data",
-              "governance",
-              "place",
-              "lack",
-              "clear",
-              "policies"
-            ],
-            "source_id": "SRC-CONSULT-008"
-          }
-        },
-        {
           "source_id": "SRC-CONSULT-009",
           "card_id": "CARD-SRC-CONSULT-009-EXP-010",
           "base_score": 0.615042,
           "keyword_prior": 0.018,
           "card_type_prior": 0.025,
-          "source_intent_prior": 0.0,
-          "rerank_score": 0.658042,
+          "source_intent_prior": 0.13,
+          "rerank_score": 0.788042,
           "has_unit_anchor": true,
           "citation_anchor": {
             "anchor_confidence": "high",
@@ -2221,6 +2193,34 @@
               "Treacy"
             ],
             "source_id": "SRC-CONSULT-002"
+          }
+        },
+        {
+          "source_id": "SRC-CONSULT-008",
+          "card_id": "CARD-SRC-CONSULT-008-EXP-004",
+          "base_score": 0.604304,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.025,
+          "source_intent_prior": -0.03,
+          "rerank_score": 0.635304,
+          "has_unit_anchor": true,
+          "citation_anchor": {
+            "anchor_confidence": "high",
+            "anchor_label": "No formal framework for data governance in place; lack of clear policies, standards, or procedu",
+            "anchor_match_score": 1.0,
+            "locator": "page:29",
+            "locator_type": "page",
+            "matched_terms": [
+              "formal",
+              "framework",
+              "data",
+              "governance",
+              "place",
+              "lack",
+              "clear",
+              "policies"
+            ],
+            "source_id": "SRC-CONSULT-008"
           }
         },
         {
@@ -2280,10 +2280,10 @@
           }
         }
       ],
-      "source_recall_at_1": false,
+      "source_recall_at_1": true,
       "source_recall_at_5": true,
       "top1_has_unit_anchor": true,
-      "anchored_citation_at_1": false,
+      "anchored_citation_at_1": true,
       "anchored_citation_at_5": true
     },
     {
@@ -2591,6 +2591,34 @@
       "answerable_by_registered_source": true,
       "top_sources": [
         {
+          "source_id": "SRC-CONSULT-012",
+          "card_id": "CARD-SRC-CONSULT-012-EXP-002",
+          "base_score": 0.584833,
+          "keyword_prior": 0.063,
+          "card_type_prior": 0.04,
+          "source_intent_prior": 0.14,
+          "rerank_score": 0.827833,
+          "has_unit_anchor": true,
+          "citation_anchor": {
+            "anchor_confidence": "high",
+            "anchor_label": "The Umbrex Post-Merger Integration Playbook—Section 1: Pre-Merger Planning 15 1.4 Prepare an Int",
+            "anchor_match_score": 1.0,
+            "locator": "page:19",
+            "locator_type": "page",
+            "matched_terms": [
+              "Umbrex",
+              "Post-Merger",
+              "Integration",
+              "Playbook",
+              "Section",
+              "Pre-Merger",
+              "Planning",
+              "Prepare"
+            ],
+            "source_id": "SRC-CONSULT-012"
+          }
+        },
+        {
           "source_id": "SRC-CONSULT-002",
           "card_id": "CARD-SRC-CONSULT-002-EXP-002",
           "base_score": 0.611965,
@@ -2616,34 +2644,6 @@
               "Business"
             ],
             "source_id": "SRC-CONSULT-002"
-          }
-        },
-        {
-          "source_id": "SRC-CONSULT-012",
-          "card_id": "CARD-SRC-CONSULT-012-EXP-002",
-          "base_score": 0.584833,
-          "keyword_prior": 0.063,
-          "card_type_prior": 0.04,
-          "source_intent_prior": 0.0,
-          "rerank_score": 0.687833,
-          "has_unit_anchor": true,
-          "citation_anchor": {
-            "anchor_confidence": "high",
-            "anchor_label": "The Umbrex Post-Merger Integration Playbook—Section 1: Pre-Merger Planning 15 1.4 Prepare an Int",
-            "anchor_match_score": 1.0,
-            "locator": "page:19",
-            "locator_type": "page",
-            "matched_terms": [
-              "Umbrex",
-              "Post-Merger",
-              "Integration",
-              "Playbook",
-              "Section",
-              "Pre-Merger",
-              "Planning",
-              "Prepare"
-            ],
-            "source_id": "SRC-CONSULT-012"
           }
         },
         {
@@ -2731,10 +2731,10 @@
           }
         }
       ],
-      "source_recall_at_1": false,
+      "source_recall_at_1": true,
       "source_recall_at_5": true,
       "top1_has_unit_anchor": true,
-      "anchored_citation_at_1": false,
+      "anchored_citation_at_1": true,
       "anchored_citation_at_5": true
     },
     {
@@ -3523,8 +3523,8 @@
           "base_score": 0.638664,
           "keyword_prior": 0.117,
           "card_type_prior": 0.055,
-          "source_intent_prior": 0.0,
-          "rerank_score": 0.810664,
+          "source_intent_prior": 0.13,
+          "rerank_score": 0.940664,
           "has_unit_anchor": true,
           "citation_anchor": {
             "anchor_confidence": "high",
@@ -3551,8 +3551,8 @@
           "base_score": 0.629084,
           "keyword_prior": 0.036,
           "card_type_prior": 0.055,
-          "source_intent_prior": 0.0,
-          "rerank_score": 0.720084,
+          "source_intent_prior": -0.03,
+          "rerank_score": 0.690084,
           "has_unit_anchor": true,
           "citation_anchor": {
             "anchor_confidence": "high",
@@ -5789,6 +5789,62 @@
       "answerable_by_registered_source": true,
       "top_sources": [
         {
+          "source_id": "SRC-CONSULT-004",
+          "card_id": "CARD-SRC-CONSULT-004-EXP-005",
+          "base_score": 0.545648,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.055,
+          "source_intent_prior": 0.11,
+          "rerank_score": 0.746648,
+          "has_unit_anchor": true,
+          "citation_anchor": {
+            "anchor_confidence": "high",
+            "anchor_label": "Bright Future Energy Solutions",
+            "anchor_match_score": 1.0,
+            "locator": "slide:8",
+            "locator_type": "slide",
+            "matched_terms": [
+              "Bright",
+              "Future",
+              "Energy",
+              "Solutions",
+              "Record",
+              "Financial",
+              "Performance",
+              "million"
+            ],
+            "source_id": "SRC-CONSULT-004"
+          }
+        },
+        {
+          "source_id": "SRC-CONSULT-007",
+          "card_id": "CARD-SRC-CONSULT-007-EXP-005",
+          "base_score": 0.571026,
+          "keyword_prior": 0.045,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.11,
+          "rerank_score": 0.726026,
+          "has_unit_anchor": true,
+          "citation_anchor": {
+            "anchor_confidence": "high",
+            "anchor_label": "3. Infrastructure & Technology1. Building ManagementInspect and confirm the adequacy of space f",
+            "anchor_match_score": 1.0,
+            "locator": "page:13",
+            "locator_type": "page",
+            "matched_terms": [
+              "Infrastructure",
+              "Technology1",
+              "Building",
+              "Management",
+              "Inspect",
+              "confirm",
+              "adequacy",
+              "space"
+            ],
+            "source_id": "SRC-CONSULT-007"
+          }
+        },
+        {
           "source_id": "SRC-CONSULT-002",
           "card_id": "CARD-SRC-CONSULT-002-EXP-004",
           "base_score": 0.626138,
@@ -5814,34 +5870,6 @@
               "Treacy"
             ],
             "source_id": "SRC-CONSULT-002"
-          }
-        },
-        {
-          "source_id": "SRC-CONSULT-004",
-          "card_id": "CARD-SRC-CONSULT-004-EXP-005",
-          "base_score": 0.545648,
-          "keyword_prior": 0.036,
-          "card_type_prior": 0.055,
-          "source_intent_prior": 0.0,
-          "rerank_score": 0.636648,
-          "has_unit_anchor": true,
-          "citation_anchor": {
-            "anchor_confidence": "high",
-            "anchor_label": "Bright Future Energy Solutions",
-            "anchor_match_score": 1.0,
-            "locator": "slide:8",
-            "locator_type": "slide",
-            "matched_terms": [
-              "Bright",
-              "Future",
-              "Energy",
-              "Solutions",
-              "Record",
-              "Financial",
-              "Performance",
-              "million"
-            ],
-            "source_id": "SRC-CONSULT-004"
           }
         },
         {
@@ -5899,40 +5927,12 @@
             ],
             "source_id": "SRC-CONSULT-011"
           }
-        },
-        {
-          "source_id": "SRC-CONSULT-007",
-          "card_id": "CARD-SRC-CONSULT-007-EXP-005",
-          "base_score": 0.571026,
-          "keyword_prior": 0.045,
-          "card_type_prior": 0.0,
-          "source_intent_prior": 0.0,
-          "rerank_score": 0.616026,
-          "has_unit_anchor": true,
-          "citation_anchor": {
-            "anchor_confidence": "high",
-            "anchor_label": "3. Infrastructure & Technology1. Building ManagementInspect and confirm the adequacy of space f",
-            "anchor_match_score": 1.0,
-            "locator": "page:13",
-            "locator_type": "page",
-            "matched_terms": [
-              "Infrastructure",
-              "Technology1",
-              "Building",
-              "Management",
-              "Inspect",
-              "confirm",
-              "adequacy",
-              "space"
-            ],
-            "source_id": "SRC-CONSULT-007"
-          }
         }
       ],
-      "source_recall_at_1": false,
+      "source_recall_at_1": true,
       "source_recall_at_5": true,
       "top1_has_unit_anchor": true,
-      "anchored_citation_at_1": false,
+      "anchored_citation_at_1": true,
       "anchored_citation_at_5": true
     },
     {
@@ -7173,31 +7173,85 @@
       "answerable_by_registered_source": true,
       "top_sources": [
         {
-          "source_id": "SRC-CONSULT-005",
-          "card_id": "CARD-SRC-CONSULT-005-EXP-010",
-          "base_score": 0.578479,
-          "keyword_prior": 0.018,
+          "source_id": "SRC-CONSULT-001",
+          "card_id": "CARD-SRC-CONSULT-001-EXP-006",
+          "base_score": 0.560516,
+          "keyword_prior": 0.0,
           "card_type_prior": 0.0,
-          "source_intent_prior": 0.0,
-          "rerank_score": 0.596479,
+          "source_intent_prior": 0.16,
+          "rerank_score": 0.720516,
           "has_unit_anchor": true,
           "citation_anchor": {
             "anchor_confidence": "high",
-            "anchor_label": "We look further to hearing from you with any feedback you may have on this proposal.",
+            "anchor_label": "Checklist: Characteristics of a useful problem definition",
             "anchor_match_score": 1.0,
-            "locator": "paragraph:33",
-            "locator_type": "paragraph",
+            "locator": "slide:15",
+            "locator_type": "slide",
             "matched_terms": [
-              "look",
-              "further",
-              "hearing",
-              "you",
-              "any",
-              "feedback",
-              "may",
-              "have"
+              "Checklist",
+              "Characteristics",
+              "useful",
+              "problem",
+              "definition",
+              "Phrased",
+              "question",
+              "Stakeholders"
             ],
-            "source_id": "SRC-CONSULT-005"
+            "source_id": "SRC-CONSULT-001"
+          }
+        },
+        {
+          "source_id": "SRC-CONSULT-014",
+          "card_id": "CARD-SRC-CONSULT-014-EXP-003",
+          "base_score": 0.576172,
+          "keyword_prior": 0.0,
+          "card_type_prior": -0.04,
+          "source_intent_prior": 0.16,
+          "rerank_score": 0.696172,
+          "has_unit_anchor": true,
+          "citation_anchor": {
+            "anchor_confidence": "high",
+            "anchor_label": "Are you seeking support from an independent consultant?",
+            "anchor_match_score": 1.0,
+            "locator": "sheet:About Umbrex#row:7",
+            "locator_type": "sheet_row",
+            "matched_terms": [
+              "Are",
+              "you",
+              "seeking",
+              "support",
+              "independent",
+              "consultant"
+            ],
+            "source_id": "SRC-CONSULT-014"
+          }
+        },
+        {
+          "source_id": "SRC-CONSULT-006",
+          "card_id": "CARD-SRC-CONSULT-006-EXP-003",
+          "base_score": 0.530366,
+          "keyword_prior": 0.0,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.16,
+          "rerank_score": 0.690366,
+          "has_unit_anchor": true,
+          "citation_anchor": {
+            "anchor_confidence": "high",
+            "anchor_label": "RFP Playbook: Glossary of Terms 155 Glossary of Terms 1. RFP (Request for Proposal): A document",
+            "anchor_match_score": 1.0,
+            "locator": "page:155",
+            "locator_type": "page",
+            "matched_terms": [
+              "RFP",
+              "Playbook",
+              "Glossary",
+              "Terms",
+              "Request",
+              "Proposal",
+              "document",
+              "outlines"
+            ],
+            "source_id": "SRC-CONSULT-006"
           }
         },
         {
@@ -7255,68 +7309,12 @@
             ],
             "source_id": "SRC-CONSULT-009"
           }
-        },
-        {
-          "source_id": "SRC-CONSULT-001",
-          "card_id": "CARD-SRC-CONSULT-001-EXP-006",
-          "base_score": 0.560516,
-          "keyword_prior": 0.0,
-          "card_type_prior": 0.0,
-          "source_intent_prior": 0.0,
-          "rerank_score": 0.560516,
-          "has_unit_anchor": true,
-          "citation_anchor": {
-            "anchor_confidence": "high",
-            "anchor_label": "Checklist: Characteristics of a useful problem definition",
-            "anchor_match_score": 1.0,
-            "locator": "slide:15",
-            "locator_type": "slide",
-            "matched_terms": [
-              "Checklist",
-              "Characteristics",
-              "useful",
-              "problem",
-              "definition",
-              "Phrased",
-              "question",
-              "Stakeholders"
-            ],
-            "source_id": "SRC-CONSULT-001"
-          }
-        },
-        {
-          "source_id": "SRC-CONSULT-004",
-          "card_id": "CARD-SRC-CONSULT-004-EXP-001",
-          "base_score": 0.55735,
-          "keyword_prior": 0.0,
-          "card_type_prior": 0.0,
-          "source_intent_prior": 0.0,
-          "rerank_score": 0.55735,
-          "has_unit_anchor": true,
-          "citation_anchor": {
-            "anchor_confidence": "high",
-            "anchor_label": "About the",
-            "anchor_match_score": 1.0,
-            "locator": "slide:3",
-            "locator_type": "slide",
-            "matched_terms": [
-              "About",
-              "Umbrex",
-              "Executive",
-              "Summary",
-              "Slide",
-              "Templates",
-              "are",
-              "grouped"
-            ],
-            "source_id": "SRC-CONSULT-004"
-          }
         }
       ],
-      "source_recall_at_1": false,
+      "source_recall_at_1": true,
       "source_recall_at_5": true,
       "top1_has_unit_anchor": true,
-      "anchored_citation_at_1": false,
+      "anchored_citation_at_1": true,
       "anchored_citation_at_5": true
     },
     {

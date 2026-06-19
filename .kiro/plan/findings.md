@@ -326,3 +326,43 @@ Immediate next sprint:
 - rerank tuning for `CONSULT-EVAL-014`, `CONSULT-EVAL-017`, `CONSULT-EVAL-038`, and `CONSULT-EVAL-047`;
 - legal/source-owner review packet;
 - runtime decision for local, private staging, provider, or hybrid deployment.
+
+## Full Extraction Readiness Sprint
+
+Artifacts created:
+
+- Full source register: `drafts/analysis/consultant-role-kb-full-source-register-20260619.csv`.
+- Full source register report: `drafts/analysis/consultant-role-kb-full-source-register-report-20260619.md`.
+- Parser unit-manifest CLI: `tmp/consultant_role_kb_parser_unit_manifest_20260619.py`.
+- Parser unit manifest: `tmp/consultant-role-kb-parser-unit-manifest-20260619.jsonl`.
+- Parser manifest report: `drafts/analysis/consultant-role-kb-parser-unit-manifest-report-20260619.md`.
+- Card QA validator: `tmp/consultant_role_kb_card_qa_validator_20260619.py`.
+- Card QA report: `drafts/analysis/consultant-role-kb-card-qa-validation-report-20260619.md`.
+- Legal/source-owner review packet: `drafts/analysis/consultant-role-kb-legal-source-owner-review-packet-20260619.md`.
+- Runtime ADR: `drafts/analysis/consultant-agent-runtime-adr-20260619.md`.
+- Sprint execution report: `drafts/analysis/consultant-role-kb-next-sprint-execution-report-20260619.md`.
+
+Evidence:
+
+- Full register covers 81/81 profiled sources.
+- Intake split: 15 `ready_for_poc`, 66 `registered`.
+- All 81 sources remain `license_status=pending_legal_review`.
+- Parser manifest covers 81/81 sources with parse_error_count = 0.
+- Parser unit count = 23310, including 9407 PDF pages, 572 PPTX slides, 12112 XLSX sheet rows, 1178 CSV rows, 36 DOCX paragraphs, and 5 EPUB sections.
+- Card QA over 150 expanded cards has failure_count = 0 and locator_manifest_coverage = 1.0.
+- Rerank tuning cleared the four expanded answerable rank-1 misses; current expanded answerable anchored_citation@1 = 1.0 and @5 = 1.0.
+- Answer-trace fixture remains 12/12.
+
+Remaining blockers:
+
+- Legal/source-owner approval is not complete.
+- Persistent storage policy for derived cards remains pending.
+- No full 81-source typed-card extraction has started.
+- No durable vector store, retrieval API, staging service, provider generation, or production deployment has been built.
+
+Boundary:
+
+- `production unchanged`.
+- `no KB provider call`.
+- `no live KB ingestion`.
+- Raw `consult/` files remain local-only.

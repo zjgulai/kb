@@ -39,9 +39,9 @@ Source/card priors:
 
 | metric | BGE only | BGE + source prior rerank |
 |---|---:|---:|
-| all_eval source_recall@1 | 0.66 | 0.92 |
+| all_eval source_recall@1 | 0.66 | 0.94 |
 | all_eval source_recall@5 | 0.9 | 0.96 |
-| answerable_eval source_recall@1 | not separately reported in BGE baseline | 0.9583 |
+| answerable_eval source_recall@1 | not separately reported in BGE baseline | 0.9792 |
 | answerable_eval source_recall@5 | not separately reported in BGE baseline | 1.0 |
 | hash_baseline all_eval source_recall@1 | 0.76 | n/a |
 | hash_baseline all_eval source_recall@5 | 0.86 | n/a |
@@ -52,7 +52,7 @@ Counts:
 - eval_count: 50
 - answerable_eval_count: 48
 - no_allowed_source_eval_count: 2
-- answerable_top1_failures: 2
+- answerable_top1_failures: 1
 - answerable_top5_failures: 0
 
 ## 3. Category Metrics
@@ -62,7 +62,7 @@ Counts:
 | deliverable_workflow | 10 | 1.0 | 1.0 |
 | diagnostic_planning | 10 | 1.0 | 1.0 |
 | methodology_selection | 10 | 1.0 | 1.0 |
-| refusal_unknown | 10 | 0.6 | 0.8 |
+| refusal_unknown | 10 | 0.7 | 0.8 |
 | source_lookup | 10 | 1.0 | 1.0 |
 
 ## 4. Interpretation
@@ -76,7 +76,6 @@ This is still not production evidence. It uses a small 33-card synthetic sample 
 Answerable top1 failures remain useful for next iteration:
 
 - `CONSULT-EVAL-043` expected `['SRC-CONSULT-010', 'SRC-CONSULT-011']`, top3 `['SRC-CONSULT-004', 'SRC-CONSULT-005', 'SRC-CONSULT-002']`.
-- `CONSULT-EVAL-047` expected `['SRC-CONSULT-001', 'SRC-CONSULT-006', 'SRC-CONSULT-014']`, top3 `['SRC-CONSULT-002', 'SRC-CONSULT-005', 'SRC-CONSULT-001']`.
 
 ## 6. Next Gate
 

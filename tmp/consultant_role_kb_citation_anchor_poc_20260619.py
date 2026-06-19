@@ -234,6 +234,31 @@ def parse_xlsx(path: Path, preferred_sheet: str | None = None) -> list[dict[str,
     return units
 
 
+def parse_csv(path: Path) -> list[dict[str, Any]]:
+    units = []
+    try:
+        with path.open(encoding="utf-8-sig", newline="") as handle:
+            rows = list(csv.reader(handle))
+    except UnicodeDecodeError:
+        with path.open(encoding="latin-1", newline="") as handle:
+            rows = list(csv.reader(handle))
+    for row_idx, row in enumerate(rows, start=1):
+        values = [str(value).strip() for value in row if value not in (None, "")]
+        if not values:
+            continue
+        text = " ".join(values)
+        units.append(
+            {
+                "locator_type": "csv_row",
+                "locator": f"row:{row_idx}",
+                "label": safe_label(text, 96),
+                "text": text,
+                "row_index": row_idx,
+            }
+        )
+    return units
+
+
 def load_units(path: Path, card: dict[str, Any]) -> list[dict[str, Any]]:
     suffix = path.suffix.lower()
     if suffix == ".pptx":
@@ -244,6 +269,8 @@ def load_units(path: Path, card: dict[str, Any]) -> list[dict[str, Any]]:
         return parse_docx(path)
     if suffix == ".xlsx":
         return parse_xlsx(path, card.get("sheet_name"))
+    if suffix == ".csv":
+        return parse_csv(path)
     return []
 
 
@@ -291,6 +318,7 @@ def score_anchor(card: dict[str, Any], anchors: list[dict[str, Any]]) -> dict[st
         "slide",
         "sheet_row",
         "paragraph",
+        "csv_row",
     }
     return {
         "card_id": card["card_id"],

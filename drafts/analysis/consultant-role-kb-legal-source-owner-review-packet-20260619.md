@@ -10,6 +10,7 @@ source_documents:
   - "drafts/analysis/consultant-role-kb-batch30-card-qa-validation-report-20260619.md"
   - "drafts/analysis/consultant-role-kb-batch60-card-qa-validation-report-20260619.md"
   - "drafts/analysis/consultant-role-kb-all-extractable-card-qa-validation-report-20260619.md"
+  - "drafts/analysis/consultant-role-kb-csv-loader-support-report-20260619.md"
   - "drafts/analysis/consultant-role-kb-all-extractable-vector-store-report-20260619.md"
   - "drafts/analysis/consultant-role-kb-human-gold-locator-labels-report-20260619.md"
   - "drafts/analysis/consultant-role-kb-human-label-review-workflow-20260619.md"
@@ -77,15 +78,16 @@ provider-backed `consultant-agent` use.
 | batch-60 answerable anchored_citation@5 | 1.0 |
 | batch-60 answer trace pass rate | 1.0 |
 | batch-60 skipped sources | SRC-CONSULT-030; SRC-CONSULT-031 |
-| all-extractable local cards already QA-checked | 780 |
-| all-extractable selected sources | 78 |
+| all-extractable local cards already QA-checked | 800 |
+| all-extractable selected sources | 80 |
 | all-extractable card QA failure_count | 0 |
 | all-extractable answerable anchored_citation@1 | 0.9792 |
 | all-extractable answerable anchored_citation@5 | 1.0 |
 | all-extractable answer trace pass rate | 1.0 |
-| all-extractable skipped sources | SRC-CONSULT-016; SRC-CONSULT-030; SRC-CONSULT-031 |
-| durable local vector-store records | 780 |
-| durable local vector-store embedding rows | 780 |
+| all-extractable skipped sources | SRC-CONSULT-016 |
+| CSV loader support | SRC-CONSULT-030 and SRC-CONSULT-031 selected with csv_row locators |
+| durable local vector-store records | 780 pre-CSV |
+| durable local vector-store embedding rows | 780 pre-CSV |
 | durable local vector-store answerable reranked source_recall@5 | 1.0 |
 | durable local vector-store provider calls | 0 |
 | durable local vector-store live KB writes | 0 |
@@ -128,7 +130,7 @@ Human interpretation:
 | Can raw `consult/` files be committed or redistributed? | No, keep local-only unless legal explicitly approves. | legal/source owner |
 | Can full source register metadata be committed? | Approved at project-local gate because it stores metadata, hashes, parser route, and governance flags, not source text. | project owner; legal/source owner still pending |
 | Can parser unit manifests be committed? | Approved at project-local gate for structural locator manifests that do not store source text. | project owner; legal/source owner still pending |
-| Can derived typed cards be stored persistently before legal review? | Existing 150 draft cards, batch-30, batch-60, and all-extractable draft cards are allowed as local eval artifacts. | project owner; legal/source owner still pending |
+| Can derived typed cards be stored persistently before legal review? | Existing 150 draft cards, batch-30, batch-60, and 800 all-extractable draft cards are allowed as local eval artifacts. | project owner; legal/source owner still pending |
 | Can local vector indexes be built from draft cards? | Yes for local PoC only; no live KB or external service. | technical owner/source owner |
 | Can pending locator label seeds be reviewed into approved gold labels? | Yes, but reviewer decisions must be explicit and recorded before using them as human-gold evidence. | source owner/domain reviewer |
 | Is the review workflow ready for reviewer input? | Yes as a local/draft queue and decision template; no labels are approved until a reviewer fills decisions and validation passes. | source owner/domain reviewer |
@@ -145,6 +147,7 @@ Human interpretation:
 - [x] Project-local: confirm whether local-only embedding/indexing is acceptable.
 - [ ] Confirm whether internal staging can use the 15-source P1 card set.
 - [x] Project-local: confirm whether full extraction should run in batches: 15 -> 30 -> 60 -> 81.
+- [x] Add CSV loader support for `SRC-CONSULT-030` and `SRC-CONSULT-031` as `csv_row` locator cards.
 - [ ] Confirm whether any source must be quarantined before batch extraction.
 - [ ] Confirm whether duplicate EPUB/PDF pairs should prefer PDF anchors.
 - [x] Generate review queue and decision template for pending locator label seeds.
@@ -175,9 +178,11 @@ retention, `approve_batch_expansion_30`, `approve_batch_expansion_60`,
 `approve_all_extractable_expansion`, durable local vector-store packaging, and
 pending locator label seeding, locator label review workflow generation,
 runtime ADR acceptance, and draft staging auth/audit contract design are now
-recorded. The next local step should move to actual human review of locator
-labels, CSV loader support for the two registered insufficient-unit CSV sources,
-or security-approved staging implementation.
+recorded. CSV loader support now covers the two previously insufficient-unit
+registered CSV sources in the 800-card all-extractable set. The next local step
+should move to rebuilding the durable vector store/API from the 800-card set,
+actual human review of locator labels, or security-approved staging
+implementation.
 
 Do not approve online provider-backed `consultant-agent` until legal/source-owner
 and security review explicitly permits retrieved KB content to leave the local

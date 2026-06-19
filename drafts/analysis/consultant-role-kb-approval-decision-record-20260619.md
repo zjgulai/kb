@@ -40,12 +40,13 @@ approve production launch.
 | `tmp/consultant-role-kb-batch60-card-qa-validation-20260619.json` | QA `failure_count=0` |
 | `tmp/consultant-role-kb-batch60-anchored-retrieval-citation-eval-20260619.json` | answerable anchored_citation@1 `0.9792`, @5 `1.0`, source-only citation violations `0` |
 | `tmp/consultant-role-kb-batch60-answer-trace-eval-20260619.json` | answer trace `12/12`, trace pass rate `1.0` |
-| `drafts/analysis/consultant-role-kb-all-extractable-source-selection-20260619.csv` | 78 selected currently extractable sources |
-| `tmp/consultant-role-kb-all-extractable-cards-20260619.jsonl` | 780 local draft cards |
+| `drafts/analysis/consultant-role-kb-all-extractable-source-selection-20260619.csv` | 80 selected non-duplicate extractable sources |
+| `tmp/consultant-role-kb-all-extractable-cards-20260619.jsonl` | 800 local draft cards |
 | `tmp/consultant-role-kb-all-extractable-card-qa-validation-20260619.json` | QA `failure_count=0` |
 | `tmp/consultant-role-kb-all-extractable-anchored-retrieval-citation-eval-20260619.json` | answerable anchored_citation@1 `0.9792`, @5 `1.0`, source-only citation violations `0` |
 | `tmp/consultant-role-kb-all-extractable-answer-trace-eval-20260619.json` | answer trace `12/12`, trace pass rate `1.0` |
-| `shared/indexes/consultant-agent/all-extractable-bge-small-zh-v1-5-20260619/manifest.json` | durable local vector store with 780 records, 780 embedding rows, 78 sources, 512-dim local BGE embeddings |
+| `drafts/analysis/consultant-role-kb-csv-loader-support-report-20260619.md` | `SRC-CONSULT-030` and `SRC-CONSULT-031` now have `csv_row` locator cards in the all-extractable set |
+| `shared/indexes/consultant-agent/all-extractable-bge-small-zh-v1-5-20260619/manifest.json` | pre-CSV durable local vector store with 780 records, 780 embedding rows, 78 sources, 512-dim local BGE embeddings |
 | `tmp/consultant-role-kb-all-extractable-vector-store-smoke-20260619.json` | vector plus deterministic rerank answerable source_recall@1 `0.9583`, @5 `1.0`; raw vector-only @5 `0.75`; provider calls `0`; live KB writes `0` |
 | `shared/eval/consultant-agent/human-gold-locator-labels.seed-20260619.jsonl` | 50 pending-review label seeds; 48 locator candidates; 2 policy-only refusal labels; no human-approved labels yet |
 | `tmp/consultant-role-kb-human-gold-locator-labels-qa-20260619.json` | label QA `failure_count=0`, locator coverage `1.0`, provider calls `0`, live KB writes `0` |
@@ -67,13 +68,16 @@ extractions.
 
 ## 3.2 All-Extractable Selection Note
 
-The all-extractable batch selected 78 sources. `SRC-CONSULT-016` was skipped
-as the duplicate EPUB secondary to the preferred PDF source. `SRC-CONSULT-030`
-and `SRC-CONSULT-031` remain skipped because the current loader produced 0
-extractable units for each.
+The all-extractable batch now selects 80 non-duplicate sources after CSV loader
+support. `SRC-CONSULT-016` remains skipped as the duplicate EPUB secondary to
+the preferred PDF source. `SRC-CONSULT-030` and `SRC-CONSULT-031` now produce
+`csv_row` locator cards and are included in the 800-card all-extractable set.
+The durable local vector store and local retrieval API still index the previous
+780-card set and must be rebuilt before claiming runtime retrieval coverage for
+these CSV cards.
 
 ## 4. Next Decision Candidates
 
 - Whether and when a human reviewer should approve, override, reject, or mark pending locator labels as needing discussion.
 - Whether to implement staging auth, audit logging, and deployment topology for the no-provider retrieval API after legal/security approval.
-- Whether to add CSV extraction support for `SRC-CONSULT-030` and `SRC-CONSULT-031`.
+- Whether to rebuild durable local indexing and the local retrieval API from the 800-card all-extractable set.

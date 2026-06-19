@@ -8,11 +8,11 @@
     "production_impact": "production unchanged",
     "implementation_status": "local expanded regression only; no live KB ingestion",
     "ranking_label_leakage": "none; allowed_source_ids are used only for evaluation",
-    "indexed_card_count": 780,
+    "indexed_card_count": 800,
     "eval_count": 50,
     "answerable_eval_count": 48,
     "no_allowed_source_eval_count": 2,
-    "elapsed_seconds": 16.292,
+    "elapsed_seconds": 14.905,
     "all_eval": {
       "count": 50,
       "source_recall_at_1": 0.94,
@@ -1428,6 +1428,25 @@
           }
         },
         {
+          "source_id": "SRC-CONSULT-031",
+          "card_id": "CARD-SRC-CONSULT-031-ALLX-010",
+          "base_score": 0.646631,
+          "keyword_prior": 0.063,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.709631,
+          "has_unit_anchor": true,
+          "citation_anchor": {
+            "anchor_confidence": "high",
+            "anchor_label": "2004-09-01 5.4",
+            "anchor_match_score": 1.0,
+            "locator": "row:10",
+            "locator_type": "csv_row",
+            "matched_terms": [],
+            "source_id": "SRC-CONSULT-031"
+          }
+        },
+        {
           "source_id": "SRC-CONSULT-029",
           "card_id": "CARD-SRC-CONSULT-029-ALLX-009",
           "base_score": 0.613998,
@@ -1456,59 +1475,27 @@
           }
         },
         {
-          "source_id": "SRC-CONSULT-025",
-          "card_id": "CARD-SRC-CONSULT-025-ALLX-008",
-          "base_score": 0.59709,
-          "keyword_prior": 0.018,
+          "source_id": "SRC-CONSULT-030",
+          "card_id": "CARD-SRC-CONSULT-030-ALLX-002",
+          "base_score": 0.591023,
+          "keyword_prior": 0.063,
           "card_type_prior": 0.0,
           "source_intent_prior": 0.0,
-          "rerank_score": 0.61509,
+          "rerank_score": 0.654023,
           "has_unit_anchor": true,
           "citation_anchor": {
             "anchor_confidence": "high",
-            "anchor_label": "Create Your Own Internship Playbook: Chapter 4—Create Initial Set of Ideas for Target List 13 Ch",
+            "anchor_label": "2004-02-01 Patagonia jacket United States 6.5",
             "anchor_match_score": 1.0,
-            "locator": "page:14",
-            "locator_type": "page",
+            "locator": "row:3",
+            "locator_type": "csv_row",
             "matched_terms": [
-              "Create",
-              "Your",
-              "Own",
-              "Internship",
-              "Playbook",
-              "Initial",
-              "Set",
-              "Ideas"
+              "Patagonia",
+              "jacket",
+              "United",
+              "States"
             ],
-            "source_id": "SRC-CONSULT-025"
-          }
-        },
-        {
-          "source_id": "SRC-CONSULT-002",
-          "card_id": "CARD-SRC-CONSULT-002-ALLX-004",
-          "base_score": 0.566932,
-          "keyword_prior": 0.036,
-          "card_type_prior": 0.0,
-          "source_intent_prior": 0.0,
-          "rerank_score": 0.602932,
-          "has_unit_anchor": true,
-          "citation_anchor": {
-            "anchor_confidence": "high",
-            "anchor_label": "Umbrex thought leadership",
-            "anchor_match_score": 1.0,
-            "locator": "slide:14",
-            "locator_type": "slide",
-            "matched_terms": [
-              "Umbrex",
-              "thought",
-              "leadership",
-              "Produce",
-              "Unleashed",
-              "leading",
-              "podcast",
-              "how"
-            ],
-            "source_id": "SRC-CONSULT-002"
+            "source_id": "SRC-CONSULT-030"
           }
         }
       ],
@@ -2972,6 +2959,25 @@
           }
         },
         {
+          "source_id": "SRC-CONSULT-031",
+          "card_id": "CARD-SRC-CONSULT-031-ALLX-002",
+          "base_score": 0.647403,
+          "keyword_prior": 0.063,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.710403,
+          "has_unit_anchor": true,
+          "citation_anchor": {
+            "anchor_confidence": "high",
+            "anchor_label": "2004-01-01 5.7",
+            "anchor_match_score": 1.0,
+            "locator": "row:2",
+            "locator_type": "csv_row",
+            "matched_terms": [],
+            "source_id": "SRC-CONSULT-031"
+          }
+        },
+        {
           "source_id": "SRC-CONSULT-029",
           "card_id": "CARD-SRC-CONSULT-029-ALLX-010",
           "base_score": 0.64679,
@@ -3025,34 +3031,6 @@
               "access"
             ],
             "source_id": "SRC-CONSULT-002"
-          }
-        },
-        {
-          "source_id": "SRC-CONSULT-017",
-          "card_id": "CARD-SRC-CONSULT-017-ALLX-002",
-          "base_score": 0.588556,
-          "keyword_prior": 0.063,
-          "card_type_prior": 0.04,
-          "source_intent_prior": 0.0,
-          "rerank_score": 0.691556,
-          "has_unit_anchor": true,
-          "citation_anchor": {
-            "anchor_confidence": "high",
-            "anchor_label": "The B2B Go-to-Market Strategy Handbook 13 o KPIs and Benchmarks: A GTM strategy defines key perf",
-            "anchor_match_score": 1.0,
-            "locator": "page:13",
-            "locator_type": "page",
-            "matched_terms": [
-              "B2B",
-              "Go-to-Market",
-              "Strategy",
-              "Handbook",
-              "KPIs",
-              "Benchmarks",
-              "GTM",
-              "defines"
-            ],
-            "source_id": "SRC-CONSULT-017"
           }
         }
       ],
@@ -4225,6 +4203,25 @@
           }
         },
         {
+          "source_id": "SRC-CONSULT-031",
+          "card_id": "CARD-SRC-CONSULT-031-ALLX-002",
+          "base_score": 0.644208,
+          "keyword_prior": 0.063,
+          "card_type_prior": 0.025,
+          "source_intent_prior": 0.0,
+          "rerank_score": 0.732208,
+          "has_unit_anchor": true,
+          "citation_anchor": {
+            "anchor_confidence": "high",
+            "anchor_label": "2004-01-01 5.7",
+            "anchor_match_score": 1.0,
+            "locator": "row:2",
+            "locator_type": "csv_row",
+            "matched_terms": [],
+            "source_id": "SRC-CONSULT-031"
+          }
+        },
+        {
           "source_id": "SRC-CONSULT-080",
           "card_id": "CARD-SRC-CONSULT-080-ALLX-008",
           "base_score": 0.61403,
@@ -4250,34 +4247,6 @@
               "Can"
             ],
             "source_id": "SRC-CONSULT-080"
-          }
-        },
-        {
-          "source_id": "SRC-CONSULT-009",
-          "card_id": "CARD-SRC-CONSULT-009-ALLX-004",
-          "base_score": 0.596251,
-          "keyword_prior": 0.018,
-          "card_type_prior": 0.055,
-          "source_intent_prior": 0.0,
-          "rerank_score": 0.669251,
-          "has_unit_anchor": true,
-          "citation_anchor": {
-            "anchor_confidence": "high",
-            "anchor_label": "2. Chief Marketing Officer (CMO) or Head of Marketing1. CX StrategyqHow is the company's brand p",
-            "anchor_match_score": 1.0,
-            "locator": "page:20",
-            "locator_type": "page",
-            "matched_terms": [
-              "Chief",
-              "Marketing",
-              "Officer",
-              "CMO",
-              "Head",
-              "Marketing1",
-              "StrategyqHow",
-              "company"
-            ],
-            "source_id": "SRC-CONSULT-009"
           }
         }
       ],

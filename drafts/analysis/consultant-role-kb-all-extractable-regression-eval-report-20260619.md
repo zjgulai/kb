@@ -21,7 +21,7 @@ This eval uses the all-extractable local cards and local BGE + source-prior rera
 
 | metric | value |
 |---|---:|
-| indexed_card_count | 780 |
+| indexed_card_count | 800 |
 | eval_count | 50 |
 | answerable_eval_count | 48 |
 | all_eval source_recall@1 | 0.94 |

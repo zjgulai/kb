@@ -9,6 +9,7 @@ source_documents:
   - "drafts/analysis/consultant-role-kb-batch30-regression-eval-report-20260619.md"
   - "drafts/analysis/consultant-role-kb-batch60-regression-eval-report-20260619.md"
   - "drafts/analysis/consultant-role-kb-all-extractable-regression-eval-report-20260619.md"
+  - "drafts/analysis/consultant-role-kb-csv-loader-support-report-20260619.md"
   - "drafts/analysis/consultant-role-kb-all-extractable-vector-store-report-20260619.md"
   - "drafts/analysis/consultant-role-kb-human-gold-locator-labels-report-20260619.md"
   - "drafts/analysis/consultant-role-kb-private-retrieval-api-report-20260619.md"
@@ -33,8 +34,8 @@ The local consultant-role KB PoC now has:
 - full 81-source draft register;
 - full parser unit manifest with 81/81 parse success;
 - 150 QA-checked local cards from the first 15 sources;
-- 780 QA-checked local cards from 78 currently extractable sources;
-- durable local vector-store package for 780 all-extractable cards;
+- 800 QA-checked local cards from 80 non-duplicate extractable sources after CSV loader support;
+- durable local vector-store package for the previous 780 all-extractable cards, pending rebuild for CSV coverage;
 - pending-review locator label seed for 50 eval items;
 - private no-provider local retrieval API prototype;
 - all-extractable answerable anchored_citation@1 = 0.9792 and anchored_citation@5 = 1.0;
@@ -46,9 +47,9 @@ The unresolved blockers are legal/license review, human approval of locator
 labels, persistent derived-card policy, provider policy, staging auth, audit
 logging, and production deployment target.
 
-Current extraction exclusions: `SRC-CONSULT-016` is a duplicate EPUB secondary
-to the preferred PDF source, while `SRC-CONSULT-030` and `SRC-CONSULT-031` are
-registered CSV sources that currently produce insufficient extractable units.
+Current extraction exclusion: `SRC-CONSULT-016` is a duplicate EPUB secondary
+to the preferred PDF source. `SRC-CONSULT-030` and `SRC-CONSULT-031` now produce
+`csv_row` locator cards in the all-extractable local card set.
 
 ## 3. Decision
 
@@ -115,6 +116,7 @@ Private staging must additionally enforce:
 - source-only citation violations = 0;
 - audit logs and rollback path are implemented.
 - staging auth/audit contract validation has `failure_count = 0`.
+- durable vector store and local retrieval API are rebuilt from the current 800-card set before claiming CSV runtime retrieval coverage.
 
 ## 7. Consequences
 

@@ -179,3 +179,17 @@ provider_call_boundary: "no KB provider call"
 - Generated `tmp/consultant-role-kb-human-label-review-workflow-validation-20260619.json`.
 - Human label review workflow validation result: seed_label_count = 50, review_queue_count = 50, decision_template_count = 50, locator_candidate_count = 48, policy_refusal_count = 2, pending_decision_count = 50, approved_decision_count = 0, failure_count = 0, provider_call_count = 0, live_kb_write_count = 0.
 - Boundary remains: review workflow only; no human approval recorded, no staging deployment, no provider call, no live KB ingestion.
+- User approved continuing the next round; proceeded with CSV loader support for `SRC-CONSULT-030` and `SRC-CONSULT-031`.
+- Attempted to rerun the full all-extractable expansion with system Python and hit missing `openpyxl`; switched to bundled Python for parser dependencies.
+- Attempted full reparse with bundled Python, but interrupted it because the full PDF/Office parse was too slow for a localized CSV-loader change; switched to a bounded incremental CSV support script.
+- Updated parser/anchor/gate/regression scripts to accept `.csv` files and `csv_row` locator types.
+- Created and ran `tmp/consultant_role_kb_csv_loader_support_20260619.py`.
+- Generated `tmp/consultant-role-kb-csv-supported-cards-20260619.jsonl` and `drafts/analysis/consultant-role-kb-csv-loader-support-report-20260619.md`.
+- Updated `tmp/consultant-role-kb-all-extractable-cards-20260619.jsonl`, `tmp/consultant-role-kb-all-extractable-card-gate-eval-20260619.json`, `drafts/analysis/consultant-role-kb-all-extractable-source-selection-20260619.csv`, and the all-extractable expansion report.
+- CSV loader support result: `SRC-CONSULT-030` has 941 CSV units and 10 cards; `SRC-CONSULT-031` has 237 CSV units and 10 cards; locator type is `csv_row`.
+- Updated all-extractable result: selected_source_count = 80, card_count = 800, source_count = 80, metadata_completeness = 1.0, unit_locator_coverage = 1.0, source_only_citation_violation_count = 0, long_text_violation_count = 0, provider_call_count = 0, live_kb_write_count = 0.
+- Reran all-extractable card QA: card_count = 800, registered_source_coverage = 1.0, locator_manifest_coverage = 1.0, blocked_actions_complete_rate = 1.0, high_risk_review_routed_rate = 1.0, failure_count = 0.
+- Reran all-extractable retrieval/citation regression after adding `csv_row` as an allowed locator type: indexed_card_count = 800, answerable anchored_citation@1 = 0.9792, answerable anchored_citation@5 = 1.0, source_only_citation_violation_count = 0, gate_threshold_pass = true.
+- All-extractable answer-trace remains green: trace_pass_count = 12/12 and trace_pass_rate = 1.0.
+- Durable local vector store and local retrieval API still point at the previous 780-record index; they must be rebuilt from the 800-card set before claiming CSV coverage in runtime retrieval.
+- Boundary remains: local draft artifacts only, `production unchanged`, no KB provider call, no live KB ingestion, no human label approval, and no legal/source-owner clearance.

@@ -27,7 +27,7 @@ GATE_OUT = ROOT / "tmp/consultant-role-kb-batch30-card-gate-eval-20260619.json"
 REPORT_OUT = ROOT / "drafts/analysis/consultant-role-kb-batch30-expansion-report-20260619.md"
 
 MAX_CARDS_PER_SOURCE = 10
-ALLOWED_LOCATOR_TYPES = {"page", "slide", "sheet_row", "paragraph"}
+ALLOWED_LOCATOR_TYPES = {"page", "slide", "sheet_row", "paragraph", "csv_row"}
 REQUIRED_FIELDS = {
     "card_id",
     "card_type",
@@ -221,7 +221,7 @@ def card_for_unit(source: dict[str, str], unit: dict[str, Any], ordinal: int) ->
             "source_unit_locator": unit["locator"],
             "source_anchors": [anchor_for(source["source_id"], unit)],
             "citation_anchor_policy": {
-                "allowed_citation_granularity": ["page", "slide", "sheet_row", "paragraph"],
+                "allowed_citation_granularity": ["page", "slide", "sheet_row", "paragraph", "csv_row"],
                 "blocked": ["long_source_text_reproduction", "source_only_citation_for_final_answer"],
                 "boundary": "local PoC only; no KB provider call; production unchanged",
             },

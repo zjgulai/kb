@@ -46,6 +46,7 @@ Resolved on 2026-06-19:
 7. Private no-provider retrieval API prototype has been built and locally smoked; this is not a staging deployment.
 8. Staging auth/audit contract has been designed and locally validated; this is not a staging deployment.
 9. Human label review workflow has been generated and locally validated; no label approvals have been recorded.
+10. CSV loader support has been added for `SRC-CONSULT-030` and `SRC-CONSULT-031`; the all-extractable local card set now has 800 cards across 80 non-duplicate sources.
 
 Still open:
 
@@ -53,4 +54,4 @@ Still open:
 2. Whether raw `consult/` third-party source files can ever be committed after legal/license review.
 3. Whether to run actual manual reviewer decisions over the locator label queue.
 4. Whether to implement staging auth, audit logs, and deployment topology for the no-provider API after legal/security approval.
-5. Whether to add special CSV extraction support for `SRC-CONSULT-030` and `SRC-CONSULT-031`.
+5. Whether to rebuild the durable vector store and local retrieval API from the 800-card all-extractable set after CSV loader support.

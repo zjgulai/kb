@@ -29,7 +29,7 @@ write cards to a live KB, call a provider, or deploy production.
 
 | metric | value |
 |---|---:|
-| card_count | 780 |
+| card_count | 800 |
 | metadata_completeness | 1.0 |
 | registered_source_coverage | 1.0 |
 | metadata_match_rate | 1.0 |
@@ -38,7 +38,7 @@ write cards to a live KB, call a provider, or deploy production.
 | source_only_citation_violation_count | 0 |
 | long_text_violation_count | 0 |
 | blocked_actions_complete_rate | 1.0 |
-| high_risk_card_count | 720 |
+| high_risk_card_count | 740 |
 | high_risk_review_routed_rate | 1.0 |
 | failure_count | 0 |
 | provider_call_count | 0 |
@@ -50,7 +50,7 @@ write cards to a live KB, call a provider, or deploy production.
 |---|---:|
 | client_development_card | 20 |
 | consult_method_card | 250 |
-| consulting_kpi_card | 30 |
+| consulting_kpi_card | 50 |
 | deliverable_template_card | 70 |
 | diagnostic_dimension_card | 110 |
 | industry_analysis_card | 300 |

@@ -32,7 +32,7 @@ TRACE_OUT = ROOT / "tmp/consultant-role-kb-expanded-answer-trace-fixture-2026061
 TRACE_EVAL_OUT = ROOT / "tmp/consultant-role-kb-expanded-answer-trace-eval-20260619.json"
 TRACE_REPORT_OUT = ROOT / "drafts/analysis/consultant-role-kb-expanded-answer-trace-fixture-report-20260619.md"
 
-ALLOWED_LOCATOR_TYPES = {"page", "slide", "sheet_row", "paragraph"}
+ALLOWED_LOCATOR_TYPES = {"page", "slide", "sheet_row", "paragraph", "csv_row"}
 FIXTURE_EVAL_IDS = [
     "CONSULT-EVAL-001",
     "CONSULT-EVAL-008",

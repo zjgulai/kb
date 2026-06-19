@@ -1,7 +1,7 @@
 {
   "summary": {
-    "card_count": 780,
-    "source_count": 78,
+    "card_count": 800,
+    "source_count": 80,
     "metadata_completeness": 1.0,
     "unit_locator_coverage": 1.0,
     "source_only_citation_violation_count": 0,
@@ -37,6 +37,8 @@
       "SRC-CONSULT-027": 10,
       "SRC-CONSULT-028": 10,
       "SRC-CONSULT-029": 10,
+      "SRC-CONSULT-030": 10,
+      "SRC-CONSULT-031": 10,
       "SRC-CONSULT-032": 10,
       "SRC-CONSULT-033": 10,
       "SRC-CONSULT-034": 10,
@@ -91,7 +93,7 @@
     "by_card_type": {
       "client_development_card": 20,
       "consult_method_card": 250,
-      "consulting_kpi_card": 30,
+      "consulting_kpi_card": 50,
       "deliverable_template_card": 70,
       "diagnostic_dimension_card": 110,
       "industry_analysis_card": 300
@@ -2891,6 +2893,206 @@
     {
       "card_id": "CARD-SRC-CONSULT-029-ALLX-010",
       "source_id": "SRC-CONSULT-029",
+      "card_type": "consulting_kpi_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-030-ALLX-001",
+      "source_id": "SRC-CONSULT-030",
+      "card_type": "consulting_kpi_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-030-ALLX-002",
+      "source_id": "SRC-CONSULT-030",
+      "card_type": "consulting_kpi_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-030-ALLX-003",
+      "source_id": "SRC-CONSULT-030",
+      "card_type": "consulting_kpi_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-030-ALLX-004",
+      "source_id": "SRC-CONSULT-030",
+      "card_type": "consulting_kpi_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-030-ALLX-005",
+      "source_id": "SRC-CONSULT-030",
+      "card_type": "consulting_kpi_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-030-ALLX-006",
+      "source_id": "SRC-CONSULT-030",
+      "card_type": "consulting_kpi_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-030-ALLX-007",
+      "source_id": "SRC-CONSULT-030",
+      "card_type": "consulting_kpi_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-030-ALLX-008",
+      "source_id": "SRC-CONSULT-030",
+      "card_type": "consulting_kpi_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-030-ALLX-009",
+      "source_id": "SRC-CONSULT-030",
+      "card_type": "consulting_kpi_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-030-ALLX-010",
+      "source_id": "SRC-CONSULT-030",
+      "card_type": "consulting_kpi_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-031-ALLX-001",
+      "source_id": "SRC-CONSULT-031",
+      "card_type": "consulting_kpi_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-031-ALLX-002",
+      "source_id": "SRC-CONSULT-031",
+      "card_type": "consulting_kpi_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-031-ALLX-003",
+      "source_id": "SRC-CONSULT-031",
+      "card_type": "consulting_kpi_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-031-ALLX-004",
+      "source_id": "SRC-CONSULT-031",
+      "card_type": "consulting_kpi_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-031-ALLX-005",
+      "source_id": "SRC-CONSULT-031",
+      "card_type": "consulting_kpi_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-031-ALLX-006",
+      "source_id": "SRC-CONSULT-031",
+      "card_type": "consulting_kpi_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-031-ALLX-007",
+      "source_id": "SRC-CONSULT-031",
+      "card_type": "consulting_kpi_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-031-ALLX-008",
+      "source_id": "SRC-CONSULT-031",
+      "card_type": "consulting_kpi_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-031-ALLX-009",
+      "source_id": "SRC-CONSULT-031",
+      "card_type": "consulting_kpi_card",
+      "missing_required_fields": [],
+      "metadata_complete": true,
+      "unit_locator_present": true,
+      "source_only_citation_violation": false,
+      "long_text_violation": false
+    },
+    {
+      "card_id": "CARD-SRC-CONSULT-031-ALLX-010",
+      "source_id": "SRC-CONSULT-031",
       "card_type": "consulting_kpi_card",
       "missing_required_fields": [],
       "metadata_complete": true,
@@ -7901,31 +8103,24 @@
   ],
   "metadata": {
     "created_at": "2026-06-19",
-    "scope": "all-extractable consultant-role card expansion",
+    "scope": "all-extractable consultant-role card expansion with CSV row support",
     "provider_call_boundary": "no KB provider call",
     "production_impact": "production unchanged",
     "implementation_status": "local batch cards only; no live KB ingestion",
     "source_register": "drafts/analysis/consultant-role-kb-full-source-register-20260619.csv",
     "source_selection": "drafts/analysis/consultant-role-kb-all-extractable-source-selection-20260619.csv",
     "cards": "tmp/consultant-role-kb-all-extractable-cards-20260619.jsonl",
+    "csv_cards": "tmp/consultant-role-kb-csv-supported-cards-20260619.jsonl",
+    "csv_source_ids": [
+      "SRC-CONSULT-030",
+      "SRC-CONSULT-031"
+    ],
     "skipped_sources": [
       {
         "source_id": "SRC-CONSULT-016",
         "reason": "duplicate_secondary",
         "extractable_unit_count": "",
         "source_title": "B2B Go to Market Strategy Handbook"
-      },
-      {
-        "source_id": "SRC-CONSULT-030",
-        "reason": "insufficient_extractable_units",
-        "extractable_unit_count": 0,
-        "source_title": "Patagonia and TNF jacket search"
-      },
-      {
-        "source_id": "SRC-CONSULT-031",
-        "reason": "insufficient_extractable_units",
-        "extractable_unit_count": 0,
-        "source_title": "UNRATE"
       }
     ]
   }

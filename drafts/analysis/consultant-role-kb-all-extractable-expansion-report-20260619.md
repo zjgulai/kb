@@ -31,8 +31,8 @@ source text.
 
 | metric | value |
 |---|---:|
-| selected_source_count | 78 |
-| card_count | 780 |
+| selected_source_count | 80 |
+| card_count | 800 |
 | metadata_completeness | 1.0 |
 | unit_locator_coverage | 1.0 |
 | source_only_citation_violation_count | 0 |
@@ -40,7 +40,7 @@ source text.
 | provider_call_count | 0 |
 | live_kb_write_count | 0 |
 | skipped_duplicate_sources | 1 |
-| skipped_insufficient_unit_sources | 2 |
+| skipped_insufficient_unit_sources | 0 |
 
 ## 3. Cards By Type
 
@@ -48,7 +48,7 @@ source text.
 |---|---:|
 | client_development_card | 20 |
 | consult_method_card | 250 |
-| consulting_kpi_card | 30 |
+| consulting_kpi_card | 50 |
 | deliverable_template_card | 70 |
 | diagnostic_dimension_card | 110 |
 | industry_analysis_card | 300 |
@@ -58,8 +58,6 @@ source text.
 | source_id | reason | extractable_unit_count |
 |---|---|---:|
 | SRC-CONSULT-016 | duplicate_secondary |  |
-| SRC-CONSULT-030 | insufficient_extractable_units | 0 |
-| SRC-CONSULT-031 | insufficient_extractable_units | 0 |
 
 ## 5. Interpretation
 

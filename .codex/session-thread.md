@@ -42,6 +42,7 @@ provider_call_boundary: "no KB provider call"
 - Reviewer decision questionnaire completed: 88 reviewer-facing question rows generated from the clearance execution pack, with 80 legal/source-owner questions and 8 security/operations questions; official decision templates were not edited and approval_effect_count remains 0.
 - Reviewer questionnaire intake converter completed: unfilled questionnaire derives temporary legal/security candidate JSONL under `tmp/`, validates with failure_count 0, keeps official templates unchanged, and records 0 legal/security approvals.
 - Legal/security official decision promotion preflight completed: current candidate files remain blocked with 81 legal pending decisions, 8 security pending decisions, 0 approvals, 0 changed rows, 5 blockers, official_template_write_count 0, and approval_effect_count 0.
+- Legal/security official decision apply gate completed: default dry-run remains blocked, write_performed false, official_template_write_count 0, approval_effect_count 0, and provider/live counts 0.
 - Runtime-config redacted fixture smoke completed: default missing config remains blocked, redacted-ready fixture passes, and secret-like/private-contact fixture remains blocked without leaking raw values; no external configuration was applied.
 
 ## Active Next Work
@@ -77,6 +78,7 @@ Evidence:
 - reviewer decision questionnaire: questionnaire_row_count 88, legal_question_count 80, security_question_count 8, official_decision_templates_updated false, approval_effect_count 0, provider_call_count 0, live_kb_write_count 0
 - reviewer questionnaire intake: answered_response_count 0, legal candidate decisions 81, security candidate decisions 8, legal selected approved 0/80, security approved 0/8, official_template_write_count 0, approval_effect_count 0, provider_call_count 0, live_kb_write_count 0
 - legal/security official decision promotion preflight: status blocked, legal pending 81, legal selected approved 0/80, security pending 8, security approved 0/8, changed_row_count 0, blocker_count 5, official_template_write_count 0, provider_call_count 0, live_kb_write_count 0
+- legal/security official decision apply gate: status blocked, write_performed false, blocker_count 4, official_template_write_count 0, approval_effect_count 0, provider_call_count 0, live_kb_write_count 0
 - runtime-config redacted fixture smoke: scenario_count 3, pass_count 3, default_missing_config blocked, redacted_ready_fixture ready, secret_like_rejected_fixture blocked, redaction_leak_count 0 for all scenarios, provider_call_count 0, live_kb_write_count 0
 
 Raw `consult/` source files remain excluded by `.gitignore`; only `consult/README.md` is tracked.
@@ -94,6 +96,7 @@ Next blockers:
 - the reviewer decision questionnaire can guide human review, but the official legal/source-owner and security/operations JSONL decision files still require real reviewer input;
 - the questionnaire intake converter can create candidate JSONL files, but candidate files under `tmp/` are not approval evidence until accepted into official decision files or supplied to manual intake through reviewed external paths;
 - the legal/security official decision promotion preflight now exists, but current candidates are no-op pending sets; a later official update still requires reviewed candidate decisions and explicit acceptance authorization;
+- the legal/security official decision apply gate now exists, but default dry-run is blocked and no official template write has occurred;
 - redacted runtime fixtures prove validation mechanics only; they are not external configuration, security approval, or staging deployment evidence;
 - no provider call, live KB ingestion, staging deployment, or production launch has occurred.
 - next local build choices: human-label review decisions, official accepted-decision promotion workflow, shared-staging deployment gate after approvals, or PRD addendum promotion after human/legal review.

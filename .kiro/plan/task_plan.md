@@ -61,6 +61,7 @@ Resolved on 2026-06-19:
 22. Human-label reviewer questionnaire and intake converter have been generated and locally validated; the unfilled questionnaire derives 50 pending candidate decisions, 0 approvals, and leaves the official decision template unchanged.
 23. Human-label candidate promotion preflight has been generated and locally validated; current candidate is blocked with 50 pending decisions, 0 approved decisions, and official template writes 0.
 24. Legal/source-owner and security official decision promotion preflight has been generated and locally validated; current candidates are blocked with 81 legal pending decisions, 8 security pending decisions, 0 approvals, and official template writes 0.
+25. Legal/source-owner and security official decision apply gate has been generated and locally validated; default dry-run is blocked, write_performed is false, and official template writes remain 0.
 
 Still open:
 
@@ -74,3 +75,4 @@ Still open:
 8. Whether filled human-label questionnaire candidate JSONL should be accepted into the official human-label decision file before claiming reviewer-approved human-gold metrics.
 9. Whether to supply a fully reviewed human-label candidate and explicit acceptance authorization for a later deliberate official decision-file update step.
 10. Whether to supply reviewed legal/source-owner and security candidate files plus explicit acceptance authorization for a later deliberate official decision-file update step.
+11. Whether to run the legal/security official decision apply gate with reviewed candidates and explicit apply mode after the promotion preflight becomes ready.

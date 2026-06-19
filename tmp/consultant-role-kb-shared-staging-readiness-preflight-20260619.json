@@ -2,13 +2,13 @@
   "ok": true,
   "ready_for_shared_staging": false,
   "status": "blocked",
-  "created_at": "2026-06-19T10:42:56Z",
+  "created_at": "2026-06-19T11:07:39Z",
   "production_impact": "production unchanged",
   "provider_call_boundary": "no KB provider call",
   "live_kb_ingestion": "no live KB ingestion",
   "shared_staging_deployment": "not deployed",
-  "check_count": 23,
-  "pass_count": 17,
+  "check_count": 24,
+  "pass_count": 18,
   "warning_count": 0,
   "blocker_count": 6,
   "blockers": [
@@ -29,28 +29,28 @@
     {
       "check_id": "external_auth_token_hash_configured",
       "status": "blocker",
-      "evidence": "environment:KB_STAGING_AUTH_TOKEN_SHA256",
+      "evidence": "tmp/consultant-role-kb-staging-runtime-config-preflight-20260619.json",
       "detail": "token hash status=missing; secret value is not logged",
       "required_for_shared_staging": true
     },
     {
       "check_id": "external_audit_path_configured",
       "status": "blocker",
-      "evidence": "environment:KB_STAGING_AUDIT_PATH",
+      "evidence": "tmp/consultant-role-kb-staging-runtime-config-preflight-20260619.json",
       "detail": "audit path status=missing; environment variable is not set",
       "required_for_shared_staging": true
     },
     {
       "check_id": "rate_limit_configured",
       "status": "blocker",
-      "evidence": "environment:KB_STAGING_RATE_LIMIT_CONFIGURED",
+      "evidence": "tmp/consultant-role-kb-staging-runtime-config-preflight-20260619.json",
       "detail": "rate limiting must be configured at private ingress or middleware before shared staging",
       "required_for_shared_staging": true
     },
     {
       "check_id": "rollback_owner_recorded",
       "status": "blocker",
-      "evidence": "environment:KB_STAGING_ROLLBACK_OWNER",
+      "evidence": "tmp/consultant-role-kb-staging-runtime-config-preflight-20260619.json",
       "detail": "rollback owner is not recorded in local environment; value is not logged",
       "required_for_shared_staging": true
     }
@@ -155,6 +155,13 @@
       "required_for_shared_staging": true
     },
     {
+      "check_id": "staging_runtime_config_preflight_green",
+      "status": "pass",
+      "evidence": "tmp/consultant-role-kb-staging-runtime-config-preflight-20260619.json",
+      "detail": "external runtime configuration preflight must validate without logging secrets or private contact details; observed=True, expected=True",
+      "required_for_shared_staging": true
+    },
+    {
       "check_id": "human_label_gate_policy_recorded",
       "status": "pass",
       "evidence": "tmp/consultant-role-kb-manual-decision-intake-preflight-20260619.json",
@@ -192,28 +199,28 @@
     {
       "check_id": "external_auth_token_hash_configured",
       "status": "blocker",
-      "evidence": "environment:KB_STAGING_AUTH_TOKEN_SHA256",
+      "evidence": "tmp/consultant-role-kb-staging-runtime-config-preflight-20260619.json",
       "detail": "token hash status=missing; secret value is not logged",
       "required_for_shared_staging": true
     },
     {
       "check_id": "external_audit_path_configured",
       "status": "blocker",
-      "evidence": "environment:KB_STAGING_AUDIT_PATH",
+      "evidence": "tmp/consultant-role-kb-staging-runtime-config-preflight-20260619.json",
       "detail": "audit path status=missing; environment variable is not set",
       "required_for_shared_staging": true
     },
     {
       "check_id": "rate_limit_configured",
       "status": "blocker",
-      "evidence": "environment:KB_STAGING_RATE_LIMIT_CONFIGURED",
+      "evidence": "tmp/consultant-role-kb-staging-runtime-config-preflight-20260619.json",
       "detail": "rate limiting must be configured at private ingress or middleware before shared staging",
       "required_for_shared_staging": true
     },
     {
       "check_id": "rollback_owner_recorded",
       "status": "blocker",
-      "evidence": "environment:KB_STAGING_ROLLBACK_OWNER",
+      "evidence": "tmp/consultant-role-kb-staging-runtime-config-preflight-20260619.json",
       "detail": "rollback owner is not recorded in local environment; value is not logged",
       "required_for_shared_staging": true
     }
@@ -221,5 +228,7 @@
   "source_text_returned": false,
   "human_label_gate_policy": "machine_seeded_eval_only_do_not_claim_human_gold",
   "human_label_gate_waived_for_staging": true,
-  "human_gold_metrics_claimed": false
+  "human_gold_metrics_claimed": false,
+  "runtime_config_ready": false,
+  "runtime_config_blocker_count": 4
 }

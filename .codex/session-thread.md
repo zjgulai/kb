@@ -28,11 +28,13 @@ provider_call_boundary: "no KB provider call"
 - Private no-provider retrieval API prototype completed and re-smoked against the 800-record index: localhost/private `/health`, `/retrieve`, and `/eval/label-seed`; smoke failure_count 0, label_seed_match_at_5 1.0, policy_refusal_pass_rate 1.0.
 - Draft staging auth/audit contract completed: private ingress/auth/RBAC/audit schema design, JSON schema, and local validator; contract validation failure_count 0 over allowed and denied sample events.
 - Local staging auth/audit harness completed: localhost-only wrapper around the private retrieval API with bearer-token hash auth, role-gated protected endpoints, and audit events for allowed, denied, and policy-refusal requests; smoke failure_count 0, audit_schema_failure_count 0, audit_forbidden_leak_count 0.
-- Shared staging readiness preflight completed: local preflight and draft runbook exist, but readiness is blocked with 7 blockers after legal/security workflow integration; no shared staging deployment has occurred.
+- Shared staging readiness preflight completed: local preflight and draft runbook exist, but readiness is blocked with 6 blockers after product-owner human-label gate policy and runtime-config integration; no shared staging deployment has occurred.
 - Legal/source-owner decision workflow completed: 81 pending source decision rows and 80 selected runtime sources pending; shared staging legal clearance remains false.
 - Security/staging-control decision workflow completed: 8 pending security/operations control rows, 0 approved controls, 0 configured external controls, secret_like_value_count 0; shared staging security readiness remains false.
-- Manual decision intake preflight completed: current default decision templates are structurally valid, but manual_decision_intake_ready is false with 0/50 human labels, 0/80 selected sources, and 0/8 security controls approved.
+- Manual decision intake preflight completed: current default decision templates are structurally valid. Product-owner Q4:D waives the human-gold label gate for machine-seeded staging evidence only; reviewer-approved human labels remain 0/50 and human-gold metrics are not claimed.
 - Manual decision intake smoke completed: default pending templates block, synthetic all-approved fixtures pass, invalid synthetic human decisions fail, provider/live-write counts stay 0, and synthetic fixtures are removed before exit.
+- Product-owner decision record completed: Q1-Q7 captured as product intent only, raw `consult/` files remain excluded from GitHub, future Tencent Cloud Lighthouse upload is a separate deployment gate, and provider calls remain disabled.
+- Staging runtime config preflight completed: current runtime_config_ready is false with 4 external config blockers: auth token hash, external audit path, rate limit status, and rollback owner. It logs no secret value, private contact detail, source text, provider call, or live KB write.
 
 ## Active Next Work
 
@@ -56,9 +58,10 @@ Evidence:
 - local staging auth/audit harness smoke: record_count 800, allowed HTTP 200, policy refusal HTTP 200, missing-token 401, RBAC denial 403, label_seed_match_at_5 1.0, policy_refusal_pass_rate 1.0, audit events 5, failure_count 0, provider_call_count 0, live_kb_write_count 0
 - legal/source-owner decision workflow: source_count 81, selected_source_count 80, pending_review_count 81, selected_approved_internal_staging_count 0, failure_count 0
 - security/staging-control decision workflow: control_count 8, pending_review_count 8, approved_control_count 0, configured_external_control_count 0, secret_like_value_count 0, failure_count 0
-- manual decision intake preflight: manual_decision_intake_ready false, blocker_count 3, failure_count 0, human approved 0/50, legal selected approved 0/80, security approved 0/8
+- manual decision intake preflight: manual_decision_intake_ready false, blocker_count 2, failure_count 0, human_label_gate_waived_for_staging true, reviewer-approved human labels 0/50, legal selected approved 0/80, security approved 0/8
 - manual decision intake smoke: ok true, scenario_count 3, default pending blocked, synthetic all-approved ready, invalid synthetic human rejected, no retained synthetic approval evidence
-- shared staging preflight: ready_for_shared_staging false, status blocked, check_count 23, pass_count 16, blocker_count 7, provider_call_count 0, live_kb_write_count 0
+- staging runtime config preflight: runtime_config_ready false, blocker_count 4, secret_value_logged false, private_contact_detail_logged false, provider_call_count 0, live_kb_write_count 0
+- shared staging preflight: ready_for_shared_staging false, status blocked, check_count 24, pass_count 18, blocker_count 6, provider_call_count 0, live_kb_write_count 0
 
 Raw `consult/` source files remain excluded by `.gitignore`; only `consult/README.md` is tracked.
 
@@ -69,6 +72,6 @@ Next blockers:
 - persistent derived-card storage policy is pending;
 - runtime ADR 002 is accepted for local-only now, private staging next, provider/hybrid only after explicit approval;
 - private no-provider retrieval API and staging auth/audit harness are local prototypes only; no staging deployment has occurred;
-- shared staging readiness is blocked by missing human label approval, legal/source-owner clearance over the 80 selected sources, security/operations control approval, external token hash, external audit path, rate limit configuration, and rollback owner;
+- shared staging readiness is blocked by legal/source-owner clearance over the 80 selected sources, security/operations control approval, external token hash, external audit path, rate limit configuration, and rollback owner; human-gold metrics still require separate reviewer-approved labels before they can be claimed;
 - no provider call, live KB ingestion, staging deployment, or production launch has occurred.
 - next local build choices: actual human-review decisions for locator labels, security-approved staging implementation, or PRD addendum promotion after human/legal review.

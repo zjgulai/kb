@@ -106,6 +106,7 @@ def main() -> None:
     legal_workflow = load_json(ROOT / "tmp/consultant-role-kb-legal-source-owner-decision-validation-20260619.json")
     security_workflow = load_json(ROOT / "tmp/consultant-role-kb-security-staging-control-validation-20260619.json")
     manual_intake = load_json(ROOT / "tmp/consultant-role-kb-manual-decision-intake-preflight-20260619.json")
+    runtime_config = load_json(ROOT / "tmp/consultant-role-kb-staging-runtime-config-preflight-20260619.json")
 
     api_metrics = api_smoke["metrics"]
     harness_metrics = harness_smoke["metrics"]
@@ -188,6 +189,7 @@ def main() -> None:
             vector_metrics["provider_call_count"],
             security_workflow["provider_call_count"],
             manual_intake["provider_call_count"],
+            runtime_config["provider_call_count"],
         ),
         0,
         "all readiness evidence must preserve no-provider boundary",
@@ -204,6 +206,7 @@ def main() -> None:
             vector_metrics["live_kb_write_count"],
             security_workflow["live_kb_write_count"],
             manual_intake["live_kb_write_count"],
+            runtime_config["live_kb_write_count"],
         ),
         0,
         "all readiness evidence must preserve no-live-KB-write boundary",
@@ -239,6 +242,14 @@ def main() -> None:
         manual_intake["failure_count"],
         0,
         "manual decision intake must validate before it can affect shared-staging readiness",
+    )
+    add_metric_check(
+        checks,
+        "staging_runtime_config_preflight_green",
+        "tmp/consultant-role-kb-staging-runtime-config-preflight-20260619.json",
+        runtime_config["ok"],
+        True,
+        "external runtime configuration preflight must validate without logging secrets or private contact details",
     )
 
     approved_labels = manual_intake["human_approved_decision_count"]
@@ -306,42 +317,42 @@ def main() -> None:
         )
     )
 
-    token_status = env_status("KB_STAGING_AUTH_TOKEN_SHA256")
+    token_status = runtime_config["auth_token_hash_status"]
     checks.append(
         Check(
             check_id="external_auth_token_hash_configured",
-            status="pass" if token_status == "set" else "blocker",
-            evidence="environment:KB_STAGING_AUTH_TOKEN_SHA256",
+            status="pass" if token_status == "configured_hash_present" else "blocker",
+            evidence="tmp/consultant-role-kb-staging-runtime-config-preflight-20260619.json",
             detail=f"token hash status={token_status}; secret value is not logged",
         )
     )
 
-    audit_status, audit_detail = external_path_status("KB_STAGING_AUDIT_PATH")
+    audit_status = runtime_config["audit_path_status"]
     checks.append(
         Check(
             check_id="external_audit_path_configured",
             status="pass" if audit_status == "external_writable_parent" else "blocker",
-            evidence="environment:KB_STAGING_AUDIT_PATH",
-            detail=f"audit path status={audit_status}; {audit_detail}",
+            evidence="tmp/consultant-role-kb-staging-runtime-config-preflight-20260619.json",
+            detail=f"audit path status={audit_status}; {runtime_config['audit_path_detail']}",
         )
     )
 
-    rate_limit_status = os.environ.get("KB_STAGING_RATE_LIMIT_CONFIGURED", "").lower()
+    rate_limit_status = runtime_config["rate_limit_status"]
     checks.append(
         Check(
             check_id="rate_limit_configured",
-            status="pass" if rate_limit_status in {"1", "true", "yes"} else "blocker",
-            evidence="environment:KB_STAGING_RATE_LIMIT_CONFIGURED",
+            status="pass" if rate_limit_status == "configured" else "blocker",
+            evidence="tmp/consultant-role-kb-staging-runtime-config-preflight-20260619.json",
             detail="rate limiting must be configured at private ingress or middleware before shared staging",
         )
     )
 
-    rollback_owner = os.environ.get("KB_STAGING_ROLLBACK_OWNER", "")
+    rollback_owner_status = runtime_config["rollback_owner_status"]
     checks.append(
         Check(
             check_id="rollback_owner_recorded",
-            status="pass" if rollback_owner else "blocker",
-            evidence="environment:KB_STAGING_ROLLBACK_OWNER",
+            status="pass" if rollback_owner_status == "recorded_redacted" else "blocker",
+            evidence="tmp/consultant-role-kb-staging-runtime-config-preflight-20260619.json",
             detail="rollback owner is not recorded in local environment; value is not logged",
         )
     )
@@ -369,6 +380,8 @@ def main() -> None:
         "human_label_gate_policy": manual_intake.get("human_label_gate_policy", "not_recorded"),
         "human_label_gate_waived_for_staging": human_gate_waived,
         "human_gold_metrics_claimed": bool(manual_intake.get("human_gold_metrics_claimed", False)),
+        "runtime_config_ready": bool(runtime_config["runtime_config_ready"]),
+        "runtime_config_blocker_count": int(runtime_config["blocker_count"]),
     }
     OUT_JSON.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
@@ -392,6 +405,7 @@ source_documents:
   - "tmp/consultant-role-kb-security-staging-control-validation-20260619.json"
   - "tmp/consultant-role-kb-manual-decision-intake-preflight-20260619.json"
   - "tmp/consultant-role-kb-product-owner-decision-validation-20260619.json"
+  - "tmp/consultant-role-kb-staging-runtime-config-preflight-20260619.json"
 scope: "preflight gate before any security-approved shared staging deployment"
 production_impact: "production unchanged"
 provider_call_boundary: "no KB provider call"
@@ -419,6 +433,8 @@ provider, ingest into a live KB, approve labels, or clear source licensing.
 | live_kb_write_count | 0 |
 | human_label_gate_waived_for_staging | {str(human_gate_waived).lower()} |
 | human_gold_metrics_claimed | {str(payload["human_gold_metrics_claimed"]).lower()} |
+| runtime_config_ready | {str(payload["runtime_config_ready"]).lower()} |
+| runtime_config_blocker_count | {payload["runtime_config_blocker_count"]} |
 
 ## 2. Blockers
 

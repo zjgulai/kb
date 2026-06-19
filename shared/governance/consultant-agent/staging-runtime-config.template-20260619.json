@@ -1,0 +1,41 @@
+{
+  "artifact_type": "staging_runtime_config_template",
+  "created_at": "2026-06-19T11:07:39Z",
+  "runtime_config_ready": false,
+  "required_environment": [
+    {
+      "env": "KB_STAGING_AUTH_TOKEN_SHA256",
+      "purpose": "SHA-256 hash of bearer token",
+      "repository_rule": "hash status only; never commit raw token",
+      "current_status": "not_configured"
+    },
+    {
+      "env": "KB_STAGING_AUDIT_PATH",
+      "purpose": "append-only audit JSONL path outside repository",
+      "repository_rule": "path must resolve outside repository; audit content must avoid raw source text",
+      "current_status": "not_configured"
+    },
+    {
+      "env": "KB_STAGING_RATE_LIMIT_CONFIGURED",
+      "purpose": "operator assertion that rate limiting is configured",
+      "repository_rule": "status only; no private ingress config details",
+      "current_status": "not_configured"
+    },
+    {
+      "env": "KB_STAGING_ROLLBACK_OWNER",
+      "purpose": "accountable rollback owner",
+      "repository_rule": "record presence only; do not store private contact details",
+      "current_status": "not_configured"
+    },
+    {
+      "env": "KB_STAGING_PRIVATE_INGRESS_CONFIGURED",
+      "purpose": "operator assertion for approved private ingress",
+      "repository_rule": "status only; approval remains in security decision workflow",
+      "current_status": "not_configured"
+    }
+  ],
+  "secret_redaction_boundary": "do not store secret values, raw tokens, passwords, private keys, or private contact details in this repository",
+  "production_impact": "production unchanged",
+  "provider_call_boundary": "no KB provider call",
+  "live_kb_ingestion": "no live KB ingestion"
+}

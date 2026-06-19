@@ -11,6 +11,7 @@ source_documents:
   - "tmp/consultant-role-kb-security-staging-control-validation-20260619.json"
   - "tmp/consultant-role-kb-manual-decision-intake-preflight-20260619.json"
   - "tmp/consultant-role-kb-product-owner-decision-validation-20260619.json"
+  - "tmp/consultant-role-kb-staging-runtime-config-preflight-20260619.json"
 scope: "preflight gate before any security-approved shared staging deployment"
 production_impact: "production unchanged"
 provider_call_boundary: "no KB provider call"
@@ -30,14 +31,16 @@ provider, ingest into a live KB, approve labels, or clear source licensing.
 |---|---:|
 | ready_for_shared_staging | false |
 | status | blocked |
-| check_count | 23 |
-| pass_count | 17 |
+| check_count | 24 |
+| pass_count | 18 |
 | warning_count | 0 |
 | blocker_count | 6 |
 | provider_call_count | 0 |
 | live_kb_write_count | 0 |
 | human_label_gate_waived_for_staging | true |
 | human_gold_metrics_claimed | false |
+| runtime_config_ready | false |
+| runtime_config_blocker_count | 4 |
 
 ## 2. Blockers
 
@@ -45,10 +48,10 @@ provider, ingest into a live KB, approve labels, or clear source licensing.
 |---|---|---|
 | `legal_source_owner_clearance` | tmp/consultant-role-kb-manual-decision-intake-preflight-20260619.json | selected_approved_internal_staging_count=0/80; legal/source-owner clearance remains pending |
 | `security_controls_approved` | tmp/consultant-role-kb-manual-decision-intake-preflight-20260619.json | approved_control_count=0/8; security/operations controls remain pending |
-| `external_auth_token_hash_configured` | environment:KB_STAGING_AUTH_TOKEN_SHA256 | token hash status=missing; secret value is not logged |
-| `external_audit_path_configured` | environment:KB_STAGING_AUDIT_PATH | audit path status=missing; environment variable is not set |
-| `rate_limit_configured` | environment:KB_STAGING_RATE_LIMIT_CONFIGURED | rate limiting must be configured at private ingress or middleware before shared staging |
-| `rollback_owner_recorded` | environment:KB_STAGING_ROLLBACK_OWNER | rollback owner is not recorded in local environment; value is not logged |
+| `external_auth_token_hash_configured` | tmp/consultant-role-kb-staging-runtime-config-preflight-20260619.json | token hash status=missing; secret value is not logged |
+| `external_audit_path_configured` | tmp/consultant-role-kb-staging-runtime-config-preflight-20260619.json | audit path status=missing; environment variable is not set |
+| `rate_limit_configured` | tmp/consultant-role-kb-staging-runtime-config-preflight-20260619.json | rate limiting must be configured at private ingress or middleware before shared staging |
+| `rollback_owner_recorded` | tmp/consultant-role-kb-staging-runtime-config-preflight-20260619.json | rollback owner is not recorded in local environment; value is not logged |
 
 ## 3. All Checks
 
@@ -68,15 +71,16 @@ provider, ingest into a live KB, approve labels, or clear source licensing.
 | `legal_source_owner_workflow_generated` | pass | tmp/consultant-role-kb-legal-source-owner-decision-validation-20260619.json |
 | `security_control_workflow_generated` | pass | tmp/consultant-role-kb-security-staging-control-validation-20260619.json |
 | `manual_decision_intake_preflight_green` | pass | tmp/consultant-role-kb-manual-decision-intake-preflight-20260619.json |
+| `staging_runtime_config_preflight_green` | pass | tmp/consultant-role-kb-staging-runtime-config-preflight-20260619.json |
 | `human_label_gate_policy_recorded` | pass | tmp/consultant-role-kb-manual-decision-intake-preflight-20260619.json |
 | `legal_source_owner_clearance` | blocker | tmp/consultant-role-kb-manual-decision-intake-preflight-20260619.json |
 | `security_controls_approved` | blocker | tmp/consultant-role-kb-manual-decision-intake-preflight-20260619.json |
 | `raw_consult_not_tracked` | pass | git ls-files consult |
 | `rollback_runbook_exists` | pass | drafts/analysis/consultant-role-kb-shared-staging-runbook-20260619.md |
-| `external_auth_token_hash_configured` | blocker | environment:KB_STAGING_AUTH_TOKEN_SHA256 |
-| `external_audit_path_configured` | blocker | environment:KB_STAGING_AUDIT_PATH |
-| `rate_limit_configured` | blocker | environment:KB_STAGING_RATE_LIMIT_CONFIGURED |
-| `rollback_owner_recorded` | blocker | environment:KB_STAGING_ROLLBACK_OWNER |
+| `external_auth_token_hash_configured` | blocker | tmp/consultant-role-kb-staging-runtime-config-preflight-20260619.json |
+| `external_audit_path_configured` | blocker | tmp/consultant-role-kb-staging-runtime-config-preflight-20260619.json |
+| `rate_limit_configured` | blocker | tmp/consultant-role-kb-staging-runtime-config-preflight-20260619.json |
+| `rollback_owner_recorded` | blocker | tmp/consultant-role-kb-staging-runtime-config-preflight-20260619.json |
 
 ## 4. Interpretation
 

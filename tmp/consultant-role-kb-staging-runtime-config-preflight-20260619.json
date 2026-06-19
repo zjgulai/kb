@@ -1,0 +1,33 @@
+{
+  "ok": true,
+  "artifact_type": "staging_runtime_config_validation",
+  "created_at": "2026-06-19T11:07:39Z",
+  "schema": "shared/governance/consultant-agent/staging-runtime-config.schema-20260619.json",
+  "template": "shared/governance/consultant-agent/staging-runtime-config.template-20260619.json",
+  "runtime_config_ready": false,
+  "status": "blocked",
+  "blocker_count": 4,
+  "failure_count": 0,
+  "blockers": [
+    "external_auth_token_hash_not_configured",
+    "external_audit_path_not_configured",
+    "rate_limit_not_configured",
+    "rollback_owner_not_recorded"
+  ],
+  "auth_token_hash_status": "missing",
+  "audit_path_status": "missing",
+  "audit_path_detail": "environment variable is not set",
+  "rate_limit_status": "missing",
+  "rollback_owner_status": "missing",
+  "private_ingress_status": "localhost_only",
+  "private_ingress_note": "security approval remains required before non-local shared access",
+  "secret_value_logged": false,
+  "private_contact_detail_logged": false,
+  "source_text_returned": false,
+  "provider_call_count": 0,
+  "live_kb_write_count": 0,
+  "production_impact": "production unchanged",
+  "provider_call_boundary": "no KB provider call",
+  "live_kb_ingestion": "no live KB ingestion",
+  "secret_redaction_boundary": "do not store secret values, raw tokens, passwords, private keys, or private contact details in this repository"
+}

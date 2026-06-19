@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Consultant Agent Staging Runtime Config",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "artifact_type",
+    "created_at",
+    "runtime_config_ready",
+    "secret_redaction_boundary",
+    "production_impact",
+    "provider_call_boundary",
+    "live_kb_ingestion"
+  ],
+  "properties": {
+    "artifact_type": {
+      "enum": [
+        "staging_runtime_config_template",
+        "staging_runtime_config_validation"
+      ]
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "schema": {
+      "type": "string"
+    },
+    "template": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "ready",
+        "blocked"
+      ]
+    },
+    "runtime_config_ready": {
+      "type": "boolean"
+    },
+    "blocker_count": {
+      "type": "integer"
+    },
+    "failure_count": {
+      "type": "integer"
+    },
+    "blockers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "required_environment": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "auth_token_hash_status": {
+      "enum": [
+        "missing",
+        "configured_hash_present",
+        "invalid_hash_format",
+        "set_redacted"
+      ]
+    },
+    "audit_path_status": {
+      "enum": [
+        "missing",
+        "inside_repo",
+        "parent_missing",
+        "parent_not_writable",
+        "external_writable_parent"
+      ]
+    },
+    "rate_limit_status": {
+      "enum": [
+        "missing",
+        "configured"
+      ]
+    },
+    "rollback_owner_status": {
+      "enum": [
+        "missing",
+        "recorded_redacted"
+      ]
+    },
+    "private_ingress_status": {
+      "enum": [
+        "not_configured",
+        "configured_externally",
+        "localhost_only"
+      ]
+    },
+    "audit_path_detail": {
+      "type": "string"
+    },
+    "private_ingress_note": {
+      "type": "string"
+    },
+    "secret_value_logged": {
+      "type": "boolean"
+    },
+    "private_contact_detail_logged": {
+      "type": "boolean"
+    },
+    "source_text_returned": {
+      "type": "boolean"
+    },
+    "provider_call_count": {
+      "type": "integer"
+    },
+    "live_kb_write_count": {
+      "type": "integer"
+    },
+    "secret_redaction_boundary": {
+      "const": "do not store secret values, raw tokens, passwords, private keys, or private contact details in this repository"
+    },
+    "production_impact": {
+      "const": "production unchanged"
+    },
+    "provider_call_boundary": {
+      "const": "no KB provider call"
+    },
+    "live_kb_ingestion": {
+      "const": "no live KB ingestion"
+    }
+  }
+}

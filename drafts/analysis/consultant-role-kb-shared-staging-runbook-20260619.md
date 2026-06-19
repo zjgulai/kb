@@ -9,6 +9,7 @@ source_documents:
   - "drafts/analysis/consultant-role-kb-security-staging-control-workflow-20260619.md"
   - "drafts/analysis/consultant-role-kb-manual-decision-intake-preflight-20260619.md"
   - "drafts/analysis/consultant-role-kb-product-owner-decision-record-20260619.md"
+  - "drafts/analysis/consultant-role-kb-staging-runtime-config-preflight-20260619.md"
 scope: "operator runbook for a future security-approved no-provider shared staging pilot"
 production_impact: "production unchanged"
 provider_call_boundary: "no KB provider call"
@@ -60,6 +61,7 @@ Required security decision artifacts:
 | `shared/governance/consultant-agent/security-staging-control-decisions.template-20260619.jsonl` | pending decision template; must be filled outside raw secret values |
 | `tmp/consultant-role-kb-security-staging-control-validation-20260619.json` | validation consumed by the shared-staging preflight |
 | `tmp/consultant-role-kb-product-owner-decision-validation-20260619.json` | product-owner Q1-Q7 decision record; does not replace legal or security approval |
+| `tmp/consultant-role-kb-staging-runtime-config-preflight-20260619.json` | external runtime config status; records only redacted status, never raw values |
 
 Optional runtime environment variables:
 
@@ -82,6 +84,7 @@ Run the local preflight before any shared staging start:
 
 ```bash
 python3 tmp/consultant_role_kb_manual_decision_intake_preflight_20260619.py
+python3 tmp/consultant_role_kb_staging_runtime_config_preflight_20260619.py
 python3 tmp/consultant_role_kb_shared_staging_readiness_preflight_20260619.py
 ```
 

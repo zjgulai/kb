@@ -53,6 +53,7 @@ Resolved on 2026-06-19:
 14. Manual decision intake preflight has been generated and wired into shared-staging readiness; it can validate default or externally supplied human/legal/security decision JSONL files. Product-owner Q4:D now waives the human-gold label gate for machine-seeded staging evidence only, while reviewer-approved human labels remain 0/50 and human-gold metrics must not be claimed.
 15. Manual decision intake smoke has been generated and locally validated with temporary synthetic fixtures; default templates block, synthetic all-approved fixtures pass, invalid synthetic human decisions fail, and no synthetic approval fixture is retained as evidence.
 16. Product-owner Q1-Q7 decisions have been recorded as product intent: all 80 selected sources are intended for internal no-provider staging pending legal/source-owner clearance; raw `consult/` source files must not be committed to GitHub; future Tencent Cloud Lighthouse upload is a separate deployment gate; security controls enter a pending-to-approval lane; provider staging is allowed only as future design, with current provider calls disabled.
+17. Staging runtime config preflight has been generated and wired into shared-staging readiness; it validates only redacted external configuration status and currently blocks on missing auth token hash, external audit path, rate limit status, and rollback owner.
 
 Still open:
 
@@ -60,4 +61,4 @@ Still open:
 2. Whether any future non-GitHub runtime upload of raw `consult/` third-party source files is approved after legal/security/deployment review.
 3. Whether to run actual manual reviewer decisions over the locator label queue before claiming human-gold metrics.
 4. Whether to record legal/source-owner clearance for internal staged retrieval over the selected corpus.
-5. Whether to approve security/operations controls and configure approved external secret storage, append-only audit storage, rate limiting, rollback ownership, and private ingress for the no-provider API.
+5. Whether to approve security/operations controls and externally configure approved secret storage, append-only audit storage, rate limiting, rollback ownership, and private ingress for the no-provider API.

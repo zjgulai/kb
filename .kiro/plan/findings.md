@@ -404,3 +404,41 @@ Remaining blockers:
 - Full 81-source typed-card extraction has not started.
 - No durable local vector store, retrieval API, private staging service, provider generation, or production launch has been built.
 - Human-gold locator labels are still missing; current retrieval metrics are local proxy evidence.
+
+## Batch-60 Local Expansion
+
+The next local extraction batch expanded from batch-30 to batch-60.
+
+Artifacts created:
+
+- Batch-60 source selection: `drafts/analysis/consultant-role-kb-batch60-source-selection-20260619.csv`.
+- Batch-60 expansion script: `tmp/consultant_role_kb_batch60_expansion_20260619.py`.
+- Batch-60 cards: `tmp/consultant-role-kb-batch60-cards-20260619.jsonl`.
+- Batch-60 gate eval: `tmp/consultant-role-kb-batch60-card-gate-eval-20260619.json`.
+- Batch-60 expansion report: `drafts/analysis/consultant-role-kb-batch60-expansion-report-20260619.md`.
+- Batch-60 card QA report: `drafts/analysis/consultant-role-kb-batch60-card-qa-validation-report-20260619.md`.
+- Batch-60 regression script: `tmp/consultant_role_kb_batch60_regression_eval_20260619.py`.
+- Batch-60 retrieval/citation report: `drafts/analysis/consultant-role-kb-batch60-regression-eval-report-20260619.md`.
+- Batch-60 answer-trace report: `drafts/analysis/consultant-role-kb-batch60-answer-trace-fixture-report-20260619.md`.
+
+Evidence:
+
+- Batch-60 selected source count = 60 extractable sources.
+- Batch-60 local draft card count = 600.
+- Expansion gate: metadata_completeness = 1.0, unit_locator_coverage = 1.0, source_only_citation_violation_count = 0, long_text_violation_count = 0, provider_call_count = 0, live_kb_write_count = 0.
+- Card QA: registered_source_coverage = 1.0, locator_manifest_coverage = 1.0, blocked_actions_complete_rate = 1.0, high_risk_review_routed_rate = 1.0, failure_count = 0.
+- Retrieval/citation regression: answerable anchored_citation@1 = 0.9792, answerable anchored_citation@5 = 1.0, source_only_citation_violation_count = 0, gate_threshold_pass = true.
+- Answer-trace fixture: trace_pass_count = 12/12, trace_pass_rate = 1.0.
+- Remaining answerable top1 failure: `CONSULT-EVAL-016`; expected source appears at top2, so this is not a current gate blocker.
+
+Skipped sources:
+
+- `SRC-CONSULT-030` and `SRC-CONSULT-031` produced 0 extractable units under the current loader and remain registered but not typed-card extracted.
+
+Boundary:
+
+- `production unchanged`.
+- `no KB provider call`.
+- `no live KB ingestion`.
+- Raw `consult/` files remain local-only.
+- Legal/source-owner review is still pending.

@@ -46,6 +46,6 @@ Still open:
 
 1. Whether to later promote the PRD addendum into `KB_Platform_PRD.md` after human/legal review.
 2. Whether raw `consult/` third-party source files can ever be committed after legal/license review.
-3. Whether next expansion should move to 60 sources or first add human-gold eval locator labels.
+3. Whether next expansion should move to the remaining extractable sources or first add human-gold eval locator labels.
 4. Whether to build a durable local vector store/index before private staging.
 5. Whether to implement a private no-provider retrieval API as the next agent runtime slice.

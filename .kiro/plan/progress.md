@@ -126,3 +126,12 @@ provider_call_boundary: "no KB provider call"
 - Reran the existing 150-card expanded regression after the rerank changes; answerable anchored_citation@1 = 0.9792, answerable anchored_citation@5 = 1.0, gate_threshold_pass = true.
 - Created `drafts/analysis/consultant-role-kb-approval-decision-record-20260619.md`.
 - Updated the legal/source-owner review packet and ADR 002 to reflect the project-local approvals while preserving `license_status=pending_legal_review`, production unchanged, no provider call, and no live KB ingestion.
+- User asked to continue the next round; proceeded with local batch-60 expansion as the next full-extraction step.
+- Created `tmp/consultant_role_kb_batch60_expansion_20260619.py` and `tmp/consultant_role_kb_batch60_regression_eval_20260619.py`.
+- First batch-60 expansion run failed on `SRC-CONSULT-030` because the current loader produced 0 extractable units; wrote one self-evolution candidate to `~/.codex/evolution/inbox/candidates.jsonl` and updated selection logic to preflight extractable units and skip insufficient sources.
+- Generated `drafts/analysis/consultant-role-kb-batch60-source-selection-20260619.csv`, `tmp/consultant-role-kb-batch60-cards-20260619.jsonl`, `tmp/consultant-role-kb-batch60-card-gate-eval-20260619.json`, and `drafts/analysis/consultant-role-kb-batch60-expansion-report-20260619.md`.
+- Batch-60 expansion result: 60 extractable sources, 600 cards, metadata_completeness = 1.0, unit_locator_coverage = 1.0, source_only_citation_violation_count = 0, long_text_violation_count = 0, provider_call_count = 0, live_kb_write_count = 0.
+- Batch-60 skipped sources: `SRC-CONSULT-030` and `SRC-CONSULT-031`, each with insufficient extractable units under the current loader.
+- Ran batch-60 card QA: card_count = 600, registered_source_coverage = 1.0, locator_manifest_coverage = 1.0, blocked_actions_complete_rate = 1.0, high_risk_review_routed_rate = 1.0, failure_count = 0.
+- Ran batch-60 retrieval/citation regression: answerable anchored_citation@1 = 0.9792, answerable anchored_citation@5 = 1.0, source_only_citation_violation_count = 0, gate_threshold_pass = true.
+- Batch-60 answer-trace result: trace_pass_count = 12/12 and trace_pass_rate = 1.0.

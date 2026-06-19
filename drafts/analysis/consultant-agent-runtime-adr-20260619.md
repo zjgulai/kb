@@ -7,6 +7,7 @@ source_documents:
   - "drafts/analysis/consultant-role-kb-legal-source-owner-review-packet-20260619.md"
   - "drafts/analysis/consultant-role-kb-expanded-regression-eval-report-20260619.md"
   - "drafts/analysis/consultant-role-kb-batch30-regression-eval-report-20260619.md"
+  - "drafts/analysis/consultant-role-kb-batch60-regression-eval-report-20260619.md"
 scope: "runtime decision for consultant-agent from full extraction to staging"
 production_impact: "production unchanged"
 provider_call_boundary: "no KB provider call"
@@ -27,8 +28,8 @@ The local consultant-role KB PoC now has:
 - full 81-source draft register;
 - full parser unit manifest with 81/81 parse success;
 - 150 QA-checked local cards from the first 15 sources;
-- 300 QA-checked local cards from the approved batch-30 source expansion;
-- batch-30 answerable anchored_citation@1 = 0.9792 and anchored_citation@5 = 1.0;
+- 600 QA-checked local cards from the approved batch-60 source expansion;
+- batch-60 answerable anchored_citation@1 = 0.9792 and anchored_citation@5 = 1.0;
 - answer-trace fixture pass rate = 1.0.
 
 The unresolved blockers are legal/license review, persistent derived-card policy,

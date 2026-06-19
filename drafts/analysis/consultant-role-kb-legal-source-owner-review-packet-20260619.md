@@ -8,6 +8,7 @@ source_documents:
   - "drafts/analysis/consultant-role-kb-parser-unit-manifest-report-20260619.md"
   - "drafts/analysis/consultant-role-kb-card-qa-validation-report-20260619.md"
   - "drafts/analysis/consultant-role-kb-batch30-card-qa-validation-report-20260619.md"
+  - "drafts/analysis/consultant-role-kb-batch60-card-qa-validation-report-20260619.md"
 scope: "human review packet for full consultant-agent source and derived-card governance"
 production_impact: "production unchanged"
 provider_call_boundary: "no KB provider call"
@@ -64,6 +65,12 @@ provider-backed `consultant-agent` use.
 | batch-30 answerable anchored_citation@1 | 0.9792 |
 | batch-30 answerable anchored_citation@5 | 1.0 |
 | batch-30 answer trace pass rate | 1.0 |
+| batch-60 local cards already QA-checked | 600 |
+| batch-60 card QA failure_count | 0 |
+| batch-60 answerable anchored_citation@1 | 0.9792 |
+| batch-60 answerable anchored_citation@5 | 1.0 |
+| batch-60 answer trace pass rate | 1.0 |
+| batch-60 skipped sources | SRC-CONSULT-030; SRC-CONSULT-031 |
 
 ## 2. High-Risk Review Buckets
 
@@ -93,7 +100,7 @@ Human interpretation:
 | Can raw `consult/` files be committed or redistributed? | No, keep local-only unless legal explicitly approves. | legal/source owner |
 | Can full source register metadata be committed? | Approved at project-local gate because it stores metadata, hashes, parser route, and governance flags, not source text. | project owner; legal/source owner still pending |
 | Can parser unit manifests be committed? | Approved at project-local gate for structural locator manifests that do not store source text. | project owner; legal/source owner still pending |
-| Can derived typed cards be stored persistently before legal review? | Existing 150 draft cards are allowed to remain; batch-30 draft cards are allowed as local eval artifacts. | project owner; legal/source owner still pending |
+| Can derived typed cards be stored persistently before legal review? | Existing 150 draft cards, batch-30 draft cards, and batch-60 draft cards are allowed as local eval artifacts. | project owner; legal/source owner still pending |
 | Can local vector indexes be built from draft cards? | Yes for local PoC only; no live KB or external service. | technical owner/source owner |
 | Can `consultant-agent` answer users online from this corpus? | Not yet; staging requires legal/source-owner/security approval. | product/legal/security |
 | Can a provider model see retrieved card content? | Not before provider policy and data-use approval. | legal/security/product |
@@ -118,6 +125,7 @@ Human interpretation:
 | approve_local_metadata | Full source register and parser manifests may stay in repo. |
 | approve_local_cards_batch_15 | Existing 150-card P1 batch may remain draft/local and support local eval. |
 | approve_batch_expansion_30 | Next extraction batch may expand to 30 registered sources. |
+| approve_batch_expansion_60 | Next extraction batch may expand to 60 extractable registered sources. |
 | approve_staging_no_provider | Internal staging may run retrieval/QA without provider generation. |
 | approve_provider_staging | Provider generation may be enabled with logging and cost controls. |
 | quarantine_source | Specific source cannot be extracted or indexed. |
@@ -126,9 +134,10 @@ Human interpretation:
 ## 6. Current Recommendation
 
 The project-local gates `approve_local_metadata`, existing draft-card
-retention, `approve_batch_expansion_30`, and runtime ADR acceptance are now
-recorded. The next local step can either stabilize the batch-30 eval harness
-or continue batch expansion toward 60 sources.
+retention, `approve_batch_expansion_30`, `approve_batch_expansion_60`, and
+runtime ADR acceptance are now recorded. The next local step can either
+stabilize human-gold locator labels or continue batch expansion toward the
+remaining extractable sources.
 
 Do not approve online provider-backed `consultant-agent` until legal/source-owner
 and security review explicitly permits retrieved KB content to leave the local

@@ -35,9 +35,21 @@ approve production launch.
 | `tmp/consultant-role-kb-batch30-card-qa-validation-20260619.json` | QA `failure_count=0` |
 | `tmp/consultant-role-kb-batch30-anchored-retrieval-citation-eval-20260619.json` | answerable anchored_citation@1 `0.9792`, @5 `1.0`, source-only citation violations `0` |
 | `tmp/consultant-role-kb-batch30-answer-trace-eval-20260619.json` | answer trace `12/12`, trace pass rate `1.0` |
+| `drafts/analysis/consultant-role-kb-batch60-source-selection-20260619.csv` | 60 selected extractable sources |
+| `tmp/consultant-role-kb-batch60-cards-20260619.jsonl` | 600 local draft cards |
+| `tmp/consultant-role-kb-batch60-card-qa-validation-20260619.json` | QA `failure_count=0` |
+| `tmp/consultant-role-kb-batch60-anchored-retrieval-citation-eval-20260619.json` | answerable anchored_citation@1 `0.9792`, @5 `1.0`, source-only citation violations `0` |
+| `tmp/consultant-role-kb-batch60-answer-trace-eval-20260619.json` | answer trace `12/12`, trace pass rate `1.0` |
+
+## 3.1 Batch-60 Selection Note
+
+`SRC-CONSULT-030` and `SRC-CONSULT-031` were skipped during batch-60 because
+the current extraction path produced fewer than 10 extractable units for each.
+They remain registered sources, but are not counted as completed typed-card
+extractions.
 
 ## 4. Next Decision Candidates
 
-- Whether to expand next to 60 sources or first stabilize human-gold eval labels.
-- Whether to build a durable local vector store/index from batch-30 cards.
+- Whether to expand next to the remaining extractable sources or first stabilize human-gold eval labels.
+- Whether to build a durable local vector store/index from batch-60 cards.
 - Whether to implement a private no-provider retrieval API for staging UX tests.

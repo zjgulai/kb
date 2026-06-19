@@ -163,3 +163,10 @@ provider_call_boundary: "no KB provider call"
 - Wrote one self-evolution candidate lesson to `~/.codex/evolution/inbox/candidates.jsonl` after the smoke failure; no long-term memory promotion was performed.
 - Fixed API retrieval to rerank all 780 records and fixed label-seed eval to treat workspace forbidden as no-retrieval policy compliance.
 - Final API smoke result: record_count = 780, label_seed_match_at_1 = 0.9375, label_seed_match_at_5 = 1.0, policy_refusal_pass_rate = 1.0, forbidden_status = 403, failure_count = 0, provider_call_count = 0, live_kb_write_count = 0.
+- User approved continuing the next round; proceeded with draft staging auth/audit contract design for the private no-provider API.
+- Created `drafts/analysis/consultant-role-kb-staging-auth-audit-design-20260619.md`.
+- Created JSON schema `shared/audit/consultant-agent/staging-audit-event.schema-20260619.json`.
+- Created and ran `tmp/consultant_role_kb_staging_auth_audit_contract_20260619.py`.
+- Generated `tmp/consultant-role-kb-staging-auth-audit-sample-events-20260619.jsonl` and `tmp/consultant-role-kb-staging-auth-audit-contract-validation-20260619.json`.
+- Staging auth/audit contract validation result: event_count = 2, allowed_event_count = 1, denied_event_count = 1, failure_count = 0, provider_call_count = 0, live_kb_write_count = 0, source_text_returned = false.
+- Boundary remains: design/local validation only; no staging deployment, no provider call, no live KB ingestion.

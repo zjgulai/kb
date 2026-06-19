@@ -12,6 +12,7 @@ source_documents:
   - "drafts/analysis/consultant-role-kb-all-extractable-vector-store-report-20260619.md"
   - "drafts/analysis/consultant-role-kb-human-gold-locator-labels-report-20260619.md"
   - "drafts/analysis/consultant-role-kb-private-retrieval-api-report-20260619.md"
+  - "drafts/analysis/consultant-role-kb-staging-auth-audit-design-20260619.md"
 scope: "runtime decision for consultant-agent from full extraction to staging"
 production_impact: "production unchanged"
 provider_call_boundary: "no KB provider call"
@@ -92,6 +93,16 @@ Runtime must enforce:
 - workspace isolation on `consultant-p1`;
 - provider-call logging if provider generation is later enabled.
 
+Private staging must additionally enforce:
+
+- bearer-token validation through external secret storage, with no token stored
+  in the repository;
+- `X-KB-Agent=consultant-agent`, `X-KB-Workspace=consultant-p1`,
+  `X-KB-Reviewer`, and `X-KB-Request-Id`;
+- role-based access for `retrieval_reader`, `reviewer`, and `admin`;
+- one audit event per allowed or denied retrieval/eval request;
+- audit logs with hashed actor/query identifiers and no raw source text.
+
 ## 6. Acceptance Gates Before Staging
 
 - legal/source-owner review packet has explicit outcome;
@@ -103,6 +114,7 @@ Runtime must enforce:
 - blocked-action pass rate = 1.0;
 - source-only citation violations = 0;
 - audit logs and rollback path are implemented.
+- staging auth/audit contract validation has `failure_count = 0`.
 
 ## 7. Consequences
 

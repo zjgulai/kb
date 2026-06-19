@@ -51,6 +51,9 @@ approve production launch.
 | `tmp/consultant-role-kb-human-gold-locator-labels-qa-20260619.json` | label QA `failure_count=0`, locator coverage `1.0`, provider calls `0`, live KB writes `0` |
 | `agents/consultant-agent/runtime/local_retrieval_api.py` | private localhost no-provider retrieval API prototype with `/health`, `/retrieve`, and `/eval/label-seed` |
 | `tmp/consultant-role-kb-private-retrieval-api-smoke-20260619.json` | API smoke `failure_count=0`, label_seed_match_at_5 `1.0`, policy_refusal_pass_rate `1.0`, provider calls `0`, live KB writes `0` |
+| `drafts/analysis/consultant-role-kb-staging-auth-audit-design-20260619.md` | private-staging auth/audit contract drafted; no staging deployment |
+| `shared/audit/consultant-agent/staging-audit-event.schema-20260619.json` | audit event schema for allowed/denied retrieval events |
+| `tmp/consultant-role-kb-staging-auth-audit-contract-validation-20260619.json` | local contract validation `failure_count=0`, provider calls `0`, live KB writes `0`, source text returned `false` |
 
 ## 3.1 Batch-60 Selection Note
 
@@ -69,5 +72,5 @@ extractable units for each.
 ## 4. Next Decision Candidates
 
 - Whether and when a human reviewer should approve or override the pending locator label seed.
-- Whether to design staging auth, audit logging, and deployment topology for the no-provider retrieval API.
+- Whether to implement staging auth, audit logging, and deployment topology for the no-provider retrieval API after legal/security approval.
 - Whether to add CSV extraction support for `SRC-CONSULT-030` and `SRC-CONSULT-031`.

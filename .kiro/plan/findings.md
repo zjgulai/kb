@@ -586,3 +586,44 @@ Boundary:
 
 - This is a local/private API prototype only.
 - It is not a staging deployment, production deployment, provider-backed agent, live KB ingestion, or legal/source-owner approval.
+
+## Staging Auth/Audit Contract
+
+The private no-provider retrieval API now has a draft staging auth/audit
+contract, but it has not been deployed to staging.
+
+Artifacts:
+
+- Design: `drafts/analysis/consultant-role-kb-staging-auth-audit-design-20260619.md`
+- Schema: `shared/audit/consultant-agent/staging-audit-event.schema-20260619.json`
+- Validator: `tmp/consultant_role_kb_staging_auth_audit_contract_20260619.py`
+- Sample events: `tmp/consultant-role-kb-staging-auth-audit-sample-events-20260619.jsonl`
+- Validation output: `tmp/consultant-role-kb-staging-auth-audit-contract-validation-20260619.json`
+
+Required staging request headers:
+
+- `Authorization`
+- `X-KB-Agent=consultant-agent`
+- `X-KB-Workspace=consultant-p1`
+- `X-KB-Reviewer`
+- `X-KB-Request-Id`
+
+Audit validation result:
+
+- event_count = 2.
+- allowed_event_count = 1.
+- denied_event_count = 1.
+- failure_count = 0.
+- provider_call_count = 0.
+- live_kb_write_count = 0.
+- source_text_returned = false.
+
+Interpretation:
+
+- Fact: the draft schema can validate allowed and denied retrieval audit events.
+- Fact: the local validator checks hashed actor/query identifiers and forbids
+  raw question/source text leakage in the sample events.
+- Inference: the next implementation step can add auth/audit middleware around
+  the local API without changing retrieval semantics.
+- Boundary: legal/source-owner approval, secret storage, private ingress,
+  append-only audit storage, rate limiting, and rollback remain unimplemented.

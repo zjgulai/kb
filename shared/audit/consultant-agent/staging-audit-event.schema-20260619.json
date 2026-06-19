@@ -1,0 +1,141 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "kb://consultant-agent/staging-audit-event.schema-20260619.json",
+  "title": "Consultant Agent Staging Audit Event",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "event_id",
+    "ts",
+    "request_id",
+    "actor_id_hash",
+    "actor_role",
+    "agent_id",
+    "workspace",
+    "endpoint",
+    "retrieval_mode",
+    "query_sha256",
+    "query_length",
+    "result_count",
+    "result_refs",
+    "decision",
+    "provider_call_count",
+    "live_kb_write_count",
+    "production_impact",
+    "source_text_returned"
+  ],
+  "properties": {
+    "event_id": {
+      "type": "string",
+      "pattern": "^audit_[0-9]{8}T[0-9]{6}Z_[a-z0-9]{8,32}$"
+    },
+    "ts": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "request_id": {
+      "type": "string",
+      "minLength": 8,
+      "maxLength": 128
+    },
+    "actor_id_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "actor_role": {
+      "type": "string",
+      "enum": ["retrieval_reader", "reviewer", "admin"]
+    },
+    "agent_id": {
+      "type": "string",
+      "const": "consultant-agent"
+    },
+    "workspace": {
+      "type": "string",
+      "const": "consultant-p1"
+    },
+    "endpoint": {
+      "type": "string",
+      "enum": ["/retrieve", "/eval/label-seed"]
+    },
+    "retrieval_mode": {
+      "type": "string",
+      "enum": ["local_bge_vector_plus_deterministic_rerank", "none_policy_refusal"]
+    },
+    "query_sha256": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "query_length": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4000
+    },
+    "eval_id": {
+      "type": ["string", "null"],
+      "pattern": "^(CONSULT-EVAL-[0-9]{3}|ADHOC|)$"
+    },
+    "result_count": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 10
+    },
+    "result_refs": {
+      "type": "array",
+      "maxItems": 10,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["source_id", "card_id", "locator", "evidence_grade", "license_status"],
+        "properties": {
+          "source_id": {
+            "type": "string",
+            "pattern": "^SRC-CONSULT-[0-9]{3}$"
+          },
+          "card_id": {
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 160
+          },
+          "locator": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160
+          },
+          "evidence_grade": {
+            "type": "string",
+            "enum": ["A", "B", "C", "D"]
+          },
+          "license_status": {
+            "type": "string",
+            "enum": ["pending_legal_review", "approved", "restricted", "rejected"]
+          }
+        }
+      }
+    },
+    "decision": {
+      "type": "string",
+      "enum": ["allowed", "denied", "policy_refusal"]
+    },
+    "blocked_reason": {
+      "type": ["string", "null"],
+      "maxLength": 240
+    },
+    "provider_call_count": {
+      "type": "integer",
+      "const": 0
+    },
+    "live_kb_write_count": {
+      "type": "integer",
+      "const": 0
+    },
+    "production_impact": {
+      "type": "string",
+      "const": "production unchanged"
+    },
+    "source_text_returned": {
+      "type": "boolean",
+      "const": false
+    }
+  }
+}

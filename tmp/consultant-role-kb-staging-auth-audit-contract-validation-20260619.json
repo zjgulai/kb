@@ -1,0 +1,29 @@
+{
+  "ok": true,
+  "schema": "shared/audit/consultant-agent/staging-audit-event.schema-20260619.json",
+  "sample_events": "tmp/consultant-role-kb-staging-auth-audit-sample-events-20260619.jsonl",
+  "event_count": 2,
+  "allowed_event_count": 1,
+  "denied_event_count": 1,
+  "failure_count": 0,
+  "provider_call_count": 0,
+  "live_kb_write_count": 0,
+  "production_impact": "production unchanged",
+  "provider_call_boundary": "no KB provider call",
+  "live_kb_ingestion": "no live KB ingestion",
+  "source_text_returned": false,
+  "results": [
+    {
+      "event_id": "audit_20260619T081500Z_contract01",
+      "decision": "allowed",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "event_id": "audit_20260619T081501Z_contract02",
+      "decision": "denied",
+      "pass": true,
+      "failures": []
+    }
+  ]
+}

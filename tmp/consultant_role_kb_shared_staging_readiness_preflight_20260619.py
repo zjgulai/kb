@@ -104,6 +104,7 @@ def main() -> None:
     label_workflow = load_json(ROOT / "tmp/consultant-role-kb-human-label-review-workflow-validation-20260619.json")
     vector_smoke = load_json(ROOT / "tmp/consultant-role-kb-all-extractable-vector-store-smoke-20260619.json")
     legal_workflow = load_json(ROOT / "tmp/consultant-role-kb-legal-source-owner-decision-validation-20260619.json")
+    security_workflow = load_json(ROOT / "tmp/consultant-role-kb-security-staging-control-validation-20260619.json")
 
     api_metrics = api_smoke["metrics"]
     harness_metrics = harness_smoke["metrics"]
@@ -184,6 +185,7 @@ def main() -> None:
             audit_contract["provider_call_count"],
             label_workflow["provider_call_count"],
             vector_metrics["provider_call_count"],
+            security_workflow["provider_call_count"],
         ),
         0,
         "all readiness evidence must preserve no-provider boundary",
@@ -198,6 +200,7 @@ def main() -> None:
             audit_contract["live_kb_write_count"],
             label_workflow["live_kb_write_count"],
             vector_metrics["live_kb_write_count"],
+            security_workflow["live_kb_write_count"],
         ),
         0,
         "all readiness evidence must preserve no-live-KB-write boundary",
@@ -217,6 +220,14 @@ def main() -> None:
         legal_workflow["failure_count"],
         0,
         "legal/source-owner decision workflow must be structurally valid",
+    )
+    add_metric_check(
+        checks,
+        "security_control_workflow_generated",
+        "tmp/consultant-role-kb-security-staging-control-validation-20260619.json",
+        security_workflow["failure_count"],
+        0,
+        "security/operations control decision workflow must be structurally valid",
     )
 
     approved_labels = label_workflow["approved_decision_count"]
@@ -239,6 +250,20 @@ def main() -> None:
                 "selected_approved_internal_staging_count="
                 f"{legal_workflow['selected_approved_internal_staging_count']}/"
                 f"{legal_workflow['selected_source_count']}; legal/source-owner clearance remains pending"
+            ),
+        )
+    )
+
+    security_ready = bool(security_workflow["shared_staging_security_controls_ready"])
+    checks.append(
+        Check(
+            check_id="security_controls_approved",
+            status="pass" if security_ready else "blocker",
+            evidence="tmp/consultant-role-kb-security-staging-control-validation-20260619.json",
+            detail=(
+                "approved_control_count="
+                f"{security_workflow['approved_control_count']}/"
+                f"{security_workflow['control_count']}; security/operations controls remain pending"
             ),
         )
     )
@@ -343,6 +368,7 @@ source_documents:
   - "tmp/consultant-role-kb-private-retrieval-api-smoke-20260619.json"
   - "tmp/consultant-role-kb-local-staging-auth-audit-smoke-20260619.json"
   - "tmp/consultant-role-kb-legal-source-owner-decision-validation-20260619.json"
+  - "tmp/consultant-role-kb-security-staging-control-validation-20260619.json"
 scope: "preflight gate before any security-approved shared staging deployment"
 production_impact: "production unchanged"
 provider_call_boundary: "no KB provider call"
@@ -389,8 +415,8 @@ green.
 
 Fact: shared staging remains blocked by missing legal/source-owner clearance,
 missing approved human-gold labels, and missing external staging controls such
-as secret configuration, external audit path, rate limit configuration, and
-rollback ownership.
+as security/operations approval, secret configuration, external audit path,
+rate limit configuration, and rollback ownership.
 
 Boundary: this is not a staging deployment and should not be described as
 online agent launch readiness.

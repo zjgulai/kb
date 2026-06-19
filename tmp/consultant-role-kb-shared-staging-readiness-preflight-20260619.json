@@ -2,15 +2,15 @@
   "ok": true,
   "ready_for_shared_staging": false,
   "status": "blocked",
-  "created_at": "2026-06-19T10:01:00Z",
+  "created_at": "2026-06-19T10:08:37Z",
   "production_impact": "production unchanged",
   "provider_call_boundary": "no KB provider call",
   "live_kb_ingestion": "no live KB ingestion",
   "shared_staging_deployment": "not deployed",
-  "check_count": 20,
-  "pass_count": 14,
+  "check_count": 22,
+  "pass_count": 15,
   "warning_count": 0,
-  "blocker_count": 6,
+  "blocker_count": 7,
   "blockers": [
     {
       "check_id": "human_labels_approved",
@@ -24,6 +24,13 @@
       "status": "blocker",
       "evidence": "tmp/consultant-role-kb-legal-source-owner-decision-validation-20260619.json",
       "detail": "selected_approved_internal_staging_count=0/80; legal/source-owner clearance remains pending",
+      "required_for_shared_staging": true
+    },
+    {
+      "check_id": "security_controls_approved",
+      "status": "blocker",
+      "evidence": "tmp/consultant-role-kb-security-staging-control-validation-20260619.json",
+      "detail": "approved_control_count=0/8; security/operations controls remain pending",
       "required_for_shared_staging": true
     },
     {
@@ -141,6 +148,13 @@
       "required_for_shared_staging": true
     },
     {
+      "check_id": "security_control_workflow_generated",
+      "status": "pass",
+      "evidence": "tmp/consultant-role-kb-security-staging-control-validation-20260619.json",
+      "detail": "security/operations control decision workflow must be structurally valid; observed=0, expected=0",
+      "required_for_shared_staging": true
+    },
+    {
       "check_id": "human_labels_approved",
       "status": "blocker",
       "evidence": "tmp/consultant-role-kb-human-label-review-workflow-validation-20260619.json",
@@ -152,6 +166,13 @@
       "status": "blocker",
       "evidence": "tmp/consultant-role-kb-legal-source-owner-decision-validation-20260619.json",
       "detail": "selected_approved_internal_staging_count=0/80; legal/source-owner clearance remains pending",
+      "required_for_shared_staging": true
+    },
+    {
+      "check_id": "security_controls_approved",
+      "status": "blocker",
+      "evidence": "tmp/consultant-role-kb-security-staging-control-validation-20260619.json",
+      "detail": "approved_control_count=0/8; security/operations controls remain pending",
       "required_for_shared_staging": true
     },
     {

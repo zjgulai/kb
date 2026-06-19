@@ -6,6 +6,7 @@ source_documents:
   - "agents/consultant-agent/runtime/staging_auth_audit.py"
   - "drafts/analysis/consultant-role-kb-staging-auth-audit-design-20260619.md"
   - "drafts/analysis/consultant-role-kb-shared-staging-readiness-preflight-20260619.md"
+  - "drafts/analysis/consultant-role-kb-security-staging-control-workflow-20260619.md"
 scope: "operator runbook for a future security-approved no-provider shared staging pilot"
 production_impact: "production unchanged"
 provider_call_boundary: "no KB provider call"
@@ -31,6 +32,7 @@ Do not run shared staging until all items are explicit and recorded:
 | human locator labels | reviewer decisions recorded before claiming human-gold metrics |
 | security owner | named staging owner and rollback owner |
 | network boundary | VPN, internal reverse proxy, or localhost tunnel approved |
+| security control decisions | all rows in `security-staging-control-decisions.template-20260619.jsonl` approved |
 | external secrets | token hash configured outside Git |
 | external audit storage | append-only path outside the repository |
 | rate limiting | private ingress or middleware rate limit configured |
@@ -47,6 +49,14 @@ Required runtime environment variables:
 | `KB_STAGING_AUDIT_PATH` | append-only audit JSONL path | must resolve outside this repository |
 | `KB_STAGING_RATE_LIMIT_CONFIGURED` | operator assertion for ingress/middleware limit | value only records configuration status |
 | `KB_STAGING_ROLLBACK_OWNER` | accountable owner for stop/rollback | do not store private contact details in repo |
+
+Required security decision artifacts:
+
+| artifact | purpose |
+|---|---|
+| `shared/governance/consultant-agent/security-staging-control-review.queue-20260619.csv` | reviewer queue for staging controls |
+| `shared/governance/consultant-agent/security-staging-control-decisions.template-20260619.jsonl` | pending decision template; must be filled outside raw secret values |
+| `tmp/consultant-role-kb-security-staging-control-validation-20260619.json` | validation consumed by the shared-staging preflight |
 
 Optional runtime environment variables:
 
@@ -67,8 +77,8 @@ Expected result before approvals is `ready_for_shared_staging=false`. Treat
 that as correct fail-closed behavior.
 
 Shared staging can proceed only when the preflight produces
-`ready_for_shared_staging=true` after the required human and security gates are
-recorded.
+`ready_for_shared_staging=true` after the required human, legal/source-owner,
+security, and external runtime configuration gates are recorded.
 
 ## 4. Start Command
 
@@ -128,5 +138,5 @@ Stop shared staging immediately if any condition appears:
 
 ## 8. Current State
 
-Current state remains blocked for shared staging. The local harness and preflight
-are validation artifacts only.
+Current state remains blocked for shared staging. The local harness, security
+decision workflow, and preflight are validation artifacts only.

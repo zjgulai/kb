@@ -1,0 +1,23 @@
+{
+  "ok": true,
+  "shared_staging_security_controls_ready": false,
+  "schema": "shared/governance/consultant-agent/security-staging-control-decision.schema-20260619.json",
+  "queue": "shared/governance/consultant-agent/security-staging-control-review.queue-20260619.csv",
+  "decision_template": "shared/governance/consultant-agent/security-staging-control-decisions.template-20260619.jsonl",
+  "control_count": 8,
+  "decision_count": 8,
+  "required_external_control_count": 6,
+  "pending_review_count": 8,
+  "approved_control_count": 0,
+  "configured_external_control_count": 0,
+  "rejected_count": 0,
+  "needs_discussion_count": 0,
+  "secret_like_value_count": 0,
+  "failure_count": 0,
+  "provider_call_count": 0,
+  "live_kb_write_count": 0,
+  "production_impact": "production unchanged",
+  "provider_call_boundary": "no KB provider call",
+  "live_kb_ingestion": "no live KB ingestion",
+  "failures": []
+}

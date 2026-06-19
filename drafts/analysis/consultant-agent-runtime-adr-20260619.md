@@ -18,6 +18,7 @@ source_documents:
   - "drafts/analysis/consultant-role-kb-shared-staging-readiness-preflight-20260619.md"
   - "drafts/analysis/consultant-role-kb-shared-staging-runbook-20260619.md"
   - "drafts/analysis/consultant-role-kb-legal-source-owner-decision-workflow-20260619.md"
+  - "drafts/analysis/consultant-role-kb-security-staging-control-workflow-20260619.md"
 scope: "runtime decision for consultant-agent from full extraction to staging"
 production_impact: "production unchanged"
 provider_call_boundary: "no KB provider call"
@@ -49,9 +50,12 @@ The local consultant-role KB PoC now has:
 - local staging auth/audit smoke has audit_event_count = 5,
   audit_schema_failure_count = 0, audit_forbidden_leak_count = 0,
   provider_call_count = 0, and live_kb_write_count = 0;
-- shared staging readiness preflight is blocked with blocker_count = 6;
+- shared staging readiness preflight is blocked with blocker_count = 7;
 - legal/source-owner decision workflow has 81 pending decisions and 0 selected
   sources approved for internal staging;
+- security/staging-control decision workflow has 8 pending decisions, 0
+  approved controls, 0 configured external controls, and secret_like_value_count
+  = 0;
 - answer-trace fixture pass rate = 1.0.
 
 The unresolved blockers are legal/license review, human approval of locator
@@ -130,6 +134,9 @@ not a shared staging deployment.
 - blocked-action pass rate = 1.0;
 - source-only citation violations = 0;
 - audit logs and rollback path are implemented.
+- security/staging-control decisions are approved without storing raw secret
+  values, bearer tokens, passwords, private keys, or private contact details in
+  repository artifacts.
 - staging auth/audit contract validation has `failure_count = 0`.
 - local staging auth/audit harness smoke has `failure_count = 0` and
   `audit_forbidden_leak_count = 0`.

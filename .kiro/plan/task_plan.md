@@ -49,6 +49,7 @@ Resolved on 2026-06-19:
 10. CSV loader support has been added for `SRC-CONSULT-030` and `SRC-CONSULT-031`; the all-extractable local card set now has 800 cards across 80 non-duplicate sources.
 11. Shared staging readiness preflight and runbook have been generated; preflight is blocked by missing human/legal/security/external-control gates, and no shared staging deployment has occurred.
 12. Legal/source-owner decision workflow has been generated and locally validated; all 81 source decisions remain `pending_review`, including all 80 selected runtime sources.
+13. Security/staging-control decision workflow has been generated and locally validated; all 8 security/operations controls remain `pending_review`, with 0 approved controls and no external configuration recorded in repo.
 
 Still open:
 
@@ -56,4 +57,4 @@ Still open:
 2. Whether raw `consult/` third-party source files can ever be committed after legal/license review.
 3. Whether to run actual manual reviewer decisions over the locator label queue.
 4. Whether to record legal/source-owner clearance for internal staged retrieval over the selected corpus.
-5. Whether to configure security-approved shared staging deployment, external secret storage, append-only audit storage, rate limiting, and rollback for the no-provider API.
+5. Whether to approve security/operations controls and configure approved external secret storage, append-only audit storage, rate limiting, rollback ownership, and private ingress for the no-provider API.

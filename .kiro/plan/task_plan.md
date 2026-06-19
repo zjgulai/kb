@@ -58,6 +58,7 @@ Resolved on 2026-06-19:
 19. Reviewer decision questionnaire has been generated from the clearance execution pack; it contains 88 question rows and maps choices to the official legal/source-owner and security/operations decision templates, but records 0 approvals and has no staging effect.
 20. Reviewer questionnaire intake converter has been generated and locally validated; it converts answered questionnaire rows into temporary candidate legal/security JSONL files under `tmp/`, leaves official templates unchanged, and currently yields 0 approvals from the unfilled questionnaire.
 21. Runtime-config redacted fixture smoke has been generated and locally validated; default config remains blocked, a redacted-ready fixture passes, and a secret-like/private-contact fixture blocks without leaking raw values.
+22. Human-label reviewer questionnaire and intake converter have been generated and locally validated; the unfilled questionnaire derives 50 pending candidate decisions, 0 approvals, and leaves the official decision template unchanged.
 
 Still open:
 
@@ -68,3 +69,4 @@ Still open:
 5. Whether security/operations reviewers fill the official JSONL decision file and whether approved external secret storage, append-only audit storage, rate limiting, rollback ownership, and private ingress are configured outside Git.
 6. Whether a filled questionnaire candidate JSONL should be accepted into official reviewer decision files after human review.
 7. Whether externally approved runtime config evidence should be supplied to preflight after security approval; current redacted fixtures are validation evidence only, not applied configuration.
+8. Whether filled human-label questionnaire candidate JSONL should be accepted into the official human-label decision file before claiming reviewer-approved human-gold metrics.

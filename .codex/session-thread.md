@@ -25,6 +25,8 @@ provider_call_boundary: "no KB provider call"
 - Vector-store smoke: raw vector answerable source_recall@1 0.5833 and @5 0.75; vector plus deterministic rerank answerable source_recall@1 0.9583 and @5 1.0; fixture answerable reranked @5 1.0.
 - Human-gold locator label seed completed: 50 pending-review labels, 48 locator candidates, 2 policy-only refusal labels, QA failure_count 0; no labels are human-approved yet.
 - Human label review workflow completed: 50-item review queue, 50-item decision template, validation failure_count 0; all decisions remain pending and approved_decision_count is 0.
+- Human-label reviewer questionnaire completed: 50 reviewer-facing rows, 48 locator questions, 2 refusal questions; official decision template unchanged and approval_effect_count remains 0.
+- Human-label questionnaire intake converter completed: unfilled questionnaire derives temporary candidate JSONL with 50 pending decisions, 0 approved decisions, official_template_write_count 0, provider_call_count 0, and live_kb_write_count 0.
 - Private no-provider retrieval API prototype completed and re-smoked against the 800-record index: localhost/private `/health`, `/retrieve`, and `/eval/label-seed`; smoke failure_count 0, label_seed_match_at_5 1.0, policy_refusal_pass_rate 1.0.
 - Draft staging auth/audit contract completed: private ingress/auth/RBAC/audit schema design, JSON schema, and local validator; contract validation failure_count 0 over allowed and denied sample events.
 - Local staging auth/audit harness completed: localhost-only wrapper around the private retrieval API with bearer-token hash auth, role-gated protected endpoints, and audit events for allowed, denied, and policy-refusal requests; smoke failure_count 0, audit_schema_failure_count 0, audit_forbidden_leak_count 0.
@@ -57,6 +59,8 @@ Evidence:
 - vector-store smoke: answerable reranked source_recall@1 0.9583, @5 1.0; raw vector-only @5 0.75 is diagnostic, not acceptance path
 - human-gold locator label seed: 50 labels, 48 locator candidates, 2 no-source refusal labels, all `pending_human_review`, QA failure_count 0
 - human label review workflow: review_queue_count 50, decision_template_count 50, pending_decision_count 50, approved_decision_count 0, failure_count 0
+- human-label reviewer questionnaire: questionnaire_row_count 50, locator_question_count 48, refusal_question_count 2, approval_effect_count 0, provider_call_count 0, live_kb_write_count 0
+- human-label questionnaire intake: answered_response_count 0, derived_decision_count 50, pending_decision_count 50, approved_decision_count 0, official_template_write_count 0, approval_effect_count 0, provider_call_count 0, live_kb_write_count 0
 - private no-provider retrieval API smoke: record_count 800, label_seed_match_at_1 0.9375, label_seed_match_at_5 1.0, policy_refusal_pass_rate 1.0, workspace forbidden 403, failure_count 0
 - staging auth/audit contract validation: event_count 2, allowed_event_count 1, denied_event_count 1, failure_count 0, provider_call_count 0, live_kb_write_count 0, source_text_returned false
 - local staging auth/audit harness smoke: record_count 800, allowed HTTP 200, policy refusal HTTP 200, missing-token 401, RBAC denial 403, label_seed_match_at_5 1.0, policy_refusal_pass_rate 1.0, audit events 5, failure_count 0, provider_call_count 0, live_kb_write_count 0
@@ -77,6 +81,7 @@ Next blockers:
 
 - legal/source-owner review packet requires human decisions;
 - human-gold locator labels now have a review queue/template but still require manual reviewer decisions before they can be treated as approved gold labels;
+- human-label questionnaire and intake converter can produce temporary candidate decisions, but the official human-label decision file still requires real reviewer input before human-gold metrics can be claimed;
 - persistent derived-card storage policy is pending;
 - runtime ADR 002 is accepted for local-only now, private staging next, provider/hybrid only after explicit approval;
 - private no-provider retrieval API and staging auth/audit harness are local prototypes only; no staging deployment has occurred;

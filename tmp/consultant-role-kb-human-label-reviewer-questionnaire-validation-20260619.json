@@ -1,0 +1,16 @@
+{
+  "ok": true,
+  "questionnaire_ready": true,
+  "questionnaire": "shared/eval/consultant-agent/human-gold-locator-label-review.questionnaire-20260619.csv",
+  "questionnaire_row_count": 50,
+  "locator_question_count": 48,
+  "refusal_question_count": 2,
+  "official_decision_template_updated": false,
+  "approval_effect_count": 0,
+  "provider_call_count": 0,
+  "live_kb_write_count": 0,
+  "production_impact": "production unchanged",
+  "provider_call_boundary": "no KB provider call",
+  "live_kb_ingestion": "no live KB ingestion",
+  "manual_review_boundary": "questionnaire only; official reviewer decision file remains required"
+}

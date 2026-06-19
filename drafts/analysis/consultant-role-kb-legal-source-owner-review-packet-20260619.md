@@ -7,10 +7,11 @@ source_documents:
   - "drafts/analysis/consultant-role-kb-full-source-register-report-20260619.md"
   - "drafts/analysis/consultant-role-kb-parser-unit-manifest-report-20260619.md"
   - "drafts/analysis/consultant-role-kb-card-qa-validation-report-20260619.md"
+  - "drafts/analysis/consultant-role-kb-batch30-card-qa-validation-report-20260619.md"
 scope: "human review packet for full consultant-agent source and derived-card governance"
 production_impact: "production unchanged"
 provider_call_boundary: "no KB provider call"
-implementation_status: "manual review packet only; no live KB ingestion"
+implementation_status: "project-local gates approved for metadata retention and batch-30 draft expansion; legal review still pending; no live KB ingestion"
 ---
 
 # Consultant Role KB Legal And Source Owner Review Packet
@@ -29,6 +30,21 @@ Current source policy remains:
 - evidence grade remains `C`;
 - blocked actions include `redistribute_source_text`, `publish_client_deliverable`, `send_client_email`, `submit_rfp`, `commit_budget`, `approve_transaction`, and `expose_pii`.
 
+## 0.1 Project Decisions Captured
+
+The project owner approved the following local/draft gates on 2026-06-19:
+
+| decision | project outcome | boundary |
+|---|---|---|
+| `approve_local_metadata` | approved | full source register and structural parser manifests may remain in the repo because they do not contain raw source text |
+| existing 150 draft derived cards | allowed | existing draft cards may remain persisted for local eval before legal review; this is not approval for client-ready publication |
+| next extraction batch | expand to 30 sources | batch expansion remains local/draft and must keep source metadata, unit locators, blocked actions, and no long source-text reproduction |
+| runtime ADR | accepted | local-only now, private staging next, provider/hybrid only after explicit legal/security/product approval |
+
+These project decisions do not clear `license_status=pending_legal_review`, do
+not authorize raw source redistribution, and do not authorize online
+provider-backed `consultant-agent` use.
+
 ## 1. Review Scope
 
 | item | current fact |
@@ -43,6 +59,11 @@ Current source policy remains:
 | structural parser units | 23310 |
 | local expanded cards already QA-checked | 150 |
 | card QA failure_count | 0 |
+| batch-30 local cards already QA-checked | 300 |
+| batch-30 card QA failure_count | 0 |
+| batch-30 answerable anchored_citation@1 | 0.9792 |
+| batch-30 answerable anchored_citation@5 | 1.0 |
+| batch-30 answer trace pass rate | 1.0 |
 
 ## 2. High-Risk Review Buckets
 
@@ -70,9 +91,9 @@ Human interpretation:
 | decision | recommended answer | reviewer |
 |---|---|---|
 | Can raw `consult/` files be committed or redistributed? | No, keep local-only unless legal explicitly approves. | legal/source owner |
-| Can full source register metadata be committed? | Yes, because it stores metadata, hashes, parser route, and governance flags, not source text. | source owner |
-| Can parser unit manifests be committed? | Yes for structural locator manifests that do not store source text. | source owner/legal |
-| Can derived typed cards be stored persistently before legal review? | Keep existing PoC cards as draft; do not expand persistent card storage beyond approved batches until legal/source-owner review. | legal/source owner |
+| Can full source register metadata be committed? | Approved at project-local gate because it stores metadata, hashes, parser route, and governance flags, not source text. | project owner; legal/source owner still pending |
+| Can parser unit manifests be committed? | Approved at project-local gate for structural locator manifests that do not store source text. | project owner; legal/source owner still pending |
+| Can derived typed cards be stored persistently before legal review? | Existing 150 draft cards are allowed to remain; batch-30 draft cards are allowed as local eval artifacts. | project owner; legal/source owner still pending |
 | Can local vector indexes be built from draft cards? | Yes for local PoC only; no live KB or external service. | technical owner/source owner |
 | Can `consultant-agent` answer users online from this corpus? | Not yet; staging requires legal/source-owner/security approval. | product/legal/security |
 | Can a provider model see retrieved card content? | Not before provider policy and data-use approval. | legal/security/product |
@@ -80,11 +101,11 @@ Human interpretation:
 ## 4. Review Checklist
 
 - [ ] Confirm whether `external_reference` materials can support internal role-KB extraction.
-- [ ] Confirm whether short derived cards are acceptable before full license clearance.
-- [ ] Confirm whether structural locator manifests are acceptable to persist.
-- [ ] Confirm whether local-only embedding/indexing is acceptable.
+- [x] Project-local: confirm whether short derived cards are acceptable before full license clearance.
+- [x] Project-local: confirm whether structural locator manifests are acceptable to persist.
+- [x] Project-local: confirm whether local-only embedding/indexing is acceptable.
 - [ ] Confirm whether internal staging can use the 15-source P1 card set.
-- [ ] Confirm whether full extraction should run in batches: 15 -> 30 -> 60 -> 81.
+- [x] Project-local: confirm whether full extraction should run in batches: 15 -> 30 -> 60 -> 81.
 - [ ] Confirm whether any source must be quarantined before batch extraction.
 - [ ] Confirm whether duplicate EPUB/PDF pairs should prefer PDF anchors.
 - [ ] Confirm whether `consultant-agent` may call a provider model in staging.
@@ -104,8 +125,10 @@ Human interpretation:
 
 ## 6. Current Recommendation
 
-Approve `approve_local_metadata` first. Then review `approve_local_cards_batch_15`
-and `approve_batch_expansion_30` separately.
+The project-local gates `approve_local_metadata`, existing draft-card
+retention, `approve_batch_expansion_30`, and runtime ADR acceptance are now
+recorded. The next local step can either stabilize the batch-30 eval harness
+or continue batch expansion toward 60 sources.
 
 Do not approve online provider-backed `consultant-agent` until legal/source-owner
 and security review explicitly permits retrieved KB content to leave the local

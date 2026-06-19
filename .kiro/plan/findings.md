@@ -366,3 +366,41 @@ Boundary:
 - `no KB provider call`.
 - `no live KB ingestion`.
 - Raw `consult/` files remain local-only.
+
+## Batch-30 Local Expansion And Approval Capture
+
+The project owner approved four local gates on 2026-06-19:
+
+- `approve_local_metadata` for full source register and structural parser manifests.
+- Existing 150 draft derived cards may remain persisted as local/draft eval artifacts before legal review.
+- The next extraction batch may expand to 30 sources.
+- ADR 002 runtime boundary is accepted: local-only now, private staging next, provider/hybrid only after explicit approval.
+
+Artifacts created:
+
+- Approval record: `drafts/analysis/consultant-role-kb-approval-decision-record-20260619.md`.
+- Batch-30 source selection: `drafts/analysis/consultant-role-kb-batch30-source-selection-20260619.csv`.
+- Batch-30 expansion script: `tmp/consultant_role_kb_batch30_expansion_20260619.py`.
+- Batch-30 cards: `tmp/consultant-role-kb-batch30-cards-20260619.jsonl`.
+- Batch-30 gate eval: `tmp/consultant-role-kb-batch30-card-gate-eval-20260619.json`.
+- Batch-30 card QA report: `drafts/analysis/consultant-role-kb-batch30-card-qa-validation-report-20260619.md`.
+- Batch-30 regression script: `tmp/consultant_role_kb_batch30_regression_eval_20260619.py`.
+- Batch-30 retrieval/citation report: `drafts/analysis/consultant-role-kb-batch30-regression-eval-report-20260619.md`.
+- Batch-30 answer-trace report: `drafts/analysis/consultant-role-kb-batch30-answer-trace-fixture-report-20260619.md`.
+
+Evidence:
+
+- Batch-30 selected source count = 30.
+- Batch-30 local draft card count = 300.
+- Expansion gate: metadata_completeness = 1.0, unit_locator_coverage = 1.0, source_only_citation_violation_count = 0, long_text_violation_count = 0, provider_call_count = 0, live_kb_write_count = 0.
+- Card QA: registered_source_coverage = 1.0, locator_manifest_coverage = 1.0, blocked_actions_complete_rate = 1.0, high_risk_review_routed_rate = 1.0, failure_count = 0.
+- Retrieval/citation regression: answerable anchored_citation@1 = 0.9792, answerable anchored_citation@5 = 1.0, source_only_citation_violation_count = 0, gate_threshold_pass = true.
+- Answer-trace fixture: trace_pass_count = 12/12, trace_pass_rate = 1.0.
+- Remaining answerable top1 failure: `CONSULT-EVAL-016`; expected `SRC-CONSULT-011`, retrieved top1 `SRC-CONSULT-010`, and expected source appears at top2. This is not a current gate blocker because answerable anchored_citation@5 = 1.0.
+
+Remaining blockers:
+
+- Legal/source-owner review has not cleared raw source redistribution or online use.
+- Full 81-source typed-card extraction has not started.
+- No durable local vector store, retrieval API, private staging service, provider generation, or production launch has been built.
+- Human-gold locator labels are still missing; current retrieval metrics are local proxy evidence.

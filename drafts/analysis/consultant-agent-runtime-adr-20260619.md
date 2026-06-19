@@ -1,23 +1,24 @@
 ---
 title: "ADR 002 Consultant Agent Runtime Boundary"
-status: "proposed"
+status: "accepted"
 created_at: "2026-06-19"
 source_documents:
   - "drafts/analysis/consultant-role-kb-full-extraction-agent-launch-plan-20260619.md"
   - "drafts/analysis/consultant-role-kb-legal-source-owner-review-packet-20260619.md"
   - "drafts/analysis/consultant-role-kb-expanded-regression-eval-report-20260619.md"
+  - "drafts/analysis/consultant-role-kb-batch30-regression-eval-report-20260619.md"
 scope: "runtime decision for consultant-agent from full extraction to staging"
 production_impact: "production unchanged"
 provider_call_boundary: "no KB provider call"
-implementation_status: "architecture decision record only; no deployment"
+implementation_status: "accepted runtime boundary; no deployment"
 ---
 
 # ADR 002 Consultant Agent Runtime Boundary
 
 ## 1. Status
 
-Proposed. This ADR is not a production approval and does not enable provider
-calls.
+Accepted by the project owner on 2026-06-19. This ADR is not a production
+approval and does not enable provider calls.
 
 ## 2. Context
 
@@ -26,7 +27,8 @@ The local consultant-role KB PoC now has:
 - full 81-source draft register;
 - full parser unit manifest with 81/81 parse success;
 - 150 QA-checked local cards from the first 15 sources;
-- expanded answerable anchored_citation@1 = 1.0 after rerank tuning;
+- 300 QA-checked local cards from the approved batch-30 source expansion;
+- batch-30 answerable anchored_citation@1 = 0.9792 and anchored_citation@5 = 1.0;
 - answer-trace fixture pass rate = 1.0.
 
 The unresolved blockers are legal/license review, persistent derived-card policy,
@@ -34,7 +36,7 @@ provider policy, staging auth, audit logging, and production deployment target.
 
 ## 3. Decision
 
-Use a staged runtime path:
+Use the accepted staged runtime path:
 
 1. **Local extraction/runtime now**: local parser, card QA, local BGE embedding,
    deterministic rerank, no provider generation.
@@ -103,5 +105,5 @@ Tradeoff:
 ## 8. Current Recommendation
 
 Proceed with local-only full extraction infrastructure and batch expansion. Do
-not enable provider-backed or public online use until this ADR is approved by
-product, legal, security, and source owner.
+not enable provider-backed or public online use until legal, security, product,
+and source-owner review explicitly approves retrieved-content handling.

@@ -1,27 +1,27 @@
 ---
-title: "Consultant Role KB Expanded Regression Eval Report"
+title: "Consultant Role KB Batch-30 Regression Eval Report"
 status: "draft"
 created_at: "2026-06-19"
 source_documents:
-  - "tmp/consultant-role-kb-expanded-cards-20260619.jsonl"
+  - "tmp/consultant-role-kb-batch30-cards-20260619.jsonl"
   - "drafts/analysis/consultant-role-kb-eval-set-50.draft.jsonl"
-scope: "local regression eval for expanded consultant role KB cards"
+scope: "local regression eval for batch-30 consultant role KB cards"
 production_impact: "production unchanged"
 provider_call_boundary: "no KB provider call"
 implementation_status: "local regression only; no live KB ingestion"
 ---
 
-# Consultant Role KB Expanded Regression Eval Report
+# Consultant Role KB Batch-30 Regression Eval Report
 
 ## 0. Boundary
 
-This eval uses the expanded local cards and local BGE + source-prior reranking. It does not call a provider, ingest into a live KB, or prove production readiness.
+This eval uses the batch-30 local cards and local BGE + source-prior reranking. It does not call a provider, ingest into a live KB, or prove production readiness.
 
 ## 1. Metrics
 
 | metric | value |
 |---|---:|
-| indexed_card_count | 150 |
+| indexed_card_count | 300 |
 | eval_count | 50 |
 | answerable_eval_count | 48 |
 | all_eval source_recall@1 | 0.94 |
@@ -57,7 +57,7 @@ This table excludes eval items with no allowed registered source, because source
 
 ## 4. Remaining Answerable Top1 Failures
 
-- `CONSULT-EVAL-016` expected `['SRC-CONSULT-011']`, top3 `[{'source_id': 'SRC-CONSULT-010', 'locator': 'page:16'}, {'source_id': 'SRC-CONSULT-011', 'locator': 'page:124'}, {'source_id': 'SRC-CONSULT-002', 'locator': 'slide:31'}]`.
+- `CONSULT-EVAL-016` expected `['SRC-CONSULT-011']`, top3 `[{'source_id': 'SRC-CONSULT-010', 'locator': 'page:6'}, {'source_id': 'SRC-CONSULT-011', 'locator': 'page:15'}, {'source_id': 'SRC-CONSULT-002', 'locator': 'slide:14'}]`.
 
 ## 5. Interpretation
 

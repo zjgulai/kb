@@ -1,0 +1,43 @@
+---
+title: "Consultant Role KB Approval Decision Record"
+status: "active"
+created_at: "2026-06-19"
+scope: "project-local approval record for consultant-agent KB extraction gates"
+production_impact: "production unchanged"
+provider_call_boundary: "no KB provider call"
+implementation_status: "local draft approvals recorded; legal review pending"
+---
+
+# Consultant Role KB Approval Decision Record
+
+## 1. Decisions
+
+| item | user decision | recorded meaning |
+|---|---|---|
+| 1 | 批准 | `approve_local_metadata`: full source register and structural parser manifests may remain committed because they do not contain raw source text. |
+| 2 | 允许 | Existing 150 draft derived cards may remain persisted as local/draft eval artifacts before legal review is complete. |
+| 3 | 扩展 | Continue extraction by expanding the local batch to 30 sources, with source metadata, unit locators, blocked actions, and QA gates preserved. |
+| 4 | 接受 | Accept ADR 002: local-only runtime now, private staging next, provider/hybrid only after explicit approval. |
+
+## 2. Boundary
+
+These decisions are project-local workflow approvals. They do not approve raw
+source redistribution, do not clear `license_status=pending_legal_review`, do
+not authorize live KB ingestion, do not authorize provider calls, and do not
+approve production launch.
+
+## 3. Evidence After Execution
+
+| artifact | fact |
+|---|---|
+| `drafts/analysis/consultant-role-kb-batch30-source-selection-20260619.csv` | 30 selected sources |
+| `tmp/consultant-role-kb-batch30-cards-20260619.jsonl` | 300 local draft cards |
+| `tmp/consultant-role-kb-batch30-card-qa-validation-20260619.json` | QA `failure_count=0` |
+| `tmp/consultant-role-kb-batch30-anchored-retrieval-citation-eval-20260619.json` | answerable anchored_citation@1 `0.9792`, @5 `1.0`, source-only citation violations `0` |
+| `tmp/consultant-role-kb-batch30-answer-trace-eval-20260619.json` | answer trace `12/12`, trace pass rate `1.0` |
+
+## 4. Next Decision Candidates
+
+- Whether to expand next to 60 sources or first stabilize human-gold eval labels.
+- Whether to build a durable local vector store/index from batch-30 cards.
+- Whether to implement a private no-provider retrieval API for staging UX tests.

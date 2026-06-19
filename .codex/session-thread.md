@@ -13,8 +13,10 @@ provider_call_boundary: "no KB provider call"
 
 - A completed: controlled local expansion generated 150 cards across 15 registered P1 sources.
 - Expanded gate passed: metadata completeness 1.0, unit locator coverage 1.0, source-only citation violations 0, long text violations 0.
-- Expanded regression passed gate: answerable anchored_citation@1 0.9167, answerable anchored_citation@5 1.0, answer-trace 12/12.
+- Expanded regression passed gate after latest rerank tuning: answerable anchored_citation@1 0.9792, answerable anchored_citation@5 1.0, answer-trace 12/12.
 - B completed: draft PRD addendum and directory blueprint created.
+- Project-local decisions captured: approve local metadata, allow existing draft cards, expand to batch-30, and accept ADR 002 runtime boundary.
+- Batch-30 expansion completed: 30 sources, 300 local draft cards, QA failure_count 0, answerable anchored_citation@1 0.9792, answerable anchored_citation@5 1.0, answer-trace 12/12.
 
 ## Active Next Work
 
@@ -36,5 +38,5 @@ Next blockers:
 
 - legal/source-owner review packet requires human decisions;
 - persistent derived-card storage policy is pending;
-- runtime ADR is proposed, not approved;
+- runtime ADR 002 is accepted for local-only now, private staging next, provider/hybrid only after explicit approval;
 - no provider call, live KB ingestion, staging deployment, or production launch has occurred.

@@ -50,6 +50,10 @@ RERANK_WEIGHTS = {
     "presentation_after_diagnostic_source": 0.11,
     "license_redistribution_governance_source": 0.16,
     "license_redistribution_client_template_penalty": -0.06,
+    "cdd_market_revenue_quality_source": 0.13,
+    "transaction_approval_refusal_source": 0.18,
+    "evidence_license_boundary_source": 0.13,
+    "client_development_governance_penalty": -0.08,
 }
 
 ENGLISH_PHRASE_PROBES = [
@@ -255,6 +259,33 @@ def source_intent_prior(eval_item: dict[str, Any], card: dict[str, Any]) -> floa
             score += RERANK_WEIGHTS["license_redistribution_governance_source"]
         if source_id in {"SRC-CONSULT-004", "SRC-CONSULT-005"}:
             score += RERANK_WEIGHTS["license_redistribution_client_template_penalty"]
+
+    cdd_market_revenue = (
+        any(marker in question for marker in ["市场吸引力", "收入质量", "收购标的", "收购交易"])
+        or any(marker in question_lower for marker in ["acquisition target", "market attractiveness", "revenue quality", "cdd"])
+    )
+    if cdd_market_revenue and source_id == "SRC-CONSULT-010":
+        score += RERANK_WEIGHTS["cdd_market_revenue_quality_source"]
+
+    transaction_approval_refusal = (
+        any(marker in question for marker in ["批准这个收购交易", "批准交易", "投委会", "交易决定"])
+        or any(marker in question_lower for marker in ["approve transaction", "approve_transaction", "commit_budget"])
+    )
+    if transaction_approval_refusal:
+        if source_id in {"SRC-CONSULT-010", "SRC-CONSULT-011"}:
+            score += RERANK_WEIGHTS["transaction_approval_refusal_source"]
+        if source_id in {"SRC-CONSULT-020", "SRC-CONSULT-027", "SRC-CONSULT-060"}:
+            score += RERANK_WEIGHTS["client_development_governance_penalty"]
+
+    evidence_license_boundary = (
+        any(marker in question for marker in ["C 级 source", "C级 source", "生产事实源", "商业无风险", "license_status"])
+        or any(marker in question_lower for marker in ["evidence grade", "license boundary", "production fact"])
+    )
+    if evidence_license_boundary:
+        if source_id in {"SRC-CONSULT-001", "SRC-CONSULT-002", "SRC-CONSULT-013"}:
+            score += RERANK_WEIGHTS["evidence_license_boundary_source"]
+        if source_id in {"SRC-CONSULT-019", "SRC-CONSULT-020", "SRC-CONSULT-060", "SRC-CONSULT-079"}:
+            score += RERANK_WEIGHTS["client_development_governance_penalty"]
 
     return score
 

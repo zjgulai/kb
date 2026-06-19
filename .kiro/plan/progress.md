@@ -113,3 +113,16 @@ provider_call_boundary: "no KB provider call"
 - Created `drafts/analysis/consultant-agent-runtime-adr-20260619.md`.
 - Created `drafts/analysis/consultant-role-kb-next-sprint-execution-report-20260619.md`.
 - Current boundary remains: production unchanged, no KB provider call, no live KB ingestion, and no legal/source-owner approval yet.
+- User approved four project-local gates: `approve_local_metadata`, allowing existing 150 draft derived cards to remain, expanding to 30 sources, and accepting ADR 002 runtime boundary.
+- Created `tmp/consultant_role_kb_batch30_expansion_20260619.py`.
+- Generated `drafts/analysis/consultant-role-kb-batch30-source-selection-20260619.csv`, `tmp/consultant-role-kb-batch30-cards-20260619.jsonl`, `tmp/consultant-role-kb-batch30-card-gate-eval-20260619.json`, and `drafts/analysis/consultant-role-kb-batch30-expansion-report-20260619.md`.
+- Batch-30 expansion result: 30 sources, 300 cards, metadata_completeness = 1.0, unit_locator_coverage = 1.0, source_only_citation_violation_count = 0, long_text_violation_count = 0, provider_call_count = 0, live_kb_write_count = 0.
+- Updated the card QA validator to accept explicit `--out` and `--report` paths; fixed a relative-path handling failure by resolving paths before project-root relativization.
+- Ran batch-30 card QA: card_count = 300, registered_source_coverage = 1.0, locator_manifest_coverage = 1.0, blocked_actions_complete_rate = 1.0, high_risk_review_routed_rate = 1.0, failure_count = 0.
+- Created `tmp/consultant_role_kb_batch30_regression_eval_20260619.py`.
+- Tuned source-intent rerank rules for new batch-30 interference cases around CDD revenue quality, transaction approval refusal, evidence/license boundaries, and client-development governance penalties.
+- Batch-30 regression result after tuning: answerable anchored_citation@1 = 0.9792, answerable anchored_citation@5 = 1.0, source_only_citation_violation_count = 0, gate_threshold_pass = true.
+- Batch-30 answer-trace result: trace_pass_count = 12/12 and trace_pass_rate = 1.0.
+- Reran the existing 150-card expanded regression after the rerank changes; answerable anchored_citation@1 = 0.9792, answerable anchored_citation@5 = 1.0, gate_threshold_pass = true.
+- Created `drafts/analysis/consultant-role-kb-approval-decision-record-20260619.md`.
+- Updated the legal/source-owner review packet and ADR 002 to reflect the project-local approvals while preserving `license_status=pending_legal_review`, production unchanged, no provider call, and no live KB ingestion.

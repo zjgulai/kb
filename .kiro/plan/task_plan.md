@@ -35,9 +35,17 @@ Use `KB_Platform_PRD.md` and the local `consult/` source folder to design a role
 
 ## Current Decisions Needed
 
-1. Whether to approve `approve_local_metadata`: full source register and structural parser manifests may remain committed.
-2. Whether existing 150 draft derived cards may remain persisted before legal review is complete.
-3. Whether next extraction should expand by batch to 30 sources rather than all 81 at once.
-4. Whether the proposed runtime ADR is accepted: local-only now, private staging next, provider/hybrid only after approval.
-5. Whether to later promote the PRD addendum into `KB_Platform_PRD.md` after human/legal review.
-6. Whether raw `consult/` third-party source files can ever be committed after legal/license review.
+Resolved on 2026-06-19:
+
+1. `approve_local_metadata` is approved for full source register and structural parser manifests.
+2. Existing 150 draft derived cards may remain persisted before legal review as local/draft artifacts.
+3. Batch extraction is approved to expand to 30 sources.
+4. Runtime ADR is accepted: local-only now, private staging next, provider/hybrid only after approval.
+
+Still open:
+
+1. Whether to later promote the PRD addendum into `KB_Platform_PRD.md` after human/legal review.
+2. Whether raw `consult/` third-party source files can ever be committed after legal/license review.
+3. Whether next expansion should move to 60 sources or first add human-gold eval locator labels.
+4. Whether to build a durable local vector store/index before private staging.
+5. Whether to implement a private no-provider retrieval API as the next agent runtime slice.

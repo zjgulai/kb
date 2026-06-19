@@ -12,20 +12,20 @@
     "eval_count": 50,
     "answerable_eval_count": 48,
     "no_allowed_source_eval_count": 2,
-    "elapsed_seconds": 4.527,
+    "elapsed_seconds": 5.426,
     "all_eval": {
       "count": 50,
-      "source_recall_at_1": 0.96,
+      "source_recall_at_1": 0.94,
       "source_recall_at_5": 0.96,
-      "anchored_citation_at_1": 0.96,
+      "anchored_citation_at_1": 0.94,
       "anchored_citation_at_5": 0.96,
       "top1_has_unit_anchor": 1.0
     },
     "answerable_eval": {
       "count": 48,
-      "source_recall_at_1": 1.0,
+      "source_recall_at_1": 0.9792,
       "source_recall_at_5": 1.0,
-      "anchored_citation_at_1": 1.0,
+      "anchored_citation_at_1": 0.9792,
       "anchored_citation_at_5": 1.0,
       "top1_has_unit_anchor": 1.0
     },
@@ -56,9 +56,9 @@
       },
       "methodology_selection": {
         "count": 10,
-        "source_recall_at_1": 1.0,
+        "source_recall_at_1": 0.9,
         "source_recall_at_5": 1.0,
-        "anchored_citation_at_1": 1.0,
+        "anchored_citation_at_1": 0.9,
         "anchored_citation_at_5": 1.0,
         "top1_has_unit_anchor": 1.0
       },
@@ -98,9 +98,9 @@
       },
       "methodology_selection": {
         "count": 10,
-        "source_recall_at_1": 1.0,
+        "source_recall_at_1": 0.9,
         "source_recall_at_5": 1.0,
-        "anchored_citation_at_1": 1.0,
+        "anchored_citation_at_1": 0.9,
         "anchored_citation_at_5": 1.0,
         "top1_has_unit_anchor": 1.0
       },
@@ -123,7 +123,7 @@
     },
     "source_only_citation_violation_count": 0,
     "failure_counts": {
-      "answerable_anchored_citation_at_1_failures": 0,
+      "answerable_anchored_citation_at_1_failures": 1,
       "answerable_anchored_citation_at_5_failures": 0
     },
     "gate_thresholds": {
@@ -2300,8 +2300,8 @@
           "base_score": 0.518931,
           "keyword_prior": 0.054,
           "card_type_prior": 0.04,
-          "source_intent_prior": 0.0,
-          "rerank_score": 0.612931,
+          "source_intent_prior": 0.13,
+          "rerank_score": 0.742931,
           "has_unit_anchor": true,
           "citation_anchor": {
             "anchor_confidence": "high",
@@ -2443,6 +2443,34 @@
       "answerable_by_registered_source": true,
       "top_sources": [
         {
+          "source_id": "SRC-CONSULT-010",
+          "card_id": "CARD-SRC-CONSULT-010-EXP-002",
+          "base_score": 0.478267,
+          "keyword_prior": 0.036,
+          "card_type_prior": 0.04,
+          "source_intent_prior": 0.13,
+          "rerank_score": 0.684267,
+          "has_unit_anchor": true,
+          "citation_anchor": {
+            "anchor_confidence": "high",
+            "anchor_label": "Find an independent consultant at www.umbrex.com 16 1.7 Data Sources for CDD There are many poss",
+            "anchor_match_score": 1.0,
+            "locator": "page:16",
+            "locator_type": "page",
+            "matched_terms": [
+              "Find",
+              "independent",
+              "consultant",
+              "www",
+              "umbrex",
+              "com",
+              "Data",
+              "Sources"
+            ],
+            "source_id": "SRC-CONSULT-010"
+          }
+        },
+        {
           "source_id": "SRC-CONSULT-011",
           "card_id": "CARD-SRC-CONSULT-011-EXP-009",
           "base_score": 0.480071,
@@ -2499,34 +2527,6 @@
           }
         },
         {
-          "source_id": "SRC-CONSULT-010",
-          "card_id": "CARD-SRC-CONSULT-010-EXP-002",
-          "base_score": 0.478267,
-          "keyword_prior": 0.036,
-          "card_type_prior": 0.04,
-          "source_intent_prior": 0.0,
-          "rerank_score": 0.554267,
-          "has_unit_anchor": true,
-          "citation_anchor": {
-            "anchor_confidence": "high",
-            "anchor_label": "Find an independent consultant at www.umbrex.com 16 1.7 Data Sources for CDD There are many poss",
-            "anchor_match_score": 1.0,
-            "locator": "page:16",
-            "locator_type": "page",
-            "matched_terms": [
-              "Find",
-              "independent",
-              "consultant",
-              "www",
-              "umbrex",
-              "com",
-              "Data",
-              "Sources"
-            ],
-            "source_id": "SRC-CONSULT-010"
-          }
-        },
-        {
           "source_id": "SRC-CONSULT-005",
           "card_id": "CARD-SRC-CONSULT-005-EXP-007",
           "base_score": 0.477286,
@@ -2576,10 +2576,10 @@
           }
         }
       ],
-      "source_recall_at_1": true,
+      "source_recall_at_1": false,
       "source_recall_at_5": true,
       "top1_has_unit_anchor": true,
-      "anchored_citation_at_1": true,
+      "anchored_citation_at_1": false,
       "anchored_citation_at_5": true
     },
     {
@@ -3671,8 +3671,8 @@
           "base_score": 0.656826,
           "keyword_prior": 0.18,
           "card_type_prior": 0.0,
-          "source_intent_prior": 0.0,
-          "rerank_score": 0.836826,
+          "source_intent_prior": 0.13,
+          "rerank_score": 0.966826,
           "has_unit_anchor": true,
           "citation_anchor": {
             "anchor_confidence": "high",
@@ -6558,8 +6558,8 @@
           "base_score": 0.54495,
           "keyword_prior": 0.018,
           "card_type_prior": 0.0,
-          "source_intent_prior": 0.0,
-          "rerank_score": 0.56295,
+          "source_intent_prior": 0.31,
+          "rerank_score": 0.87295,
           "has_unit_anchor": true,
           "citation_anchor": {
             "anchor_confidence": "high",
@@ -6578,6 +6578,34 @@
               "B2B"
             ],
             "source_id": "SRC-CONSULT-010"
+          }
+        },
+        {
+          "source_id": "SRC-CONSULT-011",
+          "card_id": "CARD-SRC-CONSULT-011-EXP-001",
+          "base_score": 0.462967,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.18,
+          "rerank_score": 0.660967,
+          "has_unit_anchor": true,
+          "citation_anchor": {
+            "anchor_confidence": "high",
+            "anchor_label": "The Operational Due Diligence Playbook 2. Community Feedback and Risk Assessment ○ Identify recu",
+            "anchor_match_score": 1.0,
+            "locator": "page:211",
+            "locator_type": "page",
+            "matched_terms": [
+              "Operational",
+              "Due",
+              "Diligence",
+              "Playbook",
+              "Community",
+              "Feedback",
+              "Risk",
+              "Assessment"
+            ],
+            "source_id": "SRC-CONSULT-011"
           }
         },
         {
@@ -6662,34 +6690,6 @@
               "Business"
             ],
             "source_id": "SRC-CONSULT-002"
-          }
-        },
-        {
-          "source_id": "SRC-CONSULT-003",
-          "card_id": "CARD-SRC-CONSULT-003-EXP-010",
-          "base_score": 0.513515,
-          "keyword_prior": 0.0,
-          "card_type_prior": 0.0,
-          "source_intent_prior": 0.0,
-          "rerank_score": 0.513515,
-          "has_unit_anchor": true,
-          "citation_anchor": {
-            "anchor_confidence": "high",
-            "anchor_label": "Completed By:",
-            "anchor_match_score": 1.0,
-            "locator": "slide:34",
-            "locator_type": "slide",
-            "matched_terms": [
-              "Completed",
-              "Enter",
-              "Name",
-              "Date",
-              "Status",
-              "Report",
-              "Project",
-              "Overall"
-            ],
-            "source_id": "SRC-CONSULT-003"
           }
         }
       ],
@@ -6868,8 +6868,8 @@
           "base_score": 0.436778,
           "keyword_prior": 0.036,
           "card_type_prior": 0.0,
-          "source_intent_prior": 0.0,
-          "rerank_score": 0.472778,
+          "source_intent_prior": 0.13,
+          "rerank_score": 0.602778,
           "has_unit_anchor": true,
           "citation_anchor": {
             "anchor_confidence": "high",
@@ -6896,8 +6896,8 @@
           "base_score": 0.425635,
           "keyword_prior": 0.018,
           "card_type_prior": 0.0,
-          "source_intent_prior": 0.0,
-          "rerank_score": 0.443635,
+          "source_intent_prior": 0.13,
+          "rerank_score": 0.573635,
           "has_unit_anchor": true,
           "citation_anchor": {
             "anchor_confidence": "high",
@@ -6916,6 +6916,34 @@
               "McKinsey"
             ],
             "source_id": "SRC-CONSULT-001"
+          }
+        },
+        {
+          "source_id": "SRC-CONSULT-013",
+          "card_id": "CARD-SRC-CONSULT-013-EXP-009",
+          "base_score": 0.428906,
+          "keyword_prior": 0.0,
+          "card_type_prior": -0.04,
+          "source_intent_prior": 0.13,
+          "rerank_score": 0.518906,
+          "has_unit_anchor": true,
+          "citation_anchor": {
+            "anchor_confidence": "high",
+            "anchor_label": "You may also be interested in the Umbrex Library of Industry-specific KPIs.",
+            "anchor_match_score": 1.0,
+            "locator": "sheet:About Umbrex#row:19",
+            "locator_type": "sheet_row",
+            "matched_terms": [
+              "You",
+              "may",
+              "also",
+              "interested",
+              "Umbrex",
+              "Library",
+              "Industry-specific",
+              "KPIs"
+            ],
+            "source_id": "SRC-CONSULT-013"
           }
         },
         {
@@ -6972,34 +7000,6 @@
               "Sources"
             ],
             "source_id": "SRC-CONSULT-010"
-          }
-        },
-        {
-          "source_id": "SRC-CONSULT-003",
-          "card_id": "CARD-SRC-CONSULT-003-EXP-009",
-          "base_score": 0.415679,
-          "keyword_prior": 0.0,
-          "card_type_prior": 0.0,
-          "source_intent_prior": 0.0,
-          "rerank_score": 0.415679,
-          "has_unit_anchor": true,
-          "citation_anchor": {
-            "anchor_confidence": "high",
-            "anchor_label": "Subtitle",
-            "anchor_match_score": 1.0,
-            "locator": "slide:20",
-            "locator_type": "slide",
-            "matched_terms": [
-              "Subtitle",
-              "Project",
-              "Name",
-              "Workplan",
-              "xxx",
-              "Workstream",
-              "Planned",
-              "activities"
-            ],
-            "source_id": "SRC-CONSULT-003"
           }
         }
       ],
@@ -7178,8 +7178,8 @@
           "base_score": 0.560516,
           "keyword_prior": 0.0,
           "card_type_prior": 0.0,
-          "source_intent_prior": 0.16,
-          "rerank_score": 0.720516,
+          "source_intent_prior": 0.29,
+          "rerank_score": 0.850516,
           "has_unit_anchor": true,
           "citation_anchor": {
             "anchor_confidence": "high",
@@ -7198,6 +7198,34 @@
               "Stakeholders"
             ],
             "source_id": "SRC-CONSULT-001"
+          }
+        },
+        {
+          "source_id": "SRC-CONSULT-002",
+          "card_id": "CARD-SRC-CONSULT-002-EXP-006",
+          "base_score": 0.566267,
+          "keyword_prior": 0.018,
+          "card_type_prior": 0.0,
+          "source_intent_prior": 0.13,
+          "rerank_score": 0.714267,
+          "has_unit_anchor": true,
+          "citation_anchor": {
+            "anchor_confidence": "high",
+            "anchor_label": "Porter's Generic Strategies — Overview",
+            "anchor_match_score": 1.0,
+            "locator": "slide:101",
+            "locator_type": "slide",
+            "matched_terms": [
+              "Porter",
+              "Generic",
+              "Strategies",
+              "Overview",
+              "framework",
+              "developed",
+              "Harvard",
+              "Business"
+            ],
+            "source_id": "SRC-CONSULT-002"
           }
         },
         {
@@ -7255,59 +7283,31 @@
           }
         },
         {
-          "source_id": "SRC-CONSULT-002",
-          "card_id": "CARD-SRC-CONSULT-002-EXP-006",
-          "base_score": 0.566267,
-          "keyword_prior": 0.018,
-          "card_type_prior": 0.0,
-          "source_intent_prior": 0.0,
-          "rerank_score": 0.584267,
-          "has_unit_anchor": true,
-          "citation_anchor": {
-            "anchor_confidence": "high",
-            "anchor_label": "Porter's Generic Strategies — Overview",
-            "anchor_match_score": 1.0,
-            "locator": "slide:101",
-            "locator_type": "slide",
-            "matched_terms": [
-              "Porter",
-              "Generic",
-              "Strategies",
-              "Overview",
-              "framework",
-              "developed",
-              "Harvard",
-              "Business"
-            ],
-            "source_id": "SRC-CONSULT-002"
-          }
-        },
-        {
-          "source_id": "SRC-CONSULT-009",
-          "card_id": "CARD-SRC-CONSULT-009-EXP-010",
-          "base_score": 0.566821,
+          "source_id": "SRC-CONSULT-013",
+          "card_id": "CARD-SRC-CONSULT-013-EXP-002",
+          "base_score": 0.578736,
           "keyword_prior": 0.0,
-          "card_type_prior": 0.0,
-          "source_intent_prior": 0.0,
-          "rerank_score": 0.566821,
+          "card_type_prior": -0.04,
+          "source_intent_prior": 0.13,
+          "rerank_score": 0.668736,
           "has_unit_anchor": true,
           "citation_anchor": {
             "anchor_confidence": "high",
-            "anchor_label": "1. Chief Executive Officer (CEO)1. CX StrategyqHow do you envision the role of customer experien",
+            "anchor_label": "Umbrex is the fastest way to find the right independent management consultant.",
             "anchor_match_score": 1.0,
-            "locator": "page:19",
-            "locator_type": "page",
+            "locator": "sheet:About Umbrex#row:5",
+            "locator_type": "sheet_row",
             "matched_terms": [
-              "Chief",
-              "Executive",
-              "Officer",
-              "CEO",
-              "StrategyqHow",
-              "you",
-              "envision",
-              "role"
+              "Umbrex",
+              "fastest",
+              "way",
+              "find",
+              "right",
+              "independent",
+              "management",
+              "consultant"
             ],
-            "source_id": "SRC-CONSULT-009"
+            "source_id": "SRC-CONSULT-013"
           }
         }
       ],

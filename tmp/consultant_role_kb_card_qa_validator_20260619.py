@@ -199,7 +199,7 @@ def summarize(rows: list[dict[str, Any]]) -> dict[str, Any]:
     }
 
 
-def write_report(summary: dict[str, Any], rows: list[dict[str, Any]]) -> None:
+def write_report(summary: dict[str, Any], rows: list[dict[str, Any]], report_path: Path, qa_output_path: Path) -> None:
     failures = [
         row
         for row in rows
@@ -237,7 +237,7 @@ write cards to a live KB, call a provider, or deploy production.
 
 | artifact | path |
 |---|---|
-| QA result JSON | `tmp/consultant-role-kb-card-qa-validation-20260619.json` |
+| QA result JSON | `{qa_output_path.relative_to(ROOT)}` |
 
 ## 2. Gate Metrics
 
@@ -293,7 +293,7 @@ has a repeatable metadata/citation QA layer.
 Unknown: this gate does not score semantic answer quality, human citation gold
 labels, or legal clearance.
 """
-    QA_REPORT_OUT.write_text(report, encoding="utf-8")
+    report_path.write_text(report, encoding="utf-8")
 
 
 def main() -> None:
@@ -301,6 +301,8 @@ def main() -> None:
     parser.add_argument("--cards", default=str(DEFAULT_CARDS))
     parser.add_argument("--register", default=str(DEFAULT_REGISTER))
     parser.add_argument("--manifest", default=str(DEFAULT_MANIFEST))
+    parser.add_argument("--out", default=str(QA_OUT))
+    parser.add_argument("--report", default=str(QA_REPORT_OUT))
     args = parser.parse_args()
 
     cards = read_jsonl(Path(args.cards))
@@ -308,11 +310,14 @@ def main() -> None:
     manifest = read_manifest(Path(args.manifest))
     results = [validate_card(card, register, manifest) for card in cards]
     summary = summarize(results)
-    QA_OUT.write_text(
+    out_path = Path(args.out)
+    out_path = Path(args.out).resolve()
+    report_path = Path(args.report).resolve()
+    out_path.write_text(
         json.dumps({"summary": summary, "results": results}, ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
-    write_report(summary, results)
+    write_report(summary, results, report_path, out_path)
     print(json.dumps(summary, ensure_ascii=False, indent=2))
 
 

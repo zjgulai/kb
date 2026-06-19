@@ -157,6 +157,11 @@ def legal_question(row: dict[str, str]) -> dict[str, str]:
         "choice_to_template_mapping": legal_choice_mapping(),
         "reviewer_response": "",
         "reviewer_name": "",
+        "legal_reviewer": "",
+        "source_owner_reviewer": "",
+        "security_reviewer": "",
+        "ops_reviewer": "",
+        "reviewed_at": "",
         "reviewer_notes": "",
         "evidence_uri": "",
         "source_type": row["source_type"],
@@ -194,6 +199,11 @@ def security_question(row: dict[str, str]) -> dict[str, str]:
         "choice_to_template_mapping": security_choice_mapping(),
         "reviewer_response": "",
         "reviewer_name": "",
+        "legal_reviewer": "",
+        "source_owner_reviewer": "",
+        "security_reviewer": "",
+        "ops_reviewer": "",
+        "reviewed_at": "",
         "reviewer_notes": "",
         "evidence_uri": "",
         "source_type": "",
@@ -228,6 +238,11 @@ def write_questionnaire(rows: list[dict[str, str]]) -> None:
         "choice_to_template_mapping",
         "reviewer_response",
         "reviewer_name",
+        "legal_reviewer",
+        "source_owner_reviewer",
+        "security_reviewer",
+        "ops_reviewer",
+        "reviewed_at",
         "reviewer_notes",
         "evidence_uri",
         "source_type",
@@ -286,9 +301,10 @@ or ingest into a live KB.
 ## 2. How To Use
 
 1. Use `shared/governance/consultant-agent/reviewer-decision-questionnaire-20260619.csv` as the human-facing question list.
-2. Copy final reviewer decisions into the official JSONL templates listed in the `official_template_path` column.
-3. Keep secret values, private keys, raw tokens, passwords, and private contact details outside the repository.
-4. Re-run the manual intake and shared-staging preflight after official decision files are filled.
+2. Fill reviewer identity fields and `reviewed_at` only after real human review.
+3. Copy final reviewer decisions into the official JSONL templates listed in the `official_template_path` column, or first run the local questionnaire-intake converter to create `tmp/` candidate JSONL files.
+4. Keep secret values, private keys, raw tokens, passwords, and private contact details outside the repository.
+5. Re-run the manual intake and shared-staging preflight after official decision files are filled.
 
 ## 3. Choice Mapping
 

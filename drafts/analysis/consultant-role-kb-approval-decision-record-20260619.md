@@ -68,6 +68,7 @@ approve production launch.
 | `tmp/consultant-role-kb-staging-runtime-config-preflight-20260619.json` | runtime config preflight is `blocked` with 4 external config blockers; no secret value or private contact detail is logged |
 | `tmp/consultant-role-kb-clearance-execution-pack-validation-20260619.json` | combined clearance execution pack is `blocked` with 80 selected legal/source-owner rows pending, 8 security controls pending, and 4 runtime config blockers |
 | `tmp/consultant-role-kb-reviewer-decision-questionnaire-validation-20260619.json` | reviewer questionnaire is structurally ready with 88 rows, 80 legal/source-owner questions, 8 security/operations questions, official decision templates unchanged, approval effect `0`, provider calls `0`, live KB writes `0` |
+| `tmp/consultant-role-kb-reviewer-questionnaire-intake-validation-20260619.json` | questionnaire intake converter generated valid temporary candidate JSONL files from the unfilled questionnaire; answered responses `0`, legal selected approvals `0/80`, security approvals `0/8`, official template writes `0`, approval effect `0` |
 
 ## 3.1 Batch-60 Selection Note
 
@@ -91,4 +92,5 @@ current 800-card all-extractable set, including the CSV cards.
 - Whether to run actual human review over locator labels.
 - Whether legal/source-owner reviewers fill the official JSONL decision file to approve, restrict, quarantine, reject, or discuss the 80 selected sources needed for shared staging.
 - Whether security/operations reviewers fill the official JSONL decision file to approve, reject, discuss, or keep pending the 8 shared-staging controls.
+- Whether a filled questionnaire candidate JSONL should be accepted into official decision files after human review.
 - Whether to configure approved external secret storage, append-only audit storage, rate limiting, rollback owner, and private ingress for the no-provider API after security approval.

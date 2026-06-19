@@ -1,0 +1,20 @@
+{
+  "failure_count": 0,
+  "failures": [],
+  "label_count": 50,
+  "label_status_counts": {
+    "pending_human_review": 50
+  },
+  "label_type_counts": {
+    "locator_gold_candidate": 48,
+    "refusal_policy_no_source": 2
+  },
+  "live_kb_write_count": 0,
+  "locator_coverage_rate": 1.0,
+  "locator_label_count": 48,
+  "production_impact": "production unchanged",
+  "provider_call_boundary": "no KB provider call",
+  "provider_call_count": 0,
+  "rank_not_top1_count": 1,
+  "refusal_policy_no_source_count": 2
+}

@@ -47,6 +47,8 @@ approve production launch.
 | `tmp/consultant-role-kb-all-extractable-answer-trace-eval-20260619.json` | answer trace `12/12`, trace pass rate `1.0` |
 | `shared/indexes/consultant-agent/all-extractable-bge-small-zh-v1-5-20260619/manifest.json` | durable local vector store with 780 records, 780 embedding rows, 78 sources, 512-dim local BGE embeddings |
 | `tmp/consultant-role-kb-all-extractable-vector-store-smoke-20260619.json` | vector plus deterministic rerank answerable source_recall@1 `0.9583`, @5 `1.0`; raw vector-only @5 `0.75`; provider calls `0`; live KB writes `0` |
+| `shared/eval/consultant-agent/human-gold-locator-labels.seed-20260619.jsonl` | 50 pending-review label seeds; 48 locator candidates; 2 policy-only refusal labels; no human-approved labels yet |
+| `tmp/consultant-role-kb-human-gold-locator-labels-qa-20260619.json` | label QA `failure_count=0`, locator coverage `1.0`, provider calls `0`, live KB writes `0` |
 
 ## 3.1 Batch-60 Selection Note
 
@@ -64,6 +66,6 @@ extractable units for each.
 
 ## 4. Next Decision Candidates
 
-- Whether to first stabilize human-gold eval locator labels.
 - Whether to implement a private no-provider retrieval API for staging UX tests.
+- Whether and when a human reviewer should approve or override the pending locator label seed.
 - Whether to add CSV extraction support for `SRC-CONSULT-030` and `SRC-CONSULT-031`.

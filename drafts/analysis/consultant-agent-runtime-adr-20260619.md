@@ -10,6 +10,7 @@ source_documents:
   - "drafts/analysis/consultant-role-kb-batch60-regression-eval-report-20260619.md"
   - "drafts/analysis/consultant-role-kb-all-extractable-regression-eval-report-20260619.md"
   - "drafts/analysis/consultant-role-kb-all-extractable-vector-store-report-20260619.md"
+  - "drafts/analysis/consultant-role-kb-human-gold-locator-labels-report-20260619.md"
 scope: "runtime decision for consultant-agent from full extraction to staging"
 production_impact: "production unchanged"
 provider_call_boundary: "no KB provider call"
@@ -32,12 +33,14 @@ The local consultant-role KB PoC now has:
 - 150 QA-checked local cards from the first 15 sources;
 - 780 QA-checked local cards from 78 currently extractable sources;
 - durable local vector-store package for 780 all-extractable cards;
+- pending-review locator label seed for 50 eval items;
 - all-extractable answerable anchored_citation@1 = 0.9792 and anchored_citation@5 = 1.0;
 - vector plus deterministic rerank answerable source_recall@1 = 0.9583 and @5 = 1.0;
 - answer-trace fixture pass rate = 1.0.
 
-The unresolved blockers are legal/license review, persistent derived-card policy,
-provider policy, staging auth, audit logging, and production deployment target.
+The unresolved blockers are legal/license review, human approval of locator
+labels, persistent derived-card policy, provider policy, staging auth, audit
+logging, and production deployment target.
 
 Current extraction exclusions: `SRC-CONSULT-016` is a duplicate EPUB secondary
 to the preferred PDF source, while `SRC-CONSULT-030` and `SRC-CONSULT-031` are
@@ -89,6 +92,7 @@ Runtime must enforce:
 ## 6. Acceptance Gates Before Staging
 
 - legal/source-owner review packet has explicit outcome;
+- locator labels have explicit human reviewer decisions before claiming human-gold precision;
 - full extraction batch has card QA failure_count = 0;
 - answerable anchored_citation@5 >= 0.95;
 - answerable anchored_citation@1 target >= 0.90;

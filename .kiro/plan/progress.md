@@ -151,3 +151,8 @@ provider_call_boundary: "no KB provider call"
 - Raw vector-only answerable source_recall@1 = 0.5833 and @5 = 0.75; this is retained as diagnostic lower-bound evidence.
 - Vector plus deterministic rerank answerable source_recall@1 = 0.9583 and @5 = 1.0; fixture answerable reranked @5 = 1.0.
 - Vector-store smoke preserved unit anchors and local-only boundaries: top1_unit_anchor_rate = 1.0, provider_call_count = 0, live_kb_write_count = 0.
+- User approved continuing the next round; proceeded with a pending-review human-gold locator label seed before private no-provider retrieval API work.
+- Created and ran `tmp/consultant_role_kb_human_gold_locator_labels_20260619.py`.
+- Generated `shared/eval/consultant-agent/human-gold-locator-labels.seed-20260619.jsonl`, `tmp/consultant-role-kb-human-gold-locator-labels-qa-20260619.json`, and `drafts/analysis/consultant-role-kb-human-gold-locator-labels-report-20260619.md`.
+- Label seed result: 50 labels, 48 locator candidates, 2 policy-only no-source refusal labels, all `pending_human_review`.
+- Label QA result: locator_coverage_rate = 1.0 for the 48 citable evals, rank_not_top1_count = 1 (`CONSULT-EVAL-016`), failure_count = 0, provider_call_count = 0, live_kb_write_count = 0.

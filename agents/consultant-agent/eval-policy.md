@@ -18,6 +18,13 @@ Required local gates:
 - answer-trace boundary checks
 - blocked-action compliance
 - refusal quality
+- pending-review locator label coverage
+- human approval state for gold labels
 
 Current eval set: `drafts/analysis/consultant-role-kb-eval-set-50.draft.jsonl`.
 
+Current locator label seed:
+
+- `shared/eval/consultant-agent/human-gold-locator-labels.seed-20260619.jsonl`
+- status: `pending_human_review`
+- use boundary: can support local no-provider retrieval API tests, but cannot be cited as approved human-gold precision until reviewer decisions are recorded.

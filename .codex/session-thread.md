@@ -23,6 +23,7 @@ provider_call_boundary: "no KB provider call"
 - All-extractable skipped `SRC-CONSULT-016` as duplicate secondary EPUB and `SRC-CONSULT-030`/`031` as insufficient-unit CSV sources.
 - Durable local vector store completed: 780 records, 780 embedding rows, 512 dimensions, local `BAAI/bge-small-zh-v1.5`, row-aligned metadata in `shared/indexes/consultant-agent/all-extractable-bge-small-zh-v1-5-20260619/`.
 - Vector-store smoke: raw vector answerable source_recall@1 0.5833 and @5 0.75; vector plus deterministic rerank answerable source_recall@1 0.9583 and @5 1.0; fixture answerable reranked @5 1.0.
+- Human-gold locator label seed completed: 50 pending-review labels, 48 locator candidates, 2 policy-only refusal labels, QA failure_count 0; no labels are human-approved yet.
 
 ## Active Next Work
 
@@ -39,13 +40,15 @@ Evidence:
 - answer trace: 12/12
 - durable local vector store: 780 records, 780 embedding rows, local BGE 512-dim embeddings
 - vector-store smoke: answerable reranked source_recall@1 0.9583, @5 1.0; raw vector-only @5 0.75 is diagnostic, not acceptance path
+- human-gold locator label seed: 50 labels, 48 locator candidates, 2 no-source refusal labels, all `pending_human_review`, QA failure_count 0
 
 Raw `consult/` source files remain excluded by `.gitignore`; only `consult/README.md` is tracked.
 
 Next blockers:
 
 - legal/source-owner review packet requires human decisions;
+- human-gold locator labels require manual reviewer decisions before they can be treated as approved gold labels;
 - persistent derived-card storage policy is pending;
 - runtime ADR 002 is accepted for local-only now, private staging next, provider/hybrid only after explicit approval;
 - no provider call, live KB ingestion, staging deployment, or production launch has occurred.
-- next local build choices: human-gold locator labels, private no-provider retrieval API, CSV loader support, or PRD addendum promotion after human/legal review.
+- next local build choices: private no-provider retrieval API, human-review workflow for locator labels, CSV loader support, or PRD addendum promotion after human/legal review.

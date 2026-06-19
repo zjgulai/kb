@@ -515,3 +515,33 @@ Interpretation:
 - Fact: the all-extractable draft card set now has a reusable local vector-store package with row-aligned metadata, routing text, normalized embeddings, and checksums.
 - Inference: raw vector-only retrieval is insufficient as the acceptance path; local agent retrieval should use vector search plus deterministic rerank/source-prior behavior.
 - Boundary: this is still local draft infrastructure only; no legal clearance, provider call, live KB ingestion, staging deployment, or production launch has occurred.
+
+## Human-Gold Locator Label Seed
+
+The 50-question eval set now has a pending-review locator label seed.
+
+Artifacts created:
+
+- Generator: `tmp/consultant_role_kb_human_gold_locator_labels_20260619.py`.
+- Label seed: `shared/eval/consultant-agent/human-gold-locator-labels.seed-20260619.jsonl`.
+- QA output: `tmp/consultant-role-kb-human-gold-locator-labels-qa-20260619.json`.
+- Report: `drafts/analysis/consultant-role-kb-human-gold-locator-labels-report-20260619.md`.
+
+Evidence:
+
+- label_count = 50.
+- locator_gold_candidate = 48.
+- refusal_policy_no_source = 2.
+- label_status_counts.pending_human_review = 50.
+- locator_coverage_rate_for_48_citable_evals = 1.0.
+- rank_not_top1_count = 1, for `CONSULT-EVAL-016`.
+- failure_count = 0.
+- provider_call_count = 0.
+- live_kb_write_count = 0.
+
+Interpretation:
+
+- Fact: every eval item now has a structured label seed that can drive reviewer workflow and retrieval API tests.
+- Fact: no label is approved human-gold yet; all labels are explicitly `pending_human_review`.
+- Inference: this unblocks private no-provider retrieval API contract work, but not a claim of human-approved locator precision.
+- Boundary: local draft labels only; no legal clearance, provider call, live KB ingestion, staging deployment, or production launch has occurred.

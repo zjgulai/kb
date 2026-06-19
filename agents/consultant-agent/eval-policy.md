@@ -29,6 +29,16 @@ Current locator label seed:
 - status: `pending_human_review`
 - use boundary: can support local no-provider retrieval API tests, but cannot be cited as approved human-gold precision until reviewer decisions are recorded.
 
+Current human label review workflow:
+
+- queue: `shared/eval/consultant-agent/human-gold-locator-label-review.queue-20260619.csv`
+- decision template: `shared/eval/consultant-agent/human-gold-locator-label-decisions.template-20260619.jsonl`
+- schema: `shared/eval/consultant-agent/human-gold-locator-label-review.schema-20260619.json`
+- validator: `tmp/consultant_role_kb_human_label_review_workflow_20260619.py`
+- validation output: `tmp/consultant-role-kb-human-label-review-workflow-validation-20260619.json`
+- required before claiming human-gold: explicit reviewer decisions and validator `failure_count=0`
+- current approved_decision_count: `0`
+
 Current local API smoke:
 
 - `tmp/consultant-role-kb-private-retrieval-api-smoke-20260619.json`

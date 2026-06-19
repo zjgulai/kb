@@ -627,3 +627,42 @@ Interpretation:
   the local API without changing retrieval semantics.
 - Boundary: legal/source-owner approval, secret storage, private ingress,
   append-only audit storage, rate limiting, and rollback remain unimplemented.
+
+## Human Label Review Workflow
+
+The pending locator label seed now has a local manual-review workflow. The
+workflow creates a reviewer-facing queue and a separate decision template, but
+it does not approve any labels.
+
+Artifacts:
+
+- Workflow design: `drafts/analysis/consultant-role-kb-human-label-review-workflow-20260619.md`
+- Queue CSV: `shared/eval/consultant-agent/human-gold-locator-label-review.queue-20260619.csv`
+- Decision template: `shared/eval/consultant-agent/human-gold-locator-label-decisions.template-20260619.jsonl`
+- Decision schema: `shared/eval/consultant-agent/human-gold-locator-label-review.schema-20260619.json`
+- Generator/validator: `tmp/consultant_role_kb_human_label_review_workflow_20260619.py`
+- Validation output: `tmp/consultant-role-kb-human-label-review-workflow-validation-20260619.json`
+
+Validation result:
+
+- seed_label_count = 50.
+- review_queue_count = 50.
+- decision_template_count = 50.
+- locator_candidate_count = 48.
+- policy_refusal_count = 2.
+- pending_decision_count = 50.
+- approved_decision_count = 0.
+- failure_count = 0.
+- provider_call_count = 0.
+- live_kb_write_count = 0.
+
+Interpretation:
+
+- Fact: every machine-seeded label has exactly one review queue row and one
+  pending decision row.
+- Fact: the template has 0 approved decisions and cannot be cited as
+  human-gold evidence yet.
+- Inference: this unblocks a human reviewer pass without mutating the machine
+  seed file.
+- Boundary: actual reviewer decisions, legal/license clearance, staging
+  implementation, provider calls, and live KB ingestion remain unperformed.

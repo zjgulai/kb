@@ -30,6 +30,10 @@ approve source licensing, or redistribute raw source text.
 | label seed | `shared/eval/consultant-agent/human-gold-locator-labels.seed-20260619.jsonl` |
 | QA result | `tmp/consultant-role-kb-human-gold-locator-labels-qa-20260619.json` |
 | generator | `tmp/consultant_role_kb_human_gold_locator_labels_20260619.py` |
+| review workflow | `drafts/analysis/consultant-role-kb-human-label-review-workflow-20260619.md` |
+| review queue | `shared/eval/consultant-agent/human-gold-locator-label-review.queue-20260619.csv` |
+| decision template | `shared/eval/consultant-agent/human-gold-locator-label-decisions.template-20260619.jsonl` |
+| review validator | `tmp/consultant_role_kb_human_label_review_workflow_20260619.py` |
 
 ## 2. Metrics
 
@@ -41,6 +45,8 @@ approve source licensing, or redistribute raw source text.
 | locator_coverage_rate_for_48_citable_evals | 1.0 |
 | rank_not_top1_count | 1 |
 | pending_human_review | 50 |
+| approved_decision_count | 0 |
+| review_workflow_failure_count | 0 |
 | failure_count | 0 |
 | provider_call_count | 0 |
 | live_kb_write_count | 0 |
@@ -59,3 +65,21 @@ contract and future reviewer workflow, but not enough to claim human-approved
 locator precision.
 
 Unknown: final human judgment may override source, card, or locator selections.
+
+## 4. Manual Review Workflow
+
+The review queue and decision template have been generated. They provide an
+auditable place for a reviewer to approve, override, reject, or mark labels as
+needing discussion.
+
+Current facts:
+
+- review_queue_count = 50.
+- decision_template_count = 50.
+- pending_decision_count = 50.
+- approved_decision_count = 0.
+- validation failure_count = 0.
+
+Boundary: these artifacts create the review workflow only. They do not approve
+labels, upgrade source licensing, authorize provider calls, or ingest anything
+into a live KB.

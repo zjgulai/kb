@@ -25,6 +25,8 @@ Durable local index package: `shared/indexes/consultant-agent/all-extractable-bg
 
 Human-gold locator label seed: `shared/eval/consultant-agent/human-gold-locator-labels.seed-20260619.jsonl`. It has 50 labels, 48 locator candidates, 2 policy-only refusal labels, QA failure_count 0, and all labels remain `pending_human_review`.
 
+Human label review workflow: `shared/eval/consultant-agent/human-gold-locator-label-review.queue-20260619.csv`, `shared/eval/consultant-agent/human-gold-locator-label-decisions.template-20260619.jsonl`, and schema `shared/eval/consultant-agent/human-gold-locator-label-review.schema-20260619.json`. Workflow validation has failure_count 0, pending_decision_count 50, approved_decision_count 0, provider_call_count 0, and live_kb_write_count 0.
+
 Private no-provider retrieval API prototype: `agents/consultant-agent/runtime/local_retrieval_api.py`. It exposes `/health`, `/retrieve`, and `/eval/label-seed` for localhost/private use. Current smoke has failure_count 0, label_seed_match_at_5 = 1.0, policy_refusal_pass_rate = 1.0, provider_call_count = 0, and live_kb_write_count = 0.
 
 Draft staging auth/audit contract: `drafts/analysis/consultant-role-kb-staging-auth-audit-design-20260619.md` plus schema `shared/audit/consultant-agent/staging-audit-event.schema-20260619.json`. Local validator output at `tmp/consultant-role-kb-staging-auth-audit-contract-validation-20260619.json` has 2 sample events, failure_count 0, provider_call_count 0, live_kb_write_count 0, and source_text_returned false. This is design/local validation only; no staging deployment has occurred.

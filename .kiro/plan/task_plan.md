@@ -45,11 +45,12 @@ Resolved on 2026-06-19:
 6. Human-gold locator label seed has been built, but all labels remain `pending_human_review`.
 7. Private no-provider retrieval API prototype has been built and locally smoked; this is not a staging deployment.
 8. Staging auth/audit contract has been designed and locally validated; this is not a staging deployment.
+9. Human label review workflow has been generated and locally validated; no label approvals have been recorded.
 
 Still open:
 
 1. Whether to later promote the PRD addendum into `KB_Platform_PRD.md` after human/legal review.
 2. Whether raw `consult/` third-party source files can ever be committed after legal/license review.
-3. Whether to run manual human review and approval over the locator label seed.
+3. Whether to run actual manual reviewer decisions over the locator label queue.
 4. Whether to implement staging auth, audit logs, and deployment topology for the no-provider API after legal/security approval.
 5. Whether to add special CSV extraction support for `SRC-CONSULT-030` and `SRC-CONSULT-031`.

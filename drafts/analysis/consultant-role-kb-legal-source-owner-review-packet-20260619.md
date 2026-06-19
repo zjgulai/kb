@@ -12,6 +12,7 @@ source_documents:
   - "drafts/analysis/consultant-role-kb-all-extractable-card-qa-validation-report-20260619.md"
   - "drafts/analysis/consultant-role-kb-all-extractable-vector-store-report-20260619.md"
   - "drafts/analysis/consultant-role-kb-human-gold-locator-labels-report-20260619.md"
+  - "drafts/analysis/consultant-role-kb-human-label-review-workflow-20260619.md"
   - "drafts/analysis/consultant-role-kb-private-retrieval-api-report-20260619.md"
   - "drafts/analysis/consultant-role-kb-staging-auth-audit-design-20260619.md"
 scope: "human review packet for full consultant-agent source and derived-card governance"
@@ -91,6 +92,9 @@ provider-backed `consultant-agent` use.
 | pending-review locator label seeds | 50 |
 | pending-review locator candidates | 48 |
 | approved human-gold locator labels | 0 |
+| human label review queue items | 50 |
+| human label review approved decisions | 0 |
+| human label review workflow failure_count | 0 |
 | private no-provider retrieval API smoke failure_count | 0 |
 | private no-provider retrieval API label_seed_match_at_5 | 1.0 |
 | private no-provider retrieval API live KB writes | 0 |
@@ -127,6 +131,7 @@ Human interpretation:
 | Can derived typed cards be stored persistently before legal review? | Existing 150 draft cards, batch-30, batch-60, and all-extractable draft cards are allowed as local eval artifacts. | project owner; legal/source owner still pending |
 | Can local vector indexes be built from draft cards? | Yes for local PoC only; no live KB or external service. | technical owner/source owner |
 | Can pending locator label seeds be reviewed into approved gold labels? | Yes, but reviewer decisions must be explicit and recorded before using them as human-gold evidence. | source owner/domain reviewer |
+| Is the review workflow ready for reviewer input? | Yes as a local/draft queue and decision template; no labels are approved until a reviewer fills decisions and validation passes. | source owner/domain reviewer |
 | Can a private no-provider retrieval API be prototyped locally? | Completed locally; staging still requires auth, audit, security, and source-owner/legal gates. | technical owner/security |
 | Can staging auth/audit be designed before deployment? | Design and local contract validation are acceptable as draft/local artifacts; implementation still requires security/legal approval. | technical owner/security |
 | Can `consultant-agent` answer users online from this corpus? | Not yet; staging requires legal/source-owner/security approval. | product/legal/security |
@@ -142,7 +147,8 @@ Human interpretation:
 - [x] Project-local: confirm whether full extraction should run in batches: 15 -> 30 -> 60 -> 81.
 - [ ] Confirm whether any source must be quarantined before batch extraction.
 - [ ] Confirm whether duplicate EPUB/PDF pairs should prefer PDF anchors.
-- [ ] Review and approve, override, or reject pending locator label seeds.
+- [x] Generate review queue and decision template for pending locator label seeds.
+- [ ] Review and approve, override, reject, or mark pending locator label seeds as needing discussion.
 - [x] Draft staging auth, audit log, and deployment topology contract before running the local API as a shared service.
 - [ ] Confirm and implement staging auth, audit log, and deployment topology before running the local API as a shared service.
 - [ ] Confirm whether `consultant-agent` may call a provider model in staging.
@@ -167,10 +173,11 @@ Human interpretation:
 The project-local gates `approve_local_metadata`, existing draft-card
 retention, `approve_batch_expansion_30`, `approve_batch_expansion_60`,
 `approve_all_extractable_expansion`, durable local vector-store packaging, and
-pending locator label seeding, runtime ADR acceptance, and draft staging
-auth/audit contract design are now recorded. The next local step should move to
-human review of locator labels, CSV loader support for the two registered
-insufficient-unit CSV sources, or security-approved staging implementation.
+pending locator label seeding, locator label review workflow generation,
+runtime ADR acceptance, and draft staging auth/audit contract design are now
+recorded. The next local step should move to actual human review of locator
+labels, CSV loader support for the two registered insufficient-unit CSV sources,
+or security-approved staging implementation.
 
 Do not approve online provider-backed `consultant-agent` until legal/source-owner
 and security review explicitly permits retrieved KB content to leave the local

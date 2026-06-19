@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "seed": "shared/eval/consultant-agent/human-gold-locator-labels.seed-20260619.jsonl",
+  "queue": "shared/eval/consultant-agent/human-gold-locator-label-review.queue-20260619.csv",
+  "decision_template": "shared/eval/consultant-agent/human-gold-locator-label-decisions.template-20260619.jsonl",
+  "schema": "shared/eval/consultant-agent/human-gold-locator-label-review.schema-20260619.json",
+  "seed_label_count": 50,
+  "review_queue_count": 50,
+  "decision_template_count": 50,
+  "locator_candidate_count": 48,
+  "policy_refusal_count": 2,
+  "pending_decision_count": 50,
+  "approved_decision_count": 0,
+  "failure_count": 0,
+  "provider_call_count": 0,
+  "live_kb_write_count": 0,
+  "production_impact": "production unchanged",
+  "provider_call_boundary": "no KB provider call",
+  "live_kb_ingestion": "no live KB ingestion",
+  "manual_review_boundary": "manual review required before treating as gold",
+  "failures": []
+}

@@ -1,0 +1,122 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "kb://consultant-agent/human-gold-locator-label-review.schema-20260619.json",
+  "title": "Consultant Agent Human Label Review Decision",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "decision_id",
+    "label_id",
+    "eval_id",
+    "label_type",
+    "decision",
+    "reviewer",
+    "reviewed_at",
+    "review_notes",
+    "approved_source_id",
+    "approved_card_id",
+    "approved_locator",
+    "approved_locator_type",
+    "approved_no_source_policy",
+    "proposed",
+    "production_impact",
+    "provider_call_boundary",
+    "live_kb_ingestion",
+    "manual_review_boundary"
+  ],
+  "properties": {
+    "decision_id": {
+      "type": "string",
+      "pattern": "^HGREVIEW-CONSULT-EVAL-[0-9]{3}-20260619$"
+    },
+    "label_id": {
+      "type": "string",
+      "pattern": "^HGLABEL-CONSULT-EVAL-[0-9]{3}-20260619$"
+    },
+    "eval_id": {
+      "type": "string",
+      "pattern": "^CONSULT-EVAL-[0-9]{3}$"
+    },
+    "label_type": {
+      "type": "string",
+      "enum": ["locator_gold_candidate", "refusal_policy_no_source"]
+    },
+    "decision": {
+      "type": "string",
+      "enum": ["pending", "approve", "override", "reject", "needs_discussion"]
+    },
+    "reviewer": {
+      "type": ["string", "null"],
+      "maxLength": 120
+    },
+    "reviewed_at": {
+      "type": ["string", "null"],
+      "maxLength": 40
+    },
+    "review_notes": {
+      "type": ["string", "null"],
+      "maxLength": 1000
+    },
+    "approved_source_id": {
+      "type": ["string", "null"],
+      "pattern": "^(SRC-CONSULT-[0-9]{3})?$"
+    },
+    "approved_card_id": {
+      "type": ["string", "null"],
+      "maxLength": 160
+    },
+    "approved_locator": {
+      "type": ["string", "null"],
+      "maxLength": 160
+    },
+    "approved_locator_type": {
+      "type": ["string", "null"],
+      "enum": ["slide", "page", "paragraph", "sheet_row", null]
+    },
+    "approved_no_source_policy": {
+      "type": "boolean"
+    },
+    "proposed": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_id",
+        "source_title",
+        "card_id",
+        "locator",
+        "locator_type",
+        "evidence_grade",
+        "license_status",
+        "workspace",
+        "expected_refusal"
+      ],
+      "properties": {
+        "source_id": {"type": ["string", "null"]},
+        "source_title": {"type": ["string", "null"]},
+        "card_id": {"type": ["string", "null"]},
+        "locator": {"type": ["string", "null"]},
+        "locator_type": {"type": ["string", "null"]},
+        "evidence_grade": {"type": ["string", "null"]},
+        "license_status": {"type": ["string", "null"]},
+        "workspace": {"type": "string"},
+        "expected_refusal": {"type": "boolean"}
+      }
+    },
+    "production_impact": {
+      "type": "string",
+      "const": "production unchanged"
+    },
+    "provider_call_boundary": {
+      "type": "string",
+      "const": "no KB provider call"
+    },
+    "live_kb_ingestion": {
+      "type": "string",
+      "const": "no live KB ingestion"
+    },
+    "manual_review_boundary": {
+      "type": "string",
+      "const": "manual review required before treating as gold"
+    }
+  }
+}

@@ -904,3 +904,35 @@ Interpretation:
   generator-template validation files.
 - Boundary: the intake preflight does not create approvals, configure secrets,
   deploy shared staging, call a provider, or ingest into a live KB.
+
+## Manual Decision Intake Smoke
+
+A manual decision intake smoke harness now verifies the intake bridge behavior
+with temporary synthetic fixtures. It does not change the formal decision
+templates and removes synthetic fixture files before exit.
+
+Artifacts:
+
+- Script: `tmp/consultant_role_kb_manual_decision_intake_smoke_20260619.py`
+- Output: `tmp/consultant-role-kb-manual-decision-intake-smoke-20260619.json`
+- Report: `drafts/analysis/consultant-role-kb-manual-decision-intake-smoke-20260619.md`
+
+Smoke result:
+
+- ok = true.
+- scenario_count = 3.
+- `default_pending_templates`: ready = false, blocker_count = 3.
+- `synthetic_all_approved`: ready = true, blocker_count = 0.
+- `synthetic_invalid_human_missing_reviewer`: ready = false, validation_failure_count = 1.
+- provider_call_count = 0.
+- live_kb_write_count = 0.
+
+Interpretation:
+
+- Fact: current default templates still block readiness.
+- Fact: a fully synthetic all-approved fixture can make intake readiness green,
+  proving the validation bridge can accept valid future reviewer decisions.
+- Fact: an invalid synthetic human decision is rejected before readiness can
+  clear.
+- Boundary: synthetic fixtures are temporary smoke data only and must not be
+  used as legal, source-owner, security, or human-gold evidence.

@@ -1,0 +1,68 @@
+{
+  "ok": true,
+  "production_impact": "production unchanged",
+  "provider_call_boundary": "no KB provider call",
+  "live_kb_ingestion": "no live KB ingestion",
+  "shared_staging_deployment": "not deployed",
+  "fixture_boundary": "synthetic smoke fixtures only; not manual approvals",
+  "fixture_dir": "tmp/manual-decision-intake-fixtures-20260619",
+  "fixture_dir_retained": false,
+  "scenario_count": 3,
+  "assertions": {
+    "default_pending_blocks": true,
+    "synthetic_all_approved_ready": true,
+    "synthetic_invalid_human_fails": true,
+    "no_provider_calls": true,
+    "no_live_kb_writes": true
+  },
+  "scenarios": {
+    "default_pending_templates": {
+      "ready": false,
+      "blockers": [
+        "human_label_decisions_not_fully_approved",
+        "legal_source_owner_clearance_not_ready",
+        "security_staging_controls_not_ready"
+      ],
+      "blocker_count": 3,
+      "validation_failure_count": 0,
+      "human_approved_decision_count": 0,
+      "human_seed_label_count": 50,
+      "legal_selected_approved_internal_staging_count": 0,
+      "legal_selected_source_count": 80,
+      "security_approved_control_count": 0,
+      "security_control_count": 8,
+      "provider_call_count": 0,
+      "live_kb_write_count": 0
+    },
+    "synthetic_all_approved": {
+      "ready": true,
+      "blockers": [],
+      "blocker_count": 0,
+      "validation_failure_count": 0,
+      "human_approved_decision_count": 50,
+      "human_seed_label_count": 50,
+      "legal_selected_approved_internal_staging_count": 80,
+      "legal_selected_source_count": 80,
+      "security_approved_control_count": 8,
+      "security_control_count": 8,
+      "provider_call_count": 0,
+      "live_kb_write_count": 0
+    },
+    "synthetic_invalid_human_missing_reviewer": {
+      "ready": false,
+      "blockers": [
+        "human_label_decisions_not_fully_approved"
+      ],
+      "blocker_count": 1,
+      "validation_failure_count": 1,
+      "human_approved_decision_count": 50,
+      "human_seed_label_count": 50,
+      "legal_selected_approved_internal_staging_count": 80,
+      "legal_selected_source_count": 80,
+      "security_approved_control_count": 8,
+      "security_control_count": 8,
+      "provider_call_count": 0,
+      "live_kb_write_count": 0
+    }
+  }
+}

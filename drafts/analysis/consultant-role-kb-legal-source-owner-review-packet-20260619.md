@@ -117,6 +117,7 @@ provider-backed `consultant-agent` use.
 | security/staging-control approved rows | 0 |
 | manual decision intake preflight status | blocked |
 | manual decision intake failure_count | 0 |
+| manual decision intake smoke | ok |
 
 ## 2. High-Risk Review Buckets
 
@@ -156,6 +157,7 @@ Human interpretation:
 | Is there a structured legal/source-owner decision intake? | Yes. The decision template is generated, but every source remains `pending_review`; no approval is recorded. | legal/source owner |
 | Is there a structured security/staging-control decision intake? | Yes. The decision template is generated, but every security control remains `pending_review`; no approval is recorded. | security/ops |
 | Can filled human/legal/security decision files be validated before staging? | Yes. The manual decision intake preflight validates default or externally supplied JSONL decisions before shared-staging readiness reads them. | product/legal/security |
+| Has the manual decision bridge been smoke-tested? | Yes. Synthetic local smoke proves pending defaults block, valid synthetic full approvals pass, and invalid synthetic human decisions fail; synthetic fixtures are not approval evidence. | technical owner |
 | Can `consultant-agent` answer users online from this corpus? | Not yet; staging requires legal/source-owner/security approval. | product/legal/security |
 | Can a provider model see retrieved card content? | Not before provider policy and data-use approval. | legal/security/product |
 
@@ -178,6 +180,7 @@ Human interpretation:
 - [x] Generate structured legal/source-owner decision queue and template.
 - [x] Generate structured security/staging-control decision queue and template.
 - [x] Generate manual decision intake preflight for filled decision JSONL files.
+- [x] Smoke-test manual decision intake behavior with temporary synthetic fixtures.
 - [ ] Review and approve, restrict, quarantine, reject, or mark pending every selected source needed for shared staging.
 - [ ] Review and approve, reject, or mark pending every security/staging-control row.
 - [ ] Confirm and implement staging auth, audit log, and deployment topology before running the local API as a shared service.
@@ -207,7 +210,8 @@ pending locator label seeding, locator label review workflow generation,
 runtime ADR acceptance, draft staging auth/audit contract design,
 localhost-only auth/audit harness smoke, shared-staging readiness preflight,
 legal/source-owner decision intake, security/staging-control decision intake,
-and manual decision intake preflight are now recorded. CSV loader support now covers the two previously insufficient-unit
+manual decision intake preflight, and manual decision intake smoke are now
+recorded. CSV loader support now covers the two previously insufficient-unit
 registered CSV sources in the 800-card all-extractable set, and the durable
 vector store plus local retrieval API smoke have been rebuilt against that
 800-card set. Legal/source-owner decision intake now exists, but all 81 source

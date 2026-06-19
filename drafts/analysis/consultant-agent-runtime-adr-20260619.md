@@ -20,6 +20,7 @@ source_documents:
   - "drafts/analysis/consultant-role-kb-legal-source-owner-decision-workflow-20260619.md"
   - "drafts/analysis/consultant-role-kb-security-staging-control-workflow-20260619.md"
   - "drafts/analysis/consultant-role-kb-manual-decision-intake-preflight-20260619.md"
+  - "drafts/analysis/consultant-role-kb-manual-decision-intake-smoke-20260619.md"
 scope: "runtime decision for consultant-agent from full extraction to staging"
 production_impact: "production unchanged"
 provider_call_boundary: "no KB provider call"
@@ -59,6 +60,9 @@ The local consultant-role KB PoC now has:
   = 0;
 - manual decision intake preflight is structurally green but blocked with 0/50
   human labels, 0/80 selected sources, and 0/8 security controls approved;
+- manual decision intake smoke proves the intake bridge blocks pending defaults,
+  can pass valid synthetic full approvals, and rejects invalid synthetic human
+  decisions; synthetic fixtures are not approval evidence;
 - answer-trace fixture pass rate = 1.0.
 
 The unresolved blockers are legal/license review, human approval of locator
@@ -144,6 +148,8 @@ not a shared staging deployment.
 - local staging auth/audit harness smoke has `failure_count = 0` and
   `audit_forbidden_leak_count = 0`.
 - manual decision intake preflight must return `manual_decision_intake_ready=true`.
+- manual decision intake smoke must remain green after any decision schema or
+  intake-bridge change.
 - shared staging readiness preflight must return `ready_for_shared_staging=true`.
 - durable vector store and local retrieval API remain aligned with the current all-extractable card set before staging.
 

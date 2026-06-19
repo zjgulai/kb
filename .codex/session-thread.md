@@ -32,6 +32,7 @@ provider_call_boundary: "no KB provider call"
 - Legal/source-owner decision workflow completed: 81 pending source decision rows and 80 selected runtime sources pending; shared staging legal clearance remains false.
 - Security/staging-control decision workflow completed: 8 pending security/operations control rows, 0 approved controls, 0 configured external controls, secret_like_value_count 0; shared staging security readiness remains false.
 - Manual decision intake preflight completed: current default decision templates are structurally valid, but manual_decision_intake_ready is false with 0/50 human labels, 0/80 selected sources, and 0/8 security controls approved.
+- Manual decision intake smoke completed: default pending templates block, synthetic all-approved fixtures pass, invalid synthetic human decisions fail, provider/live-write counts stay 0, and synthetic fixtures are removed before exit.
 
 ## Active Next Work
 
@@ -56,6 +57,7 @@ Evidence:
 - legal/source-owner decision workflow: source_count 81, selected_source_count 80, pending_review_count 81, selected_approved_internal_staging_count 0, failure_count 0
 - security/staging-control decision workflow: control_count 8, pending_review_count 8, approved_control_count 0, configured_external_control_count 0, secret_like_value_count 0, failure_count 0
 - manual decision intake preflight: manual_decision_intake_ready false, blocker_count 3, failure_count 0, human approved 0/50, legal selected approved 0/80, security approved 0/8
+- manual decision intake smoke: ok true, scenario_count 3, default pending blocked, synthetic all-approved ready, invalid synthetic human rejected, no retained synthetic approval evidence
 - shared staging preflight: ready_for_shared_staging false, status blocked, check_count 23, pass_count 16, blocker_count 7, provider_call_count 0, live_kb_write_count 0
 
 Raw `consult/` source files remain excluded by `.gitignore`; only `consult/README.md` is tracked.

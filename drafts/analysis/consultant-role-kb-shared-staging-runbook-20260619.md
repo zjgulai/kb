@@ -8,6 +8,7 @@ source_documents:
   - "drafts/analysis/consultant-role-kb-shared-staging-readiness-preflight-20260619.md"
   - "drafts/analysis/consultant-role-kb-security-staging-control-workflow-20260619.md"
   - "drafts/analysis/consultant-role-kb-manual-decision-intake-preflight-20260619.md"
+  - "drafts/analysis/consultant-role-kb-product-owner-decision-record-20260619.md"
 scope: "operator runbook for a future security-approved no-provider shared staging pilot"
 production_impact: "production unchanged"
 provider_call_boundary: "no KB provider call"
@@ -20,8 +21,8 @@ implementation_status: "draft runbook only; not approved for shared staging depl
 
 This runbook is a draft operating procedure for a future shared staging pilot.
 It does not approve staging, does not deploy a service, does not call a
-provider, does not ingest into a live KB, and does not approve source licensing
-or human-gold labels.
+provider, does not ingest into a live KB, and does not approve source licensing,
+security controls, or human-gold labels.
 
 ## 1. Required Approvals Before Use
 
@@ -30,7 +31,7 @@ Do not run shared staging until all items are explicit and recorded:
 | gate | required evidence |
 |---|---|
 | legal/source-owner clearance | recorded decision that staged retrieval may use the selected corpus |
-| human locator labels | reviewer decisions recorded before claiming human-gold metrics |
+| human locator labels | reviewer decisions recorded before claiming human-gold metrics; Q4:D currently allows machine-seeded eval only |
 | security owner | named staging owner and rollback owner |
 | network boundary | VPN, internal reverse proxy, or localhost tunnel approved |
 | security control decisions | all rows in `security-staging-control-decisions.template-20260619.jsonl` approved |
@@ -58,6 +59,7 @@ Required security decision artifacts:
 | `shared/governance/consultant-agent/security-staging-control-review.queue-20260619.csv` | reviewer queue for staging controls |
 | `shared/governance/consultant-agent/security-staging-control-decisions.template-20260619.jsonl` | pending decision template; must be filled outside raw secret values |
 | `tmp/consultant-role-kb-security-staging-control-validation-20260619.json` | validation consumed by the shared-staging preflight |
+| `tmp/consultant-role-kb-product-owner-decision-validation-20260619.json` | product-owner Q1-Q7 decision record; does not replace legal or security approval |
 
 Optional runtime environment variables:
 
@@ -87,8 +89,10 @@ Expected result before approvals is `ready_for_shared_staging=false`. Treat
 that as correct fail-closed behavior.
 
 Shared staging can proceed only when the preflight produces
-`ready_for_shared_staging=true` after the required human, legal/source-owner,
-security, and external runtime configuration gates are recorded.
+`ready_for_shared_staging=true` after the required legal/source-owner,
+security, and external runtime configuration gates are recorded. Human-gold
+metrics still require separate human reviewer approval; the current Q4:D policy
+allows only machine-seeded staging evidence.
 
 ## 4. Start Command
 
@@ -150,4 +154,6 @@ Stop shared staging immediately if any condition appears:
 
 Current state remains blocked for shared staging. The local harness, security
 decision workflow, manual decision intake preflight, and shared-staging
-preflight are validation artifacts only.
+preflight are validation artifacts only. Product-owner Q4:D removes the
+human-gold label gate from staging readiness only under the condition that
+human-gold metrics are not claimed.

@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Consultant Role KB Product Owner Decision",
+  "type": "object",
+  "required": [
+    "decision_id",
+    "recorded_at",
+    "recorded_from",
+    "decision_role",
+    "question_id",
+    "answer",
+    "decision_type",
+    "decision_value",
+    "effective_policy",
+    "decision_effect",
+    "production_impact",
+    "provider_call_boundary",
+    "live_kb_ingestion"
+  ],
+  "properties": {
+    "decision_id": {
+      "type": "string",
+      "pattern": "^PO-20260619-Q[1-7]-[A-D]$"
+    },
+    "recorded_at": {
+      "type": "string"
+    },
+    "recorded_from": {
+      "type": "string"
+    },
+    "decision_role": {
+      "const": "project_owner_product_owner"
+    },
+    "decision_scope": {
+      "const": "product_staging_strategy"
+    },
+    "question_id": {
+      "type": "string",
+      "enum": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4",
+        "Q5",
+        "Q6",
+        "Q7"
+      ]
+    },
+    "answer": {
+      "type": "string",
+      "enum": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ]
+    },
+    "decision_type": {
+      "type": "string"
+    },
+    "decision_value": {
+      "type": "string"
+    },
+    "effective_policy": {
+      "type": "object"
+    },
+    "decision_effect": {
+      "type": "string"
+    },
+    "production_impact": {
+      "const": "production unchanged"
+    },
+    "provider_call_boundary": {
+      "const": "no KB provider call"
+    },
+    "live_kb_ingestion": {
+      "const": "no live KB ingestion"
+    }
+  },
+  "additionalProperties": false
+}

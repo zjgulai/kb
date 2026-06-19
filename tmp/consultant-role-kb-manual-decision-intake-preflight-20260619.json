@@ -5,7 +5,14 @@
   "human_decisions": "shared/eval/consultant-agent/human-gold-locator-label-decisions.template-20260619.jsonl",
   "legal_decisions": "shared/governance/consultant-agent/legal-source-owner-decisions.template-20260619.jsonl",
   "security_decisions": "shared/governance/consultant-agent/security-staging-control-decisions.template-20260619.jsonl",
+  "product_owner_validation": "tmp/consultant-role-kb-product-owner-decision-validation-20260619.json",
   "human_label_decisions_ready": false,
+  "human_label_gate_ready_for_staging": true,
+  "human_label_gate_waived_for_staging": true,
+  "human_label_gate_policy": "machine_seeded_eval_only_do_not_claim_human_gold",
+  "human_gold_metrics_claimed": false,
+  "machine_seeded_eval_continues": true,
+  "product_owner_decision_effect_applied": true,
   "human_seed_label_count": 50,
   "human_approved_decision_count": 0,
   "human_pending_decision_count": 50,
@@ -17,9 +24,8 @@
   "security_approved_control_count": 0,
   "security_configured_external_control_count": 0,
   "security_secret_like_value_count": 0,
-  "blocker_count": 3,
+  "blocker_count": 2,
   "blockers": [
-    "human_label_decisions_not_fully_approved",
     "legal_source_owner_clearance_not_ready",
     "security_staging_controls_not_ready"
   ],
@@ -30,6 +36,14 @@
   "provider_call_boundary": "no KB provider call",
   "live_kb_ingestion": "no live KB ingestion",
   "shared_staging_deployment": "not deployed",
+  "product_owner_validation_summary": {
+    "ok": true,
+    "decision_count": 7,
+    "human_gold_label_gate_mode": "waive_for_staging_do_not_claim_human_gold",
+    "legal_source_owner_clearance_effect": false,
+    "security_approval_effect_count": 0,
+    "provider_call_enabled": false
+  },
   "human_validation": {
     "ok": true,
     "failure_count": 0,

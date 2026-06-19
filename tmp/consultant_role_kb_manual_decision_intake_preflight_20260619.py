@@ -22,6 +22,7 @@ REPORT = ROOT / "drafts/analysis/consultant-role-kb-manual-decision-intake-prefl
 HUMAN_MODULE = ROOT / "tmp/consultant_role_kb_human_label_review_workflow_20260619.py"
 LEGAL_MODULE = ROOT / "tmp/consultant_role_kb_legal_source_owner_decision_workflow_20260619.py"
 SECURITY_MODULE = ROOT / "tmp/consultant_role_kb_security_staging_control_workflow_20260619.py"
+PRODUCT_OWNER_VALIDATION = ROOT / "tmp/consultant-role-kb-product-owner-decision-validation-20260619.json"
 
 DEFAULT_HUMAN_DECISIONS = ROOT / "shared/eval/consultant-agent/human-gold-locator-label-decisions.template-20260619.jsonl"
 DEFAULT_LEGAL_DECISIONS = ROOT / "shared/governance/consultant-agent/legal-source-owner-decisions.template-20260619.jsonl"
@@ -29,6 +30,10 @@ DEFAULT_SECURITY_DECISIONS = ROOT / "shared/governance/consultant-agent/security
 
 PROVIDER_CALL_COUNT = 0
 LIVE_KB_WRITE_COUNT = 0
+
+
+def read_json(path: Path) -> dict[str, Any]:
+    return json.loads(path.read_text(encoding="utf-8"))
 
 
 def load_module(name: str, path: Path) -> ModuleType:
@@ -90,11 +95,21 @@ def main() -> None:
     legal_summary = legal_mod.validate_workflow(register_rows, selected_ids, read_jsonl(legal_path))
 
     security_summary = security_mod.validate_workflow(read_jsonl(security_path))
+    product_owner = read_json(PRODUCT_OWNER_VALIDATION) if PRODUCT_OWNER_VALIDATION.exists() else {}
 
     human_ready = (
         human_summary["failure_count"] == 0
         and human_summary["approved_decision_count"] == human_summary["seed_label_count"]
     )
+    human_label_gate_waived = (
+        product_owner.get("ok") is True
+        and product_owner.get("human_gold_label_gate_mode") == "waive_for_staging_do_not_claim_human_gold"
+        and product_owner.get("human_gold_metrics_claimed") is False
+        and product_owner.get("human_label_approval_effect_count") == 0
+        and product_owner.get("provider_call_enabled") is False
+        and human_summary["failure_count"] == 0
+    )
+    human_gate_ready_for_staging = human_ready or human_label_gate_waived
     legal_ready = bool(legal_summary["shared_staging_legal_clearance_ready"])
     security_ready = bool(security_summary["shared_staging_security_controls_ready"])
 
@@ -108,16 +123,18 @@ def main() -> None:
         human_summary["provider_call_count"],
         legal_summary["provider_call_count"],
         security_summary["provider_call_count"],
+        product_owner.get("provider_call_count", 0),
     )
     live_kb_write_count = max(
         LIVE_KB_WRITE_COUNT,
         human_summary["live_kb_write_count"],
         legal_summary["live_kb_write_count"],
         security_summary["live_kb_write_count"],
+        product_owner.get("live_kb_write_count", 0),
     )
     blockers = []
-    if not human_ready:
-        blockers.append("human_label_decisions_not_fully_approved")
+    if not human_gate_ready_for_staging:
+        blockers.append("human_label_gate_not_ready_for_staging")
     if not legal_ready:
         blockers.append("legal_source_owner_clearance_not_ready")
     if not security_ready:
@@ -135,7 +152,20 @@ def main() -> None:
             "KB_SECURITY_STAGING_CONTROL_DECISIONS_PATH",
             DEFAULT_SECURITY_DECISIONS,
         ),
+        "product_owner_validation": (
+            str(PRODUCT_OWNER_VALIDATION.relative_to(ROOT)) if PRODUCT_OWNER_VALIDATION.exists() else "missing"
+        ),
         "human_label_decisions_ready": human_ready,
+        "human_label_gate_ready_for_staging": human_gate_ready_for_staging,
+        "human_label_gate_waived_for_staging": human_label_gate_waived,
+        "human_label_gate_policy": (
+            "machine_seeded_eval_only_do_not_claim_human_gold"
+            if human_label_gate_waived
+            else "human_gold_approval_required"
+        ),
+        "human_gold_metrics_claimed": False if human_label_gate_waived else human_ready,
+        "machine_seeded_eval_continues": bool(product_owner.get("machine_seeded_eval_continues", False)),
+        "product_owner_decision_effect_applied": human_label_gate_waived,
         "human_seed_label_count": human_summary["seed_label_count"],
         "human_approved_decision_count": human_summary["approved_decision_count"],
         "human_pending_decision_count": human_summary["pending_decision_count"],
@@ -158,6 +188,17 @@ def main() -> None:
         "provider_call_boundary": "no KB provider call",
         "live_kb_ingestion": "no live KB ingestion",
         "shared_staging_deployment": "not deployed",
+        "product_owner_validation_summary": {
+            "ok": product_owner.get("ok", False),
+            "decision_count": product_owner.get("decision_count", 0),
+            "human_gold_label_gate_mode": product_owner.get("human_gold_label_gate_mode", "not_recorded"),
+            "legal_source_owner_clearance_effect": product_owner.get(
+                "legal_source_owner_clearance_effect",
+                False,
+            ),
+            "security_approval_effect_count": product_owner.get("security_approval_effect_count", 0),
+            "provider_call_enabled": product_owner.get("provider_call_enabled", False),
+        },
         "human_validation": {
             "ok": human_summary["ok"],
             "failure_count": human_summary["failure_count"],
@@ -195,6 +236,7 @@ source_documents:
   - "{payload["human_decisions"]}"
   - "{payload["legal_decisions"]}"
   - "{payload["security_decisions"]}"
+  - "{payload["product_owner_validation"]}"
 scope: "aggregate validation before manual decisions can affect shared-staging readiness"
 production_impact: "production unchanged"
 provider_call_boundary: "no KB provider call"
@@ -219,6 +261,8 @@ secrets, deploy shared staging, call a provider, or ingest into a live KB.
 | failure_count | {payload["failure_count"]} |
 | provider_call_count | {payload["provider_call_count"]} |
 | live_kb_write_count | {payload["live_kb_write_count"]} |
+| human_label_gate_waived_for_staging | {str(payload["human_label_gate_waived_for_staging"]).lower()} |
+| human_gold_metrics_claimed | {str(payload["human_gold_metrics_claimed"]).lower()} |
 
 ## 2. Decision Files
 
@@ -227,12 +271,13 @@ secrets, deploy shared staging, call a provider, or ingest into a live KB.
 | human labels | `{payload["human_decisions"]}` |
 | legal/source-owner | `{payload["legal_decisions"]}` |
 | security/staging controls | `{payload["security_decisions"]}` |
+| product-owner decision | `{payload["product_owner_validation"]}` |
 
 ## 3. Gate Summary
 
 | gate | ready | current count |
 |---|---:|---:|
-| human_label_decisions | {str(human_ready).lower()} | {payload["human_approved_decision_count"]}/{payload["human_seed_label_count"]} approved |
+| human_label_gate_for_staging | {str(human_gate_ready_for_staging).lower()} | {payload["human_approved_decision_count"]}/{payload["human_seed_label_count"]} approved; policy=`{payload["human_label_gate_policy"]}` |
 | legal_source_owner_clearance | {str(legal_ready).lower()} | {payload["legal_selected_approved_internal_staging_count"]}/{payload["legal_selected_source_count"]} selected sources approved |
 | security_staging_controls | {str(security_ready).lower()} | {payload["security_approved_control_count"]}/{payload["security_control_count"]} controls approved |
 
@@ -241,8 +286,13 @@ secrets, deploy shared staging, call a provider, or ingest into a live KB.
 Fact: the current default decision files are structurally valid and have
 `failure_count = 0`.
 
-Fact: all three manual decision gates remain blocked because they still contain
-pending decisions rather than approved human/legal/security outcomes.
+Fact: product-owner Q4:D waives the human-gold label gate for staging evidence
+only under a machine-seeded-eval policy. Human-gold labels remain unapproved
+and human-gold metrics must not be claimed.
+
+Fact: legal/source-owner clearance and security/staging controls remain blocked
+because they still contain pending decisions rather than approved reviewer
+outcomes.
 
 Boundary: this is only an intake preflight. Approval decisions must be made by
 the appropriate human reviewers and must not include raw secret values,

@@ -10,6 +10,7 @@ source_documents:
   - "tmp/consultant-role-kb-legal-source-owner-decision-validation-20260619.json"
   - "tmp/consultant-role-kb-security-staging-control-validation-20260619.json"
   - "tmp/consultant-role-kb-manual-decision-intake-preflight-20260619.json"
+  - "tmp/consultant-role-kb-product-owner-decision-validation-20260619.json"
 scope: "preflight gate before any security-approved shared staging deployment"
 production_impact: "production unchanged"
 provider_call_boundary: "no KB provider call"
@@ -30,17 +31,18 @@ provider, ingest into a live KB, approve labels, or clear source licensing.
 | ready_for_shared_staging | false |
 | status | blocked |
 | check_count | 23 |
-| pass_count | 16 |
+| pass_count | 17 |
 | warning_count | 0 |
-| blocker_count | 7 |
+| blocker_count | 6 |
 | provider_call_count | 0 |
 | live_kb_write_count | 0 |
+| human_label_gate_waived_for_staging | true |
+| human_gold_metrics_claimed | false |
 
 ## 2. Blockers
 
 | check | evidence | detail |
 |---|---|---|
-| `human_labels_approved` | tmp/consultant-role-kb-manual-decision-intake-preflight-20260619.json | approved_decision_count=0/50; manual reviewer decisions are required before claiming human-gold labels |
 | `legal_source_owner_clearance` | tmp/consultant-role-kb-manual-decision-intake-preflight-20260619.json | selected_approved_internal_staging_count=0/80; legal/source-owner clearance remains pending |
 | `security_controls_approved` | tmp/consultant-role-kb-manual-decision-intake-preflight-20260619.json | approved_control_count=0/8; security/operations controls remain pending |
 | `external_auth_token_hash_configured` | environment:KB_STAGING_AUTH_TOKEN_SHA256 | token hash status=missing; secret value is not logged |
@@ -66,7 +68,7 @@ provider, ingest into a live KB, approve labels, or clear source licensing.
 | `legal_source_owner_workflow_generated` | pass | tmp/consultant-role-kb-legal-source-owner-decision-validation-20260619.json |
 | `security_control_workflow_generated` | pass | tmp/consultant-role-kb-security-staging-control-validation-20260619.json |
 | `manual_decision_intake_preflight_green` | pass | tmp/consultant-role-kb-manual-decision-intake-preflight-20260619.json |
-| `human_labels_approved` | blocker | tmp/consultant-role-kb-manual-decision-intake-preflight-20260619.json |
+| `human_label_gate_policy_recorded` | pass | tmp/consultant-role-kb-manual-decision-intake-preflight-20260619.json |
 | `legal_source_owner_clearance` | blocker | tmp/consultant-role-kb-manual-decision-intake-preflight-20260619.json |
 | `security_controls_approved` | blocker | tmp/consultant-role-kb-manual-decision-intake-preflight-20260619.json |
 | `raw_consult_not_tracked` | pass | git ls-files consult |
@@ -82,10 +84,14 @@ Fact: local retrieval API, local auth/audit harness, audit schema validation,
 manual decision intake validation, no-provider boundary, no-live-write
 boundary, and raw-source Git exclusion are green.
 
-Fact: shared staging remains blocked by missing legal/source-owner clearance,
-missing approved human-gold labels, and missing external staging controls such
-as security/operations approval, secret configuration, external audit path,
-rate limit configuration, and rollback ownership.
+Fact: product-owner Q4:D waives the human-gold label gate for staging evidence
+only under a machine-seeded-eval policy. Human-gold labels remain unapproved
+and human-gold metrics are not claimed.
+
+Fact: shared staging remains blocked by missing legal/source-owner clearance
+and missing external staging controls such as security/operations approval,
+secret configuration, external audit path, rate limit configuration, and
+rollback ownership.
 
 Boundary: this is not a staging deployment and should not be described as
 online agent launch readiness.

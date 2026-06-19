@@ -242,15 +242,18 @@ def main() -> None:
     )
 
     approved_labels = manual_intake["human_approved_decision_count"]
+    human_gate_waived = bool(manual_intake.get("human_label_gate_waived_for_staging", False))
+    human_gate_ready = bool(manual_intake.get("human_label_gate_ready_for_staging", False))
     checks.append(
         Check(
-            check_id="human_labels_approved",
-            status="blocker" if approved_labels == 0 else "pass",
+            check_id="human_label_gate_policy_recorded",
+            status="pass" if human_gate_ready else "blocker",
             evidence="tmp/consultant-role-kb-manual-decision-intake-preflight-20260619.json",
             detail=(
                 "approved_decision_count="
                 f"{approved_labels}/{manual_intake['human_seed_label_count']}; "
-                "manual reviewer decisions are required before claiming human-gold labels"
+                f"human_label_gate_waived_for_staging={human_gate_waived}; "
+                "human-gold metrics must not be claimed unless labels are actually approved"
             ),
         )
     )
@@ -363,6 +366,9 @@ def main() -> None:
         "blockers": [check.to_dict() for check in blockers],
         "checks": [check.to_dict() for check in checks],
         "source_text_returned": False,
+        "human_label_gate_policy": manual_intake.get("human_label_gate_policy", "not_recorded"),
+        "human_label_gate_waived_for_staging": human_gate_waived,
+        "human_gold_metrics_claimed": bool(manual_intake.get("human_gold_metrics_claimed", False)),
     }
     OUT_JSON.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
@@ -385,6 +391,7 @@ source_documents:
   - "tmp/consultant-role-kb-legal-source-owner-decision-validation-20260619.json"
   - "tmp/consultant-role-kb-security-staging-control-validation-20260619.json"
   - "tmp/consultant-role-kb-manual-decision-intake-preflight-20260619.json"
+  - "tmp/consultant-role-kb-product-owner-decision-validation-20260619.json"
 scope: "preflight gate before any security-approved shared staging deployment"
 production_impact: "production unchanged"
 provider_call_boundary: "no KB provider call"
@@ -410,6 +417,8 @@ provider, ingest into a live KB, approve labels, or clear source licensing.
 | blocker_count | {len(blockers)} |
 | provider_call_count | 0 |
 | live_kb_write_count | 0 |
+| human_label_gate_waived_for_staging | {str(human_gate_waived).lower()} |
+| human_gold_metrics_claimed | {str(payload["human_gold_metrics_claimed"]).lower()} |
 
 ## 2. Blockers
 
@@ -429,10 +438,14 @@ Fact: local retrieval API, local auth/audit harness, audit schema validation,
 manual decision intake validation, no-provider boundary, no-live-write
 boundary, and raw-source Git exclusion are green.
 
-Fact: shared staging remains blocked by missing legal/source-owner clearance,
-missing approved human-gold labels, and missing external staging controls such
-as security/operations approval, secret configuration, external audit path,
-rate limit configuration, and rollback ownership.
+Fact: product-owner Q4:D waives the human-gold label gate for staging evidence
+only under a machine-seeded-eval policy. Human-gold labels remain unapproved
+and human-gold metrics are not claimed.
+
+Fact: shared staging remains blocked by missing legal/source-owner clearance
+and missing external staging controls such as security/operations approval,
+secret configuration, external audit path, rate limit configuration, and
+rollback ownership.
 
 Boundary: this is not a staging deployment and should not be described as
 online agent launch readiness.

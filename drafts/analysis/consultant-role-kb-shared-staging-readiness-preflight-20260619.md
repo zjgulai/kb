@@ -9,6 +9,7 @@ source_documents:
   - "tmp/consultant-role-kb-local-staging-auth-audit-smoke-20260619.json"
   - "tmp/consultant-role-kb-legal-source-owner-decision-validation-20260619.json"
   - "tmp/consultant-role-kb-security-staging-control-validation-20260619.json"
+  - "tmp/consultant-role-kb-manual-decision-intake-preflight-20260619.json"
 scope: "preflight gate before any security-approved shared staging deployment"
 production_impact: "production unchanged"
 provider_call_boundary: "no KB provider call"
@@ -28,8 +29,8 @@ provider, ingest into a live KB, approve labels, or clear source licensing.
 |---|---:|
 | ready_for_shared_staging | false |
 | status | blocked |
-| check_count | 22 |
-| pass_count | 15 |
+| check_count | 23 |
+| pass_count | 16 |
 | warning_count | 0 |
 | blocker_count | 7 |
 | provider_call_count | 0 |
@@ -39,9 +40,9 @@ provider, ingest into a live KB, approve labels, or clear source licensing.
 
 | check | evidence | detail |
 |---|---|---|
-| `human_labels_approved` | tmp/consultant-role-kb-human-label-review-workflow-validation-20260619.json | approved_decision_count=0; manual reviewer decisions are required before claiming human-gold labels |
-| `legal_source_owner_clearance` | tmp/consultant-role-kb-legal-source-owner-decision-validation-20260619.json | selected_approved_internal_staging_count=0/80; legal/source-owner clearance remains pending |
-| `security_controls_approved` | tmp/consultant-role-kb-security-staging-control-validation-20260619.json | approved_control_count=0/8; security/operations controls remain pending |
+| `human_labels_approved` | tmp/consultant-role-kb-manual-decision-intake-preflight-20260619.json | approved_decision_count=0/50; manual reviewer decisions are required before claiming human-gold labels |
+| `legal_source_owner_clearance` | tmp/consultant-role-kb-manual-decision-intake-preflight-20260619.json | selected_approved_internal_staging_count=0/80; legal/source-owner clearance remains pending |
+| `security_controls_approved` | tmp/consultant-role-kb-manual-decision-intake-preflight-20260619.json | approved_control_count=0/8; security/operations controls remain pending |
 | `external_auth_token_hash_configured` | environment:KB_STAGING_AUTH_TOKEN_SHA256 | token hash status=missing; secret value is not logged |
 | `external_audit_path_configured` | environment:KB_STAGING_AUDIT_PATH | audit path status=missing; environment variable is not set |
 | `rate_limit_configured` | environment:KB_STAGING_RATE_LIMIT_CONFIGURED | rate limiting must be configured at private ingress or middleware before shared staging |
@@ -64,9 +65,10 @@ provider, ingest into a live KB, approve labels, or clear source licensing.
 | `human_label_workflow_generated` | pass | tmp/consultant-role-kb-human-label-review-workflow-validation-20260619.json |
 | `legal_source_owner_workflow_generated` | pass | tmp/consultant-role-kb-legal-source-owner-decision-validation-20260619.json |
 | `security_control_workflow_generated` | pass | tmp/consultant-role-kb-security-staging-control-validation-20260619.json |
-| `human_labels_approved` | blocker | tmp/consultant-role-kb-human-label-review-workflow-validation-20260619.json |
-| `legal_source_owner_clearance` | blocker | tmp/consultant-role-kb-legal-source-owner-decision-validation-20260619.json |
-| `security_controls_approved` | blocker | tmp/consultant-role-kb-security-staging-control-validation-20260619.json |
+| `manual_decision_intake_preflight_green` | pass | tmp/consultant-role-kb-manual-decision-intake-preflight-20260619.json |
+| `human_labels_approved` | blocker | tmp/consultant-role-kb-manual-decision-intake-preflight-20260619.json |
+| `legal_source_owner_clearance` | blocker | tmp/consultant-role-kb-manual-decision-intake-preflight-20260619.json |
+| `security_controls_approved` | blocker | tmp/consultant-role-kb-manual-decision-intake-preflight-20260619.json |
 | `raw_consult_not_tracked` | pass | git ls-files consult |
 | `rollback_runbook_exists` | pass | drafts/analysis/consultant-role-kb-shared-staging-runbook-20260619.md |
 | `external_auth_token_hash_configured` | blocker | environment:KB_STAGING_AUTH_TOKEN_SHA256 |
@@ -77,8 +79,8 @@ provider, ingest into a live KB, approve labels, or clear source licensing.
 ## 4. Interpretation
 
 Fact: local retrieval API, local auth/audit harness, audit schema validation,
-no-provider boundary, no-live-write boundary, and raw-source Git exclusion are
-green.
+manual decision intake validation, no-provider boundary, no-live-write
+boundary, and raw-source Git exclusion are green.
 
 Fact: shared staging remains blocked by missing legal/source-owner clearance,
 missing approved human-gold labels, and missing external staging controls such

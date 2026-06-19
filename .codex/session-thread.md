@@ -31,6 +31,7 @@ provider_call_boundary: "no KB provider call"
 - Shared staging readiness preflight completed: local preflight and draft runbook exist, but readiness is blocked with 7 blockers after legal/security workflow integration; no shared staging deployment has occurred.
 - Legal/source-owner decision workflow completed: 81 pending source decision rows and 80 selected runtime sources pending; shared staging legal clearance remains false.
 - Security/staging-control decision workflow completed: 8 pending security/operations control rows, 0 approved controls, 0 configured external controls, secret_like_value_count 0; shared staging security readiness remains false.
+- Manual decision intake preflight completed: current default decision templates are structurally valid, but manual_decision_intake_ready is false with 0/50 human labels, 0/80 selected sources, and 0/8 security controls approved.
 
 ## Active Next Work
 
@@ -54,7 +55,8 @@ Evidence:
 - local staging auth/audit harness smoke: record_count 800, allowed HTTP 200, policy refusal HTTP 200, missing-token 401, RBAC denial 403, label_seed_match_at_5 1.0, policy_refusal_pass_rate 1.0, audit events 5, failure_count 0, provider_call_count 0, live_kb_write_count 0
 - legal/source-owner decision workflow: source_count 81, selected_source_count 80, pending_review_count 81, selected_approved_internal_staging_count 0, failure_count 0
 - security/staging-control decision workflow: control_count 8, pending_review_count 8, approved_control_count 0, configured_external_control_count 0, secret_like_value_count 0, failure_count 0
-- shared staging preflight: ready_for_shared_staging false, status blocked, check_count 22, pass_count 15, blocker_count 7, provider_call_count 0, live_kb_write_count 0
+- manual decision intake preflight: manual_decision_intake_ready false, blocker_count 3, failure_count 0, human approved 0/50, legal selected approved 0/80, security approved 0/8
+- shared staging preflight: ready_for_shared_staging false, status blocked, check_count 23, pass_count 16, blocker_count 7, provider_call_count 0, live_kb_write_count 0
 
 Raw `consult/` source files remain excluded by `.gitignore`; only `consult/README.md` is tracked.
 

@@ -747,12 +747,12 @@ Artifacts:
 - Preflight report: `drafts/analysis/consultant-role-kb-shared-staging-readiness-preflight-20260619.md`
 - Runbook: `drafts/analysis/consultant-role-kb-shared-staging-runbook-20260619.md`
 
-Preflight result after the legal and security workflow integrations:
+Preflight result after the legal, security, and manual-decision-intake workflow integrations:
 
 - ready_for_shared_staging = false.
 - status = blocked.
-- check_count = 22.
-- pass_count = 15.
+- check_count = 23.
+- pass_count = 16.
 - blocker_count = 7.
 - provider_call_count = 0.
 - live_kb_write_count = 0.
@@ -761,14 +761,14 @@ Passing checks include local API smoke, 800-record alignment, policy-refusal
 path, local auth/audit harness smoke, missing-token 401 behavior, RBAC 403
 behavior, audit contract validation, audit leak check, no-provider boundary,
 no-live-write boundary, human label workflow generation, legal/source-owner
-workflow generation, security-control workflow generation, raw `consult/` Git
-exclusion, and rollback runbook existence.
+workflow generation, security-control workflow generation, manual decision
+intake validation, raw `consult/` Git exclusion, and rollback runbook existence.
 
 Current blockers:
 
-- `human_labels_approved`: approved decision count remains 0.
-- `legal_source_owner_clearance`: selected approved internal-staging count remains 0/80.
-- `security_controls_approved`: approved security/operations control count remains 0/8.
+- `human_labels_approved`: approved decision count remains 0/50 in the manual intake preflight.
+- `legal_source_owner_clearance`: selected approved internal-staging count remains 0/80 in the manual intake preflight.
+- `security_controls_approved`: approved security/operations control count remains 0/8 in the manual intake preflight.
 - `external_auth_token_hash_configured`: `KB_STAGING_AUTH_TOKEN_SHA256` is not configured.
 - `external_audit_path_configured`: `KB_STAGING_AUDIT_PATH` is not configured.
 - `rate_limit_configured`: ingress or middleware rate limiting is not recorded.
@@ -862,3 +862,45 @@ Interpretation:
   and still checks actual environment configuration separately.
 - Boundary: no secret, token, password, private key, or private contact detail
   was written to the repository; no shared staging deployment occurred.
+
+## Manual Decision Intake Preflight
+
+A manual decision intake preflight now aggregates the three human-controlled
+decision files into one validated readiness bridge. It defaults to the current
+pending templates and can later be pointed at externally supplied JSONL files
+through environment variables before rerunning the shared-staging preflight.
+
+Artifacts:
+
+- Script: `tmp/consultant_role_kb_manual_decision_intake_preflight_20260619.py`
+- Output: `tmp/consultant-role-kb-manual-decision-intake-preflight-20260619.json`
+- Report: `drafts/analysis/consultant-role-kb-manual-decision-intake-preflight-20260619.md`
+
+Supported override environment variables:
+
+- `KB_HUMAN_LABEL_DECISIONS_PATH`
+- `KB_LEGAL_SOURCE_OWNER_DECISIONS_PATH`
+- `KB_SECURITY_STAGING_CONTROL_DECISIONS_PATH`
+
+Validation result over current default templates:
+
+- manual_decision_intake_ready = false.
+- blocker_count = 3.
+- failure_count = 0.
+- human_approved_decision_count = 0/50.
+- legal_selected_approved_internal_staging_count = 0/80.
+- security_approved_control_count = 0/8.
+- provider_call_count = 0.
+- live_kb_write_count = 0.
+
+Interpretation:
+
+- Fact: current default decision files are structurally valid and ready for
+  human filling.
+- Fact: no manual approval has been recorded; all three manual decision gates
+  remain blocked.
+- Fact: shared-staging preflight now uses this aggregate output for human,
+  legal/source-owner, and security readiness instead of reading only the
+  generator-template validation files.
+- Boundary: the intake preflight does not create approvals, configure secrets,
+  deploy shared staging, call a provider, or ingest into a live KB.

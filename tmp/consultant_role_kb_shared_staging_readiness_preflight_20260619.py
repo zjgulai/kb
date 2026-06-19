@@ -105,6 +105,7 @@ def main() -> None:
     vector_smoke = load_json(ROOT / "tmp/consultant-role-kb-all-extractable-vector-store-smoke-20260619.json")
     legal_workflow = load_json(ROOT / "tmp/consultant-role-kb-legal-source-owner-decision-validation-20260619.json")
     security_workflow = load_json(ROOT / "tmp/consultant-role-kb-security-staging-control-validation-20260619.json")
+    manual_intake = load_json(ROOT / "tmp/consultant-role-kb-manual-decision-intake-preflight-20260619.json")
 
     api_metrics = api_smoke["metrics"]
     harness_metrics = harness_smoke["metrics"]
@@ -186,6 +187,7 @@ def main() -> None:
             label_workflow["provider_call_count"],
             vector_metrics["provider_call_count"],
             security_workflow["provider_call_count"],
+            manual_intake["provider_call_count"],
         ),
         0,
         "all readiness evidence must preserve no-provider boundary",
@@ -201,6 +203,7 @@ def main() -> None:
             label_workflow["live_kb_write_count"],
             vector_metrics["live_kb_write_count"],
             security_workflow["live_kb_write_count"],
+            manual_intake["live_kb_write_count"],
         ),
         0,
         "all readiness evidence must preserve no-live-KB-write boundary",
@@ -229,41 +232,53 @@ def main() -> None:
         0,
         "security/operations control decision workflow must be structurally valid",
     )
+    add_metric_check(
+        checks,
+        "manual_decision_intake_preflight_green",
+        "tmp/consultant-role-kb-manual-decision-intake-preflight-20260619.json",
+        manual_intake["failure_count"],
+        0,
+        "manual decision intake must validate before it can affect shared-staging readiness",
+    )
 
-    approved_labels = label_workflow["approved_decision_count"]
+    approved_labels = manual_intake["human_approved_decision_count"]
     checks.append(
         Check(
             check_id="human_labels_approved",
             status="blocker" if approved_labels == 0 else "pass",
-            evidence="tmp/consultant-role-kb-human-label-review-workflow-validation-20260619.json",
-            detail=f"approved_decision_count={approved_labels}; manual reviewer decisions are required before claiming human-gold labels",
-        )
-    )
-
-    legal_ready = bool(legal_workflow["shared_staging_legal_clearance_ready"])
-    checks.append(
-        Check(
-            check_id="legal_source_owner_clearance",
-            status="pass" if legal_ready else "blocker",
-            evidence="tmp/consultant-role-kb-legal-source-owner-decision-validation-20260619.json",
+            evidence="tmp/consultant-role-kb-manual-decision-intake-preflight-20260619.json",
             detail=(
-                "selected_approved_internal_staging_count="
-                f"{legal_workflow['selected_approved_internal_staging_count']}/"
-                f"{legal_workflow['selected_source_count']}; legal/source-owner clearance remains pending"
+                "approved_decision_count="
+                f"{approved_labels}/{manual_intake['human_seed_label_count']}; "
+                "manual reviewer decisions are required before claiming human-gold labels"
             ),
         )
     )
 
-    security_ready = bool(security_workflow["shared_staging_security_controls_ready"])
+    legal_ready = bool(manual_intake["legal_clearance_ready"])
+    checks.append(
+        Check(
+            check_id="legal_source_owner_clearance",
+            status="pass" if legal_ready else "blocker",
+            evidence="tmp/consultant-role-kb-manual-decision-intake-preflight-20260619.json",
+            detail=(
+                "selected_approved_internal_staging_count="
+                f"{manual_intake['legal_selected_approved_internal_staging_count']}/"
+                f"{manual_intake['legal_selected_source_count']}; legal/source-owner clearance remains pending"
+            ),
+        )
+    )
+
+    security_ready = bool(manual_intake["security_controls_ready"])
     checks.append(
         Check(
             check_id="security_controls_approved",
             status="pass" if security_ready else "blocker",
-            evidence="tmp/consultant-role-kb-security-staging-control-validation-20260619.json",
+            evidence="tmp/consultant-role-kb-manual-decision-intake-preflight-20260619.json",
             detail=(
                 "approved_control_count="
-                f"{security_workflow['approved_control_count']}/"
-                f"{security_workflow['control_count']}; security/operations controls remain pending"
+                f"{manual_intake['security_approved_control_count']}/"
+                f"{manual_intake['security_control_count']}; security/operations controls remain pending"
             ),
         )
     )
@@ -369,6 +384,7 @@ source_documents:
   - "tmp/consultant-role-kb-local-staging-auth-audit-smoke-20260619.json"
   - "tmp/consultant-role-kb-legal-source-owner-decision-validation-20260619.json"
   - "tmp/consultant-role-kb-security-staging-control-validation-20260619.json"
+  - "tmp/consultant-role-kb-manual-decision-intake-preflight-20260619.json"
 scope: "preflight gate before any security-approved shared staging deployment"
 production_impact: "production unchanged"
 provider_call_boundary: "no KB provider call"
@@ -410,8 +426,8 @@ provider, ingest into a live KB, approve labels, or clear source licensing.
 ## 4. Interpretation
 
 Fact: local retrieval API, local auth/audit harness, audit schema validation,
-no-provider boundary, no-live-write boundary, and raw-source Git exclusion are
-green.
+manual decision intake validation, no-provider boundary, no-live-write
+boundary, and raw-source Git exclusion are green.
 
 Fact: shared staging remains blocked by missing legal/source-owner clearance,
 missing approved human-gold labels, and missing external staging controls such

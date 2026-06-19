@@ -7,6 +7,7 @@ source_documents:
   - "drafts/analysis/consultant-role-kb-staging-auth-audit-design-20260619.md"
   - "drafts/analysis/consultant-role-kb-shared-staging-readiness-preflight-20260619.md"
   - "drafts/analysis/consultant-role-kb-security-staging-control-workflow-20260619.md"
+  - "drafts/analysis/consultant-role-kb-manual-decision-intake-preflight-20260619.md"
 scope: "operator runbook for a future security-approved no-provider shared staging pilot"
 production_impact: "production unchanged"
 provider_call_boundary: "no KB provider call"
@@ -65,11 +66,20 @@ Optional runtime environment variables:
 | `KB_STAGING_HOST` | bind host; default remains `127.0.0.1` |
 | `KB_STAGING_PORT` | bind port; choose an internal-only port |
 
+Optional manual decision intake environment variables:
+
+| variable | purpose |
+|---|---|
+| `KB_HUMAN_LABEL_DECISIONS_PATH` | path to filled human label decision JSONL |
+| `KB_LEGAL_SOURCE_OWNER_DECISIONS_PATH` | path to filled legal/source-owner decision JSONL |
+| `KB_SECURITY_STAGING_CONTROL_DECISIONS_PATH` | path to filled security/staging-control decision JSONL |
+
 ## 3. Preflight
 
 Run the local preflight before any shared staging start:
 
 ```bash
+python3 tmp/consultant_role_kb_manual_decision_intake_preflight_20260619.py
 python3 tmp/consultant_role_kb_shared_staging_readiness_preflight_20260619.py
 ```
 
@@ -139,4 +149,5 @@ Stop shared staging immediately if any condition appears:
 ## 8. Current State
 
 Current state remains blocked for shared staging. The local harness, security
-decision workflow, and preflight are validation artifacts only.
+decision workflow, manual decision intake preflight, and shared-staging
+preflight are validation artifacts only.

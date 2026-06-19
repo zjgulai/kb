@@ -2,34 +2,34 @@
   "ok": true,
   "ready_for_shared_staging": false,
   "status": "blocked",
-  "created_at": "2026-06-19T10:08:37Z",
+  "created_at": "2026-06-19T10:30:15Z",
   "production_impact": "production unchanged",
   "provider_call_boundary": "no KB provider call",
   "live_kb_ingestion": "no live KB ingestion",
   "shared_staging_deployment": "not deployed",
-  "check_count": 22,
-  "pass_count": 15,
+  "check_count": 23,
+  "pass_count": 16,
   "warning_count": 0,
   "blocker_count": 7,
   "blockers": [
     {
       "check_id": "human_labels_approved",
       "status": "blocker",
-      "evidence": "tmp/consultant-role-kb-human-label-review-workflow-validation-20260619.json",
-      "detail": "approved_decision_count=0; manual reviewer decisions are required before claiming human-gold labels",
+      "evidence": "tmp/consultant-role-kb-manual-decision-intake-preflight-20260619.json",
+      "detail": "approved_decision_count=0/50; manual reviewer decisions are required before claiming human-gold labels",
       "required_for_shared_staging": true
     },
     {
       "check_id": "legal_source_owner_clearance",
       "status": "blocker",
-      "evidence": "tmp/consultant-role-kb-legal-source-owner-decision-validation-20260619.json",
+      "evidence": "tmp/consultant-role-kb-manual-decision-intake-preflight-20260619.json",
       "detail": "selected_approved_internal_staging_count=0/80; legal/source-owner clearance remains pending",
       "required_for_shared_staging": true
     },
     {
       "check_id": "security_controls_approved",
       "status": "blocker",
-      "evidence": "tmp/consultant-role-kb-security-staging-control-validation-20260619.json",
+      "evidence": "tmp/consultant-role-kb-manual-decision-intake-preflight-20260619.json",
       "detail": "approved_control_count=0/8; security/operations controls remain pending",
       "required_for_shared_staging": true
     },
@@ -155,23 +155,30 @@
       "required_for_shared_staging": true
     },
     {
+      "check_id": "manual_decision_intake_preflight_green",
+      "status": "pass",
+      "evidence": "tmp/consultant-role-kb-manual-decision-intake-preflight-20260619.json",
+      "detail": "manual decision intake must validate before it can affect shared-staging readiness; observed=0, expected=0",
+      "required_for_shared_staging": true
+    },
+    {
       "check_id": "human_labels_approved",
       "status": "blocker",
-      "evidence": "tmp/consultant-role-kb-human-label-review-workflow-validation-20260619.json",
-      "detail": "approved_decision_count=0; manual reviewer decisions are required before claiming human-gold labels",
+      "evidence": "tmp/consultant-role-kb-manual-decision-intake-preflight-20260619.json",
+      "detail": "approved_decision_count=0/50; manual reviewer decisions are required before claiming human-gold labels",
       "required_for_shared_staging": true
     },
     {
       "check_id": "legal_source_owner_clearance",
       "status": "blocker",
-      "evidence": "tmp/consultant-role-kb-legal-source-owner-decision-validation-20260619.json",
+      "evidence": "tmp/consultant-role-kb-manual-decision-intake-preflight-20260619.json",
       "detail": "selected_approved_internal_staging_count=0/80; legal/source-owner clearance remains pending",
       "required_for_shared_staging": true
     },
     {
       "check_id": "security_controls_approved",
       "status": "blocker",
-      "evidence": "tmp/consultant-role-kb-security-staging-control-validation-20260619.json",
+      "evidence": "tmp/consultant-role-kb-manual-decision-intake-preflight-20260619.json",
       "detail": "approved_control_count=0/8; security/operations controls remain pending",
       "required_for_shared_staging": true
     },

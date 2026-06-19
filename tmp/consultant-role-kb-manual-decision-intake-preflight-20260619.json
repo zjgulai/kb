@@ -1,0 +1,53 @@
+{
+  "ok": true,
+  "manual_decision_intake_ready": false,
+  "status": "blocked",
+  "human_decisions": "shared/eval/consultant-agent/human-gold-locator-label-decisions.template-20260619.jsonl",
+  "legal_decisions": "shared/governance/consultant-agent/legal-source-owner-decisions.template-20260619.jsonl",
+  "security_decisions": "shared/governance/consultant-agent/security-staging-control-decisions.template-20260619.jsonl",
+  "human_label_decisions_ready": false,
+  "human_seed_label_count": 50,
+  "human_approved_decision_count": 0,
+  "human_pending_decision_count": 50,
+  "legal_clearance_ready": false,
+  "legal_selected_source_count": 80,
+  "legal_selected_approved_internal_staging_count": 0,
+  "security_controls_ready": false,
+  "security_control_count": 8,
+  "security_approved_control_count": 0,
+  "security_configured_external_control_count": 0,
+  "security_secret_like_value_count": 0,
+  "blocker_count": 3,
+  "blockers": [
+    "human_label_decisions_not_fully_approved",
+    "legal_source_owner_clearance_not_ready",
+    "security_staging_controls_not_ready"
+  ],
+  "failure_count": 0,
+  "provider_call_count": 0,
+  "live_kb_write_count": 0,
+  "production_impact": "production unchanged",
+  "provider_call_boundary": "no KB provider call",
+  "live_kb_ingestion": "no live KB ingestion",
+  "shared_staging_deployment": "not deployed",
+  "human_validation": {
+    "ok": true,
+    "failure_count": 0,
+    "pending_decision_count": 50,
+    "approved_decision_count": 0
+  },
+  "legal_validation": {
+    "ok": true,
+    "failure_count": 0,
+    "selected_source_count": 80,
+    "selected_approved_internal_staging_count": 0,
+    "shared_staging_legal_clearance_ready": false
+  },
+  "security_validation": {
+    "ok": true,
+    "failure_count": 0,
+    "control_count": 8,
+    "approved_control_count": 0,
+    "shared_staging_security_controls_ready": false
+  }
+}

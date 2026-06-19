@@ -50,6 +50,7 @@ Resolved on 2026-06-19:
 11. Shared staging readiness preflight and runbook have been generated; preflight is blocked by missing human/legal/security/external-control gates, and no shared staging deployment has occurred.
 12. Legal/source-owner decision workflow has been generated and locally validated; all 81 source decisions remain `pending_review`, including all 80 selected runtime sources.
 13. Security/staging-control decision workflow has been generated and locally validated; all 8 security/operations controls remain `pending_review`, with 0 approved controls and no external configuration recorded in repo.
+14. Manual decision intake preflight has been generated and wired into shared-staging readiness; it can validate default or externally supplied human/legal/security decision JSONL files, but current default files remain blocked with 0/50 human labels, 0/80 selected sources, and 0/8 security controls approved.
 
 Still open:
 

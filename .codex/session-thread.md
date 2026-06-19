@@ -27,6 +27,7 @@ provider_call_boundary: "no KB provider call"
 - Human label review workflow completed: 50-item review queue, 50-item decision template, validation failure_count 0; all decisions remain pending and approved_decision_count is 0.
 - Human-label reviewer questionnaire completed: 50 reviewer-facing rows, 48 locator questions, 2 refusal questions; official decision template unchanged and approval_effect_count remains 0.
 - Human-label questionnaire intake converter completed: unfilled questionnaire derives temporary candidate JSONL with 50 pending decisions, 0 approved decisions, official_template_write_count 0, provider_call_count 0, and live_kb_write_count 0.
+- Human-label candidate promotion preflight completed: current candidate remains blocked with 50 pending decisions, 0 approved decisions, 0 changed rows, 4 blockers, official_template_write_count 0, and approval_effect_count 0.
 - Private no-provider retrieval API prototype completed and re-smoked against the 800-record index: localhost/private `/health`, `/retrieve`, and `/eval/label-seed`; smoke failure_count 0, label_seed_match_at_5 1.0, policy_refusal_pass_rate 1.0.
 - Draft staging auth/audit contract completed: private ingress/auth/RBAC/audit schema design, JSON schema, and local validator; contract validation failure_count 0 over allowed and denied sample events.
 - Local staging auth/audit harness completed: localhost-only wrapper around the private retrieval API with bearer-token hash auth, role-gated protected endpoints, and audit events for allowed, denied, and policy-refusal requests; smoke failure_count 0, audit_schema_failure_count 0, audit_forbidden_leak_count 0.
@@ -61,6 +62,7 @@ Evidence:
 - human label review workflow: review_queue_count 50, decision_template_count 50, pending_decision_count 50, approved_decision_count 0, failure_count 0
 - human-label reviewer questionnaire: questionnaire_row_count 50, locator_question_count 48, refusal_question_count 2, approval_effect_count 0, provider_call_count 0, live_kb_write_count 0
 - human-label questionnaire intake: answered_response_count 0, derived_decision_count 50, pending_decision_count 50, approved_decision_count 0, official_template_write_count 0, approval_effect_count 0, provider_call_count 0, live_kb_write_count 0
+- human-label candidate promotion preflight: status blocked, candidate_decision_count 50, candidate_pending_count 50, candidate_non_pending_count 0, candidate_approved_count 0, blocker_count 4, official_template_write_count 0, provider_call_count 0, live_kb_write_count 0
 - private no-provider retrieval API smoke: record_count 800, label_seed_match_at_1 0.9375, label_seed_match_at_5 1.0, policy_refusal_pass_rate 1.0, workspace forbidden 403, failure_count 0
 - staging auth/audit contract validation: event_count 2, allowed_event_count 1, denied_event_count 1, failure_count 0, provider_call_count 0, live_kb_write_count 0, source_text_returned false
 - local staging auth/audit harness smoke: record_count 800, allowed HTTP 200, policy refusal HTTP 200, missing-token 401, RBAC denial 403, label_seed_match_at_5 1.0, policy_refusal_pass_rate 1.0, audit events 5, failure_count 0, provider_call_count 0, live_kb_write_count 0
@@ -82,6 +84,7 @@ Next blockers:
 - legal/source-owner review packet requires human decisions;
 - human-gold locator labels now have a review queue/template but still require manual reviewer decisions before they can be treated as approved gold labels;
 - human-label questionnaire and intake converter can produce temporary candidate decisions, but the official human-label decision file still requires real reviewer input before human-gold metrics can be claimed;
+- human-label candidate promotion preflight now exists, but current candidate is a no-op pending set; a later official update still requires fully reviewed candidate decisions and explicit acceptance authorization;
 - persistent derived-card storage policy is pending;
 - runtime ADR 002 is accepted for local-only now, private staging next, provider/hybrid only after explicit approval;
 - private no-provider retrieval API and staging auth/audit harness are local prototypes only; no staging deployment has occurred;

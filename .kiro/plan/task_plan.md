@@ -46,6 +46,7 @@ Still open:
 
 1. Whether to later promote the PRD addendum into `KB_Platform_PRD.md` after human/legal review.
 2. Whether raw `consult/` third-party source files can ever be committed after legal/license review.
-3. Whether next expansion should move to the remaining extractable sources or first add human-gold eval locator labels.
-4. Whether to build a durable local vector store/index before private staging.
+3. Whether to build a durable local vector store/index before private staging.
+4. Whether to add human-gold eval locator labels before broader agent runtime work.
 5. Whether to implement a private no-provider retrieval API as the next agent runtime slice.
+6. Whether to add special CSV extraction support for `SRC-CONSULT-030` and `SRC-CONSULT-031`.

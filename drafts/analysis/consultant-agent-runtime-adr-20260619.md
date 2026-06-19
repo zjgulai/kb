@@ -8,6 +8,7 @@ source_documents:
   - "drafts/analysis/consultant-role-kb-expanded-regression-eval-report-20260619.md"
   - "drafts/analysis/consultant-role-kb-batch30-regression-eval-report-20260619.md"
   - "drafts/analysis/consultant-role-kb-batch60-regression-eval-report-20260619.md"
+  - "drafts/analysis/consultant-role-kb-all-extractable-regression-eval-report-20260619.md"
 scope: "runtime decision for consultant-agent from full extraction to staging"
 production_impact: "production unchanged"
 provider_call_boundary: "no KB provider call"
@@ -28,12 +29,16 @@ The local consultant-role KB PoC now has:
 - full 81-source draft register;
 - full parser unit manifest with 81/81 parse success;
 - 150 QA-checked local cards from the first 15 sources;
-- 600 QA-checked local cards from the approved batch-60 source expansion;
-- batch-60 answerable anchored_citation@1 = 0.9792 and anchored_citation@5 = 1.0;
+- 780 QA-checked local cards from 78 currently extractable sources;
+- all-extractable answerable anchored_citation@1 = 0.9792 and anchored_citation@5 = 1.0;
 - answer-trace fixture pass rate = 1.0.
 
 The unresolved blockers are legal/license review, persistent derived-card policy,
 provider policy, staging auth, audit logging, and production deployment target.
+
+Current extraction exclusions: `SRC-CONSULT-016` is a duplicate EPUB secondary
+to the preferred PDF source, while `SRC-CONSULT-030` and `SRC-CONSULT-031` are
+registered CSV sources that currently produce insufficient extractable units.
 
 ## 3. Decision
 

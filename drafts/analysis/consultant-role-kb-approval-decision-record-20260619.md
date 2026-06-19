@@ -40,6 +40,11 @@ approve production launch.
 | `tmp/consultant-role-kb-batch60-card-qa-validation-20260619.json` | QA `failure_count=0` |
 | `tmp/consultant-role-kb-batch60-anchored-retrieval-citation-eval-20260619.json` | answerable anchored_citation@1 `0.9792`, @5 `1.0`, source-only citation violations `0` |
 | `tmp/consultant-role-kb-batch60-answer-trace-eval-20260619.json` | answer trace `12/12`, trace pass rate `1.0` |
+| `drafts/analysis/consultant-role-kb-all-extractable-source-selection-20260619.csv` | 78 selected currently extractable sources |
+| `tmp/consultant-role-kb-all-extractable-cards-20260619.jsonl` | 780 local draft cards |
+| `tmp/consultant-role-kb-all-extractable-card-qa-validation-20260619.json` | QA `failure_count=0` |
+| `tmp/consultant-role-kb-all-extractable-anchored-retrieval-citation-eval-20260619.json` | answerable anchored_citation@1 `0.9792`, @5 `1.0`, source-only citation violations `0` |
+| `tmp/consultant-role-kb-all-extractable-answer-trace-eval-20260619.json` | answer trace `12/12`, trace pass rate `1.0` |
 
 ## 3.1 Batch-60 Selection Note
 
@@ -48,8 +53,15 @@ the current extraction path produced fewer than 10 extractable units for each.
 They remain registered sources, but are not counted as completed typed-card
 extractions.
 
+## 3.2 All-Extractable Selection Note
+
+The all-extractable batch selected 78 sources. `SRC-CONSULT-016` was skipped
+as the duplicate EPUB secondary to the preferred PDF source. `SRC-CONSULT-030`
+and `SRC-CONSULT-031` remain skipped because the current loader produced 0
+extractable units for each.
+
 ## 4. Next Decision Candidates
 
-- Whether to expand next to the remaining extractable sources or first stabilize human-gold eval labels.
-- Whether to build a durable local vector store/index from batch-60 cards.
+- Whether to build a durable local vector store/index from the 780 all-extractable cards.
+- Whether to first stabilize human-gold eval locator labels.
 - Whether to implement a private no-provider retrieval API for staging UX tests.

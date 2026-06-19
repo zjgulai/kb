@@ -19,6 +19,8 @@ provider_call_boundary: "no KB provider call"
 - Batch-30 expansion completed: 30 sources, 300 local draft cards, QA failure_count 0, answerable anchored_citation@1 0.9792, answerable anchored_citation@5 1.0, answer-trace 12/12.
 - Batch-60 expansion completed: 60 extractable sources, 600 local draft cards, QA failure_count 0, answerable anchored_citation@1 0.9792, answerable anchored_citation@5 1.0, answer-trace 12/12.
 - Batch-60 skipped `SRC-CONSULT-030` and `SRC-CONSULT-031` because the current loader produced insufficient extractable units.
+- All-extractable expansion completed: 78 selected sources, 780 local draft cards, QA failure_count 0, answerable anchored_citation@1 0.9792, answerable anchored_citation@5 1.0, answer-trace 12/12.
+- All-extractable skipped `SRC-CONSULT-016` as duplicate secondary EPUB and `SRC-CONSULT-030`/`031` as insufficient-unit CSV sources.
 
 ## Active Next Work
 
@@ -30,8 +32,8 @@ Evidence:
 - remote: `https://github.com/zjgulai/kb.git`
 - full source register: 81/81 sources registered
 - parser manifest: 81/81 parse success, 0 parse errors, 23310 structural units
-- card QA: 600 batch-60 cards, failure_count 0, locator_manifest_coverage 1.0
-- batch-60 retrieval regression: answerable anchored_citation@1 0.9792, @5 1.0
+- card QA: 780 all-extractable cards, failure_count 0, locator_manifest_coverage 1.0
+- all-extractable retrieval regression: answerable anchored_citation@1 0.9792, @5 1.0
 - answer trace: 12/12
 
 Raw `consult/` source files remain excluded by `.gitignore`; only `consult/README.md` is tracked.
@@ -42,3 +44,4 @@ Next blockers:
 - persistent derived-card storage policy is pending;
 - runtime ADR 002 is accepted for local-only now, private staging next, provider/hybrid only after explicit approval;
 - no provider call, live KB ingestion, staging deployment, or production launch has occurred.
+- next local build choices: durable local vector store/index, human-gold locator labels, or private no-provider retrieval API.

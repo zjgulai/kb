@@ -135,3 +135,11 @@ provider_call_boundary: "no KB provider call"
 - Ran batch-60 card QA: card_count = 600, registered_source_coverage = 1.0, locator_manifest_coverage = 1.0, blocked_actions_complete_rate = 1.0, high_risk_review_routed_rate = 1.0, failure_count = 0.
 - Ran batch-60 retrieval/citation regression: answerable anchored_citation@1 = 0.9792, answerable anchored_citation@5 = 1.0, source_only_citation_violation_count = 0, gate_threshold_pass = true.
 - Batch-60 answer-trace result: trace_pass_count = 12/12 and trace_pass_rate = 1.0.
+- User asked to continue the next round; proceeded with all-extractable local expansion.
+- Created `tmp/consultant_role_kb_all_extractable_expansion_20260619.py` and `tmp/consultant_role_kb_all_extractable_regression_eval_20260619.py`.
+- Generated `drafts/analysis/consultant-role-kb-all-extractable-source-selection-20260619.csv`, `tmp/consultant-role-kb-all-extractable-cards-20260619.jsonl`, `tmp/consultant-role-kb-all-extractable-card-gate-eval-20260619.json`, and `drafts/analysis/consultant-role-kb-all-extractable-expansion-report-20260619.md`.
+- All-extractable expansion result: 78 selected sources, 780 cards, metadata_completeness = 1.0, unit_locator_coverage = 1.0, source_only_citation_violation_count = 0, long_text_violation_count = 0, provider_call_count = 0, live_kb_write_count = 0.
+- All-extractable skipped sources: `SRC-CONSULT-016` as duplicate secondary EPUB, and `SRC-CONSULT-030`/`SRC-CONSULT-031` as insufficient-unit CSV sources under the current loader.
+- Ran all-extractable card QA: card_count = 780, registered_source_coverage = 1.0, locator_manifest_coverage = 1.0, blocked_actions_complete_rate = 1.0, high_risk_review_routed_rate = 1.0, failure_count = 0.
+- Ran all-extractable retrieval/citation regression: answerable anchored_citation@1 = 0.9792, answerable anchored_citation@5 = 1.0, source_only_citation_violation_count = 0, gate_threshold_pass = true.
+- All-extractable answer-trace result: trace_pass_count = 12/12 and trace_pass_rate = 1.0.

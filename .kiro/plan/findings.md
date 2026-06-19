@@ -442,3 +442,42 @@ Boundary:
 - `no live KB ingestion`.
 - Raw `consult/` files remain local-only.
 - Legal/source-owner review is still pending.
+
+## All-Extractable Local Expansion
+
+The next local extraction step expanded from batch-60 to all currently
+extractable non-duplicate sources.
+
+Artifacts created:
+
+- Source selection: `drafts/analysis/consultant-role-kb-all-extractable-source-selection-20260619.csv`.
+- Expansion script: `tmp/consultant_role_kb_all_extractable_expansion_20260619.py`.
+- Cards: `tmp/consultant-role-kb-all-extractable-cards-20260619.jsonl`.
+- Gate eval: `tmp/consultant-role-kb-all-extractable-card-gate-eval-20260619.json`.
+- Expansion report: `drafts/analysis/consultant-role-kb-all-extractable-expansion-report-20260619.md`.
+- Card QA report: `drafts/analysis/consultant-role-kb-all-extractable-card-qa-validation-report-20260619.md`.
+- Regression script: `tmp/consultant_role_kb_all_extractable_regression_eval_20260619.py`.
+- Retrieval/citation report: `drafts/analysis/consultant-role-kb-all-extractable-regression-eval-report-20260619.md`.
+- Answer-trace report: `drafts/analysis/consultant-role-kb-all-extractable-answer-trace-fixture-report-20260619.md`.
+
+Evidence:
+
+- Selected source count = 78.
+- Local draft card count = 780.
+- Expansion gate: metadata_completeness = 1.0, unit_locator_coverage = 1.0, source_only_citation_violation_count = 0, long_text_violation_count = 0, provider_call_count = 0, live_kb_write_count = 0.
+- Card QA: registered_source_coverage = 1.0, locator_manifest_coverage = 1.0, blocked_actions_complete_rate = 1.0, high_risk_review_routed_rate = 1.0, failure_count = 0.
+- Retrieval/citation regression: answerable anchored_citation@1 = 0.9792, answerable anchored_citation@5 = 1.0, source_only_citation_violation_count = 0, gate_threshold_pass = true.
+- Answer-trace fixture: trace_pass_count = 12/12, trace_pass_rate = 1.0.
+- Remaining answerable top1 failure: `CONSULT-EVAL-016`; expected source appears at top2, so this is not a current gate blocker.
+
+Skipped sources:
+
+- `SRC-CONSULT-016`: duplicate EPUB secondary to the preferred PDF source.
+- `SRC-CONSULT-030`: CSV source with 0 extractable units under the current loader.
+- `SRC-CONSULT-031`: CSV source with 0 extractable units under the current loader.
+
+Interpretation:
+
+- Fact: under the current local parser/loader stack, 78 of 81 registered sources have typed-card extraction coverage.
+- Inference: expansion is no longer the main blocker; the next engineering bottleneck is durable local indexing, human-gold evaluation labels, or a private no-provider retrieval API.
+- Boundary: this remains local draft evidence only; no legal clearance, provider call, live ingestion, staging deployment, or production launch has occurred.

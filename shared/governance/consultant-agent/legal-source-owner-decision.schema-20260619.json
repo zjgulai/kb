@@ -1,0 +1,172 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "kb://consultant-agent/legal-source-owner-decision.schema-20260619.json",
+  "title": "Consultant Agent Legal And Source Owner Decision",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "decision_id",
+    "source_id",
+    "source_title",
+    "source_owner",
+    "decision",
+    "legal_reviewer",
+    "source_owner_reviewer",
+    "reviewed_at",
+    "review_notes",
+    "legal_decision",
+    "source_owner_decision",
+    "license_status_decision",
+    "allowed_runtime_scope",
+    "permitted_actions",
+    "blocked_actions",
+    "conditions",
+    "included_in_all_extractable",
+    "source_trace",
+    "production_impact",
+    "provider_call_boundary",
+    "live_kb_ingestion",
+    "manual_review_boundary"
+  ],
+  "properties": {
+    "decision_id": {
+      "type": "string",
+      "pattern": "^LEGAL-SRC-CONSULT-[0-9]{3}-20260619$"
+    },
+    "source_id": {
+      "type": "string",
+      "pattern": "^SRC-CONSULT-[0-9]{3}$"
+    },
+    "source_title": {
+      "type": "string",
+      "maxLength": 240
+    },
+    "source_owner": {
+      "type": "string",
+      "maxLength": 120
+    },
+    "decision": {
+      "type": "string",
+      "enum": [
+        "pending_review",
+        "approve_internal_staging_retrieval",
+        "approve_local_only",
+        "quarantine_source",
+        "reject_source",
+        "needs_discussion"
+      ]
+    },
+    "legal_reviewer": {
+      "type": ["string", "null"],
+      "maxLength": 120
+    },
+    "source_owner_reviewer": {
+      "type": ["string", "null"],
+      "maxLength": 120
+    },
+    "reviewed_at": {
+      "type": ["string", "null"],
+      "maxLength": 40
+    },
+    "review_notes": {
+      "type": ["string", "null"],
+      "maxLength": 1200
+    },
+    "legal_decision": {
+      "type": "string",
+      "enum": ["pending_review", "approved", "rejected", "needs_discussion"]
+    },
+    "source_owner_decision": {
+      "type": "string",
+      "enum": ["pending_review", "approved", "rejected", "needs_discussion"]
+    },
+    "license_status_decision": {
+      "type": "string",
+      "enum": [
+        "pending_legal_review",
+        "approved_internal_use",
+        "approved_internal_staging_no_provider",
+        "restricted_local_only",
+        "rejected",
+        "needs_discussion"
+      ]
+    },
+    "allowed_runtime_scope": {
+      "type": "string",
+      "enum": ["none", "local_draft_only", "internal_no_provider_staging"]
+    },
+    "permitted_actions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "metadata_retention",
+          "parser_manifest_retention",
+          "local_draft_cards",
+          "local_embedding_index",
+          "human_label_review",
+          "internal_no_provider_retrieval"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "blocked_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "conditions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 240
+      }
+    },
+    "included_in_all_extractable": {
+      "type": "boolean"
+    },
+    "source_trace": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_type",
+        "source_uri",
+        "hash_sha256",
+        "evidence_grade",
+        "workspace",
+        "source_suffix",
+        "duplicate_policy",
+        "high_risk_flags"
+      ],
+      "properties": {
+        "source_type": {"type": "string"},
+        "source_uri": {"type": "string"},
+        "hash_sha256": {"type": "string"},
+        "evidence_grade": {"type": "string"},
+        "workspace": {"type": "string"},
+        "source_suffix": {"type": "string"},
+        "duplicate_policy": {"type": "string"},
+        "high_risk_flags": {"type": "string"}
+      }
+    },
+    "production_impact": {
+      "type": "string",
+      "const": "production unchanged"
+    },
+    "provider_call_boundary": {
+      "type": "string",
+      "const": "no KB provider call"
+    },
+    "live_kb_ingestion": {
+      "type": "string",
+      "const": "no live KB ingestion"
+    },
+    "manual_review_boundary": {
+      "type": "string",
+      "const": "legal and source-owner review required before shared staging"
+    }
+  }
+}

@@ -7,6 +7,7 @@ source_documents:
   - "drafts/analysis/consultant-role-kb-legal-source-owner-review-packet-20260619.md"
   - "tmp/consultant-role-kb-private-retrieval-api-smoke-20260619.json"
   - "tmp/consultant-role-kb-local-staging-auth-audit-smoke-20260619.json"
+  - "tmp/consultant-role-kb-legal-source-owner-decision-validation-20260619.json"
 scope: "preflight gate before any security-approved shared staging deployment"
 production_impact: "production unchanged"
 provider_call_boundary: "no KB provider call"
@@ -26,8 +27,8 @@ provider, ingest into a live KB, approve labels, or clear source licensing.
 |---|---:|
 | ready_for_shared_staging | false |
 | status | blocked |
-| check_count | 19 |
-| pass_count | 13 |
+| check_count | 20 |
+| pass_count | 14 |
 | warning_count | 0 |
 | blocker_count | 6 |
 | provider_call_count | 0 |
@@ -38,7 +39,7 @@ provider, ingest into a live KB, approve labels, or clear source licensing.
 | check | evidence | detail |
 |---|---|---|
 | `human_labels_approved` | tmp/consultant-role-kb-human-label-review-workflow-validation-20260619.json | approved_decision_count=0; manual reviewer decisions are required before claiming human-gold labels |
-| `legal_source_owner_clearance` | drafts/analysis/consultant-role-kb-legal-source-owner-review-packet-20260619.md | legal/source-owner clearance remains pending; shared staging cannot treat corpus as approved |
+| `legal_source_owner_clearance` | tmp/consultant-role-kb-legal-source-owner-decision-validation-20260619.json | selected_approved_internal_staging_count=0/80; legal/source-owner clearance remains pending |
 | `external_auth_token_hash_configured` | environment:KB_STAGING_AUTH_TOKEN_SHA256 | token hash status=missing; secret value is not logged |
 | `external_audit_path_configured` | environment:KB_STAGING_AUDIT_PATH | audit path status=missing; environment variable is not set |
 | `rate_limit_configured` | environment:KB_STAGING_RATE_LIMIT_CONFIGURED | rate limiting must be configured at private ingress or middleware before shared staging |
@@ -59,8 +60,9 @@ provider, ingest into a live KB, approve labels, or clear source licensing.
 | `no_provider_calls` | pass | multiple smoke outputs |
 | `no_live_kb_writes` | pass | multiple smoke outputs |
 | `human_label_workflow_generated` | pass | tmp/consultant-role-kb-human-label-review-workflow-validation-20260619.json |
+| `legal_source_owner_workflow_generated` | pass | tmp/consultant-role-kb-legal-source-owner-decision-validation-20260619.json |
 | `human_labels_approved` | blocker | tmp/consultant-role-kb-human-label-review-workflow-validation-20260619.json |
-| `legal_source_owner_clearance` | blocker | drafts/analysis/consultant-role-kb-legal-source-owner-review-packet-20260619.md |
+| `legal_source_owner_clearance` | blocker | tmp/consultant-role-kb-legal-source-owner-decision-validation-20260619.json |
 | `raw_consult_not_tracked` | pass | git ls-files consult |
 | `rollback_runbook_exists` | pass | drafts/analysis/consultant-role-kb-shared-staging-runbook-20260619.md |
 | `external_auth_token_hash_configured` | blocker | environment:KB_STAGING_AUTH_TOKEN_SHA256 |

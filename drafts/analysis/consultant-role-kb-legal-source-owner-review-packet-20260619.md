@@ -19,6 +19,7 @@ source_documents:
   - "drafts/analysis/consultant-role-kb-local-staging-auth-audit-smoke-report-20260619.md"
   - "drafts/analysis/consultant-role-kb-shared-staging-readiness-preflight-20260619.md"
   - "drafts/analysis/consultant-role-kb-shared-staging-runbook-20260619.md"
+  - "drafts/analysis/consultant-role-kb-legal-source-owner-decision-workflow-20260619.md"
 scope: "human review packet for full consultant-agent source and derived-card governance"
 production_impact: "production unchanged"
 provider_call_boundary: "no KB provider call"
@@ -110,6 +111,8 @@ provider-backed `consultant-agent` use.
 | local staging auth/audit harness audit forbidden leaks | 0 |
 | shared staging readiness preflight status | blocked |
 | shared staging readiness preflight blockers | 6 |
+| legal/source-owner decision rows | 81 |
+| legal/source-owner selected approved internal staging rows | 0 |
 
 ## 2. High-Risk Review Buckets
 
@@ -146,6 +149,7 @@ Human interpretation:
 | Can a private no-provider retrieval API be prototyped locally? | Completed locally; staging still requires auth, audit, security, and source-owner/legal gates. | technical owner/security |
 | Can staging auth/audit be designed before deployment? | Design, local contract validation, and localhost-only harness smoke are acceptable as draft/local artifacts; shared staging still requires security/legal approval. | technical owner/security |
 | Is shared staging ready now? | No. Preflight is blocked by human label, legal/source-owner, external secret, external audit path, rate limit, and rollback-owner gates. | product/legal/security |
+| Is there a structured legal/source-owner decision intake? | Yes. The decision template is generated, but every source remains `pending_review`; no approval is recorded. | legal/source owner |
 | Can `consultant-agent` answer users online from this corpus? | Not yet; staging requires legal/source-owner/security approval. | product/legal/security |
 | Can a provider model see retrieved card content? | Not before provider policy and data-use approval. | legal/security/product |
 
@@ -165,6 +169,8 @@ Human interpretation:
 - [x] Draft staging auth, audit log, and deployment topology contract before running the local API as a shared service.
 - [x] Implement and smoke-test localhost-only staging auth/audit harness without shared staging deployment.
 - [x] Generate shared-staging readiness preflight and draft runbook.
+- [x] Generate structured legal/source-owner decision queue and template.
+- [ ] Review and approve, restrict, quarantine, reject, or mark pending every selected source needed for shared staging.
 - [ ] Confirm and implement staging auth, audit log, and deployment topology before running the local API as a shared service.
 - [ ] Confirm whether `consultant-agent` may call a provider model in staging.
 - [ ] Confirm retention policy for prompts, retrieved card IDs, and answer traces.
@@ -195,9 +201,12 @@ are now
 recorded. CSV loader support now covers the two previously insufficient-unit
 registered CSV sources in the 800-card all-extractable set, and the durable
 vector store plus local retrieval API smoke have been rebuilt against that
-800-card set. Shared staging readiness is currently blocked with 6 blockers.
-The next local step should move to actual human review of locator labels or
-recording legal/security decisions needed to clear the preflight.
+800-card set. Legal/source-owner decision intake now exists, but all 81 source
+decisions remain `pending_review`, and the 80 selected runtime sources have 0
+approved internal-staging decisions. Shared staging readiness is currently
+blocked with 6 blockers. The next local step should move to actual human review
+of locator labels or recording legal/security decisions needed to clear the
+preflight.
 
 Do not approve online provider-backed `consultant-agent` until legal/source-owner
 and security review explicitly permits retrieved KB content to leave the local

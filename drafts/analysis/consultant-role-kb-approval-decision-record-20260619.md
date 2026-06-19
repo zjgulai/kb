@@ -61,8 +61,9 @@ approve production launch.
 | `agents/consultant-agent/runtime/staging_auth_audit.py` | localhost-only staging auth/audit harness; not a staging deployment |
 | `tmp/consultant-role-kb-local-staging-auth-audit-smoke-20260619.json` | local harness smoke `record_count=800`, missing-token `401`, RBAC denial `403`, audit events `5`, `failure_count=0`, provider calls `0`, live KB writes `0` |
 | `tmp/consultant-role-kb-local-staging-audit-events-20260619.jsonl` | audit events store hashed actor/query identifiers and source/card/locator refs only; no raw token/header/question/source leakage detected by smoke |
-| `tmp/consultant-role-kb-shared-staging-readiness-preflight-20260619.json` | shared staging readiness preflight is `blocked`, `ready_for_shared_staging=false`, `pass_count=13`, `blocker_count=6`, provider calls `0`, live KB writes `0` |
+| `tmp/consultant-role-kb-shared-staging-readiness-preflight-20260619.json` | shared staging readiness preflight is `blocked`, `ready_for_shared_staging=false`, `pass_count=14`, `blocker_count=6`, provider calls `0`, live KB writes `0` |
 | `drafts/analysis/consultant-role-kb-shared-staging-runbook-20260619.md` | draft runbook for future approved shared staging; not an approval or deployment |
+| `tmp/consultant-role-kb-legal-source-owner-decision-validation-20260619.json` | structured legal/source-owner decision workflow has 81 pending decisions, 80 selected sources pending, 0 internal-staging approvals, failure_count `0` |
 
 ## 3.1 Batch-60 Selection Note
 

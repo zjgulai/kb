@@ -103,6 +103,7 @@ def main() -> None:
     audit_contract = load_json(ROOT / "tmp/consultant-role-kb-staging-auth-audit-contract-validation-20260619.json")
     label_workflow = load_json(ROOT / "tmp/consultant-role-kb-human-label-review-workflow-validation-20260619.json")
     vector_smoke = load_json(ROOT / "tmp/consultant-role-kb-all-extractable-vector-store-smoke-20260619.json")
+    legal_workflow = load_json(ROOT / "tmp/consultant-role-kb-legal-source-owner-decision-validation-20260619.json")
 
     api_metrics = api_smoke["metrics"]
     harness_metrics = harness_smoke["metrics"]
@@ -209,6 +210,14 @@ def main() -> None:
         0,
         "human label workflow generation must be valid",
     )
+    add_metric_check(
+        checks,
+        "legal_source_owner_workflow_generated",
+        "tmp/consultant-role-kb-legal-source-owner-decision-validation-20260619.json",
+        legal_workflow["failure_count"],
+        0,
+        "legal/source-owner decision workflow must be structurally valid",
+    )
 
     approved_labels = label_workflow["approved_decision_count"]
     checks.append(
@@ -220,16 +229,17 @@ def main() -> None:
         )
     )
 
-    legal_packet = (ROOT / "drafts/analysis/consultant-role-kb-legal-source-owner-review-packet-20260619.md").read_text(
-        encoding="utf-8"
-    )
-    legal_ready = "license_status=pending_legal_review" not in legal_packet and "legal review still pending" not in legal_packet
+    legal_ready = bool(legal_workflow["shared_staging_legal_clearance_ready"])
     checks.append(
         Check(
             check_id="legal_source_owner_clearance",
             status="pass" if legal_ready else "blocker",
-            evidence="drafts/analysis/consultant-role-kb-legal-source-owner-review-packet-20260619.md",
-            detail="legal/source-owner clearance remains pending; shared staging cannot treat corpus as approved",
+            evidence="tmp/consultant-role-kb-legal-source-owner-decision-validation-20260619.json",
+            detail=(
+                "selected_approved_internal_staging_count="
+                f"{legal_workflow['selected_approved_internal_staging_count']}/"
+                f"{legal_workflow['selected_source_count']}; legal/source-owner clearance remains pending"
+            ),
         )
     )
 
@@ -332,6 +342,7 @@ source_documents:
   - "drafts/analysis/consultant-role-kb-legal-source-owner-review-packet-20260619.md"
   - "tmp/consultant-role-kb-private-retrieval-api-smoke-20260619.json"
   - "tmp/consultant-role-kb-local-staging-auth-audit-smoke-20260619.json"
+  - "tmp/consultant-role-kb-legal-source-owner-decision-validation-20260619.json"
 scope: "preflight gate before any security-approved shared staging deployment"
 production_impact: "production unchanged"
 provider_call_boundary: "no KB provider call"

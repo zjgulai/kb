@@ -781,3 +781,41 @@ Boundary:
 - No live KB ingestion.
 - No human label approval.
 - No legal/source-owner clearance.
+
+## Legal Source-Owner Decision Workflow
+
+A structured legal/source-owner decision workflow now exists for the registered
+consultant-agent corpus. It converts the legal review packet into source-level
+decision intake without recording any approvals.
+
+Artifacts:
+
+- Schema: `shared/governance/consultant-agent/legal-source-owner-decision.schema-20260619.json`
+- Queue: `shared/governance/consultant-agent/legal-source-owner-review.queue-20260619.csv`
+- Decision template: `shared/governance/consultant-agent/legal-source-owner-decisions.template-20260619.jsonl`
+- Generator/validator: `tmp/consultant_role_kb_legal_source_owner_decision_workflow_20260619.py`
+- Validation output: `tmp/consultant-role-kb-legal-source-owner-decision-validation-20260619.json`
+- Report: `drafts/analysis/consultant-role-kb-legal-source-owner-decision-workflow-20260619.md`
+
+Validation result:
+
+- source_count = 81.
+- selected_source_count = 80.
+- decision_count = 81.
+- pending_review_count = 81.
+- selected_approved_internal_staging_count = 0.
+- selected_pending_review_count = 80.
+- shared_staging_legal_clearance_ready = false.
+- failure_count = 0.
+- provider_call_count = 0.
+- live_kb_write_count = 0.
+
+Interpretation:
+
+- Fact: every registered source has one pending legal/source-owner decision row.
+- Fact: all 80 selected runtime sources still need explicit legal and
+  source-owner approval before shared staging can clear the legal gate.
+- Fact: the shared-staging preflight now reads this structured validation file
+  instead of inferring clearance from prose.
+- Boundary: no source approval was recorded, no license status was upgraded,
+  and no shared staging deployment occurred.

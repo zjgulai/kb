@@ -48,6 +48,7 @@ Resolved on 2026-06-19:
 9. Human label review workflow has been generated and locally validated; no label approvals have been recorded.
 10. CSV loader support has been added for `SRC-CONSULT-030` and `SRC-CONSULT-031`; the all-extractable local card set now has 800 cards across 80 non-duplicate sources.
 11. Shared staging readiness preflight and runbook have been generated; preflight is blocked by missing human/legal/security/external-control gates, and no shared staging deployment has occurred.
+12. Legal/source-owner decision workflow has been generated and locally validated; all 81 source decisions remain `pending_review`, including all 80 selected runtime sources.
 
 Still open:
 

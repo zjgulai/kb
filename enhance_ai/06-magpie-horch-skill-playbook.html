@@ -1,0 +1,724 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Magpie-Horch 外置开发 Skill 的使用 Playbook">
+  <title>Magpie-Horch 开发 Skill Playbook</title>
+  <style>
+    :root {
+      --ink: #172033;
+      --muted: #5d6980;
+      --line: #dfe6f1;
+      --paper: #ffffff;
+      --canvas: #f5f8fc;
+      --blue: #2559c7;
+      --blue-soft: #e9f0ff;
+      --teal: #0c786d;
+      --teal-soft: #e2f5f1;
+      --amber: #a45f00;
+      --amber-soft: #fff1dd;
+      --violet: #6441bc;
+      --violet-soft: #eee9ff;
+      --shadow: 0 14px 36px rgba(26, 48, 88, .09);
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 8% 0%, rgba(92, 148, 255, .16), transparent 28rem),
+        radial-gradient(circle at 100% 13%, rgba(75, 214, 181, .12), transparent 29rem),
+        var(--canvas);
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB",
+        "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    a { color: inherit; }
+
+    .page {
+      width: min(1160px, calc(100% - 36px));
+      margin: 0 auto;
+      padding: 28px 0 64px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(30px, 6vw, 70px);
+      border: 1px solid rgba(255, 255, 255, .7);
+      border-radius: 28px;
+      color: #fff;
+      background: linear-gradient(135deg, #173f91 0%, #285bc5 49%, #177f7c 100%);
+      box-shadow: var(--shadow);
+    }
+
+    .hero::after {
+      position: absolute;
+      right: -96px;
+      bottom: -126px;
+      width: 340px;
+      height: 340px;
+      border: 52px solid rgba(255, 255, 255, .08);
+      border-radius: 50%;
+      content: "";
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 14px;
+      padding: 5px 10px;
+      border: 1px solid rgba(255, 255, 255, .36);
+      border-radius: 999px;
+      font-size: 13px;
+      letter-spacing: .04em;
+      background: rgba(255, 255, 255, .1);
+    }
+
+    .eyebrow::before {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #a3ffe4;
+      box-shadow: 0 0 0 4px rgba(163, 255, 228, .14);
+      content: "";
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1 {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+      margin-bottom: 16px;
+      font-size: clamp(32px, 5vw, 56px);
+      line-height: 1.13;
+      letter-spacing: -.035em;
+    }
+
+    .hero p {
+      position: relative;
+      z-index: 1;
+      max-width: 690px;
+      margin-bottom: 0;
+      color: rgba(255, 255, 255, .88);
+      font-size: clamp(17px, 2vw, 20px);
+    }
+
+    .hero strong { color: #fff; }
+
+    .quick-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin: 22px 0 0;
+    }
+
+    .quick-nav a {
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 14px;
+      text-decoration: none;
+      background: rgba(255, 255, 255, .76);
+      transition: transform .18s ease, border-color .18s ease, color .18s ease;
+    }
+
+    .quick-nav a:hover {
+      border-color: #a8c0ef;
+      color: var(--blue);
+      transform: translateY(-1px);
+    }
+
+    main { margin-top: 26px; }
+
+    section {
+      margin-top: 22px;
+      padding: clamp(23px, 4vw, 38px);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: 0 7px 25px rgba(26, 48, 88, .035);
+    }
+
+    h2 {
+      margin-bottom: 9px;
+      font-size: clamp(23px, 3vw, 31px);
+      line-height: 1.28;
+      letter-spacing: -.02em;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+      line-height: 1.35;
+    }
+
+    .lead {
+      max-width: 850px;
+      color: #344057;
+      font-size: 18px;
+    }
+
+    .plain-talk {
+      margin: 22px 0 0;
+      padding: 18px 20px;
+      border-left: 4px solid var(--blue);
+      border-radius: 0 12px 12px 0;
+      color: #2e4166;
+      background: #f3f7ff;
+    }
+
+    .plain-talk strong { color: #173f91; }
+
+    .decision-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .decision {
+      display: block;
+      min-height: 174px;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      color: var(--ink);
+      text-decoration: none;
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+
+    .decision:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 22px rgba(33, 55, 91, .1);
+    }
+
+    .decision small {
+      display: block;
+      margin-bottom: 12px;
+      color: var(--muted);
+      font-weight: 650;
+      letter-spacing: .025em;
+    }
+
+    .decision strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 19px;
+      line-height: 1.35;
+    }
+
+    .decision span {
+      color: #536078;
+      font-size: 15px;
+      line-height: 1.55;
+    }
+
+    .decision.recovery { border-top: 4px solid var(--violet); background: linear-gradient(160deg, #fff, var(--violet-soft)); }
+    .decision.feature { border-top: 4px solid var(--blue); background: linear-gradient(160deg, #fff, var(--blue-soft)); }
+    .decision.incident { border-top: 4px solid var(--amber); background: linear-gradient(160deg, #fff, var(--amber-soft)); }
+    .decision.review { border-top: 4px solid var(--teal); background: linear-gradient(160deg, #fff, var(--teal-soft)); }
+
+    .skill-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .skill-card {
+      padding: 23px;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+    }
+
+    .skill-card .label {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 750;
+      letter-spacing: .03em;
+    }
+
+    .skill-card.recovery .label { color: var(--violet); background: var(--violet-soft); }
+    .skill-card.feature .label { color: var(--blue); background: var(--blue-soft); }
+    .skill-card.incident .label { color: var(--amber); background: var(--amber-soft); }
+    .skill-card.review .label { color: var(--teal); background: var(--teal-soft); }
+
+    .skill-card p:last-of-type { margin-bottom: 0; }
+
+    .question {
+      margin: 17px 0;
+      padding: 12px 14px;
+      border-radius: 10px;
+      color: #273756;
+      background: #f7f9fc;
+    }
+
+    .question b {
+      display: block;
+      margin-bottom: 4px;
+      color: #65728a;
+      font-size: 12px;
+      letter-spacing: .04em;
+    }
+
+    ul {
+      margin: 12px 0 0;
+      padding-left: 21px;
+    }
+
+    li + li { margin-top: 7px; }
+
+    code {
+      padding: .13em .38em;
+      border-radius: 5px;
+      color: #253b66;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: .88em;
+      background: #edf2fa;
+    }
+
+    details {
+      margin-top: 16px;
+      padding: 0 15px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: #fbfcff;
+    }
+
+    summary {
+      padding: 12px 4px;
+      cursor: pointer;
+      color: #334260;
+      font-weight: 700;
+    }
+
+    details > div {
+      padding: 0 4px 15px;
+      color: #526078;
+    }
+
+    .sequence {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr auto 1fr;
+      align-items: stretch;
+      gap: 10px;
+      margin-top: 25px;
+    }
+
+    .sequence-card {
+      min-height: 142px;
+      padding: 18px;
+      border-radius: 13px;
+    }
+
+    .sequence-card b {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 17px;
+    }
+
+    .sequence-card p {
+      margin: 0;
+      color: #4d5b74;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .sequence-card.diagnose { background: var(--amber-soft); }
+    .sequence-card.build { background: var(--blue-soft); }
+    .sequence-card.check { background: var(--teal-soft); }
+
+    .arrow {
+      display: grid;
+      place-items: center;
+      color: #8290a6;
+      font-size: 28px;
+      font-weight: 300;
+    }
+
+    .flow-note {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .scenario-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .scenario {
+      display: grid;
+      grid-template-columns: 40px minmax(0, 1fr);
+      gap: 15px;
+      align-items: start;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+
+    .number {
+      display: grid;
+      width: 32px;
+      height: 32px;
+      place-items: center;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 800;
+      background: var(--blue);
+    }
+
+    .scenario p { margin-bottom: 0; }
+    .scenario strong { display: block; margin-bottom: 4px; }
+
+    .prompt {
+      display: block;
+      margin-top: 8px;
+      padding: 11px 12px;
+      border-radius: 8px;
+      color: #34435f;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 13px;
+      line-height: 1.55;
+      white-space: pre-wrap;
+      background: #f5f8fc;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .do-card, .dont-card {
+      padding: 22px;
+      border-radius: 14px;
+    }
+
+    .do-card { background: #eff9f7; }
+    .dont-card { background: #fff6e9; }
+
+    .do-card h3 { color: #087166; }
+    .dont-card h3 { color: #9a5b00; }
+
+    .start-checklist {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 11px;
+      margin-top: 22px;
+    }
+
+    .check {
+      min-height: 110px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fbfcff;
+    }
+
+    .check b {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--blue);
+      font-size: 14px;
+    }
+
+    .check span {
+      color: #59677e;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .fine-print {
+      margin: 22px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    footer {
+      padding: 25px 6px 0;
+      color: #77849a;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    @media (max-width: 760px) {
+      .page { width: min(100% - 22px, 1160px); padding-top: 11px; }
+      .hero { border-radius: 20px; }
+      section { padding: 23px 18px; }
+      .decision-grid, .skill-grid, .two-col { grid-template-columns: 1fr; }
+      .sequence { grid-template-columns: 1fr; gap: 7px; }
+      .arrow { min-height: 27px; transform: rotate(90deg); }
+      .start-checklist { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page { width: 100%; max-width: none; padding: 0; }
+      .hero, section { box-shadow: none; }
+      .quick-nav { display: none; }
+      details { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="eyebrow">Magpie-Horch · 外置开发 Skill</div>
+      <h1>把 AI 当成靠谱开发搭子，而不是会乱冲的自动补全</h1>
+      <p>这份 Playbook 讲清楚四个新增 Skill：<strong>什么时候该用、它会帮你做什么、你该怎样说、它又不会越界做什么。</strong>你不需要记一套复杂咒语，正常说人话就行。</p>
+    </header>
+
+    <nav class="quick-nav" aria-label="页内导航">
+      <a href="#one-sentence">一句话理解</a>
+      <a href="#choose">选哪一个</a>
+      <a href="#four-skills">四个 Skill</a>
+      <a href="#workflow">怎么串起来</a>
+      <a href="#prompts">直接这样说</a>
+      <a href="#boundaries">它不会做什么</a>
+    </nav>
+
+    <main>
+      <section id="one-sentence">
+        <h2>先用一句话说清楚</h2>
+        <p class="lead">不要把它理解成四个机器人。它更像是给同一个 AI 开发搭子准备的四种工作模式：<strong>先弄清现实、再找故障、再做功能、最后验收结果。</strong></p>
+        <p class="plain-talk"><strong>最简单的判断法：</strong>你现在缺的是“真实状态”、需要“找为什么坏了”、要“把明确的东西做出来”，还是要“确认别人说的完成到底是不是真的”？四种缺口，对应四个 Skill。</p>
+      </section>
+
+      <section id="choose">
+        <h2>30 秒选对 Skill</h2>
+        <p class="lead">不用猜技术名词，先看你正在面对哪种现实问题。</p>
+        <div class="decision-grid">
+          <a class="decision recovery" href="#context-recovery">
+            <small>你不知道现在到底进展到哪了</small>
+            <strong>先把事实捞出来</strong>
+            <span>旧任务、长对话、脏工作区，代码和测试谁留下的都不清楚。先恢复真实状态，再决定做什么。</span>
+          </a>
+          <a class="decision incident" href="#incident-diagnosis">
+            <small>已经看见一个坏现象</small>
+            <strong>先找根因，不要猜</strong>
+            <span>白屏、卡死、Loading plugins、门禁失败、性能回归。先证明为什么坏，别靠叠补丁或拉长超时。</span>
+          </a>
+          <a class="decision feature" href="#feature-delivery">
+            <small>目标和范围已经清楚</small>
+            <strong>把功能稳稳做出来</strong>
+            <span>新增功能、跨包改动、运行时 UI、file: 装载、测试、打包或交付链路。它会把改动和验证收住。</span>
+          </a>
+          <a class="decision review" href="#evidence-review">
+            <small>已有改动或完成声明</small>
+            <strong>确认“真的完成了吗”</strong>
+            <span>PR 能否合入、功能是否真生效、发布是否有证据。默认只读，不会为了让结果好看而顺手改代码。</span>
+          </a>
+        </div>
+      </section>
+
+      <section id="four-skills">
+        <h2>四个 Skill，各自到底管什么</h2>
+        <p class="lead">它们之间可以交接，但不会互相抢活。你只要说清自己想要的结果，AI 会优先选择合适的工作模式。</p>
+
+        <div class="skill-grid">
+          <article id="context-recovery" class="skill-card recovery">
+            <span class="label">先恢复现实</span>
+            <h3>magpie-horch-context-recovery</h3>
+            <p><strong>它解决的问题：</strong>“我上次做到哪了？”“这堆改动是谁的？”“测试是刚跑的还是历史记录？”</p>
+            <div class="question">
+              <b>你可以这样说</b>
+              继续昨天的 Magpie-Horch 工作，但我不确定实现、测试和日志分别到哪一步了。先给我真实状态和唯一下一步。
+            </div>
+            <p><strong>它会帮你产出：</strong>一张真实状态快照：目标是否已确认、代码是否已写、测试是否本次运行、运行态是否见过、哪些改动不属于本任务，以及一个最小下一步。</p>
+            <p><strong>它不会做：</strong>不会因为任务来自昨天就自动接着写；也不会 reset、清理、提交或把不明来源的改动算到你头上。</p>
+            <details>
+              <summary>什么时候不要用它</summary>
+              <div>如果你的目标、要改的范围和下一步都已经明确，直接进入功能交付更快。不要为了“看起来谨慎”多走一层恢复流程。</div>
+            </details>
+          </article>
+
+          <article id="incident-diagnosis" class="skill-card incident">
+            <span class="label">先证明根因</span>
+            <h3>magpie-horch-incident-diagnosis</h3>
+            <p><strong>它解决的问题：</strong>看得见问题，但不知道真正卡在哪一层。尤其适合白屏、卡死、插件加载失败、性能回归和宿主兼容问题。</p>
+            <div class="question">
+              <b>你可以这样说</b>
+              DSH 启动一直停在 Loading plugins。先复现并定位根因；不要先改超时，也不要靠猜。
+            </div>
+            <p><strong>它会帮你产出：</strong>复现证据、并列假设、最便宜的区分实验、根因或候选根因、窄修复方案与回滚方式。</p>
+            <p><strong>它不会做：</strong>如果你只授权诊断，它会停在证据和方案，不会偷偷修改代码。根因和写入范围明确后，才交给功能交付实施。</p>
+            <details>
+              <summary>Magpie-Horch 的重点提醒</summary>
+              <div>遇到持续加载或卡死，不能因为某次日志、一次重试或延长 watchdog 后暂时能启动，就宣布已修好。需要同时看生命周期、运行载荷、profile/bundle、装载点和用户面。</div>
+            </details>
+          </article>
+
+          <article id="feature-delivery" class="skill-card feature">
+            <span class="label">稳稳把东西做出来</span>
+            <h3>magpie-horch-feature-delivery</h3>
+            <p><strong>它解决的问题：</strong>功能实现不只是“改一行代码”。特别是跨包、运行时 UI、file: 依赖、打包和发布链路，最容易出现源码改了但消费者没用上的假完成。</p>
+            <div class="question">
+              <b>你可以这样说</b>
+              新增一个任务看板能力，涉及 packages、运行时 UI 和 file: 装载。先确认最小改动范围，再实现并给出真实验证。
+            </div>
+            <p><strong>它会帮你产出：</strong>最小写入集、明确不碰的边界、消费链、验收命题、对应测试或运行读数，以及未能证明的部分。</p>
+            <p><strong>它不会做：</strong>不会把纯 README 文案、错别字或仅审美调整拖进一套复杂交付流程；也不会越过项目规则、用户授权、ADR 或既有门禁。</p>
+            <details>
+              <summary>小改也能用，但会更轻</summary>
+              <div>已知范围的一行代码修复仍可进入功能交付，不过它只需要点明目标文件和直接验证；不会强行写成长篇任务契约。真正跨包或运行时改动，才会展开完整的消费链与完成门。</div>
+            </details>
+          </article>
+
+          <article id="evidence-review" class="skill-card review">
+            <span class="label">只看证据，不替人背书</span>
+            <h3>magpie-horch-evidence-review</h3>
+            <p><strong>它解决的问题：</strong>“代码写了”“测试绿了”“页面打开了”常被误说成“功能完成”。这个 Skill 专门判断结论是否站得住。</p>
+            <div class="question">
+              <b>你可以这样说</b>
+              不要改代码。只读复核这轮 profile sync 改动是否真的生效，以及这个 PR 能不能合入。
+            </div>
+            <p><strong>它会帮你产出：</strong>每条验收命题对应的证据，以及 <code>PASS</code>、<code>FAIL</code> 或 <code>UNVERIFIABLE</code>。不能证明时会明确缺什么，而不是把猜测说成通过。</p>
+            <p><strong>它不会做：</strong>不替实现者顺手修 bug，不把退出码 0、历史绿灯或单条日志当成完整交付；“这段代码优不优雅”也不属于它的专项范围。</p>
+            <details>
+              <summary>它重点查哪几层</summary>
+              <div>它会按需要核对源码和 diff、自动化判据、构建或装载链路、真实运行态或用户面。四层互相补充，任何一层绿都不能替其他层背书。</div>
+            </details>
+          </article>
+        </div>
+      </section>
+
+      <section id="workflow">
+        <h2>一个任务常常要串着用，不是只选一次</h2>
+        <p class="lead">最典型的复杂问题是：先找清楚为什么坏，再写窄修复，最后独立确认修复是否真的生效。</p>
+        <div class="sequence" aria-label="事故处理的三个阶段">
+          <div class="sequence-card diagnose">
+            <b>1. 故障诊断</b>
+            <p>复现现象，比较竞争假设，证明根因。这里先不靠猜写补丁。</p>
+          </div>
+          <div class="arrow" aria-hidden="true">→</div>
+          <div class="sequence-card build">
+            <b>2. 功能交付</b>
+            <p>根因和最小写入范围清楚后，再实现修复、跑针对性验证、检查消费链。</p>
+          </div>
+          <div class="arrow" aria-hidden="true">→</div>
+          <div class="sequence-card check">
+            <b>3. 证据审查</b>
+            <p>从结果倒查证据。确认不是“某层绿了”，而是用户真正能用。</p>
+          </div>
+        </div>
+        <p class="flow-note">如果你连当前 branch、改动归属或上一次验证都说不清，最前面先加一次断点恢复。它不做实现，只把起点校正。</p>
+      </section>
+
+      <section id="prompts">
+        <h2>日常开发时，直接这样说就够了</h2>
+        <p class="lead">下面这些句子不是固定模板，只是告诉你什么信息最有用。目标、范围、禁止项和“怎样算完成”说得越清楚，AI 越能快速走对路径。</p>
+        <div class="scenario-list">
+          <article class="scenario">
+            <span class="number">1</span>
+            <div>
+              <strong>你要接着做，但不知道前情</strong>
+              <p>先让 AI 做状态恢复，而不是让它凭聊天记录猜着继续。</p>
+              <span class="prompt">继续 Magpie-Horch 上次的设置页任务。先只读核对 branch、已有改动、测试和运行态；告诉我真实状态与唯一下一步，先不要写代码。</span>
+            </div>
+          </article>
+          <article class="scenario">
+            <span class="number">2</span>
+            <div>
+              <strong>你要做一个明确的新功能</strong>
+              <p>把用户会得到什么、哪些地方不能碰、怎么证明做完说清楚。</p>
+              <span class="prompt">在 Magpie-Horch 新增 X 能力。可以修改 A 和 B，不能动 vendor/dsh-desktop。需要覆盖运行时 UI 和本地 gate；先给最小写入范围，再实施。</span>
+            </div>
+          </article>
+          <article class="scenario">
+            <span class="number">3</span>
+            <div>
+              <strong>你看见异常，先想知道为什么</strong>
+              <p>明确告诉 AI 不要先 patch，让它建立可反驳的根因链。</p>
+              <span class="prompt">当前出现 X 异常，复现条件是 Y。先定位根因并列出证据、反证和最便宜的区分实验；在我确认前不要修改代码。</span>
+            </div>
+          </article>
+          <article class="scenario">
+            <span class="number">4</span>
+            <div>
+              <strong>别人说做完了，你要验收</strong>
+              <p>明确“只读”，把审查和修复的权限分开。</p>
+              <span class="prompt">只读审查这轮改动是否真的达到 X。检查 diff、测试、装载/构建和运行态；按 PASS、FAIL、UNVERIFIABLE 给我结论，不要写代码。</span>
+            </div>
+          </article>
+        </div>
+
+        <p class="plain-talk"><strong>如果你想百分百指定某一种工作模式：</strong>在请求里直接写 <code>$magpie-horch-feature-delivery</code>、<code>$magpie-horch-incident-diagnosis</code>、<code>$magpie-horch-evidence-review</code> 或 <code>$magpie-horch-context-recovery</code>。大多数时候不需要点名，正常表述场景即可自动发现。</p>
+      </section>
+
+      <section id="boundaries">
+        <h2>它能帮你提高质量，但不会替你越权</h2>
+        <p class="lead">这些 Skill 的价值不是“让 AI 变得很会说”，而是让它在复杂工程里少犯典型错误：错接断点、把症状当根因、源码改了却没生效、测试绿了却没有真正验收。</p>
+        <div class="two-col">
+          <div class="do-card">
+            <h3>它会主动帮你守住的事</h3>
+            <ul>
+              <li>区分当前事实、历史记录和个人猜测。</li>
+              <li>保护共享或脏工作区，不擅自 reset、清理或把别人的改动算进本任务。</li>
+              <li>把源码、构建/装载、运行态和用户面分开验证。</li>
+              <li>无法证明时明确写 <code>UNVERIFIABLE</code>，不编一个“应该没问题”。</li>
+              <li>把诊断、实施和独立验收分开，减少“自己证明自己”的假绿。</li>
+            </ul>
+          </div>
+          <div class="dont-card">
+            <h3>它不会替你做的事</h3>
+            <ul>
+              <li>不会覆盖 <code>AGENTS.md</code>、ADR、项目门禁或你的显式授权。</li>
+              <li>不会因为“检查一下”就偷偷修改、提交、发布或调用外部系统。</li>
+              <li>不会把纯文案错别字、代码命名或审美讨论升级成复杂工程流程。</li>
+              <li>不会把一次退出码为 0、一个日志或历史绿灯当成完整交付。</li>
+              <li>不会自动把 Magpie-Horch 的项目规则写进仓库；Skill 保持在用户级目录，避免污染项目。</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="start">
+        <h2>每次开工前，给 AI 四句话就很够用</h2>
+        <p class="lead">不必写正式 PRD。下面四点齐了，Skill 就能既快又稳地工作。</p>
+        <div class="start-checklist">
+          <div class="check">
+            <b>我要什么</b>
+            <span>用户最终应该看见或得到什么。</span>
+          </div>
+          <div class="check">
+            <b>能碰什么</b>
+            <span>允许的包、文件或模块；明确不能碰的边界。</span>
+          </div>
+          <div class="check">
+            <b>眼前有什么</b>
+            <span>已知故障、已有改动、日志、测试或不确定性。</span>
+          </div>
+          <div class="check">
+            <b>怎么算完成</b>
+            <span>测试、界面、运行态或合入标准；没有就说需要一起定义。</span>
+          </div>
+        </div>
+        <p class="fine-print">推荐先拿一个边界清楚、可在本地验证、不会碰 pinned vendor 或生产发布的标准功能任务做第一轮实战。完成两到三个真实任务后，再根据误触发、返工和验证缺口微调 Skill 文本，而不是一开始就把规则写得越来越长。</p>
+      </section>
+    </main>
+
+    <footer>
+      Magpie-Horch 开发 Skill Playbook · 用户级外置 Skill · 2026-09-23
+    </footer>
+  </div>
+</body>
+</html>
